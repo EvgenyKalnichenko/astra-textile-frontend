@@ -27,10 +27,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16.10.0
-      - name: npm install
-        run: npm install
-      - name: project build
-        run: npm run build
           
 
           
