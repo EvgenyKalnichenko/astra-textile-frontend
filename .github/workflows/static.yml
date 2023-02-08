@@ -2,9 +2,10 @@ name: Build
 on:
   workflow_dispatch:
 jobs:
-  test:
+  build:
     name: Test on node ${{ matrix.node_version }} and windows-latest
     runs-on: windows-latest
+    
     strategy:
       matrix:
         node_version: ['16']
