@@ -35,4 +35,5 @@ jobs:
           node-version: 16.10.0
       - name: npm install, build and test
         run: |
+          npm install
           npm run build
