@@ -15,8 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
+  build:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -28,10 +27,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16.10.0
-      - name: npm install, build and test
-        run: |
-          npm install
-          npm run build
+      - name: npm install
+        run: npm install
+      - name: project build
+        run: npm run build
+          
 
           
         
