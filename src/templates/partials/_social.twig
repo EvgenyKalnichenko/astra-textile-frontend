@@ -1,0 +1,19 @@
+{% set
+    social = [
+    {icon: 'vk'},
+    {icon: 'ok'},
+    {icon: 'twitter'},
+    {icon: 'telegram'},
+    {icon: 'ya-dzen'},
+    {icon: 'r'},
+    {icon: 'yandex'}
+]
+%}
+<div class="social-title">IN - всегда рядом в соцсетях:</div>
+<div class="social">
+    {% for item in social %}
+        <a href="#" class="social__item">
+            {{ mixins.icon(item.icon) }}
+        </a>
+    {% endfor %}
+</div>

@@ -1,0 +1,24 @@
+// LIBS
+// @import 'normalize.css/normalize';
+//@import 'swiper/src/swiper';
+
+// VARIABLES AND MIXINS
+@import './base/variables';
+@import './base/mixins';
+
+// DEFAULTS
+@import './base/fonts';
+@import './base/normalize';
+@import './generated/sprite-svg';
+@import './base/common';
+
+
+// BLOCKS
+@import './blocks/layout/layout';
+
+
+// HELPERS
+@import './base/helpers';
+
+
+
