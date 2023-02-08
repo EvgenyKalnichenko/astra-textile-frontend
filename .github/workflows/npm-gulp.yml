@@ -32,5 +32,9 @@ jobs:
         name: my-artifact
         path: build
         
-
+    # Deployment job
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: build
 
