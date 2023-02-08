@@ -1,0 +1,29 @@
+name: Build
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    name: Test on node ${{ matrix.node_version }} and windows-latest
+    runs-on: windows-latest
+    
+    strategy:
+      matrix:
+        node_version: ['16']
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node_version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node_version }}
+
+    - name: npm install, build
+      run: |
+        npm install
+        npm run build
+        
+    - name: Upload artifact
+    - uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: build
