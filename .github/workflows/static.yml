@@ -38,4 +38,11 @@ jobs:
         run: |
           npm install
           npm run build
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v3.0.2
+        with:
+          # Artifact name
+          name: my-artifact
+          # Destination path
+          path: build
         
