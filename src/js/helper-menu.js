@@ -63,13 +63,6 @@ function pageWidget(pages) {
 $(function () {
     pageWidget([
         'index',
-        'newsfeed',
-        'news',
-        'live',
-        'search',
-        'contacts',
-        'advertising',
-        'information',
         '404'
     ]);
 });
