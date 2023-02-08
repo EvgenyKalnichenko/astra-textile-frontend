@@ -1,2 +1,22 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Build
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    name: Test on node ${{ matrix.node_version }} and windows-latest
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        node_version: ['16']
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node_version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node_version }}
+
+    - name: npm install, build
+      run: |
+        npm install
+        npm run build
