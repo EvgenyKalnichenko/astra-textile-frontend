@@ -1,4 +1,4 @@
-name: NodeJS with Gulp
+8name: NodeJS with Gulp
 
 on:
   push:
@@ -30,13 +30,13 @@ jobs:
         
     - uses: actions/upload-artifact@v3     
       with:
-        name: production-files
+        name: build
         path: build
         
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: build
+        folder: build
+        branch: main
+    
 
