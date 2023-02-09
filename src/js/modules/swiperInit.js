@@ -1,7 +1,6 @@
 import Swiper, {Navigation, Pagination} from "swiper";
 
 export function swiperInit () {
-
     document.querySelectorAll('.main-slider:not(.swiper-init)').forEach((el) => {
         el.classList.add('swiper-init')
         new Swiper (el.querySelector('.swiper-container'), {
