@@ -103,7 +103,10 @@
         <div class="header__container">
           <div class="header__top">
             <div class="container">
-              <div class="header__nav">
+              <a href="/" class="header__logo none md-block">
+                <img src="./img/logo.png" alt="logo">
+              </a>
+              <div class="header__nav md-none">
                 <a class="header__nav-link" href="#">О компании</a>
                 <a class="header__nav-link" href="#">Доставка и оплата</a>
                 <a class="header__nav-link" href="#">Отзывы</a>
@@ -112,7 +115,7 @@
                 <a class="header__nav-link" href="#">Размеры</a>
                 <a class="header__nav-link" href="#">Контакты</a>
               </div>
-              <div class="header__callback">Перезвоните мне</div>
+              <div class="header__callback sm-none">Перезвоните мне</div>
               <div class="header__phone">
                 <a href="tel:89206739705">8 920 673 97 05</a>
                 <svg class="icon icon-arrow-bottom">
@@ -123,10 +126,15 @@
           </div>
           <div class="header__bottom">
             <div class="container">
-              <a href="/" class="header__logo">
+              <a href="/" class="header__logo md-none">
                 <img src="./img/logo.png" alt="logo">
               </a>
-              <div class="header__catalog">
+              <div class="header__menu none md-flex">
+                <svg class="icon icon-hamb-mobile">
+                  <use xlink:href="img/sprite.svg#icon-hamb-mobile"></use>
+                </svg> Меню
+              </div>
+              <div class="header__catalog md-none">
                 <button class="btn btn--transparent btn--big" type="button">
                   <svg class="icon icon-hamburger">
                     <use xlink:href="img/sprite.svg#icon-hamburger"></use>
@@ -139,12 +147,30 @@
                     <button class="btn btn--pd-min btn--white btn--border-accent" type="submit">
                       <svg class="icon icon-search">
                         <use xlink:href="img/sprite.svg#icon-search"></use>
-                      </svg> Найти </button>
+                      </svg>
+                      <span class="sm-none">Найти</span>
+                    </button>
                   </div>
                 </form>
               </div>
               <div class="customer-panel">
-                <div class="customer-panel__item">
+                <a href="#" class="customer-panel__item none md-flex">
+                  <div class="customer-panel__icon">
+                    <svg class="icon icon-home">
+                      <use xlink:href="img/sprite.svg#icon-home"></use>
+                    </svg>
+                  </div>
+                  <div class="customer-panel__name"> Главная </div>
+                </a>
+                <a href="#" class="customer-panel__item none md-flex">
+                  <div class="customer-panel__icon">
+                    <svg class="icon icon-hamb-mobile">
+                      <use xlink:href="img/sprite.svg#icon-hamb-mobile"></use>
+                    </svg>
+                  </div>
+                  <div class="customer-panel__name"> Каталог </div>
+                </a>
+                <a href="#" class="customer-panel__item">
                   <div class="customer-panel__icon">
                     <div class="customer-panel__counter customer-panel__counter--accent">7</div>
                     <svg class="icon icon-user">
@@ -152,8 +178,8 @@
                     </svg>
                   </div>
                   <div class="customer-panel__name"> Профиль </div>
-                </div>
-                <div class="customer-panel__item">
+                </a>
+                <a href="#" class="customer-panel__item">
                   <div class="customer-panel__icon">
                     <div class="customer-panel__counter">0</div>
                     <svg class="icon icon-heart">
@@ -161,8 +187,8 @@
                     </svg>
                   </div>
                   <div class="customer-panel__name"> Избранное </div>
-                </div>
-                <div class="customer-panel__item">
+                </a>
+                <a href="#" class="customer-panel__item">
                   <div class="customer-panel__icon">
                     <div class="customer-panel__counter customer-panel__counter--accent">37</div>
                     <svg class="icon icon-basket">
@@ -170,20 +196,126 @@
                     </svg>
                   </div>
                   <div class="customer-panel__name"> 356 430 руб. </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </header>
+      <div class="catalog-menu">
+      </div>
       <main class="container">
         <h1>Главная</h1>
         <div class="main-slider">
         </div>
       </main>
-      <footer class="footer">
-        <div class="footer__container container">footer</div>
-      </footer>
+      <div class="footer">
+        <div class="footer__container container">
+          <div class="footer__row">
+            <div class="footer__col">
+              <div class="footer__top">
+                <div class="footer__title"> Каталог <svg class="icon" x="0px" y="0px" viewBox="0 0 25 25">
+                    <circle cx="12.5" cy="12.5" r="12.5" />
+                    <polygon fill="#ffffff" points="13,15.5 8.8,11.2 10.2,9.8 13,12.7 15.8,9.8 17.2,11.2 " />
+                  </svg>
+                </div>
+              </div>
+              <ul class="footer__list column-2">
+                <li>
+                  <a href="#">Детский трикотаж</a>
+                </li>
+                <li>
+                  <a href="#">Домашняя обувь</a>
+                </li>
+                <li>
+                  <a href="#">Женский трикотаж</a>
+                </li>
+                <li>
+                  <a href="#">Мужской трикотаж</a>
+                </li>
+                <li>
+                  <a href="#">Прочие товары</a>
+                </li>
+                <li>
+                  <a href="#">Товары для дома</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__col footer__col--info">
+              <div class="footer__top">
+                <div class="footer__title"> Информация <svg class="icon" x="0px" y="0px" viewBox="0 0 25 25">
+                    <circle cx="12.5" cy="12.5" r="12.5" />
+                    <polygon fill="#ffffff" points="13,15.5 8.8,11.2 10.2,9.8 13,12.7 15.8,9.8 17.2,11.2 " />
+                  </svg>
+                </div>
+              </div>
+              <ul class="footer__list column-2">
+                <li><a href="#" class="">Новости</a></li>
+                <li><a href="#" class="">Новости</a></li>
+                <li><a href="#" class="">Новости</a></li>
+                <li><a href="#" class="">Новости</a></li>
+                <li><a href="#" class="">Новости</a></li>
+                <li><a href="#" class="">Новости</a></li>
+                <li><a href="#" class="">Новости</a></li>
+                <li><a href="#" class="">Новости</a></li>
+                <li><a href="#" class="">Новости</a></li>
+                <li><a href="#" class="">Новости</a></li>
+              </ul>
+            </div>
+            <div class="footer__col footer__col--contacts">
+              <div class="footer__top">
+                <div class="footer__title"> Контакты </div>
+              </div>
+              <div class="footer__contacts">
+                <div class="footer__contacts-item">
+                  <div class="contact-item">
+                    <div class="contact-item__icon">
+                      <svg class="icon icon-phone">
+                        <use xlink:href="img/sprite.svg#icon-phone"></use>
+                      </svg>
+                    </div>
+                    <div class="contact-item__info">
+                      <a href="tel:+7 920 673 97 05" class="contact-item__phone"> +7 (920) 673 97 05</a> <br>
+                      <a href="#">Перезвоните мне</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer__contacts-item">
+                  <div class="contact-item">
+                    <div class="contact-item__icon">
+                      <svg class="icon icon-message">
+                        <use xlink:href="img/sprite.svg#icon-message"></use>
+                      </svg>
+                    </div>
+                    <div class="contact-item__info">
+                      <a href="mailto:astraivtex2010@yandex.ru" target="_blank">astraivtex2010@yandex.ru</a>
+                      <br> техническая поддержка
+                    </div>
+                  </div>
+                </div>
+                <div class="footer__contacts-item">
+                  <div class="footer__social-text"> Присоединяйтесь к нам <br> в социальных сетях: </div>
+                  <div class="social-icon">
+                    <a href="#" target="_blank" class="social-icon__item">
+                      <img src="./img/vk.svg" alt="">
+                    </a>
+                    <a href="#" target="_blank" class="social-icon__item">
+                      <img src="./img/ok.svg" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="copyright__container container">
+            <div class="copyright__row">
+              <div class="copyright__text">Астра Текстиль ©Текстиль из Иваново 2022</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- END content -->
     <script type="text/javascript" src="js/app.js?v=0"></script>
