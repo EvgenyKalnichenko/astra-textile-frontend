@@ -11,93 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" media="all" href="css/style.css?v=0" />
   </head>
   <body>
     <!-- BEGIN content -->
-    <div class="debug">
-      <div class="container">
-        <div class="debug__row">
-          <div class="debug__col">
-            <div class="debug__col-inner"></div>
-          </div>
-          <div class="debug__col">
-            <div class="debug__col-inner"></div>
-          </div>
-          <div class="debug__col">
-            <div class="debug__col-inner"></div>
-          </div>
-          <div class="debug__col">
-            <div class="debug__col-inner"></div>
-          </div>
-          <div class="debug__col">
-            <div class="debug__col-inner"></div>
-          </div>
-          <div class="debug__col">
-            <div class="debug__col-inner"></div>
-          </div>
-          <div class="debug__col">
-            <div class="debug__col-inner"></div>
-          </div>
-          <div class="debug__col">
-            <div class="debug__col-inner"></div>
-          </div>
-          <div class="debug__col">
-            <div class="debug__col-inner"></div>
-          </div>
-          <div class="debug__col">
-            <div class="debug__col-inner"></div>
-          </div>
-          <div class="debug__col">
-            <div class="debug__col-inner"></div>
-          </div>
-          <div class="debug__col">
-            <div class="debug__col-inner"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <style>
-      .debug
-      {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        pointer-events: none;
-        z-index: 9999999;
-      }
-
-      .debug__row
-      {
-        display: flex;
-        margin: 0 -15px;
-      }
-
-      .debug__col
-      {
-        padding: 0 15px;
-        width: calc(100% / 12);
-      }
-
-      .debug__col-inner
-      {
-        border-left: 1px solid #28fdff;
-        border-right: 1px solid #28fdff;
-        height: 100vh;
-        opacity: .5;
-      }
-
-      @media (max-width: 767px)
-      {
-        .debug
-        {
-          display: none;
-        }
-      }
-
-    </style>
     <div class="layout">
       <header class="header">
         <div class="header__container">
@@ -205,9 +123,91 @@
       <div class="catalog-menu">
       </div>
       <main class="container">
-        <h1>Главная</h1>
-        <div class="main-slider">
-        </div>
+        <section class="section">
+          <div class="main-slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper swiper-container">
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <a href="#" class="main-slider-item">
+                    <div class="main-slider-item__image">
+                      <picture>
+                        <source data-srcset="img/slider-1.webp" type="image/webp" />
+                        <img class="lazy" data-src="img/slider-1.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="main-slider-item__container">
+                      <h2 class="main-slider-item__title">Удобно для дома и прогулок!</h2>
+                      <p>В наличии полные размерные ряды (48-58)</p>
+                      <button class="btn btn--white" type="button">Смотреть</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="main-slider-item">
+                    <div class="main-slider-item__image">
+                      <picture>
+                        <source data-srcset="img/slider-2.webp" type="image/webp" />
+                        <img class="lazy" data-src="img/slider-2.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="main-slider-item__container">
+                      <h2 class="main-slider-item__title">Удобно для дома и прогулок!</h2>
+                      <p>В наличии полные размерные ряды (48-58)</p>
+                      <button class="btn btn--white" type="button">Смотреть</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="main-slider-item">
+                    <div class="main-slider-item__image">
+                      <picture>
+                        <source data-srcset="img/slider-1.webp" type="image/webp" />
+                        <img class="lazy" data-src="img/slider-1.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="main-slider-item__container">
+                      <h2 class="main-slider-item__title">Удобно для дома и прогулок!</h2>
+                      <p>В наличии полные размерные ряды (48-58)</p>
+                      <button class="btn btn--white" type="button">Смотреть</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="main-slider-item">
+                    <div class="main-slider-item__image">
+                      <picture>
+                        <source data-srcset="img/slider-2.webp" type="image/webp" />
+                        <img class="lazy" data-src="img/slider-2.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="main-slider-item__container">
+                      <h2 class="main-slider-item__title">Удобно для дома и прогулок!</h2>
+                      <p>В наличии полные размерные ряды (48-58)</p>
+                      <button class="btn btn--white" type="button">Смотреть</button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-arrow sm-none">
+              <div class="swiper-arrow__item swiper-arrow__item--prev">
+                <svg class="icon icon-swiper-prev">
+                  <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                </svg>
+              </div>
+              <div class="swiper-arrow__item swiper-arrow__item--next">
+                <svg class="icon icon-swiper-next">
+                  <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <div class="footer">
         <div class="footer__container container">
