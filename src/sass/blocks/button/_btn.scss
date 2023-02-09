@@ -1,8 +1,8 @@
 .btn {
-  border: 1px solid currentColor;
-  border-radius: 8px;
+  border: none;
   background: transparent;
-  padding: 0 15px;
+  padding: 0 35px;
+  gap: 12px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -11,6 +11,9 @@
   font-weight: 500;
   position: relative;
   cursor: pointer;
+  background: var(--accent);
+  border-radius: var(--border-radius-btn);
+  color: #fff;
 
   &[disabled] {
     opacity: 0.8;
@@ -19,16 +22,35 @@
   }
 
   &:hover {
-    background: var(--btnHover);
-  }
-
-  .icon-arrow-bottom {
-    font-size: 7px;
-    display: inline-flex;
-    margin-left: 15px;
+    background: var(--accentHover);
   }
 
   &--full {
     width: 100%;
+  }
+
+  &--transparent {
+    text-transform: uppercase;
+  }
+
+  &--big {
+    min-height: 49px;
+  }
+
+  &--pd-min {
+    padding: 0 25px 0 13px;
+  }
+
+  &--white {
+    background: #fff;
+    color: var(--main-color-font);
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &--border-accent {
+    border: 1px solid var(--accent)
   }
 }

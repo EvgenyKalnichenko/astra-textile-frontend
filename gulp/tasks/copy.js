@@ -14,7 +14,7 @@ gulp.task('copy:img', () => gulp
 );
 
 gulp.task('copy:fonts', () => gulp
-  .src(config.src.fonts + '/*.{ttf,eot,woff,woff2}')
+  .src(config.src.fonts + '/**/*.{ttf,eot,woff,woff2}')
   .pipe(gulp.dest(config.dest.fonts))
 );
 

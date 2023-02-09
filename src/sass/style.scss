@@ -14,8 +14,10 @@
 
 
 // BLOCKS
+@import './blocks/button/btn';
+@import './blocks/forms/form-search';
 @import './blocks/layout/layout';
-
+@import './blocks/components/header';
 
 // HELPERS
 @import './base/helpers';

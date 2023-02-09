@@ -1,0 +1,147 @@
+.header {
+
+  &__top {
+    background: $bg-color;
+    display: flex;
+    min-height: 48px;
+
+    .container {
+      display: flex;
+      align-items: center;
+      flex: 1 1 0;
+    }
+  }
+
+  &__logo {
+    margin-right: 40px;
+
+    @include xl-screen {
+      margin-right: 30px;
+    }
+  }
+
+  &__nav {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+
+    @include xl-screen {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    @include lg-screen {
+      font-size: 13px;
+      line-height: 18px;
+    }
+
+    &-link {
+      margin-right: 31px;
+      transition: var(--theme-duration) var(--ease) color;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+
+  &__callback {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--accent);
+    margin-left: auto;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--accentHover);
+    }
+  }
+
+  &__phone {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    margin-left: 25px;
+    display: inline-flex;
+    align-items: center;
+
+    svg {
+      font-size: 5px;
+      margin-left: 11px;
+      margin-right: 5px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    padding: 17px;
+
+    .container {
+      display: flex;
+      align-items: center;
+      flex: 1 1 0;
+    }
+
+    .customer-panel {
+      margin-left: auto;
+    }
+  }
+
+  &__catalog {
+    margin-right:  30px;
+  }
+
+  &__search {
+    width: 30%;
+    max-width: 500px;
+    min-width: 250px;
+  }
+}
+
+.customer-panel {
+  display: flex;
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    margin-right: 38px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__icon {
+    margin-right: 16px;
+    position: relative;
+    font-size: 20px;
+  }
+
+  &__counter {
+    width: 20px;
+    height: 20px;
+    background: var(--background-components-v2);
+    color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 60%;
+    z-index: 1;
+
+    &--accent {
+      background: var(--accent);
+    }
+  }
+}

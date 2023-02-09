@@ -1,3 +1,75 @@
 <header class="header">
-    <div class="header__container container">header</div>
+    <div class="header__container">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__nav">
+                    <a class="header__nav-link" href="#">О компании</a>
+                    <a class="header__nav-link" href="#">Доставка и оплата</a>
+                    <a class="header__nav-link" href="#">Отзывы</a>
+                    <a class="header__nav-link" href="#">Сотрудничество</a>
+                    <a class="header__nav-link" href="#">Прайс-лист</a>
+                    <a class="header__nav-link" href="#">Размеры</a>
+                    <a class="header__nav-link" href="#">Контакты</a>
+                </div>
+                <div class="header__callback">Перезвоните мне</div>
+                <div class="header__phone">
+                    <a href="tel:89206739705">8 920 673 97 05</a>
+                    {{ mixins.icon('arrow-bottom') }}
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <a href="/" class="header__logo">
+                    <img src="./img/logo.png" alt="logo">
+                </a>
+                <div class="header__catalog">
+                    <button class="btn btn--transparent btn--big" type="button">
+                        {{ mixins.icon('hamburger') }}
+                        Каталог
+                    </button>
+                </div>
+                <div class="header__search">
+                    <form action="#" class="form-search">
+                        <input type="text" placeholder="Поиск по каталогу" class="form-search__input">
+                        <div class="form-search__btn">
+                            <button class="btn btn--pd-min btn--white btn--border-accent" type="submit">
+                                {{ mixins.icon('search') }}
+                                Найти
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="customer-panel">
+                    <div class="customer-panel__item">
+                        <div class="customer-panel__icon">
+                            <div class="customer-panel__counter customer-panel__counter--accent">7</div>
+                            {{ mixins.icon('user') }}
+                        </div>
+                        <div class="customer-panel__name">
+                            Профиль
+                        </div>
+                    </div>
+                    <div class="customer-panel__item">
+                        <div class="customer-panel__icon">
+                            <div class="customer-panel__counter">0</div>
+                            {{ mixins.icon('heart') }}
+                        </div>
+                        <div class="customer-panel__name">
+                            Избранное
+                        </div>
+                    </div>
+                    <div class="customer-panel__item">
+                        <div class="customer-panel__icon">
+                            <div class="customer-panel__counter customer-panel__counter--accent">37</div>
+                            {{ mixins.icon('basket') }}
+                        </div>
+                        <div class="customer-panel__name">
+                            356 430 руб.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>

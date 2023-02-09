@@ -1,6 +1,3 @@
-import {withBreakpoint} from "./breakpoints";
-import {lockScroll, unlockScroll} from "./scroll-lock";
-
 //policy
 
 $(document).on('change', '[data-input-policy]', function () {
@@ -18,20 +15,20 @@ $(document).on('change', '[data-input-policy]', function () {
 });
 
 // input mask
-$('[name="phone"]').mask('+7 (999) 999 99 99');
-$.fn.setCursorPosition = function (pos) {
-    if ($(this).get(0).setSelectionRange) {
-        $(this).get(0).setSelectionRange(pos, pos);
-    } else if ($(this).get(0).createTextRange) {
-        var range = $(this).get(0).createTextRange();
-        range.collapse(true);
-        range.moveEnd('character', pos);
-        range.moveStart('character', pos);
-        range.select();
-    }
-};
-$(document).on('click', '[name="phone"]', function () {
-    if ($(this).val() === '+7 (___) ___ __ __') {
-        $(this).setCursorPosition(4);  // set position number
-    }
-});
+// $('[name="phone"]').mask('+7 (999) 999 99 99');
+// $.fn.setCursorPosition = function (pos) {
+//     if ($(this).get(0).setSelectionRange) {
+//         $(this).get(0).setSelectionRange(pos, pos);
+//     } else if ($(this).get(0).createTextRange) {
+//         var range = $(this).get(0).createTextRange();
+//         range.collapse(true);
+//         range.moveEnd('character', pos);
+//         range.moveStart('character', pos);
+//         range.select();
+//     }
+// };
+// $(document).on('click', '[name="phone"]', function () {
+//     if ($(this).val() === '+7 (___) ___ __ __') {
+//         $(this).setCursorPosition(4);  // set position number
+//     }
+// });

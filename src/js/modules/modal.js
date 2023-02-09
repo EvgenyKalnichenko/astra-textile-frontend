@@ -53,11 +53,12 @@ class Modal {
                 document.body.insertAdjacentElement('beforeend', dataHtml);
                 this.onModalLoaded(dataHtml);
                 this.open(id);
-                myLazyLoad.update();
+
+                // myLazyLoad.update();
                 // input mask
-                if($(`[data-modal=${id}]`).find('[name="phone"]').length) {
-                    $('[name="phone"]').mask('+7 (999) 999 99 99');
-                }
+                // if($(`[data-modal=${id}]`).find('[name="phone"]').length) {
+                //     $('[name="phone"]').mask('+7 (999) 999 99 99');
+                // }
             },
             error: () => {
                 this.showError();
