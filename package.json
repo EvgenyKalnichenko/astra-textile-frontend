@@ -75,7 +75,7 @@
     "webpack-cli": "^3.3.0"
   },
   "dependencies": {
-    "swiper": "^8.3.2",
+    "swiper": "^8.4.7",
     "vanilla-lazyload": "^17.4.0"
   }
 }
