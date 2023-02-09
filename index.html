@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Главная</title>
+    <link rel="preload" href="./src/fonts/Manrope/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./src/fonts/Manrope/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./src/fonts/Manrope/Manrope-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./src/fonts/Manrope/Manrope-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" media="all" href="css/style.css?v=0" />
+  </head>
+  <body>
+    <!-- BEGIN content -->
+    <div class="debug">
+      <div class="container">
+        <div class="debug__row">
+          <div class="debug__col">
+            <div class="debug__col-inner"></div>
+          </div>
+          <div class="debug__col">
+            <div class="debug__col-inner"></div>
+          </div>
+          <div class="debug__col">
+            <div class="debug__col-inner"></div>
+          </div>
+          <div class="debug__col">
+            <div class="debug__col-inner"></div>
+          </div>
+          <div class="debug__col">
+            <div class="debug__col-inner"></div>
+          </div>
+          <div class="debug__col">
+            <div class="debug__col-inner"></div>
+          </div>
+          <div class="debug__col">
+            <div class="debug__col-inner"></div>
+          </div>
+          <div class="debug__col">
+            <div class="debug__col-inner"></div>
+          </div>
+          <div class="debug__col">
+            <div class="debug__col-inner"></div>
+          </div>
+          <div class="debug__col">
+            <div class="debug__col-inner"></div>
+          </div>
+          <div class="debug__col">
+            <div class="debug__col-inner"></div>
+          </div>
+          <div class="debug__col">
+            <div class="debug__col-inner"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      .debug
+      {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        z-index: 9999999;
+      }
+
+      .debug__row
+      {
+        display: flex;
+        margin: 0 -15px;
+      }
+
+      .debug__col
+      {
+        padding: 0 15px;
+        width: calc(100% / 12);
+      }
+
+      .debug__col-inner
+      {
+        border-left: 1px solid #28fdff;
+        border-right: 1px solid #28fdff;
+        height: 100vh;
+        opacity: .5;
+      }
+
+      @media (max-width: 767px)
+      {
+        .debug
+        {
+          display: none;
+        }
+      }
+
+    </style>
+    <div class="layout">
+      <header class="header">
+        <div class="header__container container">header</div>
+      </header>
+      <main class="container">
+        <h1>Главная</h1>
+        <div class="main-slider">
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container container">footer</div>
+      </footer>
+    </div>
+    <!-- END content -->
+    <script type="text/javascript" src="js/app.js?v=0"></script>
+    <!-- !!!!!!!! START: HELPER ТОЛЬКО ДЛЯ DEV !!!!!!!!! -->
+    <script defer src="js/helper-menu.js"></script>
+    <!-- !!!!!!!! END: HELPER ТОЛЬКО ДЛЯ DEV !!!!!!!!! -->
+  </body>
+</html>
