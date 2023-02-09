@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <title>Главная</title>
-    <link rel="preload" href="./src/fonts/Manrope/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./src/fonts/Manrope/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./src/fonts/Manrope/Manrope-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./src/fonts/Manrope/Manrope-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Manrope/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Manrope/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Manrope/Manrope-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Manrope/Manrope-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fff" />
@@ -100,7 +100,81 @@
     </style>
     <div class="layout">
       <header class="header">
-        <div class="header__container container">header</div>
+        <div class="header__container">
+          <div class="header__top">
+            <div class="container">
+              <div class="header__nav">
+                <a class="header__nav-link" href="#">О компании</a>
+                <a class="header__nav-link" href="#">Доставка и оплата</a>
+                <a class="header__nav-link" href="#">Отзывы</a>
+                <a class="header__nav-link" href="#">Сотрудничество</a>
+                <a class="header__nav-link" href="#">Прайс-лист</a>
+                <a class="header__nav-link" href="#">Размеры</a>
+                <a class="header__nav-link" href="#">Контакты</a>
+              </div>
+              <div class="header__callback">Перезвоните мне</div>
+              <div class="header__phone">
+                <a href="tel:89206739705">8 920 673 97 05</a>
+                <svg class="icon icon-arrow-bottom">
+                  <use xlink:href="img/sprite.svg#icon-arrow-bottom"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <div class="container">
+              <a href="/" class="header__logo">
+                <img src="./img/logo.png" alt="logo">
+              </a>
+              <div class="header__catalog">
+                <button class="btn btn--transparent btn--big" type="button">
+                  <svg class="icon icon-hamburger">
+                    <use xlink:href="img/sprite.svg#icon-hamburger"></use>
+                  </svg> Каталог </button>
+              </div>
+              <div class="header__search">
+                <form action="#" class="form-search">
+                  <input type="text" placeholder="Поиск по каталогу" class="form-search__input">
+                  <div class="form-search__btn">
+                    <button class="btn btn--pd-min btn--white btn--border-accent" type="submit">
+                      <svg class="icon icon-search">
+                        <use xlink:href="img/sprite.svg#icon-search"></use>
+                      </svg> Найти </button>
+                  </div>
+                </form>
+              </div>
+              <div class="customer-panel">
+                <div class="customer-panel__item">
+                  <div class="customer-panel__icon">
+                    <div class="customer-panel__counter customer-panel__counter--accent">7</div>
+                    <svg class="icon icon-user">
+                      <use xlink:href="img/sprite.svg#icon-user"></use>
+                    </svg>
+                  </div>
+                  <div class="customer-panel__name"> Профиль </div>
+                </div>
+                <div class="customer-panel__item">
+                  <div class="customer-panel__icon">
+                    <div class="customer-panel__counter">0</div>
+                    <svg class="icon icon-heart">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </div>
+                  <div class="customer-panel__name"> Избранное </div>
+                </div>
+                <div class="customer-panel__item">
+                  <div class="customer-panel__icon">
+                    <div class="customer-panel__counter customer-panel__counter--accent">37</div>
+                    <svg class="icon icon-basket">
+                      <use xlink:href="img/sprite.svg#icon-basket"></use>
+                    </svg>
+                  </div>
+                  <div class="customer-panel__name"> 356 430 руб. </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </header>
       <main class="container">
         <h1>Главная</h1>
