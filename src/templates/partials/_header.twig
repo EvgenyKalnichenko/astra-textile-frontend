@@ -2,7 +2,10 @@
     <div class="header__container">
         <div class="header__top">
             <div class="container">
-                <div class="header__nav">
+                <a href="/" class="header__logo none md-block">
+                    <img src="./img/logo.png" alt="logo">
+                </a>
+                <div class="header__nav md-none">
                     <a class="header__nav-link" href="#">О компании</a>
                     <a class="header__nav-link" href="#">Доставка и оплата</a>
                     <a class="header__nav-link" href="#">Отзывы</a>
@@ -11,7 +14,7 @@
                     <a class="header__nav-link" href="#">Размеры</a>
                     <a class="header__nav-link" href="#">Контакты</a>
                 </div>
-                <div class="header__callback">Перезвоните мне</div>
+                <div class="header__callback sm-none">Перезвоните мне</div>
                 <div class="header__phone">
                     <a href="tel:89206739705">8 920 673 97 05</a>
                     {{ mixins.icon('arrow-bottom') }}
@@ -20,10 +23,14 @@
         </div>
         <div class="header__bottom">
             <div class="container">
-                <a href="/" class="header__logo">
+                <a href="/" class="header__logo md-none">
                     <img src="./img/logo.png" alt="logo">
                 </a>
-                <div class="header__catalog">
+                <div class="header__menu none md-flex">
+                    {{ mixins.icon('hamb-mobile') }}
+                    Меню
+                </div>
+                <div class="header__catalog md-none">
                     <button class="btn btn--transparent btn--big" type="button">
                         {{ mixins.icon('hamburger') }}
                         Каталог
@@ -35,13 +42,29 @@
                         <div class="form-search__btn">
                             <button class="btn btn--pd-min btn--white btn--border-accent" type="submit">
                                 {{ mixins.icon('search') }}
-                                Найти
+                                <span class="sm-none">Найти</span>
                             </button>
                         </div>
                     </form>
                 </div>
                 <div class="customer-panel">
-                    <div class="customer-panel__item">
+                    <a href="#" class="customer-panel__item none md-flex">
+                        <div class="customer-panel__icon">
+                            {{ mixins.icon('home') }}
+                        </div>
+                        <div class="customer-panel__name">
+                            Главная
+                        </div>
+                    </a>
+                    <a href="#" class="customer-panel__item none md-flex">
+                        <div class="customer-panel__icon">
+                            {{ mixins.icon('hamb-mobile') }}
+                        </div>
+                        <div class="customer-panel__name">
+                            Каталог
+                        </div>
+                    </a>
+                    <a href="#" class="customer-panel__item">
                         <div class="customer-panel__icon">
                             <div class="customer-panel__counter customer-panel__counter--accent">7</div>
                             {{ mixins.icon('user') }}
@@ -49,8 +72,8 @@
                         <div class="customer-panel__name">
                             Профиль
                         </div>
-                    </div>
-                    <div class="customer-panel__item">
+                    </a>
+                    <a href="#" class="customer-panel__item">
                         <div class="customer-panel__icon">
                             <div class="customer-panel__counter">0</div>
                             {{ mixins.icon('heart') }}
@@ -58,8 +81,8 @@
                         <div class="customer-panel__name">
                             Избранное
                         </div>
-                    </div>
-                    <div class="customer-panel__item">
+                    </a>
+                    <a href="#" class="customer-panel__item">
                         <div class="customer-panel__icon">
                             <div class="customer-panel__counter customer-panel__counter--accent">37</div>
                             {{ mixins.icon('basket') }}
@@ -67,9 +90,13 @@
                         <div class="customer-panel__name">
                             356 430 руб.
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </header>
+
+<div class="catalog-menu">
+
+</div>

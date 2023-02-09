@@ -2,6 +2,7 @@ import "./modules/jqueryIinit";
 import "./modules/winsize";
 import "./modules/select";
 import "./modules/tabs";
+import "./modules/footer";
 import "./modules/common";
 import LazyLoad from 'vanilla-lazyload';
 import {documentReady} from "./modules/utils"

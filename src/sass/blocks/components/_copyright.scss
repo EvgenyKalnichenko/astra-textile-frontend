@@ -1,0 +1,18 @@
+.copyright {
+  margin-top: 45px;
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--background-components-v2);
+
+  &__row {
+    border-top: 1px solid var(--background-components-v2);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include md-screen {
+      padding: 20px 0;
+    }
+  }
+}

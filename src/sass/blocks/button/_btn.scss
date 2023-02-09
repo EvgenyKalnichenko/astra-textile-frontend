@@ -35,6 +35,10 @@
 
   &--big {
     min-height: 49px;
+
+    @include xl-screen {
+      min-height: 43px;
+    }
   }
 
   &--pd-min {
