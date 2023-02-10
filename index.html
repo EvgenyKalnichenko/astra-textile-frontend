@@ -122,7 +122,7 @@
       <div class="catalog-menu">
       </div>
       <main class="container">
-        <section class="section">
+        <section class="section-main-slider">
           <div class="main-slider">
             <!-- Additional required wrapper -->
             <div class="swiper swiper-container">
@@ -207,69 +207,723 @@
             </div>
           </div>
         </section>
-        <section>
-          <div class="section-advantages">
-            <h2 class="section-advantages__title title-h2"> Сотрудничество с нами выгодно вам </h2>
-            <div class="section-advantages__grid">
-              <div class="section-advantages__item">
-                <div class="section-advantages__icon">
-                  <svg class="icon icon-jersey">
-                    <use xlink:href="img/sprite.svg#icon-jersey"></use>
-                  </svg>
+        <section class="section-products">
+          <div class="section-products__top">
+            <a href="#" class="section-products__link is-active">Новинки</a>
+            <a href="#" class="section-products__link">Хит продаж</a>
+            <a href="#" class="section-products__link">Распродажа</a>
+            <a href="#" class="section-products__link">Все по 200</a>
+          </div>
+          <div class="section-products__grid">
+            <div class="card-product">
+              <div class="card-product__wrapper">
+                <div class="card-product__top">
+                  <div class="card-product__labels">
+                    <div class="label-status action"> 40% </div>
+                  </div>
+                  <div class="card-product__favorites">
+                    <div class="favorite-icon is-active">
+                      <svg class="icon icon-heart">
+                        <use xlink:href="img/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="card-product__images">
+                    <picture>
+                      <source data-srcset="img/product-1.webp" type="image/webp" />
+                      <img class="lazy" data-src="img/product-1.jpg" alt="">
+                    </picture>
+                  </div>
                 </div>
-                <div class="section-advantages__text"> Вы приобретаете ивановский трикотаж оптом от производителя </div>
+                <div class="card-product__bottom">
+                  <div class="card-product__title">Б0760-2 Футболка женская люрекс</div>
+                  <div class="card-product__row">
+                    <div class="card-product__col">
+                      <span class="card-product__old-price"></span>
+                      <span class="card-product__price"><b>1 350</b> ₽</span>
+                      <span class="card-product__price-name">Розница</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">1 200 ₽</span>
+                      <span class="card-product__price"><b>1 050</b> ₽</span>
+                      <span class="card-product__price-name">Мел. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__price"><b>650</b> ₽</span>
+                      <span class="card-product__price-name">Сред. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">390 ₽</span>
+                      <span class="card-product__price"><b>350</b> ₽</span>
+                      <span class="card-product__price-name">Круп. опт</span>
+                    </div>
+                  </div>
+                  <div class="card-product__dropdown">
+                    <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
+                    <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
+                    <button class="card-product__button btn"> В корзину </button>
+                  </div>
+                </div>
               </div>
-              <div class="section-advantages__item">
-                <div class="section-advantages__icon">
-                  <svg class="icon icon-medal">
-                    <use xlink:href="img/sprite.svg#icon-medal"></use>
-                  </svg>
+            </div>
+            <div class="card-product">
+              <div class="card-product__wrapper">
+                <div class="card-product__top">
+                  <div class="card-product__labels">
+                    <div class="label-status action"> 40% </div>
+                    <div class="label-status orange"> Хит </div>
+                    <div class="label-status blue"> New </div>
+                  </div>
+                  <div class="card-product__favorites">
+                    <div class="favorite-icon">
+                      <svg class="icon icon-heart">
+                        <use xlink:href="img/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="card-product__fast-view">
+                    <a href="#" class="btn btn--medium">Быстрый просмотр</a>
+                  </div>
+                  <div class="card-product__images">
+                    <picture>
+                      <source data-srcset="img/product-1.webp" type="image/webp" />
+                      <img class="lazy" data-src="img/product-1.jpg" alt="">
+                    </picture>
+                  </div>
                 </div>
-                <div class="section-advantages__text"> Мы гарантируем высокое качество товара и разнообразие ассортимента и торговых предложений </div>
+                <div class="card-product__bottom">
+                  <div class="card-product__title">Б0760-2 Футболка женская люрекс</div>
+                  <div class="card-product__row">
+                    <div class="card-product__col">
+                      <span class="card-product__old-price">1 550</span>
+                      <span class="card-product__price">
+                        <b>1 350</b> ₽ </span>
+                      <span class="card-product__price-name">Розница</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">1 200 ₽</span>
+                      <span class="card-product__price"><b>1 050</b> ₽</span>
+                      <span class="card-product__price-name">Мел. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__price"><b>650</b> ₽</span>
+                      <span class="card-product__price-name">Сред. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">390 ₽</span>
+                      <span class="card-product__price"><b>350</b> ₽</span>
+                      <span class="card-product__price-name">Круп. опт</span>
+                    </div>
+                    <div class="card-product__col card-product__col--right none sm-flex">
+                      <button class="btn-basket">
+                        <span class="btn-min__add">
+                          <svg class="icon icon-add-basket">
+                            <use xlink:href="img/sprite.svg#icon-add-basket"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-product__dropdown">
+                    <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
+                    <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
+                    <button class="card-product__button btn"> В корзину </button>
+                  </div>
+                </div>
               </div>
-              <div class="section-advantages__item">
-                <div class="section-advantages__icon">
-                  <svg class="icon icon-rub">
-                    <use xlink:href="img/sprite.svg#icon-rub"></use>
-                  </svg>
+            </div>
+            <div class="card-product">
+              <div class="card-product__wrapper">
+                <div class="card-product__top">
+                  <div class="card-product__labels">
+                    <div class="label-status action"> 40% </div>
+                    <div class="label-status orange"> Хит </div>
+                    <div class="label-status blue"> New </div>
+                  </div>
+                  <div class="card-product__favorites">
+                    <div class="favorite-icon">
+                      <svg class="icon icon-heart">
+                        <use xlink:href="img/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="card-product__fast-view">
+                    <a href="#" class="btn btn--medium">Быстрый просмотр</a>
+                  </div>
+                  <div class="card-product__images">
+                    <picture>
+                      <source data-srcset="img/product-1.webp" type="image/webp" />
+                      <img class="lazy" data-src="img/product-1.jpg" alt="">
+                    </picture>
+                  </div>
                 </div>
-                <div class="section-advantages__text"> Мы предлагаем качественные товары в сочетании со справедливой ценой </div>
+                <div class="card-product__bottom">
+                  <div class="card-product__title">Б0760-2 Футболка женская люрекс</div>
+                  <div class="card-product__row">
+                    <div class="card-product__col">
+                      <span class="card-product__old-price">1 550</span>
+                      <span class="card-product__price">
+                        <b>1 350</b> ₽ </span>
+                      <span class="card-product__price-name">Розница</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">1 200 ₽</span>
+                      <span class="card-product__price"><b>1 050</b> ₽</span>
+                      <span class="card-product__price-name">Мел. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__price"><b>650</b> ₽</span>
+                      <span class="card-product__price-name">Сред. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">390 ₽</span>
+                      <span class="card-product__price"><b>350</b> ₽</span>
+                      <span class="card-product__price-name">Круп. опт</span>
+                    </div>
+                    <div class="card-product__col card-product__col--right none sm-flex">
+                      <button class="btn-basket">
+                        <span class="btn-min__add">
+                          <svg class="icon icon-add-basket">
+                            <use xlink:href="img/sprite.svg#icon-add-basket"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-product__dropdown">
+                    <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
+                    <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
+                    <button class="card-product__button btn"> В корзину </button>
+                  </div>
+                </div>
               </div>
-              <div class="section-advantages__item">
-                <div class="section-advantages__icon">
-                  <svg class="icon icon-user-advantages">
-                    <use xlink:href="img/sprite.svg#icon-user-advantages"></use>
-                  </svg>
+            </div>
+            <div class="card-product">
+              <div class="card-product__wrapper">
+                <div class="card-product__top">
+                  <div class="card-product__labels">
+                    <div class="label-status action"> 40% </div>
+                    <div class="label-status orange"> Хит </div>
+                    <div class="label-status blue"> New </div>
+                  </div>
+                  <div class="card-product__favorites">
+                    <div class="favorite-icon">
+                      <svg class="icon icon-heart">
+                        <use xlink:href="img/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="card-product__fast-view">
+                    <a href="#" class="btn btn--medium">Быстрый просмотр</a>
+                  </div>
+                  <div class="card-product__images">
+                    <picture>
+                      <source data-srcset="img/product-1.webp" type="image/webp" />
+                      <img class="lazy" data-src="img/product-1.jpg" alt="">
+                    </picture>
+                  </div>
                 </div>
-                <div class="section-advantages__text"> Обеспечиваем индивидуальный подход к каждому покупателю </div>
+                <div class="card-product__bottom">
+                  <div class="card-product__title">Б0760-2 Футболка женская люрекс</div>
+                  <div class="card-product__row">
+                    <div class="card-product__col">
+                      <span class="card-product__old-price">1 550</span>
+                      <span class="card-product__price">
+                        <b>1 350</b> ₽ </span>
+                      <span class="card-product__price-name">Розница</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">1 200 ₽</span>
+                      <span class="card-product__price"><b>1 050</b> ₽</span>
+                      <span class="card-product__price-name">Мел. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__price"><b>650</b> ₽</span>
+                      <span class="card-product__price-name">Сред. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">390 ₽</span>
+                      <span class="card-product__price"><b>350</b> ₽</span>
+                      <span class="card-product__price-name">Круп. опт</span>
+                    </div>
+                    <div class="card-product__col card-product__col--right none sm-flex">
+                      <button class="btn-basket">
+                        <span class="btn-min__add">
+                          <svg class="icon icon-add-basket">
+                            <use xlink:href="img/sprite.svg#icon-add-basket"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-product__dropdown">
+                    <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
+                    <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
+                    <button class="card-product__button btn"> В корзину </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product">
+              <div class="card-product__wrapper">
+                <div class="card-product__top">
+                  <div class="card-product__labels">
+                    <div class="label-status action"> 40% </div>
+                    <div class="label-status orange"> Хит </div>
+                    <div class="label-status blue"> New </div>
+                  </div>
+                  <div class="card-product__favorites">
+                    <div class="favorite-icon">
+                      <svg class="icon icon-heart">
+                        <use xlink:href="img/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="card-product__fast-view">
+                    <a href="#" class="btn btn--medium">Быстрый просмотр</a>
+                  </div>
+                  <div class="card-product__images">
+                    <picture>
+                      <source data-srcset="img/product-1.webp" type="image/webp" />
+                      <img class="lazy" data-src="img/product-1.jpg" alt="">
+                    </picture>
+                  </div>
+                </div>
+                <div class="card-product__bottom">
+                  <div class="card-product__title">Б0760-2 Футболка женская люрекс</div>
+                  <div class="card-product__row">
+                    <div class="card-product__col">
+                      <span class="card-product__old-price">1 550</span>
+                      <span class="card-product__price">
+                        <b>1 350</b> ₽ </span>
+                      <span class="card-product__price-name">Розница</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">1 200 ₽</span>
+                      <span class="card-product__price"><b>1 050</b> ₽</span>
+                      <span class="card-product__price-name">Мел. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__price"><b>650</b> ₽</span>
+                      <span class="card-product__price-name">Сред. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">390 ₽</span>
+                      <span class="card-product__price"><b>350</b> ₽</span>
+                      <span class="card-product__price-name">Круп. опт</span>
+                    </div>
+                    <div class="card-product__col card-product__col--right none sm-flex">
+                      <button class="btn-basket">
+                        <span class="btn-min__add">
+                          <svg class="icon icon-add-basket">
+                            <use xlink:href="img/sprite.svg#icon-add-basket"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-product__dropdown">
+                    <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
+                    <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
+                    <button class="card-product__button btn"> В корзину </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product">
+              <div class="card-product__wrapper">
+                <div class="card-product__top">
+                  <div class="card-product__labels">
+                    <div class="label-status action"> 40% </div>
+                    <div class="label-status orange"> Хит </div>
+                    <div class="label-status blue"> New </div>
+                  </div>
+                  <div class="card-product__favorites">
+                    <div class="favorite-icon">
+                      <svg class="icon icon-heart">
+                        <use xlink:href="img/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="card-product__fast-view">
+                    <a href="#" class="btn btn--medium">Быстрый просмотр</a>
+                  </div>
+                  <div class="card-product__images">
+                    <picture>
+                      <source data-srcset="img/product-1.webp" type="image/webp" />
+                      <img class="lazy" data-src="img/product-1.jpg" alt="">
+                    </picture>
+                  </div>
+                </div>
+                <div class="card-product__bottom">
+                  <div class="card-product__title">Б0760-2 Футболка женская люрекс</div>
+                  <div class="card-product__row">
+                    <div class="card-product__col">
+                      <span class="card-product__old-price">1 550</span>
+                      <span class="card-product__price">
+                        <b>1 350</b> ₽ </span>
+                      <span class="card-product__price-name">Розница</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">1 200 ₽</span>
+                      <span class="card-product__price"><b>1 050</b> ₽</span>
+                      <span class="card-product__price-name">Мел. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__price"><b>650</b> ₽</span>
+                      <span class="card-product__price-name">Сред. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">390 ₽</span>
+                      <span class="card-product__price"><b>350</b> ₽</span>
+                      <span class="card-product__price-name">Круп. опт</span>
+                    </div>
+                    <div class="card-product__col card-product__col--right none sm-flex">
+                      <button class="btn-basket">
+                        <span class="btn-min__add">
+                          <svg class="icon icon-add-basket">
+                            <use xlink:href="img/sprite.svg#icon-add-basket"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-product__dropdown">
+                    <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
+                    <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
+                    <button class="card-product__button btn"> В корзину </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product">
+              <div class="card-product__wrapper">
+                <div class="card-product__top">
+                  <div class="card-product__labels">
+                    <div class="label-status action"> 40% </div>
+                    <div class="label-status orange"> Хит </div>
+                    <div class="label-status blue"> New </div>
+                  </div>
+                  <div class="card-product__favorites">
+                    <div class="favorite-icon">
+                      <svg class="icon icon-heart">
+                        <use xlink:href="img/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="card-product__fast-view">
+                    <a href="#" class="btn btn--medium">Быстрый просмотр</a>
+                  </div>
+                  <div class="card-product__images">
+                    <picture>
+                      <source data-srcset="img/product-1.webp" type="image/webp" />
+                      <img class="lazy" data-src="img/product-1.jpg" alt="">
+                    </picture>
+                  </div>
+                </div>
+                <div class="card-product__bottom">
+                  <div class="card-product__title">Б0760-2 Футболка женская люрекс</div>
+                  <div class="card-product__row">
+                    <div class="card-product__col">
+                      <span class="card-product__old-price">1 550</span>
+                      <span class="card-product__price">
+                        <b>1 350</b> ₽ </span>
+                      <span class="card-product__price-name">Розница</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">1 200 ₽</span>
+                      <span class="card-product__price"><b>1 050</b> ₽</span>
+                      <span class="card-product__price-name">Мел. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__price"><b>650</b> ₽</span>
+                      <span class="card-product__price-name">Сред. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">390 ₽</span>
+                      <span class="card-product__price"><b>350</b> ₽</span>
+                      <span class="card-product__price-name">Круп. опт</span>
+                    </div>
+                    <div class="card-product__col card-product__col--right none sm-flex">
+                      <button class="btn-basket">
+                        <span class="btn-min__add">
+                          <svg class="icon icon-add-basket">
+                            <use xlink:href="img/sprite.svg#icon-add-basket"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-product__dropdown">
+                    <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
+                    <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
+                    <button class="card-product__button btn"> В корзину </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product">
+              <div class="card-product__wrapper">
+                <div class="card-product__top">
+                  <div class="card-product__labels">
+                    <div class="label-status action"> 40% </div>
+                    <div class="label-status orange"> Хит </div>
+                    <div class="label-status blue"> New </div>
+                  </div>
+                  <div class="card-product__favorites">
+                    <div class="favorite-icon">
+                      <svg class="icon icon-heart">
+                        <use xlink:href="img/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="card-product__fast-view">
+                    <a href="#" class="btn btn--medium">Быстрый просмотр</a>
+                  </div>
+                  <div class="card-product__images">
+                    <picture>
+                      <source data-srcset="img/product-1.webp" type="image/webp" />
+                      <img class="lazy" data-src="img/product-1.jpg" alt="">
+                    </picture>
+                  </div>
+                </div>
+                <div class="card-product__bottom">
+                  <div class="card-product__title">Б0760-2 Футболка женская люрекс</div>
+                  <div class="card-product__row">
+                    <div class="card-product__col">
+                      <span class="card-product__old-price">1 550</span>
+                      <span class="card-product__price">
+                        <b>1 350</b> ₽ </span>
+                      <span class="card-product__price-name">Розница</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">1 200 ₽</span>
+                      <span class="card-product__price"><b>1 050</b> ₽</span>
+                      <span class="card-product__price-name">Мел. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__price"><b>650</b> ₽</span>
+                      <span class="card-product__price-name">Сред. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">390 ₽</span>
+                      <span class="card-product__price"><b>350</b> ₽</span>
+                      <span class="card-product__price-name">Круп. опт</span>
+                    </div>
+                    <div class="card-product__col card-product__col--right none sm-flex">
+                      <button class="btn-basket">
+                        <span class="btn-min__add">
+                          <svg class="icon icon-add-basket">
+                            <use xlink:href="img/sprite.svg#icon-add-basket"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-product__dropdown">
+                    <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
+                    <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
+                    <button class="card-product__button btn"> В корзину </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product">
+              <div class="card-product__wrapper">
+                <div class="card-product__top">
+                  <div class="card-product__labels">
+                    <div class="label-status action"> 40% </div>
+                    <div class="label-status orange"> Хит </div>
+                    <div class="label-status blue"> New </div>
+                  </div>
+                  <div class="card-product__favorites">
+                    <div class="favorite-icon">
+                      <svg class="icon icon-heart">
+                        <use xlink:href="img/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="card-product__fast-view">
+                    <a href="#" class="btn btn--medium">Быстрый просмотр</a>
+                  </div>
+                  <div class="card-product__images">
+                    <picture>
+                      <source data-srcset="img/product-1.webp" type="image/webp" />
+                      <img class="lazy" data-src="img/product-1.jpg" alt="">
+                    </picture>
+                  </div>
+                </div>
+                <div class="card-product__bottom">
+                  <div class="card-product__title">Б0760-2 Футболка женская люрекс</div>
+                  <div class="card-product__row">
+                    <div class="card-product__col">
+                      <span class="card-product__old-price">1 550</span>
+                      <span class="card-product__price">
+                        <b>1 350</b> ₽ </span>
+                      <span class="card-product__price-name">Розница</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">1 200 ₽</span>
+                      <span class="card-product__price"><b>1 050</b> ₽</span>
+                      <span class="card-product__price-name">Мел. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__price"><b>650</b> ₽</span>
+                      <span class="card-product__price-name">Сред. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">390 ₽</span>
+                      <span class="card-product__price"><b>350</b> ₽</span>
+                      <span class="card-product__price-name">Круп. опт</span>
+                    </div>
+                    <div class="card-product__col card-product__col--right none sm-flex">
+                      <button class="btn-basket">
+                        <span class="btn-min__add">
+                          <svg class="icon icon-add-basket">
+                            <use xlink:href="img/sprite.svg#icon-add-basket"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-product__dropdown">
+                    <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
+                    <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
+                    <button class="card-product__button btn"> В корзину </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product">
+              <div class="card-product__wrapper">
+                <div class="card-product__top">
+                  <div class="card-product__labels">
+                    <div class="label-status action"> 40% </div>
+                    <div class="label-status orange"> Хит </div>
+                    <div class="label-status blue"> New </div>
+                  </div>
+                  <div class="card-product__favorites">
+                    <div class="favorite-icon">
+                      <svg class="icon icon-heart">
+                        <use xlink:href="img/sprite.svg#icon-heart"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="card-product__fast-view">
+                    <a href="#" class="btn btn--medium">Быстрый просмотр</a>
+                  </div>
+                  <div class="card-product__images">
+                    <picture>
+                      <source data-srcset="img/product-1.webp" type="image/webp" />
+                      <img class="lazy" data-src="img/product-1.jpg" alt="">
+                    </picture>
+                  </div>
+                </div>
+                <div class="card-product__bottom">
+                  <div class="card-product__title">Б0760-2 Футболка женская люрекс</div>
+                  <div class="card-product__row">
+                    <div class="card-product__col">
+                      <span class="card-product__old-price">1 550</span>
+                      <span class="card-product__price">
+                        <b>1 350</b> ₽ </span>
+                      <span class="card-product__price-name">Розница</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">1 200 ₽</span>
+                      <span class="card-product__price"><b>1 050</b> ₽</span>
+                      <span class="card-product__price-name">Мел. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__price"><b>650</b> ₽</span>
+                      <span class="card-product__price-name">Сред. опт</span>
+                    </div>
+                    <div class="card-product__col sm-none">
+                      <span class="card-product__old-price">390 ₽</span>
+                      <span class="card-product__price"><b>350</b> ₽</span>
+                      <span class="card-product__price-name">Круп. опт</span>
+                    </div>
+                    <div class="card-product__col card-product__col--right none sm-flex">
+                      <button class="btn-basket">
+                        <span class="btn-min__add">
+                          <svg class="icon icon-add-basket">
+                            <use xlink:href="img/sprite.svg#icon-add-basket"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-product__dropdown">
+                    <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
+                    <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
+                    <button class="card-product__button btn"> В корзину </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <div class="section-products__more">
+            <button class="btn btn--medium btn--stroke">Показать еще</button>
+          </div>
         </section>
-        <section>
-          <div class="section-news">
-            <div class="section-head">
-              <h2 class="section-head__title title-h2"> Новости </h2>
+        <section class="section-advantages">
+          <h2 class="section-advantages__title title-h2"> Сотрудничество с нами выгодно вам </h2>
+          <div class="section-advantages__grid">
+            <div class="section-advantages__item">
+              <div class="section-advantages__icon">
+                <svg class="icon icon-jersey">
+                  <use xlink:href="img/sprite.svg#icon-jersey"></use>
+                </svg>
+              </div>
+              <div class="section-advantages__text"> Вы приобретаете ивановский трикотаж оптом от производителя </div>
             </div>
-            <div class="news-grid">
-              <div class="news-card">
-                <div class="news-card__data"> 26.09.2022 </div>
-                <a href="#" class="news-card__title"> График работы в праздничные дни 2023 </a>
-                <div class="news-card__text"> Последний день отгрузок 30 декабря. Если вы не успели оплатить свой заказ, то отгрузка будет после праздничных дней. С 1 января по 8 января заказы принимаются в обычном режиме. Обработка заказов и выставление счетов начнутся с 9 января. </div>
-                <a href="#" class="link-arrow"> Подробнее </a>
+            <div class="section-advantages__item">
+              <div class="section-advantages__icon">
+                <svg class="icon icon-medal">
+                  <use xlink:href="img/sprite.svg#icon-medal"></use>
+                </svg>
               </div>
-              <div class="news-card">
-                <div class="news-card__data"> 26.09.2022 </div>
-                <a href="#" class="news-card__title"> График работы в праздничные дни 2023 </a>
-                <div class="news-card__text"> Последний день отгрузок 30 декабря. Если вы не успели оплатить свой заказ, то отгрузка будет после праздничных дней. С 1 января по 8 января заказы принимаются в обычном режиме. Обработка заказов и выставление счетов начнутся с 9 января. </div>
-                <a href="#" class="link-arrow"> Подробнее </a>
+              <div class="section-advantages__text"> Мы гарантируем высокое качество товара и разнообразие ассортимента и торговых предложений </div>
+            </div>
+            <div class="section-advantages__item">
+              <div class="section-advantages__icon">
+                <svg class="icon icon-rub">
+                  <use xlink:href="img/sprite.svg#icon-rub"></use>
+                </svg>
               </div>
-              <div class="news-card">
-                <div class="news-card__data"> 26.09.2022 </div>
-                <a href="#" class="news-card__title"> График работы в праздничные дни 2023 </a>
-                <div class="news-card__text"> Последний день отгрузок 30 декабря. Если вы не успели оплатить свой заказ, то отгрузка будет после праздничных дней. С 1 января по 8 января заказы принимаются в обычном режиме. Обработка заказов и выставление счетов начнутся с 9 января. </div>
-                <a href="#" class="link-arrow"> Подробнее </a>
+              <div class="section-advantages__text"> Мы предлагаем качественные товары в сочетании со справедливой ценой </div>
+            </div>
+            <div class="section-advantages__item">
+              <div class="section-advantages__icon">
+                <svg class="icon icon-user-advantages">
+                  <use xlink:href="img/sprite.svg#icon-user-advantages"></use>
+                </svg>
               </div>
+              <div class="section-advantages__text"> Обеспечиваем индивидуальный подход к каждому покупателю </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-news">
+          <div class="section-head">
+            <h2 class="section-head__title title-h2"> Новости </h2>
+          </div>
+          <div class="news-grid">
+            <div class="news-card">
+              <div class="news-card__data"> 26.09.2022 </div>
+              <a href="#" class="news-card__title"> График работы в праздничные дни 2023 </a>
+              <div class="news-card__text"> Последний день отгрузок 30 декабря. Если вы не успели оплатить свой заказ, то отгрузка будет после праздничных дней. С 1 января по 8 января заказы принимаются в обычном режиме. Обработка заказов и выставление счетов начнутся с 9 января. </div>
+              <a href="#" class="link-arrow"> Подробнее </a>
+            </div>
+            <div class="news-card">
+              <div class="news-card__data"> 26.09.2022 </div>
+              <a href="#" class="news-card__title"> График работы в праздничные дни 2023 </a>
+              <div class="news-card__text"> Последний день отгрузок 30 декабря. Если вы не успели оплатить свой заказ, то отгрузка будет после праздничных дней. С 1 января по 8 января заказы принимаются в обычном режиме. Обработка заказов и выставление счетов начнутся с 9 января. </div>
+              <a href="#" class="link-arrow"> Подробнее </a>
+            </div>
+            <div class="news-card">
+              <div class="news-card__data"> 26.09.2022 </div>
+              <a href="#" class="news-card__title"> График работы в праздничные дни 2023 </a>
+              <div class="news-card__text"> Последний день отгрузок 30 декабря. Если вы не успели оплатить свой заказ, то отгрузка будет после праздничных дней. С 1 января по 8 января заказы принимаются в обычном режиме. Обработка заказов и выставление счетов начнутся с 9 января. </div>
+              <a href="#" class="link-arrow"> Подробнее </a>
             </div>
           </div>
         </section>
