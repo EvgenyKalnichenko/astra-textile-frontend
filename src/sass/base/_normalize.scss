@@ -36,6 +36,19 @@ img {
 	vertical-align: bottom;
 	max-width: 100%;
 	height: auto;
+
+	&[data-src] {
+		opacity: 0;
+	}
+
+	&.lazy {
+		//opacity: 0;
+		transition: 0.15s opacity linear;
+
+		&.loaded {
+			opacity: 1;
+		}
+	}
 }
 
 button::-moz-focus-inner,

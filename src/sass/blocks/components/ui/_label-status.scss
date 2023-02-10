@@ -1,0 +1,40 @@
+.label-status {
+  color: #fff;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 18px;
+  min-width: 66px;
+  padding: 0 3px;
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  background: #139CFF;
+
+  @include xl-screen {
+    min-width: 45px;
+  }
+
+  &.blue {
+    background: #139CFF;
+  }
+
+  &.orange {
+    background: #FFAD03;
+  }
+
+  &.action {
+    background: var(--accent);
+  }
+}
+
+.label-discount{
+  margin-top: -5px;
+  background: #E85D5D;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 8px 5px 4px 10px;
+  text-align: center;
+}

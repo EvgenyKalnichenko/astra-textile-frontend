@@ -1,8 +1,8 @@
 .section-news {
-  margin: 100px 0;
+  margin-bottom: 100px;
 
   @include xl-screen {
-    margin: 75px 0;
+    margin-bottom: 75px;
   }
 
   &__title {

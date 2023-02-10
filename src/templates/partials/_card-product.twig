@@ -1,0 +1,69 @@
+<div class="card-product">
+    <div class="card-product__wrapper">
+        <div class="card-product__top">
+            <div class="card-product__labels">
+                <div class="label-status action">
+                    40%
+                </div>
+                <div class="label-status orange">
+                    Хит
+                </div>
+                <div class="label-status blue">
+                    New
+                </div>
+            </div>
+            <div class="card-product__favorites">
+                <div class="favorite-icon">
+                    {{ mixins.icon('heart') }}
+                </div>
+            </div>
+            <div class="card-product__fast-view">
+                <a href="#" class="btn btn--medium">Быстрый просмотр</a>
+            </div>
+            <div class="card-product__images">
+                <picture>
+                    <source data-srcset="img/product-1.webp" type="image/webp"/>
+                    <img class="lazy" data-src="img/product-1.jpg" alt="">
+                </picture>
+            </div>
+        </div>
+        <div class="card-product__bottom">
+            <div class="card-product__title">Б0760-2 Футболка женская люрекс</div>
+            <div class="card-product__row">
+                <div class="card-product__col">
+                    <span class="card-product__old-price">1 550</span>
+                    <span class="card-product__price">
+                                        <b>1 350</b> ₽
+                                    </span>
+                    <span class="card-product__price-name">Розница</span>
+                </div>
+                <div class="card-product__col sm-none">
+                    <span class="card-product__old-price">1 200 ₽</span>
+                    <span class="card-product__price"><b>1 050</b> ₽</span>
+                    <span class="card-product__price-name">Мел. опт</span>
+                </div>
+                <div class="card-product__col sm-none">
+                    <span class="card-product__price"><b>650</b> ₽</span>
+                    <span class="card-product__price-name">Сред. опт</span>
+                </div>
+                <div class="card-product__col sm-none">
+                    <span class="card-product__old-price">390 ₽</span>
+                    <span class="card-product__price"><b>350</b> ₽</span>
+                    <span class="card-product__price-name">Круп. опт</span>
+                </div>
+                <div class="card-product__col card-product__col--right none sm-flex">
+                    <button class="btn-basket">
+                        <span class="btn-min__add">{{ mixins.icon('add-basket') }}</span>
+                    </button>
+                </div>
+            </div>
+            <div class="card-product__dropdown">
+                <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
+                <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
+                <button class="card-product__button btn">
+                    В корзину
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

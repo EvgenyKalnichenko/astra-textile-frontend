@@ -33,6 +33,10 @@
     text-transform: uppercase;
   }
 
+  &--medium {
+    min-height: 43px;
+  }
+
   &--big {
     min-height: 49px;
 
@@ -54,7 +58,44 @@
     }
   }
 
+  &--stroke {
+    background: transparent;
+    color:  var(--accent);
+    border: 1px solid var(--accent);
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
   &--border-accent {
     border: 1px solid var(--accent)
+  }
+}
+
+.btn-basket {
+  border: none;
+  background: transparent;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  line-height: 36px;
+  transition: var(--theme-duration) var(--ease);
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+  background: var(--accent);
+  color: #fff;
+  font-size: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    display: inline-flex;
+  }
+
+  .icon-add-basket {
+    left: 1px;
   }
 }

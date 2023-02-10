@@ -1,8 +1,8 @@
 .section-advantages {
-  margin: 90px 0 110px;
+  margin-bottom: 110px;
 
   @include xs-screen {
-    margin: 70px 0 50px;
+    margin-bottom: 50px;
   }
 
   &__title {
@@ -24,7 +24,6 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin-bottom: 20px;
     grid-gap: 35px;
 
     @include xl-screen {

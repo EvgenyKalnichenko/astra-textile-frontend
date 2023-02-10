@@ -14,21 +14,28 @@
 @import './base/typography';
 // BLOCKS
 @import './blocks/swiper';
-@import './blocks/button/btn';
+@import 'blocks/components/ui/btn';
+@import 'blocks/components/ui/label-status';
 @import './blocks/components/sliders/main-slider';
-@import './blocks/components/sliders/swiper-arrow';
+@import './blocks/components/ui/swiper-arrow';
+@import './blocks/components/ui/social';
 @import './blocks/forms/form-search';
 @import './blocks/layout/layout';
+
+
+@import './blocks/components/card/card-product';
+@import './blocks/components/card/news-card';
 @import './blocks/components/header';
 @import './blocks/components/footer';
-@import './blocks/components/social';
-@import './blocks/components/news-card';
-@import 'blocks/components/section/section-advantages';
-@import 'blocks/components/section/section-news';
-@import 'blocks/components/section/section-head';
+@import './blocks/components/section/section-advantages';
+@import 'blocks/components/section/section-main-slider';
+@import './blocks/components/section/section-products';
+@import './blocks/components/section/section-news';
+@import './blocks/components/section/section-head';
 @import './blocks/components/copyright';
 
-@import './blocks/components/ui/link-arrow';
+@import 'blocks/components/ui/link-arrow';
+@import 'blocks/components/ui/favorite-icon';
 
 // HELPERS
 @import './base/helpers';
