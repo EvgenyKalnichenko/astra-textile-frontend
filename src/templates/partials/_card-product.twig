@@ -21,10 +21,19 @@
                 <a href="#" class="btn btn--medium">Быстрый просмотр</a>
             </div>
             <div class="card-product__images">
-                <picture>
-                    <source data-srcset="img/product-1.webp" type="image/webp"/>
-                    <img class="lazy" data-src="img/product-1.jpg" alt="">
-                </picture>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        {% for i in range(0, 3) %}
+                            <div class="swiper-slide">
+                                <picture>
+                                    <source data-srcset="img/product-1.webp" type="image/webp"/>
+                                    <img class="lazy" data-src="img/product-1.jpg" alt="">
+                                </picture>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination--card-product"></div>
             </div>
         </div>
         <div class="card-product__bottom">
@@ -52,7 +61,7 @@
                     <span class="card-product__price-name">Круп. опт</span>
                 </div>
                 <div class="card-product__col card-product__col--right none sm-flex">
-                    <button class="btn-basket">
+                    <button type="button" aria-label="add basket" class="btn-basket">
                         <span class="btn-min__add">{{ mixins.icon('add-basket') }}</span>
                     </button>
                 </div>
@@ -60,7 +69,7 @@
             <div class="card-product__dropdown">
                 <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                 <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                <button class="card-product__button btn">
+                <button type="button" aria-label="add basket" class="card-product__button btn">
                     В корзину
                 </button>
             </div>

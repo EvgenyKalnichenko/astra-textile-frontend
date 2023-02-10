@@ -1,4 +1,5 @@
 import Swiper, {Navigation, Pagination} from "swiper";
+import {initIntersectionObserver} from "./initIntersectionObserver";
 
 export function swiperInit () {
     document.querySelectorAll('.main-slider:not(.swiper-init)').forEach((el) => {
@@ -32,4 +33,27 @@ export function swiperInit () {
             }
         })
     })
+
+    initIntersectionObserver(
+        (item) => {
+            const el = item.target;
+            el.classList.add('init')
+            new Swiper (el.querySelector('.swiper'), {
+                modules: [Pagination],
+                loop: false,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                watchOverflow: true,
+                speed: 200,
+                slideClass: 'swiper-slide',
+                pagination: {
+                    el: el.querySelector('.swiper-pagination--card-product'),
+                    type: 'bullets',
+                    // clickable: true
+                }
+            })
+        },
+        document.querySelectorAll('.card-product__images:not(.init)')
+    )
+
 }

@@ -10,8 +10,8 @@ import LazyLoad from 'vanilla-lazyload';
 import {documentReady} from "./modules/utils"
 import {swiperInit} from "./modules/swiperInit";
 import {modalsInit} from './controllers/modals';
-import {withBreakpoint, Breakpoints} from "./modules/breakpoints";
-import {hoverCardHandler} from "./modules/cardProduct";
+
+import {interactionWithCard} from "./modules/cardProduct";
 
 $(function () {
 
@@ -29,6 +29,6 @@ $(function () {
         elements_selector: ".lazy",
     });
 
-    // обработчик раскрыввающейся карточки
-    withBreakpoint(hoverCardHandler, Breakpoints.SM)
+    // Взаимодействие с карточкой товара (открытие закрытие) только на девайсах больше 768
+    interactionWithCard()
 })

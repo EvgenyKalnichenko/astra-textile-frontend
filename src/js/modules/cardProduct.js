@@ -1,8 +1,8 @@
-import {Breakpoints} from "./breakpoints";
+import {Breakpoints, withBreakpoint} from "./breakpoints";
 
 let startWidth = $(window).width()
 
-export function hoverCardHandler () {
+function hoverCardHandler () {
     const currentWidth = $(window).width();
     if(currentWidth > Breakpoints.SM) {
         startWidth = currentWidth
@@ -24,7 +24,7 @@ function openCard () {
     hover = true
     $(this).css({
         'height': `${$(this).height()}px`,
-        'z-index': 2
+        'z-index': 5
     })
     $(this).find('.card-product__dropdown').stop().slideDown(150)
 }
@@ -49,3 +49,8 @@ function handlerResize () {
         hover = false
     }
 }
+
+export function interactionWithCard () {
+    withBreakpoint(hoverCardHandler, Breakpoints.SM)
+}
+
