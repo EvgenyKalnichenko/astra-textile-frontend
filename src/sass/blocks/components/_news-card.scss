@@ -1,0 +1,76 @@
+.news-card {
+
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    display: block;
+    margin-bottom: 5px;
+    transition: 0.2s color ease-in-out;
+    height: calc(20px*2);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    &:hover {
+      color: var(--accent);
+    }
+
+    @include sm-screen {
+      margin-bottom: 7px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-light);
+    height: calc(24px*2);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-bottom: 10px;
+
+    @include lg-screen {
+      font-size: 14px;
+      line-height: 20px;
+      height: calc(20px*2);
+    }
+
+    @include sm-screen {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__data {
+    font-size: 12px;
+    line-height: 12px;
+    color: #646464;
+    margin-bottom: 20px;
+
+    @include lg-screen {
+      font-size: 12px;
+      line-height: 12px;
+    }
+
+    @include sm-screen {
+      margin-bottom: 10px;
+    }
+  }
+
+  .link-arrow {
+    font-size: 14px;
+    line-height: 14px;
+
+    @include lg-screen {
+      font-size: 14px;
+      line-height: 14px
+    }
+
+    svg {
+      width: 12px;
+    }
+  }
+}

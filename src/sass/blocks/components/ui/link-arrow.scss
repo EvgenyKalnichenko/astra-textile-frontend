@@ -1,0 +1,30 @@
+.link-arrow {
+  color: var(--accent);
+  transition: 0.15s ease-in-out;
+  align-items: center;
+  display: inline-flex;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+  grid-gap: 10px;
+
+  &:hover {
+    color: var(--accentHover);
+  }
+
+  .duble-arrow {
+    font-size: 9px;
+  }
+
+  .icon {
+    //margin-left: 10px;
+  }
+
+  &--accent {
+    color: var(--accent);
+
+    &:hover {
+      color: #3C3C3C;
+    }
+  }
+}

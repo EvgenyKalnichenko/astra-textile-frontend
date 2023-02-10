@@ -1,0 +1,26 @@
+<div class="section-news">
+    <div class="section-head">
+        <h2 class="section-head__title title-h2">
+            Новости
+        </h2>
+    </div>
+    <div class="news-grid">
+        {% for i in range(0, 3) %}
+            <div class="news-card">
+                <div class="news-card__data">
+                    26.09.2022
+                </div>
+                <a href="#" class="news-card__title">
+                    График работы в праздничные дни 2023
+                </a>
+                <div class="news-card__text">
+                    Последний день отгрузок 30 декабря. Если вы не успели оплатить свой заказ, то отгрузка будет после праздничных дней.
+                    С 1 января по 8 января заказы принимаются в обычном режиме. Обработка заказов и выставление счетов начнутся с 9 января.
+                </div>
+                <a href="#" class="link-arrow">
+                    Подробнее
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

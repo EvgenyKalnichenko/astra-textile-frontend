@@ -22,7 +22,13 @@
 @import './blocks/components/header';
 @import './blocks/components/footer';
 @import './blocks/components/social';
-@import './blocks/components/advantages-block';
+@import './blocks/components/news-card';
+@import 'blocks/components/section/section-advantages';
+@import 'blocks/components/section/section-news';
+@import 'blocks/components/section/section-head';
 @import './blocks/components/copyright';
+
+@import './blocks/components/ui/link-arrow';
+
 // HELPERS
 @import './base/helpers';
