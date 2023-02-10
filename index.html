@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <title>Главная</title>
@@ -61,7 +61,7 @@
                 <form action="#" class="form-search">
                   <input type="text" placeholder="Поиск по каталогу" class="form-search__input">
                   <div class="form-search__btn">
-                    <button class="btn btn--pd-min btn--white btn--border-accent" type="submit">
+                    <button class="btn btn--pd-min btn--white btn--border-accent" aria-label="search" type="submit">
                       <svg class="icon icon-search">
                         <use xlink:href="img/sprite.svg#icon-search"></use>
                       </svg>
@@ -285,10 +285,29 @@
                     <a href="#" class="btn btn--medium">Быстрый просмотр</a>
                   </div>
                   <div class="card-product__images">
-                    <picture>
-                      <source data-srcset="img/product-1.webp" type="image/webp" />
-                      <img class="lazy" data-src="img/product-1.jpg" alt="">
-                    </picture>
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination--card-product"></div>
                   </div>
                 </div>
                 <div class="card-product__bottom">
@@ -315,7 +334,7 @@
                       <span class="card-product__price-name">Круп. опт</span>
                     </div>
                     <div class="card-product__col card-product__col--right none sm-flex">
-                      <button class="btn-basket">
+                      <button type="button" aria-label="add basket" class="btn-basket">
                         <span class="btn-min__add">
                           <svg class="icon icon-add-basket">
                             <use xlink:href="img/sprite.svg#icon-add-basket"></use>
@@ -327,7 +346,7 @@
                   <div class="card-product__dropdown">
                     <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                     <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                    <button class="card-product__button btn"> В корзину </button>
+                    <button type="button" aria-label="add basket" class="card-product__button btn"> В корзину </button>
                   </div>
                 </div>
               </div>
@@ -351,10 +370,29 @@
                     <a href="#" class="btn btn--medium">Быстрый просмотр</a>
                   </div>
                   <div class="card-product__images">
-                    <picture>
-                      <source data-srcset="img/product-1.webp" type="image/webp" />
-                      <img class="lazy" data-src="img/product-1.jpg" alt="">
-                    </picture>
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination--card-product"></div>
                   </div>
                 </div>
                 <div class="card-product__bottom">
@@ -381,7 +419,7 @@
                       <span class="card-product__price-name">Круп. опт</span>
                     </div>
                     <div class="card-product__col card-product__col--right none sm-flex">
-                      <button class="btn-basket">
+                      <button type="button" aria-label="add basket" class="btn-basket">
                         <span class="btn-min__add">
                           <svg class="icon icon-add-basket">
                             <use xlink:href="img/sprite.svg#icon-add-basket"></use>
@@ -393,7 +431,7 @@
                   <div class="card-product__dropdown">
                     <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                     <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                    <button class="card-product__button btn"> В корзину </button>
+                    <button type="button" aria-label="add basket" class="card-product__button btn"> В корзину </button>
                   </div>
                 </div>
               </div>
@@ -417,10 +455,29 @@
                     <a href="#" class="btn btn--medium">Быстрый просмотр</a>
                   </div>
                   <div class="card-product__images">
-                    <picture>
-                      <source data-srcset="img/product-1.webp" type="image/webp" />
-                      <img class="lazy" data-src="img/product-1.jpg" alt="">
-                    </picture>
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination--card-product"></div>
                   </div>
                 </div>
                 <div class="card-product__bottom">
@@ -447,7 +504,7 @@
                       <span class="card-product__price-name">Круп. опт</span>
                     </div>
                     <div class="card-product__col card-product__col--right none sm-flex">
-                      <button class="btn-basket">
+                      <button type="button" aria-label="add basket" class="btn-basket">
                         <span class="btn-min__add">
                           <svg class="icon icon-add-basket">
                             <use xlink:href="img/sprite.svg#icon-add-basket"></use>
@@ -459,7 +516,7 @@
                   <div class="card-product__dropdown">
                     <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                     <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                    <button class="card-product__button btn"> В корзину </button>
+                    <button type="button" aria-label="add basket" class="card-product__button btn"> В корзину </button>
                   </div>
                 </div>
               </div>
@@ -483,10 +540,29 @@
                     <a href="#" class="btn btn--medium">Быстрый просмотр</a>
                   </div>
                   <div class="card-product__images">
-                    <picture>
-                      <source data-srcset="img/product-1.webp" type="image/webp" />
-                      <img class="lazy" data-src="img/product-1.jpg" alt="">
-                    </picture>
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination--card-product"></div>
                   </div>
                 </div>
                 <div class="card-product__bottom">
@@ -513,7 +589,7 @@
                       <span class="card-product__price-name">Круп. опт</span>
                     </div>
                     <div class="card-product__col card-product__col--right none sm-flex">
-                      <button class="btn-basket">
+                      <button type="button" aria-label="add basket" class="btn-basket">
                         <span class="btn-min__add">
                           <svg class="icon icon-add-basket">
                             <use xlink:href="img/sprite.svg#icon-add-basket"></use>
@@ -525,7 +601,7 @@
                   <div class="card-product__dropdown">
                     <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                     <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                    <button class="card-product__button btn"> В корзину </button>
+                    <button type="button" aria-label="add basket" class="card-product__button btn"> В корзину </button>
                   </div>
                 </div>
               </div>
@@ -549,10 +625,29 @@
                     <a href="#" class="btn btn--medium">Быстрый просмотр</a>
                   </div>
                   <div class="card-product__images">
-                    <picture>
-                      <source data-srcset="img/product-1.webp" type="image/webp" />
-                      <img class="lazy" data-src="img/product-1.jpg" alt="">
-                    </picture>
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination--card-product"></div>
                   </div>
                 </div>
                 <div class="card-product__bottom">
@@ -579,7 +674,7 @@
                       <span class="card-product__price-name">Круп. опт</span>
                     </div>
                     <div class="card-product__col card-product__col--right none sm-flex">
-                      <button class="btn-basket">
+                      <button type="button" aria-label="add basket" class="btn-basket">
                         <span class="btn-min__add">
                           <svg class="icon icon-add-basket">
                             <use xlink:href="img/sprite.svg#icon-add-basket"></use>
@@ -591,7 +686,7 @@
                   <div class="card-product__dropdown">
                     <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                     <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                    <button class="card-product__button btn"> В корзину </button>
+                    <button type="button" aria-label="add basket" class="card-product__button btn"> В корзину </button>
                   </div>
                 </div>
               </div>
@@ -615,10 +710,29 @@
                     <a href="#" class="btn btn--medium">Быстрый просмотр</a>
                   </div>
                   <div class="card-product__images">
-                    <picture>
-                      <source data-srcset="img/product-1.webp" type="image/webp" />
-                      <img class="lazy" data-src="img/product-1.jpg" alt="">
-                    </picture>
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination--card-product"></div>
                   </div>
                 </div>
                 <div class="card-product__bottom">
@@ -645,7 +759,7 @@
                       <span class="card-product__price-name">Круп. опт</span>
                     </div>
                     <div class="card-product__col card-product__col--right none sm-flex">
-                      <button class="btn-basket">
+                      <button type="button" aria-label="add basket" class="btn-basket">
                         <span class="btn-min__add">
                           <svg class="icon icon-add-basket">
                             <use xlink:href="img/sprite.svg#icon-add-basket"></use>
@@ -657,7 +771,7 @@
                   <div class="card-product__dropdown">
                     <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                     <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                    <button class="card-product__button btn"> В корзину </button>
+                    <button type="button" aria-label="add basket" class="card-product__button btn"> В корзину </button>
                   </div>
                 </div>
               </div>
@@ -681,10 +795,29 @@
                     <a href="#" class="btn btn--medium">Быстрый просмотр</a>
                   </div>
                   <div class="card-product__images">
-                    <picture>
-                      <source data-srcset="img/product-1.webp" type="image/webp" />
-                      <img class="lazy" data-src="img/product-1.jpg" alt="">
-                    </picture>
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination--card-product"></div>
                   </div>
                 </div>
                 <div class="card-product__bottom">
@@ -711,7 +844,7 @@
                       <span class="card-product__price-name">Круп. опт</span>
                     </div>
                     <div class="card-product__col card-product__col--right none sm-flex">
-                      <button class="btn-basket">
+                      <button type="button" aria-label="add basket" class="btn-basket">
                         <span class="btn-min__add">
                           <svg class="icon icon-add-basket">
                             <use xlink:href="img/sprite.svg#icon-add-basket"></use>
@@ -723,7 +856,7 @@
                   <div class="card-product__dropdown">
                     <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                     <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                    <button class="card-product__button btn"> В корзину </button>
+                    <button type="button" aria-label="add basket" class="card-product__button btn"> В корзину </button>
                   </div>
                 </div>
               </div>
@@ -747,10 +880,29 @@
                     <a href="#" class="btn btn--medium">Быстрый просмотр</a>
                   </div>
                   <div class="card-product__images">
-                    <picture>
-                      <source data-srcset="img/product-1.webp" type="image/webp" />
-                      <img class="lazy" data-src="img/product-1.jpg" alt="">
-                    </picture>
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination--card-product"></div>
                   </div>
                 </div>
                 <div class="card-product__bottom">
@@ -777,7 +929,7 @@
                       <span class="card-product__price-name">Круп. опт</span>
                     </div>
                     <div class="card-product__col card-product__col--right none sm-flex">
-                      <button class="btn-basket">
+                      <button type="button" aria-label="add basket" class="btn-basket">
                         <span class="btn-min__add">
                           <svg class="icon icon-add-basket">
                             <use xlink:href="img/sprite.svg#icon-add-basket"></use>
@@ -789,7 +941,7 @@
                   <div class="card-product__dropdown">
                     <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                     <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                    <button class="card-product__button btn"> В корзину </button>
+                    <button type="button" aria-label="add basket" class="card-product__button btn"> В корзину </button>
                   </div>
                 </div>
               </div>
@@ -813,10 +965,29 @@
                     <a href="#" class="btn btn--medium">Быстрый просмотр</a>
                   </div>
                   <div class="card-product__images">
-                    <picture>
-                      <source data-srcset="img/product-1.webp" type="image/webp" />
-                      <img class="lazy" data-src="img/product-1.jpg" alt="">
-                    </picture>
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                        <div class="swiper-slide">
+                          <picture>
+                            <source data-srcset="img/product-1.webp" type="image/webp" />
+                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination--card-product"></div>
                   </div>
                 </div>
                 <div class="card-product__bottom">
@@ -843,7 +1014,7 @@
                       <span class="card-product__price-name">Круп. опт</span>
                     </div>
                     <div class="card-product__col card-product__col--right none sm-flex">
-                      <button class="btn-basket">
+                      <button type="button" aria-label="add basket" class="btn-basket">
                         <span class="btn-min__add">
                           <svg class="icon icon-add-basket">
                             <use xlink:href="img/sprite.svg#icon-add-basket"></use>
@@ -855,7 +1026,7 @@
                   <div class="card-product__dropdown">
                     <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                     <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                    <button class="card-product__button btn"> В корзину </button>
+                    <button type="button" aria-label="add basket" class="card-product__button btn"> В корзину </button>
                   </div>
                 </div>
               </div>
