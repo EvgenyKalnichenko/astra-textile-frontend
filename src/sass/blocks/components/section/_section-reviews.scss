@@ -1,0 +1,11 @@
+.section-reviews {
+  margin-bottom: 90px;
+
+  @include xl-screen {
+    margin-bottom: 50px;
+  }
+
+  @include sm-screen {
+    margin-bottom: 55px;
+  }
+}

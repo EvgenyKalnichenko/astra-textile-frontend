@@ -105,6 +105,10 @@
     opacity: 0;
     transition: var(--theme-duration) var(--ease);
 
+    @include md-screen {
+      display: none;
+    }
+
     .btn {
       flex-shrink: 0;
     }
@@ -187,10 +191,11 @@
     width: 100%;
     line-height: 43px;
   }
-
-  &:hover {
-    #{$block}__fast-view {
-      opacity: 1;
+  @media (hover: hover) {
+    &:hover {
+      #{$block}__fast-view {
+        opacity: 1;
+      }
     }
   }
 }

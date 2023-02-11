@@ -1,0 +1,51 @@
+.card-reviews {
+  border: 1px solid var(--background-components-v2);
+  border-radius: 12px;
+  padding: 30px;
+
+  @include sm-screen {
+    padding: 25px 20px;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 12px;
+    font-weight: bold;
+  }
+
+  &__top {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 20px;
+    color: var(--color-light);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    height: calc(18px * 1);
+    -webkit-line-clamp: 1;
+  }
+
+  &__data {
+    margin-right: 25px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    height: calc(22px * 6);
+    -webkit-line-clamp: 6;
+    margin-bottom: 15px;
+
+    @include xl-screen {
+      font-size: 14px;
+      line-height: 19px;
+      height: calc(19px * 6);
+    }
+  }
+}

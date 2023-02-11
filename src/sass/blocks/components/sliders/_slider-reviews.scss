@@ -1,0 +1,27 @@
+.slider-reviews {
+  position: relative;
+
+  &:not(.init) {
+    .swiper-arrow {
+      display: none;
+    }
+  }
+
+  .swiper:not(.swiper-initialized) {
+
+    .swiper-slide {
+      width: calc(33.333% - 20px);
+      margin-right: 30px;
+
+      @include lg-screen {
+        margin-right: 15px;
+        width: calc(50% - 7.5px);
+      }
+
+      @include sm-screen {
+        margin-right: 15px;
+        width: 100%;
+      }
+    }
+  }
+}

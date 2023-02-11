@@ -31,8 +31,8 @@
                         </div>
                         <div class="card-product__images">
                             <picture>
-                                <source data-srcset="img/product-1.webp" type="image/webp"/>
-                                <img class="lazy" data-src="img/product-1.jpg" alt="">
+                                <source data-srcset="img/product-3.webp" type="image/webp"/>
+                                <img class="lazy" data-src="img/product-3.jpg" alt="">
                             </picture>
                         </div>
                     </div>
@@ -77,6 +77,55 @@
             <button class="btn btn--medium btn--stroke">Показать еще</button>
         </div>
     </section>
+
+    <section class="section-reviews">
+        <div class="section-head">
+            <h2 class="section-head__title title-h2">
+                Отзывы
+            </h2>
+            <div class="section-head__right">
+                <a href="#" class="link-arrow">
+                    <span class="link-arrow__text">Все отзывы</span> {{ mixins.icon('arrow-link-right') }}
+                </a>
+            </div>
+        </div>
+        <div class="slider-reviews">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    {% for i in range(0, 7) %}
+                        <div class="swiper-slide">
+                            <div class="card-reviews">
+                                <div class="card-reviews__top">
+                                    <span class="card-reviews__data">26.09.2022</span>
+                                    <span class="card-reviews__geolocation">Краснодарский край, ст Васюринская</span>
+                                </div>
+                                <div class="card-reviews__title">
+                                    График работы в праздничные дни 2023
+                                </div>
+                                <div class="card-reviews__text">
+                                    Последний день отгрузок 30 декабря. Если вы не успели оплатить свой заказ, то отгрузка будет после праздничных дней.
+                                    С 1 января по 8 января заказы принимаются в обычном режиме. Обработка заказов и выставление счетов начнутся с 9 января.
+                                </div>
+                                <a href="#" class="link-arrow">
+                                    Читать полностью
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="swiper-arrow sm-none">
+                <div class="swiper-arrow__item swiper-arrow__item--prev">
+                    {{ mixins.icon('swiper-prev') }}
+                </div>
+                <div class="swiper-arrow__item swiper-arrow__item--next">
+                    {{ mixins.icon('swiper-next') }}
+                </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination--mod"></div>
+        </div>
+    </section>
+
     {% include "partials/_section-advantages.twig" %}
     {% include "partials/_section-news.twig" %}
 {% endblock %}

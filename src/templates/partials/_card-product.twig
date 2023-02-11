@@ -26,8 +26,8 @@
                         {% for i in range(0, 3) %}
                             <div class="swiper-slide">
                                 <picture>
-                                    <source data-srcset="img/product-1.webp" type="image/webp"/>
-                                    <img class="lazy" data-src="img/product-1.jpg" alt="">
+                                    <source data-srcset="img/product-{{ i + 1 }}.webp" type="image/webp"/>
+                                    <img class="lazy" data-src="img/product-{{ i + 1 }}.jpg" alt="">
                                 </picture>
                             </div>
                         {% endfor %}

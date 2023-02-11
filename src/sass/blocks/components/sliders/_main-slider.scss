@@ -1,26 +1,17 @@
 .main-slider {
   position: relative;
 
-  .swiper-pagination {
-    top: calc(100% + 25px);
-
-    @include xl-screen {
-      top: calc(100% + 15px);
-    }
-  }
-
-  .swiper-pagination-bullet {
-    background: var(--accent);
-  }
-
   .swiper:not(.swiper-initialized) {
 
     .swiper-slide {
       width: calc(50% - 9px);
       margin-right: 18px;
+
+      @include md-screen {
+        width: calc(100%);
+      }
     }
   }
-
 }
 
 .main-slider-item {
@@ -125,3 +116,21 @@
     }
   }
 }
+
+
+.swiper-pagination {
+
+  &.swiper-pagination--mod {
+    top: calc(100% + 25px);
+
+    @include xl-screen {
+      top: calc(100% + 15px);
+    }
+  }
+
+  .swiper-pagination-bullet {
+    background: var(--accent);
+  }
+}
+
+

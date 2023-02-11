@@ -21,7 +21,13 @@
     transform: translateY(1px);
   }
 
-  &:hover, &.is-active {
+  @media (hover: hover) {
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  &.is-active {
     color: var(--accent);
   }
 }

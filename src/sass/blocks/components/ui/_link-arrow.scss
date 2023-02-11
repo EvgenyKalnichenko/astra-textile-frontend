@@ -8,16 +8,23 @@
   cursor: pointer;
   grid-gap: 10px;
 
+  @include lg-screen {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  &__text {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
   &:hover {
     color: var(--accentHover);
   }
 
-  .duble-arrow {
-    font-size: 9px;
-  }
-
-  .icon {
+  .icon-arrow-link-right {
     //margin-left: 10px;
+    font-size: 12px;
   }
 
   &--accent {
