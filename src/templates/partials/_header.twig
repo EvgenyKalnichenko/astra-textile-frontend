@@ -16,8 +16,50 @@
                 </div>
                 <div class="header__callback sm-none">Перезвоните мне</div>
                 <div class="header__phone">
-                    <a href="tel:89206739705">8 920 673 97 05</a>
+                    <span data-modal-open="popup-callback">8 920 673 97 05</span>
                     {{ mixins.icon('arrow-bottom') }}
+                    <div data-modal="popup-callback" data-disabled-scroll="false" class="header__phone-popup">
+                        <div data-modal-close="popup-callback" class="back-bg"></div>
+                        <div data-modal-inner="popup-callback" class="card-contacts">
+                            <div class="card-contacts__item">
+                                <a href="tel:84932554328">
+                                   {{ mixins.icon('phone') }}
+                                    8 (4932) 55-43-28
+                                </a>
+                                <span class="card-contacts__item-description"></span>
+                            </div>
+                            <div class="card-contacts__item">
+                                <a href="tel:8 (920) 673-97-05">
+                                    {{ mixins.icon('phone') }}
+                                    8 (920) 673-97-05
+                                </a>
+                                <span class="card-contacts__item-description"> (viber, whatapp)</span>
+                            </div>
+                            <button type="button" class="btn btn--medium">
+                                Заказать звонок
+                            </button>
+                            <div class="card-contacts__item" data-v-759b5fdc="">
+                                {{ mixins.icon('message') }}
+                                <span class="card-contacts__email" >
+                                    astraivtex2010@yandex.ru
+                                </span> <br>
+                                Техническая поддержка
+                            </div>
+                            <button type="button" class="btn btn--medium">
+                                Написать
+                            </button>
+                            <div class="card-contacts__item" data-v-759b5fdc="">
+                                {{ mixins.icon('geolocation') }}
+                                Россия, Иваново, ул. Громобоя, д. 1Б
+                            </div>
+                            <div class="card-contacts__social" data-v-759b5fdc="">
+                                <div class="card-contacts__social-text" data-v-759b5fdc="">
+                                    Присоединяйтесь к нам:
+                                </div>
+                                {% include "./_social.twig" %}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -40,10 +82,25 @@
                     <form action="#" class="form-search">
                         <input type="text" placeholder="Поиск по каталогу" class="form-search__input">
                         <div class="form-search__btn">
-                            <button class="btn btn--pd-min btn--white btn--border-accent" aria-label="search" type="submit">
+                            <button class="btn btn--pd-min btn--white btn--border-accent" aria-label="search"
+                                    type="submit">
                                 {{ mixins.icon('search') }}
                                 <span class="sm-none">Найти</span>
                             </button>
+                        </div>
+                        <div class="form-search__result">
+                            <div class="custom-scroll">
+                                {% for i in range(0, 7) %}
+                                    <a href="#" class="form-search__item">Халат 1</a>
+                                    <a href="#" class="form-search__item">Халат 2</a>
+                                {% endfor %}
+
+                                {# <div class="form-search__message">Ничего не найдено</div> #}
+
+                                {# <div class="form-search__message"> #}
+                                {# <div class="loader"></div> #}
+                                {# </div> #}
+                            </div>
                         </div>
                     </form>
                 </div>

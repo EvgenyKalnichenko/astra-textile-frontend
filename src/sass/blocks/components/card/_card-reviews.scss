@@ -1,4 +1,5 @@
 .card-reviews {
+  $block: &;
   border: 1px solid var(--background-components-v2);
   border-radius: 12px;
   padding: 30px;
@@ -46,6 +47,16 @@
       font-size: 14px;
       line-height: 19px;
       height: calc(19px * 6);
+    }
+  }
+
+  &--mod {
+    border: none;
+    padding: 0;
+
+    #{$block}__text {
+      height:100%;
+      -webkit-line-clamp: unset;
     }
   }
 }

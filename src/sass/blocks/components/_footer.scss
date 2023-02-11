@@ -13,6 +13,7 @@
     width: calc(100% + 30px);
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     @include sm-screen {
       margin-left: -10px;
@@ -119,7 +120,7 @@
 
     &:last-child {
       width: 25%;
-      margin-left: auto;
+      //margin-left: auto;
 
       @include md-screen {
         width: 100%;

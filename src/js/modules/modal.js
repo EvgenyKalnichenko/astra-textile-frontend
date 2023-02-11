@@ -17,8 +17,9 @@ class Modal {
 
     open (id) {
         const $modal = $(`[data-modal=${id}]`);
+        const isDisabled = $modal.attr('data-disabled-scroll') !== 'false';
 
-        lockScroll();
+        if(isDisabled) lockScroll();
 
         $modal.addClass(this.activeClass).focus();
         this.body.addClass('modal-open');

@@ -1,0 +1,75 @@
+.card-contacts {
+  background: #FFFFFF;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  min-width: 350px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  transition: 0.35s var(--ease) transform;
+
+  .is-active & {
+    transform: translateY(0);
+  }
+
+  @include sm-screen {
+    border-radius: 10px 10px 0 0;
+    transform: translateY(100%);
+  }
+
+  @include xs-screen {
+    min-width: 280px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__item {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 8px;
+    color: #000;
+
+    svg {
+      position: absolute;
+      color: var(--accent);
+      left: 2px;
+      flex-shrink: 0;
+      top: 3px;
+
+
+      &.icon-message {
+        top: 8px;
+        font-size: 12px;
+
+        @include xs-screen {
+          top: 4px;
+        }
+      }
+    }
+  }
+  &__email{
+    cursor: pointer;
+  }
+  .btn{
+    margin: 10px 0 20px;
+  }
+
+  a:not(.social__item) {
+    color: #000;
+    transition: 0.2s color ease-in-out;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  &__social {
+    margin-top: 30px;
+
+    &-text {
+      margin-bottom: 8px;
+    }
+  }
+}

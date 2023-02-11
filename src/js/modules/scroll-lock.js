@@ -18,12 +18,12 @@ export const lockScroll = () => {
             body.style.paddingRight = scrollWidth + 'px';
             headerElement.style.paddingRight = scrollWidth + 'px';
         }
-        bodyScrollTop =
-            typeof window.pageYOffset !== "undefined"
-                ? window.pageYOffset
-                : (document.documentElement ||
-                document.body.parentNode ||
-                document.body).scrollTop;
+        // bodyScrollTop =
+        //     typeof window.pageYOffset !== "undefined"
+        //         ? window.pageYOffset
+        //         : (document.documentElement ||
+        //         document.body.parentNode ||
+        //         document.body).scrollTop;
 
         body.classList.add("scroll-locked");
 
@@ -37,7 +37,7 @@ export const unlockScroll = () => {
         body.classList.remove("scroll-locked");
 
         // body.style.top = null;
-        window.scrollTo(0, bodyScrollTop);
+        // window.scrollTo(0, bodyScrollTop);
         body.style.paddingRight = '';
         headerElement.style.paddingRight = '';
         locked = false;

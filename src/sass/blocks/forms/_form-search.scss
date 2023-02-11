@@ -1,4 +1,5 @@
 .form-search {
+  $block: &;
   min-height: 49px;
   display: flex;
   position: relative;
@@ -34,5 +35,54 @@
         padding: 15px;
       }
     }
+  }
+
+  &__result {
+    border-radius: 25px;
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    border: 1px solid var(--background-components-v2);
+    background: var(--background-components);
+    width: 100%;
+    min-width: 320px;
+    overflow: hidden;
+    z-index: 20;
+    display: none;
+
+    @include xs-screen {
+      min-width: 290px;
+    }
+
+    .custom-scroll {
+      overflow: auto;
+      max-height: calc(40px * 10);
+    }
+  }
+
+  &__message {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 12px;
+    position: relative;
+  }
+
+  &__item {
+    padding: 10px 20px;
+    display: block;
+    cursor: pointer;
+
+    &:hover {
+      color: #fff;
+      background: var(--color-light);
+      opacity: 0.3;
+    }
+  }
+
+  &__input:focus ~ &__result {
+    display: block;
   }
 }

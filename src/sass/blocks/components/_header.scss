@@ -85,13 +85,14 @@
     margin-left: 25px;
     display: inline-flex;
     align-items: center;
+    position: relative;
 
     @include sm-screen {
       font-size: 15px;
       line-height: 20px;
     }
 
-    svg {
+    & > svg {
       font-size: 5px;
       margin-left: 11px;
       margin-right: 5px;
@@ -99,6 +100,68 @@
       @include sm-screen {
         margin-right: 0;
         margin-left: 7px;
+      }
+    }
+
+    &:hover {
+
+      @include rmin($break_sm) {
+        .header__phone-popup {
+          opacity: 1;
+          transform: translateY(0);
+          pointer-events: all;
+        }
+      }
+    }
+
+    .back-bg {
+      background: rgba(0, 0, 0, 0.25);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100vh;
+      right: 0;
+      display: none;
+      z-index: -1;
+
+      @include sm-screen {
+        display: block;
+      }
+    }
+
+    &-popup {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 15px);
+      z-index: 20;
+      transform: translateY(20px);
+      transition: 0.3s ease;
+      opacity: 0;
+      pointer-events: none;
+
+      &.is-active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: all;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        width: 100%;
+        height: 15px;
+      }
+
+      @include sm-screen {
+        transform: translateY(0);
+        position: fixed;
+        bottom: 0;
+        top: unset;
+        width: 100%;
+        left: 0;
+        height: auto;
+        z-index: 100;
       }
     }
   }

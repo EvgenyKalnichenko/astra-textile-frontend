@@ -1,5 +1,4 @@
 import {modal} from "../modules/modal";
-import {swiperInitNews} from "../modules/swiperInit";
 
 export const modalsInit = () => {
     const $document = $(document);
@@ -37,8 +36,11 @@ export const modalsInit = () => {
 
     $(document).on('modal-open', (params, name) => {
         if(name === 'news-detail') {
-            swiperInitNews();
-            // initModalSticky();
+
         }
+    })
+
+    $(document).on('mouseleave', '.header__phone', () => {
+        modal.close('popup-callback')
     })
 }
