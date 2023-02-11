@@ -118,6 +118,8 @@
         max-width: 100%;
         overflow: hidden;
         border: none;
+        transform: translateY(100%);
+        transition: 0.4s var(--ease) transform;
       }
 
       #{$block}__scroll {
@@ -134,6 +136,10 @@
 
   &__wrap {
     position: relative;
+  }
+
+  &.is-active #{$block}__inner {
+    transform: translateY(0);
   }
 }
 
