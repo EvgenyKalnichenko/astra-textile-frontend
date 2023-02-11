@@ -117,12 +117,17 @@
         max-height: calc((var(--vh, 1vh) * 90));
         max-width: 100%;
         overflow: hidden;
+        border: none;
       }
 
       #{$block}__scroll {
         overflow: auto;
         height: 100%;
         max-height: calc((var(--vh, 1vh) * 90) - 25px);
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
       }
     }
   }

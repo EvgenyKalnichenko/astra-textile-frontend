@@ -1,4 +1,5 @@
 .product-total {
+  $block: &;
 
   &__text {
     font-weight: 600;
@@ -12,6 +13,11 @@
     font-size: 28px;
     line-height: 38px;
     margin-bottom: 10px;
+
+    @include sm-screen {
+      font-size: 22px;
+      line-height: 29px;
+    }
   }
 
   &__row {
@@ -20,8 +26,40 @@
     .btn {
       margin-right: 25px;
       width: 100%;
+
+      @include sm-screen {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &--sm-fixed {
+
+    @include sm-screen {
+      position: fixed;
+      align-items: center;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      background: #fff;
+      padding: 7px 15px;
+      box-shadow: 0 4px 35px rgba(0, 0, 0, 0.1);
+      justify-content: space-between;
+
+      #{$block}__price {
+        margin-bottom: 0;
+      }
+
+      #{$block}__text {
+        margin-bottom: 0;
+      }
     }
 
-
+    .favorite-icon {
+      width: 44px;
+      height: 44px;
+      font-size: 18px;
+    }
   }
 }
