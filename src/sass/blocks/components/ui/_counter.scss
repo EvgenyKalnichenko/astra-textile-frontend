@@ -1,0 +1,64 @@
+.counter {
+  $block: &;
+  display: inline-flex;
+
+  &__name {
+    width: 35px;
+    line-height: 34px;
+    top: 2px;
+  }
+
+  &__info {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--color-light);
+  }
+
+  &__main {
+    position: relative;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid var(--color-light-v2);
+    display: inline-flex;
+    overflow: hidden;
+  }
+
+  &__input {
+    border: none;
+    outline: none;
+    width: 33px;
+    min-height: 34px;
+    text-align: center;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-size: 11px;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--background-components);
+      color: var(--accent);
+    }
+  }
+
+  &.yellow  {
+
+    #{$block}__main {
+      border-color: var(--color-yellow);
+    }
+  }
+
+  &.green  {
+
+    #{$block}__main {
+      border-color: var(--color-green);
+    }
+  }
+
+
+}

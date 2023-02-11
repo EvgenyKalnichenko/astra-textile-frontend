@@ -135,7 +135,7 @@
       top: calc(100% + 15px);
       z-index: 20;
       transform: translateY(20px);
-      transition: 0.3s ease;
+      transition: var(--theme-duration) ease;
       opacity: 0;
       pointer-events: none;
 

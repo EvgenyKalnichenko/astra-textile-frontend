@@ -1,0 +1,27 @@
+.product-total {
+
+  &__text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 4px;
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 10px;
+  }
+
+  &__row {
+    display: flex;
+
+    .btn {
+      margin-right: 25px;
+      width: 100%;
+    }
+
+
+  }
+}

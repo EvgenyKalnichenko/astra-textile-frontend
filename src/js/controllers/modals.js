@@ -1,4 +1,5 @@
 import {modal} from "../modules/modal";
+import {swiperInit} from "../modules/swiperInit";
 
 export const modalsInit = () => {
     const $document = $(document);
@@ -35,8 +36,9 @@ export const modalsInit = () => {
     });
 
     $(document).on('modal-open', (params, name) => {
-        if(name === 'news-detail') {
-
+        if(name === 'fast-view') {
+            swiperInit()
+            myLazyLoad.update()
         }
     })
 

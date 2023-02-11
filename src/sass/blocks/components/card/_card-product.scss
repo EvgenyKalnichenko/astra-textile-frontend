@@ -191,8 +191,12 @@
     width: 100%;
     line-height: 43px;
   }
+
   @media (hover: hover) {
     &:hover {
+      #{$block}__wrapper {
+        box-shadow: 0 4px 35px rgba(0, 0, 0, 0.1);
+      }
       #{$block}__fast-view {
         opacity: 1;
       }

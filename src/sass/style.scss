@@ -39,12 +39,18 @@
 @import './blocks/components/card/card-reviews';
 @import './blocks/components/card/card-contacts';
 
+@import 'blocks/components/product/product-prices';
+@import './blocks/components/product/product-sizes';
+@import './blocks/components/product/product-total';
+@import './blocks/components/product/fast-view-product';
+
 @import './blocks/components/ui/link-arrow';
 @import './blocks/components/ui/favorite-icon';
 @import './blocks/components/ui/swiper-arrow';
 @import './blocks/components/ui/social';
 @import './blocks/components/ui/btn';
 @import './blocks/components/ui/label-status';
+@import './blocks/components/ui/counter';
 
 // HELPERS
 @import './base/helpers';

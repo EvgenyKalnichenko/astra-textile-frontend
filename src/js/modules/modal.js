@@ -34,9 +34,24 @@ class Modal {
             return;
         }
 
-        let ajaxUrl = (location.hostname === 'localhost' || location.hostname === '192.168.0.13' || "cadesign.ru" === location.hostname) ? `./ajax/${id}.html` : `/local/ajax/`;
-        let ajaxDataType = (location.hostname === 'localhost' || location.hostname === '192.168.0.13' || "cadesign.ru" === location.hostname) ? `html` : `json`;
-        let ajaxMethod = (location.hostname === 'localhost' || location.hostname === '192.168.0.13' || "cadesign.ru" === location.hostname) ? `GET` : `POST`;
+        const hostname = location.hostname
+        let ajaxUrl = '/local/ajax/'
+        let ajaxDataType = 'json'
+        let ajaxMethod = 'post'
+
+        //Для тетсового домена
+        if(hostname === "evgenykalnichenko.github.io") {
+            ajaxUrl = `./astra-textile-frontend/ajax/${id}.html`
+            ajaxMethod = 'GET'
+            ajaxDataType = 'html'
+        }
+        //Для разработки
+        if(hostname === "localhost") {
+            ajaxUrl = `./ajax/${id}.html`
+            ajaxMethod = 'GET'
+            ajaxDataType = 'html'
+        }
+
         $.ajax({
             url: ajaxUrl,
             method: ajaxMethod,

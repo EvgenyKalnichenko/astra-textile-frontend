@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  //overflow: hidden;
   z-index: 300;
   display: flex;
   flex-direction: column;
@@ -14,6 +14,7 @@
   pointer-events: none;
   transition: opacity .3s ease;
   padding: 20px;
+  overflow: auto;
 
   @include sm-screen {
     padding: 0;
@@ -35,11 +36,23 @@
     margin: auto;
     position: relative;
     border-radius: 12px;
-    overflow-y: auto;
-    overflow-x: hidden;
+    //overflow-y: auto;
+    //overflow-x: hidden;
 
     @include sm-screen {
       padding: 20px 15px;
+    }
+  }
+
+  &--w930 {
+    #{$block}__inner {
+      max-width: 930px;
+    }
+  }
+
+  &--w450 {
+    #{$block}__inner {
+      max-width: 450px;
     }
   }
 
@@ -47,8 +60,8 @@
     display: block;
     cursor: pointer;
     position: absolute;
-    top: 24px;
-    right: 15px;
+    top: 10px;
+    right: 10px;
     font-size: 14px;
     background-color: transparent;
     border: none;
@@ -56,7 +69,7 @@
     transition: color var(--theme-duration) var(--ease);
 
     @include sm-screen {
-      right: 25px;
+      right: 13px;
     }
 
     // расширешие области нажатия
@@ -101,7 +114,7 @@
       #{$block}__inner {
         margin: auto 0 0 0;
         border-radius: 15px 15px 0 0;
-        max-height: calc((var(--vh, 1vh) * 80));
+        max-height: calc((var(--vh, 1vh) * 90));
         max-width: 100%;
         overflow: hidden;
       }
@@ -109,7 +122,7 @@
       #{$block}__scroll {
         overflow: auto;
         height: 100%;
-        max-height: calc((var(--vh, 1vh)*80) - 100px);
+        max-height: calc((var(--vh, 1vh) * 90) - 25px);
       }
     }
   }

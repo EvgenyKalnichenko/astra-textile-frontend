@@ -34,14 +34,14 @@
   }
 
   &--medium {
-    min-height: 43px;
+    min-height: 44px;
   }
 
   &--big {
-    min-height: 49px;
+    min-height: 50px;
 
     @include xl-screen {
-      min-height: 43px;
+      min-height: 44px;
     }
   }
 
