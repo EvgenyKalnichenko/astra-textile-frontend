@@ -33,6 +33,8 @@
     <path fill-rule="evenodd" clip-rule="evenodd" d="M.293 1.879A1 1 0 1 1 1.707.464l2.121 2.122L5.95.464A1 1 0 0 1 7.364 1.88L4.542 4.7a1 1 0 0 1-1.42.006L.291 1.879z"/>
 </symbol><symbol id="icon-arrow-left" viewBox="0 0 5 8">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.293 7.364A1 1 0 0 0 4.707 5.95L2.586 3.828l2.121-2.12A1 1 0 1 0 3.293.292L.471 3.115a1 1 0 0 0-.006 1.42l2.828 2.829z"/>
+</symbol><symbol id="icon-arrow-link-right" viewBox="0 0 9 14">
+    <path class="st0" d="M1.7 13.7c-.3 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l4.9-5-5-4.9C.5 1.7.5 1.1.9.7s1-.4 1.4 0L8.7 7l-6.4 6.4c-.1.2-.4.3-.6.3z"/>
 </symbol><symbol id="icon-arrow-long-left" viewBox="0 0 12 8">
     <path d="M.646 3.646a.5.5 0 0 0 0 .708l3.182 3.182a.5.5 0 1 0 .708-.708L1.707 4l2.829-2.828a.5.5 0 1 0-.708-.708L.646 3.646zM12 3.5H1v1h11v-1z"/>
 </symbol><symbol id="icon-arrow-right" viewBox="0 0 5 8">
