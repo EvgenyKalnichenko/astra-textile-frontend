@@ -27,6 +27,7 @@
     display: flex;
     align-items: start;
     flex-direction: column;
+    z-index: 2;
 
     @include r(360px) {
       left: 6%;
