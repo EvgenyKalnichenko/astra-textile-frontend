@@ -39,14 +39,8 @@ class Modal {
         let ajaxDataType = 'json'
         let ajaxMethod = 'post'
 
-        //Для тетсового домена
-        if(hostname === "evgenykalnichenko.github.io") {
-            ajaxUrl = `./astra-textile-frontend/ajax/${id}.html`
-            ajaxMethod = 'GET'
-            ajaxDataType = 'html'
-        }
-        //Для разработки
-        if(hostname === "localhost") {
+        //Для тетсового домена и разработки
+        if(hostname === "evgenykalnichenko.github.io" || hostname === "localhost") {
             ajaxUrl = `./ajax/${id}.html`
             ajaxMethod = 'GET'
             ajaxDataType = 'html'
