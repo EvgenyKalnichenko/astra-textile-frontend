@@ -90,14 +90,22 @@
                 <img src="./img/logo.png" alt="logo">
               </a>
               <div class="header__menu none md-flex">
-                <svg class="icon icon-hamb-mobile">
-                  <use xlink:href="img/sprite.svg#icon-hamb-mobile"></use>
-                </svg> Меню
+                <span class="open">
+                  <svg class="icon icon-hamb-mobile">
+                    <use xlink:href="img/sprite.svg#icon-hamb-mobile"></use>
+                  </svg> Меню </span>
+                <span class="close">
+                  <svg class="icon icon-close">
+                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                  </svg> Закрыть </span>
               </div>
               <div class="header__catalog md-none">
-                <button class="btn btn--transparent btn--big" type="button">
+                <button class="btn btn--transparent btn--big" data-modal-toggle="menu-catalog" type="button">
                   <svg class="icon icon-hamburger">
                     <use xlink:href="img/sprite.svg#icon-hamburger"></use>
+                  </svg>
+                  <svg class="icon icon-close">
+                    <use xlink:href="img/sprite.svg#icon-close"></use>
                   </svg> Каталог </button>
               </div>
               <div class="header__search">
@@ -140,7 +148,7 @@
                   </div>
                   <div class="customer-panel__name"> Главная </div>
                 </a>
-                <a href="#" class="customer-panel__item none md-flex">
+                <a href="#" data-modal-toggle="menu-catalog" class="customer-panel__item none md-flex">
                   <div class="customer-panel__icon">
                     <svg class="icon icon-hamb-mobile">
                       <use xlink:href="img/sprite.svg#icon-hamb-mobile"></use>
@@ -179,9 +187,351 @@
             </div>
           </div>
         </div>
+        <div class="menu-mobile" data-modal="menu-mobile" data-modal-inner="menu-mobile">
+          <div class="menu-mobile__wrap">
+            <a href="#" class="menu-mobile__link" data-modal-open="menu-catalog">Каталог</a>
+            <a href="#" class="menu-mobile__link">О компании</a>
+            <a href="#" class="menu-mobile__link">Доставка и оплата</a>
+            <a href="#" class="menu-mobile__link">Отзывы</a>
+            <a href="#" class="menu-mobile__link">Сотрудничество</a>
+            <a href="#" class="menu-mobile__link">Прайс-лист</a>
+            <a href="#" class="menu-mobile__link">Размеры</a>
+            <a href="#" class="menu-mobile__link">Контакты</a>
+          </div>
+        </div>
+        <div class="menu-catalog" data-modal="menu-catalog" data-disabled-scroll="false">
+          <div class="menu-catalog__wrapper container" data-modal-inner="catalog-menu">
+            <div class="menu-catalog__left custom-scroll">
+              <div class="recommendations">
+                <div class="recommendations__item blue">
+                  <div class="recommendations__icon">
+                    <svg class="icon icon-new">
+                      <use xlink:href="img/sprite.svg#icon-new"></use>
+                    </svg>
+                  </div>
+                  <a href="#" class="recommendations__link"> Новинки </a>
+                </div>
+                <div class="recommendations__item accent">
+                  <div class="recommendations__icon">
+                    <svg class="icon icon-actions">
+                      <use xlink:href="img/sprite.svg#icon-actions"></use>
+                    </svg>
+                  </div>
+                  <a href="#" class="recommendations__link"> Акции </a>
+                </div>
+                <div class="recommendations__item yellow">
+                  <div class="recommendations__icon">
+                    <svg class="icon icon-star">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </div>
+                  <a href="#" class="recommendations__link"> Хиты продаж </a>
+                </div>
+              </div>
+              <a href="#" class="menu-catalog__link" data-menu-open="Женский трикотаж ">Женский трикотаж </a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Мужской трикотаж">Мужской трикотаж</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Детский трикотаж">Детский трикотаж</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Домашний текстиль">Домашний текстиль</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Спецодежда">Спецодежда</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Нижнее белье">Нижнее белье</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Носки, колготки">Носки, колготки</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Шапки, шарфы, перчатки, снуды">Шапки, шарфы, перчатки, снуды</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Сумки зонты">Сумки зонты</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Обувь">Обувь</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Женский трикотаж ">Женский трикотаж </a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Мужской трикотаж">Мужской трикотаж</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Детский трикотаж">Детский трикотаж</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Домашний текстиль">Домашний текстиль</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Спецодежда">Спецодежда</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Нижнее белье">Нижнее белье</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Носки, колготки">Носки, колготки</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Шапки, шарфы, перчатки, снуды">Шапки, шарфы, перчатки, снуды</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Сумки зонты">Сумки зонты</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Обувь">Обувь</a>
+            </div>
+            <div class="menu-catalog__right custom-scroll">
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Женский трикотаж " data-modal-inner="Женский трикотаж ">
+                <a href="#" data-modal-close="Женский трикотаж " class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Женский трикотаж </h4>
+                <ul>
+                  <li>
+                    <a href="#">Халаты</a>
+                  </li>
+                  <li>
+                    <a href="#">Платья</a>
+                  </li>
+                  <li>
+                    <a href="#">Сарафаны</a>
+                  </li>
+                  <li>
+                    <a href="#">Футболки майки</a>
+                  </li>
+                  <li>
+                    <a href="#">Джемпера, водолазки</a>
+                  </li>
+                  <li>
+                    <a href="#">Толстовки кардиганы</a>
+                  </li>
+                  <li>
+                    <a href="#">Костюмы</a>
+                  </li>
+                  <li>
+                    <a href="#">Брюки, бриджи, легенсы, шорты, юбки</a>
+                  </li>
+                  <li>
+                    <a href="#">Пижамы</a>
+                  </li>
+                  <li>
+                    <a href="#">Ночные сорочки</a>
+                  </li>
+                  <li>
+                    <a href="#">Ночные комплекты-пеньюары</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Мужской трикотаж" data-modal-inner="Мужской трикотаж">
+                <a href="#" data-modal-close="Мужской трикотаж" class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Мужской трикотаж</h4>
+                <ul>
+                  <li>
+                    <a href="#">Халаты</a>
+                  </li>
+                  <li>
+                    <a href="#">Платья</a>
+                  </li>
+                  <li>
+                    <a href="#">Сарафаны</a>
+                  </li>
+                  <li>
+                    <a href="#">Футболки майки</a>
+                  </li>
+                  <li>
+                    <a href="#">Джемпера, водолазки</a>
+                  </li>
+                  <li>
+                    <a href="#">Толстовки кардиганы</a>
+                  </li>
+                  <li>
+                    <a href="#">Костюмы</a>
+                  </li>
+                  <li>
+                    <a href="#">Брюки, бриджи, легенсы, шорты, юбки</a>
+                  </li>
+                  <li>
+                    <a href="#">Пижамы</a>
+                  </li>
+                  <li>
+                    <a href="#">Ночные сорочки</a>
+                  </li>
+                  <li>
+                    <a href="#">Ночные комплекты-пеньюары</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Детский трикотаж" data-modal-inner="Детский трикотаж">
+                <a href="#" data-modal-close="Детский трикотаж" class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Детский трикотаж</h4>
+                <ul>
+                  <li>
+                    <a href="#">Халаты</a>
+                  </li>
+                  <li>
+                    <a href="#">Платья</a>
+                  </li>
+                  <li>
+                    <a href="#">Сарафаны</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Домашний текстиль" data-modal-inner="Домашний текстиль">
+                <a href="#" data-modal-close="Домашний текстиль" class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Домашний текстиль</h4>
+                <ul>
+                  <li>
+                    <a href="#">Готовый бизнес</a>
+                  </li>
+                  <li>
+                    <a href="#">Партнерство и сотрудничество</a>
+                  </li>
+                  <li>
+                    <a href="#">Бизнес услуги</a>
+                  </li>
+                  <li>
+                    <a href="#">Сырье, тара, товары оптом</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Спецодежда" data-modal-inner="Спецодежда">
+                <a href="#" data-modal-close="Спецодежда" class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Спецодежда</h4>
+                <ul>
+                  <li>
+                    <a href="#">Детская одежда</a>
+                  </li>
+                  <li>
+                    <a href="#">Детская обувь</a>
+                  </li>
+                  <li>
+                    <a href="#">Игрушки, книжки</a>
+                  </li>
+                  <li>
+                    <a href="#">Детское питание</a>
+                  </li>
+                  <li>
+                    <a href="#">Коляски и транспорт для детей</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Нижнее белье" data-modal-inner="Нижнее белье">
+                <a href="#" data-modal-close="Нижнее белье" class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Нижнее белье</h4>
+                <ul>
+                  <li>
+                    <a href="#">Одежда для мужчин</a>
+                  </li>
+                  <li>
+                    <a href="#">Одежда для женщин</a>
+                  </li>
+                  <li>
+                    <a href="#">Обувь для мужчин</a>
+                  </li>
+                  <li>
+                    <a href="#">Обувь для женщин</a>
+                  </li>
+                  <li>
+                    <a href="#">Головные уборы</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Носки, колготки" data-modal-inner="Носки, колготки">
+                <a href="#" data-modal-close="Носки, колготки" class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Носки, колготки</h4>
+                <ul>
+                  <li>
+                    <a href="#">Фауна</a>
+                  </li>
+                  <li>
+                    <a href="#">Флора</a>
+                  </li>
+                  <li>
+                    <a href="#">Аквариумистика</a>
+                  </li>
+                  <li>
+                    <a href="#">Автоуслуги</a>
+                  </li>
+                  <li>
+                    <a href="#">Фермерское хозяйство</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Шапки, шарфы, перчатки, снуды" data-modal-inner="Шапки, шарфы, перчатки, снуды">
+                <a href="#" data-modal-close="Шапки, шарфы, перчатки, снуды" class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Шапки, шарфы, перчатки, снуды</h4>
+                <ul>
+                  <li>
+                    <a href="#">Готовый бизнес</a>
+                  </li>
+                  <li>
+                    <a href="#">Партнерство и сотрудничество</a>
+                  </li>
+                  <li>
+                    <a href="#">Бизнес услуги</a>
+                  </li>
+                  <li>
+                    <a href="#">Сырье, тара, товары оптом</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Сумки зонты" data-modal-inner="Сумки зонты">
+                <a href="#" data-modal-close="Сумки зонты" class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Сумки зонты</h4>
+                <ul>
+                  <li>
+                    <a href="#">Готовый бизнес</a>
+                  </li>
+                  <li>
+                    <a href="#">Партнерство и сотрудничество</a>
+                  </li>
+                  <li>
+                    <a href="#">Бизнес услуги</a>
+                  </li>
+                  <li>
+                    <a href="#">Сырье, тара, товары оптом</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Обувь" data-modal-inner="Обувь">
+                <a href="#" data-modal-close="Обувь" class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Обувь</h4>
+                <ul>
+                  <li>
+                    <a href="#">Готовый бизнес</a>
+                  </li>
+                  <li>
+                    <a href="#">Партнерство и сотрудничество</a>
+                  </li>
+                  <li>
+                    <a href="#">Бизнес услуги</a>
+                  </li>
+                  <li>
+                    <a href="#">Сырье, тара, товары оптом</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </header>
-      <div class="catalog-menu">
-      </div>
       <main class="container">
         <div class="layout__container container">
           <div class="page404">
