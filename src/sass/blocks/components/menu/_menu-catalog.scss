@@ -30,6 +30,10 @@
     padding-top: 30px;
     padding-bottom: 10px;
     height: 100%;
+
+    @include sm-screen {
+      padding-top: 10px;
+    }
   }
 
   &__left {

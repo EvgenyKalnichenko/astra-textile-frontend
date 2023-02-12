@@ -69,9 +69,10 @@
                     <img src="./img/logo.png" alt="logo">
                 </a>
                 <div class="header__menu none md-flex">
-                    {{ mixins.icon('hamb-mobile') }}
-                    Меню
+                    <span class="open"> {{ mixins.icon('hamb-mobile') }} Меню </span>
+                    <span class="close"> {{ mixins.icon('close') }} Закрыть </span>
                 </div>
+
                 <div class="header__catalog md-none">
                     <button class="btn btn--transparent btn--big" data-modal-toggle="menu-catalog" type="button">
                         {{ mixins.icon('hamburger') }}
@@ -153,7 +154,18 @@
             </div>
         </div>
     </div>
-
+    <div class="menu-mobile" data-modal="menu-mobile" data-modal-inner="menu-mobile">
+        <div class="menu-mobile__wrap">
+            <a href="#" class="menu-mobile__link" data-modal-open="menu-catalog">Каталог</a>
+            <a href="#" class="menu-mobile__link">О компании</a>
+            <a href="#" class="menu-mobile__link">Доставка и оплата</a>
+            <a href="#" class="menu-mobile__link">Отзывы</a>
+            <a href="#" class="menu-mobile__link">Сотрудничество</a>
+            <a href="#" class="menu-mobile__link">Прайс-лист</a>
+            <a href="#" class="menu-mobile__link">Размеры</a>
+            <a href="#" class="menu-mobile__link">Контакты</a>
+        </div>
+    </div>
     <div class="menu-catalog" data-modal="menu-catalog" data-disabled-scroll="false">
         <div class="menu-catalog__wrapper container" data-modal-inner="catalog-menu">
             <div class="menu-catalog__left custom-scroll">
@@ -211,6 +223,7 @@
             </div>
         </div>
     </div>
+
 </header>
 
 

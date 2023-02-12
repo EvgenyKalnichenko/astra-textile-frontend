@@ -4,6 +4,18 @@ $(document).on('mouseenter', '[data-menu-open]', openMenu)
 
 // $(document).on('mouseleave', '[data-menu-open]', closeMenu)
 
+$('.header__menu').on('click', function () {
+    const $this = $(this)
+    const isActive = $this.hasClass('is-active')
+    $this.toggleClass('is-active')
+    if(isActive) {
+        modal.close('menu-catalog')
+        modal.close('menu-mobile')
+    } else {
+        modal.open('menu-mobile')
+    }
+})
+
 function openMenu() {
     closeMenu()
     const $this = $(this)
