@@ -16,9 +16,10 @@ class Modal {
     }
 
     open (id) {
-        const $modal = $(`[data-modal=${id}]`);
+        console.log('id', id)
+        const $modal = $(`[data-modal="${id}"]`);
         const isDisabled = $modal.attr('data-disabled-scroll') !== 'false';
-
+        console.log('isDisabled', isDisabled, $modal.attr('data-disabled-scroll'))
         if(isDisabled) lockScroll();
 
         $modal.addClass(this.activeClass).focus();
@@ -81,7 +82,7 @@ class Modal {
     }
 
     close(id) {
-        const $modal = $(`[data-modal=${id}]`),
+        const $modal = $(`[data-modal="${id}"]`),
             dataOnClose = $modal.data('modal-onclose');
 
         if (id) {

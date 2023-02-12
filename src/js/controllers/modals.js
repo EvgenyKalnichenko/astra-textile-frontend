@@ -12,6 +12,14 @@ export const modalsInit = () => {
         modal.open(modalId);
     });
 
+    $document.on('click', '[data-modal-toggle]', function (e) {
+        e.preventDefault();
+        const $this = $(this),
+            modalId = $this.data('modal-toggle');
+        $this.toggleClass('is-active')
+        modal.toggle(modalId);
+    });
+
     $document.on('click', '[data-modal-ajax-open]', function (e) {
         e.preventDefault();
         const $this = $(this),

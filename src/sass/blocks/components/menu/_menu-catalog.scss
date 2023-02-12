@@ -1,0 +1,185 @@
+.menu-catalog {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background: #fff;
+  z-index: 20;
+  opacity: 0;
+  //transform: translateY(-100%);
+  transition: 0.38s var(--ease);
+  box-shadow: 0 44px 35px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  height: 80vh;
+  height: calc(100vh - var(--hHead));
+
+  @include sm-screen {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: unset;
+  }
+
+  &.is-active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+
+  &__wrapper {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    height: 100%;
+  }
+
+  &__left {
+    width: 325px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 100%;
+    padding-right: 30px;
+    flex-shrink: 0;
+
+    @include xl-screen {
+      width: 290px;
+      padding-right: 15px;
+    }
+
+    @include sm-screen {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+
+  &__back {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+
+    @include sm-screen {
+      display: inline-flex;
+    }
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background: var(--accent);
+      margin-right: 10px;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      font-size: 9px;
+    }
+  }
+
+  &__right {
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+
+    @include sm-screen {
+      background: var(--accent);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      border-radius: 12px;
+      padding: 10px 10px;
+      margin-bottom: 25px;
+      color: #fff;
+      margin-left: -7px;
+      width: calc(100% + 14px);
+    }
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    border-radius: 12px;
+    padding: 10px 24px;
+    margin-bottom: 10px;
+
+    @include xl-screen {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include sm-screen {
+      padding: 10px 0;
+    }
+
+    &.is-active {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    &:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+  }
+
+  &__second {
+    padding: 20px 55px;
+    max-width: 800px;
+    width: 100%;
+    display: none;
+
+    @include md-screen {
+      padding: 15px 35px;
+    }
+
+    @include sm-screen {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      padding: 15px;
+      font-size: 16px;
+    }
+
+    &.is-active {
+      display: block;
+    }
+
+    ul {
+      width: 100%;
+      column-count: 2;
+
+      @include sm-screen {
+        column-count: 1;
+      }
+
+      li {
+        margin-bottom: 20px;
+      }
+
+      a:hover {
+        color: var(--accent);
+      }
+    }
+  }
+
+  .recommendations {
+    padding: 0 20px;
+    margin-bottom: 22px;
+
+    @include sm-screen {
+      padding: 0;
+    }
+  }
+}

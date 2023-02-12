@@ -23,7 +23,7 @@
                         <div data-modal-inner="popup-callback" class="card-contacts">
                             <div class="card-contacts__item">
                                 <a href="tel:84932554328">
-                                   {{ mixins.icon('phone') }}
+                                    {{ mixins.icon('phone') }}
                                     8 (4932) 55-43-28
                                 </a>
                                 <span class="card-contacts__item-description"></span>
@@ -40,7 +40,7 @@
                             </button>
                             <div class="card-contacts__item" data-v-759b5fdc="">
                                 {{ mixins.icon('message') }}
-                                <span class="card-contacts__email" >
+                                <span class="card-contacts__email">
                                     astraivtex2010@yandex.ru
                                 </span> <br>
                                 Техническая поддержка
@@ -73,8 +73,9 @@
                     Меню
                 </div>
                 <div class="header__catalog md-none">
-                    <button class="btn btn--transparent btn--big" type="button">
+                    <button class="btn btn--transparent btn--big" data-modal-toggle="menu-catalog" type="button">
                         {{ mixins.icon('hamburger') }}
+                        {{ mixins.icon('close') }}
                         Каталог
                     </button>
                 </div>
@@ -113,7 +114,7 @@
                             Главная
                         </div>
                     </a>
-                    <a href="#" class="customer-panel__item none md-flex">
+                    <a href="#" data-modal-toggle="menu-catalog" class="customer-panel__item none md-flex">
                         <div class="customer-panel__icon">
                             {{ mixins.icon('hamb-mobile') }}
                         </div>
@@ -152,8 +153,64 @@
             </div>
         </div>
     </div>
+
+    <div class="menu-catalog" data-modal="menu-catalog" data-disabled-scroll="false">
+        <div class="menu-catalog__wrapper container" data-modal-inner="catalog-menu">
+            <div class="menu-catalog__left custom-scroll">
+                <div class="recommendations">
+                    <div class="recommendations__item blue">
+                        <div class="recommendations__icon">
+                            {{ mixins.icon('new') }}
+                        </div>
+                        <a href="#" class="recommendations__link">
+                            Новинки
+                        </a>
+                    </div>
+                    <div class="recommendations__item accent">
+                        <div class="recommendations__icon">
+                            {{ mixins.icon('actions') }}
+                        </div>
+                        <a href="#" class="recommendations__link">
+                            Акции
+                        </a>
+                    </div>
+                    <div class="recommendations__item yellow">
+                        <div class="recommendations__icon">
+                            {{ mixins.icon('star') }}
+                        </div>
+                        <a href="#" class="recommendations__link">
+                            Хиты продаж
+                        </a>
+                    </div>
+                </div>
+                {% for i in range(0, 2) %}
+                    {% for item in data.catalogMenu %}
+                        <a href="#" class="menu-catalog__link" data-menu-open="{{ item.title }}">{{ item.title }}</a>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+            <div class="menu-catalog__right custom-scroll">
+                {% for item in data.catalogMenu %}
+                    <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="{{ item.title }}" data-modal-inner="{{ item.title }}">
+                        <a href="#" data-modal-close="{{ item.title }}" class="menu-catalog__back none">
+                            <span>
+                                {{ mixins.icon('arrow-left') }}
+                            </span>
+                            Назад
+                        </a>
+                        <h4 class="menu-catalog__title">{{ item.title }}</h4>
+                        <ul>
+                            {% for el in item.list %}
+                                <li>
+                                    <a href="#">{{ el.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 </header>
 
-<div class="catalog-menu">
 
-</div>

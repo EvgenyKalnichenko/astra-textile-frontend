@@ -1,0 +1,42 @@
+.recommendations {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+
+  @include xl-screen {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__item {
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    width: 17px;
+    height: 24px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+
+    svg {
+      font-size: 17px;
+    }
+  }
+
+  &__link {
+    color: var(--main-color-font);
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      color: currentColor;
+    }
+  }
+}

@@ -13,6 +13,11 @@ body {
   @include xl-screen {
     font-size: 14px;
   }
+
+  @include sm-screen {
+    padding-top: 125px;
+    padding-top: var(--hHead);
+  }
 }
 
 .page {

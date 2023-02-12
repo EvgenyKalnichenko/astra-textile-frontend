@@ -5,7 +5,7 @@ function setSize() {
     winsize.height = window.innerHeight;
     documentStyles.setProperty('--vh', `${winsize.height / 100}px`);
     documentStyles.setProperty('--vw', `${winsize.width / 100}px`);
-    documentStyles.setProperty('--hHead', `${$('.header').height()}px`);
+    documentStyles.setProperty('--hHead', `${$('.header__container').height()}px`);
 }
 
 setSize();

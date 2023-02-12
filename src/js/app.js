@@ -6,6 +6,8 @@ import "./modules/footer";
 import "./modules/cardProduct";
 import "./modules/common";
 
+import "./controllers/catalog-menu";
+
 import LazyLoad from 'vanilla-lazyload';
 import {documentReady} from "./modules/utils"
 import {swiperInit} from "./modules/swiperInit";
