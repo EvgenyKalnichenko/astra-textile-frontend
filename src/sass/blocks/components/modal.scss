@@ -45,6 +45,25 @@
     }
   }
 
+  &--right {
+    @include rmin($break_sm) {
+      padding: 0;
+
+      #{$block}__close {
+        right: 15px;
+        top: 10px;
+      }
+
+      #{$block}__inner {
+        margin-left: auto;
+        border-radius: 0;
+        margin-right: 0;
+        height: 100%;
+        width: 400px;
+      }
+    }
+  }
+
   &--auto {
     #{$block}__inner {
       width: auto;

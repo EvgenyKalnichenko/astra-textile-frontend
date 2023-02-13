@@ -29,6 +29,14 @@
     width: 100%;
   }
 
+  &--black {
+    color: var(--main-color-font);
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
   &--transparent {
     text-transform: uppercase;
   }
@@ -49,6 +57,14 @@
     padding: 0 25px 0 13px;
   }
 
+  &--accent {
+    color: var(--accent);
+
+    &:hover {
+      color: var(--main-color-font);
+    }
+  }
+
   &--white {
     background: #fff;
     color: var(--main-color-font);
@@ -60,11 +76,10 @@
 
   &--stroke {
     background: transparent;
-    color:  var(--accent);
-    border: 1px solid var(--accent);
+    border: 1px solid currentColor;
 
     &:hover {
-      color: #fff;
+      background: transparent;
     }
   }
 

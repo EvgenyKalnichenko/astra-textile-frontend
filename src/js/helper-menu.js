@@ -63,6 +63,7 @@ function pageWidget(pages) {
 $(function () {
     pageWidget([
         'index',
+        'catalog',
         '404'
     ]);
 });

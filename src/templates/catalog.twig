@@ -1,0 +1,177 @@
+{% set index = true %}
+{% set title = "Каталог" %}
+
+{% extends "layouts/_layout.twig" %}
+
+{% block content %}
+    <h1 class="title-h2">Главная</h1>
+    <section class="section-catalog">
+        <div class="section-catalog__sidebar">
+            12
+        </div>
+        <div class="section-catalog__main">
+            <div class="section-catalog__top">
+                <div class="section-catalog__filters">
+                    <div class="filter-item none sm-flex" data-modal-open="filters">
+                        <div class="filter-item__text">Все фильтры</div>
+                        <div class="filter-item__icon">0</div>
+                    </div>
+                    <div class="filter-item sm-none" data-modal-open="filters">
+                        <div class="filter-item__text">Цена</div>
+                        <div class="filter-item__icon">1</div>
+                    </div>
+                    <div class="filter-item sm-none" data-modal-open="filters">
+                        <div class="filter-item__text">Размер</div>
+                        <div class="filter-item__icon">2</div>
+                    </div>
+                    <div class="filter-item sm-none" data-modal-open="filters">
+                        <div class="filter-item__text">Ткань</div>
+                    </div>
+                </div>
+                <div class="section-catalog__sort">
+                    <div class="select select--mod" data-select="filter">
+                        <div class="select__head" data-select-head="">
+                            <div class="select__title select__title-sort" data-select-title="">
+                                Сначала популярные
+                            </div>
+                            {{ mixins.icon('arrow-bottom') }}
+                        </div>
+                        <div class="select__body" data-select-body="">
+                            <ul class="select__list select__list-sort">
+                                <li class="" data-select-item="">
+                                    <a rel="canonical"
+                                       href="?sort_by=SCALED_PRICE_2&amp;sort_order=ASC">
+                                        по цене (сначала дорогие) </a>
+                                </li>
+                                <li class="" data-select-item="">
+                                    <a rel="canonical"
+                                       href="?sort_by=SCALED_PRICE_2&amp;sort_order=DESC">
+                                        по цене (сначала дешевые) </a>
+                                </li>
+                                <li class="" data-select-item="">
+                                    <a rel="canonical"
+                                       href="?sort_by=PROPERTY_KHITY_PRODAZH&amp;sort_order=ASC,NULLS">
+                                        по популярности (популярные в начале) </a>
+                                </li>
+                                <li class="" data-select-item="">
+                                    <a rel="canonical"
+                                       href="?sort_by=PROPERTY_KHITY_PRODAZH&amp;sort_order=NULLS,DESC">
+                                        по популярности (популярные в конце) </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <input type="hidden" class="select__input" value="Женская" data-select-input="">
+                    </div>
+                </div>
+            </div>
+            <div class="section-catalog__active-filters">
+                <form id="active-filters" class="active-filters">
+                    <div class="active-filters__row">
+                        {% for i in range(0, 16) %}
+                            <div class="active-filters__item">
+                                Цвет {{ i }}
+                                <input id="arrFilter_2124_3217157474-{{ i }}" type="checkbox" hidden="hidden" value="Y">
+                                <label for="arrFilter_2124_3217157474-{{ i }}" class="active-filters__label">
+                                    {{ mixins.icon('close') }}
+                                </label>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </form>
+            </div>
+            <div class="section-products">
+                <div class="section-products__grid">
+                    {% for i in range(0, 16) %}
+                        {% include "partials/_card-product.twig" %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="section-catalog__pagination">
+                {% include "partials/_pagination.twig" %}
+            </div>
+            <div class="section-seo">
+                <h2 class="section-seo__title title-h2">С этими товарами ищут</h2>
+                <div class="section-seo__grid">
+                    {% for i in range(0, 4) %}
+                        <a href="#" class="btn btn--big btn--stroke btn--black">Платья</a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal modal--right modal--sm-bottom" data-modal="filters">
+        <div class="modal__inner custom-scroll" data-modal-inner="filters">
+            <div class="modal__close" data-modal-close="filters">
+                {{ mixins.icon('close') }}
+            </div>
+            <div class="modal__container">
+                <h2 class="modal__title">Фильтр</h2>
+                <div class="modal__scroll">
+                    <form action="#" class="form-filters">
+                        <div class="filter-list">
+                            <div class="filter-list-wrap">
+                                <div class="filter-list__top">
+                                    <div class="filter-list__name">Ткань:</div>
+                                    <div class="filter-list__reset">
+                                        Сбросить {{ mixins.icon('close') }}
+                                    </div>
+                                </div>
+                                <div class="filter-list__scroll custom-scroll">
+                                    {% for i in range(0, 3) %}
+                                        <div class="filter-list__item filter-list__item">
+                                            <div class="checkbox checkbox--stroke checkbox--min">
+                                                <input type="checkbox" id="arrFilter_2076_763644074{{ i }}" class="checkbox__input" >
+                                                <label for="arrFilter_2076_763644074{{ i }}" class="checkbox__label">
+                                                    <span class="checkbox__icon">{{ mixins.icon('check-mark') }}</span>
+                                                    <span class="checkbox__text checkbox__text--min">
+                                                    Ткань {{ i }}
+                                                </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <div class="filter-list__btn">
+                                    <span>Показать все </span>
+                                    {{ mixins.icon('arrow-bottom') }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-list">
+                            <div class="filter-list-wrap">
+                                <div class="filter-list__top">
+                                    <div class="filter-list__name">Размер:</div>
+                                    <div class="filter-list__reset">
+                                        Сбросить {{ mixins.icon('close') }}
+                                    </div>
+                                </div>
+                                <div class="filter-list__scroll custom-scroll">
+                                    {% for i in range(30, 50) %}
+                                        <div class="filter-list__item filter-list__item">
+                                            <div class="checkbox checkbox--stroke checkbox--min">
+                                                <input type="checkbox" id="arrFilter_2076_763644074{{ i }}" class="checkbox__input" >
+                                                <label for="arrFilter_2076_763644074{{ i }}" class="checkbox__label">
+                                                    <span class="checkbox__icon">{{ mixins.icon('check-mark') }}</span>
+                                                    <span class="checkbox__text checkbox__text--min">
+                                                    {{ i }}
+                                                </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <div class="filter-list__btn">
+                                    <span>Показать все </span>
+                                    {{ mixins.icon('arrow-bottom') }}
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include "partials/_section-advantages.twig" %}
+{% endblock %}

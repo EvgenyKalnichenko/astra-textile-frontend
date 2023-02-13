@@ -71,7 +71,8 @@
     }
 
     #{$block}__input:checked + #{$block}__label & {
-      //border-color: $accentBlue;
+      background: var(--accent);
+
       .icon {
         opacity: 1;
       }
@@ -99,6 +100,42 @@
       &:hover {
         color: var(--main-color-font);
       }
+    }
+  }
+
+  &--min {
+
+    #{$block}__label {
+      padding-left: 32px;
+    }
+
+    #{$block}__icon {
+      top: 0;
+      width: 20px;
+      height: 20px;
+
+      @include xl-screen {
+        top: -1px;
+      }
+
+      @include sm-screen {
+        top: -2px;
+      }
+
+      svg {
+        font-size: 10px;
+      }
+    }
+  }
+
+  &--stroke {
+    #{$block}__icon {
+      background: transparent;
+      border: 1px solid var(--background-components-v2);
+    }
+
+    #{$block}__input:checked + #{$block}__label #{$block}__icon{
+      border-color: var(--accent);
     }
   }
 }

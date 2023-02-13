@@ -12,6 +12,7 @@ import LazyLoad from 'vanilla-lazyload';
 import {documentReady} from "./modules/utils"
 import {swiperInit} from "./modules/swiperInit";
 import {modalsInit} from './controllers/modals';
+import {selectsInit} from './modules/select';
 
 import {interactionWithCard} from "./modules/cardProduct";
 
@@ -25,6 +26,9 @@ $(function () {
 
     // инициализация модальных окон
     modalsInit();
+
+    // инициализация селектов
+    selectsInit()
 
     // инициализация lazyload
     window.myLazyLoad = new LazyLoad({

@@ -11,7 +11,7 @@ export default class Select {
             afterSelect: null
         };
 
-        this.options = Object.assign(defaultOpts, obj);
+        this.options = Object.assign({}, defaultOpts, obj);
 
         this.dom = {el: $(el)};
         this.dom.head = this.dom.el.find(this.options.head);
@@ -40,10 +40,7 @@ export default class Select {
         });
 
         $(document).mouseup((e) => {
-            if (
-                !this.dom.el[0].contains(e.target) &&
-                !$(e.target).closest('.air-datepicker-global-container').length
-            ) {
+            if (!this.dom.el[0].contains(e.target)) {
                 this.close();
             }
         });
@@ -69,6 +66,9 @@ export default class Select {
     }
     changeActive(el) {
         const isActive = el.hasClass('active');
+
+        this.dom.el.removeClass('is-error');
+
         this.dom.items.removeClass('active');
         if (!isActive) {
             el.addClass('active');
@@ -76,39 +76,43 @@ export default class Select {
     }
 }
 
-$('[data-select=sort]:not([data-select-init=true])').each(function() {
-    const select = new Select(this, {
-        changeHead: false,
-        closeOnSelect: true
+export function selectsInit() {
+    // $('[data-select="with-radio"]:not([data-select-init=true])').each(function() {
+    //     new Select(this, {
+    //         changeHead: true,
+    //         closeOnSelect: true,
+    //         input: '[data-select-input]',
+    //         afterSelect: (e) => {
+    //             const dataValue = e.dom.items.filter('.active').data('value');
+    //
+    //             if (dataValue) {
+    //                 e.dom.el.closest('.radio-with-select').find('input[type=radio]').attr('value', dataValue);
+    //             }
+    //         }
+    //     });
+    // });
+    //
+    // $('[data-select=tabs]:not([data-select-init=true])').each(function() {
+    //     new Select(this, {
+    //         changeHead: true,
+    //         closeOnSelect: true,
+    //     });
+    // });
+    //
+    // $('[data-select=form]:not([data-select-init=true])').each(function() {
+    //     new Select(this, {
+    //         changeHead: true,
+    //         closeOnSelect: true,
+    //         input: '[data-select-input]'
+    //     });
+    // });
+    console.log('1')
+    $('[data-select=filter]:not([data-select-init=true])').each(function() {
+        console.log('dasdasasd')
+        new Select(this, {
+            changeHead: false,
+            closeOnSelect: false
+        });
     });
 
-    $(this).find('[data-sort-close]').on('click', function () {
-        select.close();
-    })
-
-    $(this).find('[data-select-change]').on('click', function() {
-        const $this = $(this),
-            $body = $this.closest('[data-select-body]'),
-            $activeRadio = $body.find('input[type=radio]:checked'),
-            isRange = $activeRadio.data('range');
-
-        let text = '';
-
-        if (isRange) {
-            const $inputBox = $activeRadio.closest('.input-radio'),
-                start = $inputBox.find('[data-range-start]').val(),
-                end = $inputBox.find('[data-range-end]').val(),
-                rangeText = `c ${start} по ${end}`;
-
-            $activeRadio.data('value', rangeText);
-            text = rangeText;
-        } else {
-            text = `${$activeRadio.data('value')}`;
-        }
-
-        select.changeHead(text);
-        select.close();
-    });
-});
-
-
+}

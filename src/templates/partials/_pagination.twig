@@ -1,0 +1,46 @@
+<div class="paginator-box">
+    <button class="paginator-box__load">
+        {{ mixins.icon('double-arrow-bottom') }}
+        Показать еще
+    </button>
+    <ul class="pagination">
+        <li class="page-item disabled">
+            <button disabled="disabled" class="page-link page-link--icon disabled">
+                {{ mixins.icon('arrow-link-left') }}
+            </button>
+        </li>
+        <li class="page-item active ">
+            <button class="page-link is-active">
+                1
+            </button>
+        </li>
+        <li class="page-item">
+            <button class="page-link ">
+                2
+            </button>
+        </li>
+        <li class="page-item">
+            <button class="page-link ">
+                3
+            </button>
+        </li>
+        <li class="page-item">
+            <button class="page-link ">
+                4
+            </button>
+        </li>
+        <li class="page-item  disabled"><span class="page-link disabled">
+        ...
+      </span></li>
+        <li class="page-item  ">
+            <button class="page-link ">
+                148
+            </button>
+        </li>
+        <li class="page-item ">
+            <button class="page-link page-link--icon">
+                {{ mixins.icon('arrow-link-right') }}
+            </button>
+        </li>
+    </ul>
+</div>

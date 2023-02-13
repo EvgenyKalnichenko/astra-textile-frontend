@@ -1,0 +1,119 @@
+
+.select {
+  position: relative;
+  min-width: 190px;
+  $block: &;
+
+  &__head {
+    height: 40px;
+    padding: 0 30px 0 10px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #dadada;
+    position: relative;
+    cursor: pointer;
+
+    .icon-arrow-bottom {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      color: currentColor;
+      font-size: 5px;
+      -webkit-transition: -webkit-transform .3s ease;
+      -o-transition: transform .3s ease;
+      transition: transform var(--theme-duration) var(--ease);
+    }
+  }
+
+  &__title {
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    line-height: 38px
+  }
+
+  &__body {
+    position: absolute;
+    top: calc(100% - 1px);
+    right: 0;
+    background: #FFFFFF;
+    box-shadow: 0 4px 35px rgba(0, 0, 0, 0.1);
+    width: 360px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(5px);
+    transition: opacity var(--theme-duration) var(--ease), transform var(--theme-duration) var(--ease);
+    border-radius: 12px;
+    padding: 10px 0;
+  }
+
+  &__list {
+    margin: 6px 0;
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    li {
+      padding: 3px 16px;
+      cursor: pointer;
+      -webkit-transition: background-color .3s ease;
+      -o-transition: background-color .3s ease;
+      transition: background-color .3s ease;
+
+        &.active, &:hover {
+        background-color: #f2f2f2
+      }
+    }
+  }
+
+
+  &--mod {
+    #{$block}__head {
+      border: none;
+    }
+  }
+
+  &.is-error {
+
+    .select__head {
+      border-color: var(--accent)
+    }
+  }
+
+  &.is-disabled {
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    .select__head {
+      background-color: transparent
+    }
+  }
+
+  &.is-active {
+    z-index: 10;
+    -webkit-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    transition-delay: .3s;
+
+    .select__head .arrow-bottom {
+      -webkit-transform: translateY(-50%) rotate(180deg);
+      -ms-transform: translateY(-50%) rotate(180deg);
+      transform: translateY(-50%) rotate(180deg)
+    }
+
+    .select__body {
+      opacity: 1;
+      pointer-events: auto;
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0)
+    }
+  }
+}
+
+

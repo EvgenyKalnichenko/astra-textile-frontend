@@ -1,0 +1,50 @@
+.section-catalog {
+  display: flex;
+
+  &__sidebar {
+    width: 300px;
+    margin-right: 20px;
+    flex-shrink: 0;
+
+    @include lg-screen {
+      display: none;
+    }
+  }
+
+  &__filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: auto;
+
+    .filter-item {
+      margin-right: 15px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__active-filters {
+    margin-bottom: 35px;
+  }
+
+  &__main {
+    width: 100%;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 1rem;
+    margin-bottom: 30px;
+  }
+
+  &__top {
+    border-bottom: 1px solid #E0E0E0;
+    margin-bottom: 25px;
+    display: flex;
+    padding-bottom: 15px;
+    flex-wrap: wrap;
+  }
+
+  &__sort {}
+}

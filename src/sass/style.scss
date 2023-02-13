@@ -18,6 +18,7 @@
 @import './blocks/forms/form-search';
 @import './blocks/layout/layout';
 
+
 @import './blocks/components/header';
 @import './blocks/components/footer';
 @import './blocks/components/copyright';
@@ -35,6 +36,8 @@
 @import './blocks/components/section/section-head';
 @import './blocks/components/section/section-reviews';
 @import './blocks/components/section/section-about';
+@import './blocks/components/section/section-catalog';
+@import './blocks/components/section/section-seo';
 
 @import './blocks/components/sliders/main-slider';
 @import './blocks/components/sliders/slider-reviews';
@@ -58,8 +61,13 @@
 @import './blocks/components/ui/counter';
 @import './blocks/components/ui/form-group';
 @import './blocks/components/ui/checkbox';
+@import './blocks/components/ui/pagination';
+@import './blocks/components/ui/filter-item';
+@import './blocks/components/ui/select';
 
 @import './blocks/components/forms/form-callback';
+@import './blocks/components/forms/form-active-filters';
+@import './blocks/components/forms/form-filters';
 
 // HELPERS
 @import './base/helpers';

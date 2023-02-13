@@ -1,0 +1,22 @@
+.section-seo {
+  margin-bottom: 80px;
+
+  @include xl-screen {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+
+
+    .btn {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
