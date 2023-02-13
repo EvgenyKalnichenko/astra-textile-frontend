@@ -1,0 +1,102 @@
+.form-group  {
+  $block: &;
+  position: relative;
+  margin-bottom: 11px;
+  width: 100%;
+
+  &--mg0{
+    margin-bottom: 0;
+  }
+
+  &--mg10{
+    margin-bottom: 10px;
+  }
+
+  &--mg20 {
+    margin-bottom: 20px;
+  }
+
+  &--mg-b30{
+    margin-bottom: 30px;
+  }
+
+  &--mg30{
+    margin: 30px 0;
+  }
+
+  &__error {
+    font-size: 10px;
+    color: var(--accent);
+    display: none;
+  }
+
+  &.error {
+    //margin-bottom: 0;
+
+    #{$block}__error {
+      display: block;
+    }
+
+    #{$block}__input, #{$block}__textarea {
+      border: 1px solid var(--accent);
+    }
+  }
+
+  &__label {
+    margin-bottom: 3px;
+  }
+
+  &__input {
+    background: transparent;
+    border: 1px solid var(--background-components-v2);
+    border-radius: 6px;
+    overflow: hidden;
+    outline: 0;
+    line-height: 42px;
+    padding: 0 15px;
+    width: 100%;
+    font-size: 16px;
+    transition: background var(--theme-duration) var(--ease);
+
+    &.error {
+      border-color: $error;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    background: var(--background-components);
+    border: none;
+    border-radius: 6px;
+    padding: 15px;
+  }
+
+  &__error-field {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+    z-index: 1;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  //&__input:not(:placeholder-shown) ~ &__help,
+  //&__input:focus ~ &__help,
+  //&__textarea:not(:placeholder-shown) ~ &__help,
+  //&__textarea:focus ~ &__help{
+  //  opacity: 0;
+  //}
+}

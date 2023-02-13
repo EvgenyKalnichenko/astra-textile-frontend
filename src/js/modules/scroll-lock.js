@@ -16,7 +16,7 @@ export const lockScroll = () => {
     if (!locked) {
         if (window.document.documentElement.clientHeight < body.scrollHeight) {
             body.style.paddingRight = scrollWidth + 'px';
-            headerElement.style.paddingRight = scrollWidth + 'px';
+            // headerElement.style.paddingRight = scrollWidth + 'px';
         }
         // bodyScrollTop =
         //     typeof window.pageYOffset !== "undefined"
