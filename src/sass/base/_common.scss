@@ -1,3 +1,5 @@
+
+
 body {
   height: 100%;
   font-size: 16px;
@@ -15,8 +17,7 @@ body {
   }
 
   @include sm-screen {
-    padding-top: 125px;
-    padding-top: var(--hHead);
+    padding-top: var(--hHead, 125px);
   }
 }
 

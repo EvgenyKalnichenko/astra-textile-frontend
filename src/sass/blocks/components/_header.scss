@@ -1,17 +1,18 @@
 .header {
   position: relative;
+  z-index: 30;
+
+  @include sm-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 
   &__container {
-    z-index: 10;
-    position: relative;
+    z-index: 15;
     background: #fff;
-
-    @include sm-screen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-    }
+    position: relative;
   }
 
   &__top {
@@ -259,6 +260,7 @@
   }
 
   &__menu {
+    min-width: 90px;
 
     span {
       display: inline-flex;
