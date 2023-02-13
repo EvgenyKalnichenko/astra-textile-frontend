@@ -1,4 +1,5 @@
 import {modal} from "../modules/modal";
+import {Breakpoints, withBreakpoint} from "../modules/breakpoints";
 
 $(document).on('mouseenter', '[data-menu-open]', openMenu)
 
@@ -51,3 +52,16 @@ $(document).on('click', '.menu-catalog__back', function () {
     const name = $(this).attr('data-modal-close')
     $(`[data-menu-open="${name}"]`).removeClass('is-active')
 })
+
+let startWidth = $(window).width()
+
+function addAttrForBigScreen() {
+    const currentWidth = $(window).width();
+    if(currentWidth > Breakpoints.MD) {
+        $('.menu-catalog').attr('data-disabled-scroll', 'false')
+    } else if (startWidth > currentWidth){
+        $('.menu-catalog').attr('data-disabled-scroll', '')
+    }
+}
+
+withBreakpoint(addAttrForBigScreen, Breakpoints.MD)
