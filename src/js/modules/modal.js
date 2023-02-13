@@ -1,5 +1,6 @@
 import {lockScroll, unlockScroll} from "./scroll-lock";
 import {createElement} from "./utils";
+import {SPMaskBehavior, spOptions} from "../controllers/mask";
 
 class Modal {
     constructor() {
@@ -65,11 +66,12 @@ class Modal {
                 this.onModalLoaded(dataHtml);
                 this.open(id);
 
+
                 // myLazyLoad.update();
                 // input mask
-                // if($(`[data-modal=${id}]`).find('[name="phone"]').length) {
-                //     $('[name="phone"]').mask('+7 (999) 999 99 99');
-                // }
+                if($(`[data-modal=${id}]`).find('[name="phone"]').length) {
+                    $('[name="phone"]').mask(SPMaskBehavior, spOptions);
+                }
             },
             error: () => {
                 this.showError();
