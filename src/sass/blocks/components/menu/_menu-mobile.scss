@@ -7,7 +7,7 @@
   height: 80vh;
   height: calc((var(--vh, 1vh)*100) - var(--hHead));
   display: none;
-  transition: 0.38s var(--ease);
+  transition: var(--theme-duration) var(--ease);
 
   @include md-screen {
     opacity: 0;

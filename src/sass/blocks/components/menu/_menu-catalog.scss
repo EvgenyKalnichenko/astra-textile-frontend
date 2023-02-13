@@ -5,8 +5,8 @@
   background: #fff;
   z-index: 20;
   opacity: 0;
-  transform: translateY(-100%);
-  transition: 0.38s var(--ease);
+
+  transition: var(--theme-duration) var(--ease);
   box-shadow: 0 44px 35px rgba(0, 0, 0, 0.1);
   pointer-events: none;
   height: 80vh;
@@ -132,8 +132,6 @@
       }
     }
 
-
-
     @media (hover: hover) {
       &:hover {
         background: var(--accent);
@@ -147,11 +145,12 @@
     max-width: 800px;
     width: 100%;
     opacity: 0;
-    transform: translate(-100%, 0);
-    transition: 0.38s var(--ease);
+    transition: var(--theme-duration) var(--ease);
+    display: none;
 
     @include md-screen {
       padding: 15px 35px;
+      transform: translate(-100%, 0);
     }
 
     @include sm-screen {
@@ -167,8 +166,9 @@
     }
 
     &.is-active {
-      opacity: 1;
+      display: block;
       transform: translate(0, 0);
+      opacity: 1;
     }
 
     ul {
