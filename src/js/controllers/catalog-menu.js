@@ -1,5 +1,4 @@
 import {modal} from "../modules/modal";
-import {swiperInit} from "../modules/swiperInit";
 
 $(document).on('mouseenter', '[data-menu-open]', openMenu)
 
@@ -8,12 +7,18 @@ $(document).on('mouseenter', '[data-menu-open]', openMenu)
 $('.header__menu').on('click', function () {
     const $this = $(this)
     const isActive = $this.hasClass('is-active')
-    $this.toggleClass('is-active')
     if(isActive) {
+        // закрываем все отрытые меню
         modal.close('menu-catalog')
         modal.close('menu-mobile')
+        $('.menu-catalog__second.is-active').each((index, el) => {
+            const name = $(el).attr('data-modal')
+            modal.close(name)
+        })
+        $this.removeClass('is-active')
     } else {
         modal.open('menu-mobile')
+        $this.addClass('is-active')
     }
 })
 
@@ -22,13 +27,11 @@ function openMenu() {
     const $this = $(this)
     const name = $this.attr('data-menu-open')
     $this.addClass('is-active')
-    console.log('name', name)
     modal.open(name)
 }
 
 function closeMenu() {
     $('.menu-catalog__second.is-active').removeClass('is-active')
-
     $('[data-menu-open]').removeClass('is-active')
 }
 

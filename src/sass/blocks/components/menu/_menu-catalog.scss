@@ -5,12 +5,12 @@
   background: #fff;
   z-index: 20;
   opacity: 0;
-
   transition: var(--theme-duration) var(--ease);
   box-shadow: 0 44px 35px rgba(0, 0, 0, 0.1);
   pointer-events: none;
   height: 80vh;
   height: calc((var(--vh, 1vh)*100) - var(--hHead));
+  overflow: auto;
 
   @include md-screen {
     transform: translate(-100%, 0);
@@ -32,6 +32,11 @@
     padding-top: 30px;
     padding-bottom: 10px;
     height: 100%;
+    overflow: auto;
+
+    @include md-screen {
+      padding: 15px 5px;
+    }
 
     @include sm-screen {
       padding-top: 10px;

@@ -164,9 +164,48 @@
             <a href="#" class="menu-mobile__link">Прайс-лист</a>
             <a href="#" class="menu-mobile__link">Размеры</a>
             <a href="#" class="menu-mobile__link">Контакты</a>
+            <div class="card-contacts card-contacts--mod">
+                <div class="card-contacts__item">
+                    <a href="tel:84932554328">
+                        {{ mixins.icon('phone') }}
+                        8 (4932) 55-43-28
+                    </a>
+                    <span class="card-contacts__item-description"></span>
+                </div>
+                <div class="card-contacts__item">
+                    <a href="tel:8 (920) 673-97-05">
+                        {{ mixins.icon('phone') }}
+                        8 (920) 673-97-05
+                    </a>
+                    <span class="card-contacts__item-description"> (viber, whatapp)</span>
+                </div>
+                <button type="button" class="btn btn--medium">
+                    Заказать звонок
+                </button>
+                <div class="card-contacts__item" data-v-759b5fdc="">
+                    {{ mixins.icon('message') }}
+                    <span class="card-contacts__email">
+                                    astraivtex2010@yandex.ru
+                                </span> <br>
+                    Техническая поддержка
+                </div>
+                <button type="button" class="btn btn--medium">
+                    Написать
+                </button>
+                <div class="card-contacts__item" data-v-759b5fdc="">
+                    {{ mixins.icon('geolocation') }}
+                    Россия, Иваново, ул. Громобоя, д. 1Б
+                </div>
+                <div class="card-contacts__social" data-v-759b5fdc="">
+                    <div class="card-contacts__social-text" data-v-759b5fdc="">
+                        Присоединяйтесь к нам:
+                    </div>
+                    {% include "./_social.twig" %}
+                </div>
+            </div>
         </div>
     </div>
-    <div class="menu-catalog" data-modal="menu-catalog" data-disabled-scroll="false">
+    <div class="menu-catalog" data-modal="menu-catalog">
         <div class="menu-catalog__wrapper container" data-modal-inner="catalog-menu">
             <div class="menu-catalog__left custom-scroll">
                 <div class="recommendations">
@@ -223,7 +262,6 @@
             </div>
         </div>
     </div>
-
 </header>
 
 
