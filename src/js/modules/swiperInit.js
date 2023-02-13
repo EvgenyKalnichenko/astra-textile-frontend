@@ -28,7 +28,7 @@ export function swiperInit () {
                     slidesPerView: 1,
                 },
                 // when window width is >= 640px
-                1023: {
+                1024: {
                     slidesPerView: 2,
                 }
             }
@@ -82,11 +82,11 @@ export function swiperInit () {
                         },
                     },
                     // when window width is >= 640px
-                    767: {
+                    768: {
                         slidesPerView: 2,
                         spaceBetween: 15,
                     },
-                    1279: {
+                    1280: {
                         spaceBetween: 30,
                         slidesPerView: 3,
                     }

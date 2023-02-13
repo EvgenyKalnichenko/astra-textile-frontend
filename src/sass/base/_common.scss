@@ -17,6 +17,10 @@ body {
   @include md-screen {
     padding-top: var(--hHead, 125px);
   }
+
+  @include sm-screen {
+    padding-top: var(--hHead, 107px);
+  }
 }
 
 .page {
