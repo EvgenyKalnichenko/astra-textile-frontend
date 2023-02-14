@@ -101,6 +101,7 @@
     display: inline-flex;
     align-items: center;
     position: relative;
+    z-index: 22;
 
     @include sm-screen {
       font-size: 15px;

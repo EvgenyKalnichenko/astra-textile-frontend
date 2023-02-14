@@ -15,15 +15,15 @@
     min-width: 45px;
   }
 
-  &.blue {
+  &.label-status--blue {
     background: #139CFF;
   }
 
-  &.orange {
+  &.label-status--orange {
     background: #FFAD03;
   }
 
-  &.action {
+  &.label-status--action {
     background: var(--accent);
   }
 }
