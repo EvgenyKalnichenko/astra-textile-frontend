@@ -68,12 +68,51 @@
     }
   }
 
-
   &--mod {
     #{$block}__head {
       border: none;
     }
   }
+
+  &--sm-fixed {
+
+    @include sm-screen {
+      #{$block}__body {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        left: 0;
+        z-index: 213132;
+        top: unset;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        transition: var(--theme-duration) var(--ease) transform;
+        transform: translateY(100%);
+      }
+
+      #{$block}__bg {
+        position: fixed;
+        bottom: 0;
+        height: 100vh;
+        left: 0;
+        width: 100vw;
+        background: rgba(0,0,0,0.25);
+        z-index: 60;
+        display: none;
+      }
+
+      &.is-active {
+        z-index: 50;
+
+        #{$block}__bg {
+          display: block;
+        }
+      }
+    }
+  }
+
+
 
   &.is-error {
 

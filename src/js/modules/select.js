@@ -2,6 +2,7 @@ export default class Select {
     constructor(el, obj) {
         const defaultOpts = {
             head: '[data-select-head]',
+            close: '[data-select-close]',
             body: '[data-select-body]',
             title: '[data-select-title]',
             items: '[data-select-item]',
@@ -19,6 +20,7 @@ export default class Select {
         this.dom.title = this.dom.el.find(this.options.title);
         this.dom.items = this.dom.el.find(this.options.items);
         this.dom.input = this.dom.el.find(this.options.input);
+        this.dom.close = this.dom.el.find(this.options.close);
         this.defaultValue = this.dom.title.text();
         this.activeClass = 'is-active';
 
@@ -38,6 +40,11 @@ export default class Select {
             if (this.options.closeOnSelect) this.close();
             if (this.options.afterSelect) this.options.afterSelect(this);
         });
+
+        this.dom.close.on('click', (e) => {
+            console.log('clickclickclick')
+            this.close();
+        })
 
         $(document).mouseup((e) => {
             if (!this.dom.el[0].contains(e.target)) {
@@ -106,9 +113,8 @@ export function selectsInit() {
     //         input: '[data-select-input]'
     //     });
     // });
-    console.log('1')
+
     $('[data-select=filter]:not([data-select-init=true])').each(function() {
-        console.log('dasdasasd')
         new Select(this, {
             changeHead: false,
             closeOnSelect: false

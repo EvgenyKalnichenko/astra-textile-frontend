@@ -21,10 +21,6 @@ $(document).on('click', '.menu-sidebar__name', function () {
     $(this).siblings('.menu-sidebar__list').stop().slideToggle(200)
 })
 
-$('.menu-sidebar__link.is-active').closest('.menu-sidebar__list').css({
-    'display': 'block'
-})
-
 // input mask
 // $('[name="phone"]').mask('+7 (999) 999 99 99');
 // $.fn.setCursorPosition = function (pos) {

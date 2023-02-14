@@ -67,12 +67,12 @@
 .paginator-box {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
   margin: 60px 0 80px;
 
   @include sm-screen {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   &__load {
@@ -86,6 +86,8 @@
     border-radius: 25px;
     background: transparent;
     transition: 0.15s ease-in-out;
+    width: max-content;
+    flex: 1 1 0;
 
     @include md-screen {
       height: 40px;
@@ -93,6 +95,7 @@
 
     @include sm-screen {
       width: 100%;
+      flex: unset;
       margin-bottom: 20px;
     }
 
