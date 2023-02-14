@@ -1,4 +1,4 @@
-.title-h2 {
+.title-h2, .title-page {
   font-weight: 600;
   font-size: 32px;
   line-height: 44px;
@@ -16,5 +16,14 @@
   @include sm-screen {
     font-size: 18px;
     line-height: 25px;
+  }
+}
+
+
+.title-page {
+  margin-bottom: 36px;
+
+  @include sm-screen {
+    margin-bottom: 30px;
   }
 }

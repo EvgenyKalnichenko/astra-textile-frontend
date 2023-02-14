@@ -1,0 +1,43 @@
+.menu-sidebar {
+  margin: 15px 0;
+
+  &__name {
+    font-weight: 600;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    min-height: 33px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    margin-top: 5px;
+
+    &:hover {
+      color: var(--accent);
+    }
+
+    .icon {
+      font-size: 6px;
+    }
+  }
+
+  &__list {
+    display: none;
+    padding-left: 6px;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 3px;
+    border-radius: 12px;
+    padding: 10px 20px;
+    min-height: 42px;
+    //transition: var(--theme-duration) var(--ease) color, var(--theme-duration) var(--ease) background-color;
+
+    &.is-active, &:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+  }
+}

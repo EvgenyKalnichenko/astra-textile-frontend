@@ -4,10 +4,25 @@
 {% extends "layouts/_layout.twig" %}
 
 {% block content %}
-    <h1 class="title-h2">Главная</h1>
+    {% include "./partials/_breadcrumbs.twig" %}
+    <h1 class="title-page">Халаты</h1>
     <section class="section-catalog">
         <div class="section-catalog__sidebar">
-            12
+            <div class="section-catalog__menu">
+                {% include "./partials/_recommendations.twig" %}
+            </div>
+            <div class="menu-sidebar">
+                {% for menu in data.catalogMenu %}
+                    <div class="menu-sidebar__item">
+                        <div class="menu-sidebar__name">{{ menu.title }} {{ mixins.icon('arrow-bottom') }}</div>
+                        <div class="menu-sidebar__list">
+                            {% for item in menu.list %}
+                                <a href="#" class="menu-sidebar__link {% if item.active === 'true' %}is-active{% endif %}">{{ item.title }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
         <div class="section-catalog__main">
             <div class="section-catalog__top">
@@ -67,7 +82,7 @@
             <div class="section-catalog__active-filters">
                 <form id="active-filters" class="active-filters">
                     <div class="active-filters__row">
-                        {% for i in range(0, 16) %}
+                        {% for i in range(0, 4) %}
                             <div class="active-filters__item">
                                 Цвет {{ i }}
                                 <input id="arrFilter_2124_3217157474-{{ i }}" type="checkbox" hidden="hidden" value="Y">
@@ -99,7 +114,6 @@
             </div>
         </div>
     </section>
-
     <div class="modal modal--right modal--sm-bottom" data-modal="filters">
         <div class="modal__inner custom-scroll" data-modal-inner="filters">
             <div class="modal__close" data-modal-close="filters">
@@ -192,6 +206,5 @@
             </div>
         </div>
     </div>
-
     {% include "partials/_section-advantages.twig" %}
 {% endblock %}
