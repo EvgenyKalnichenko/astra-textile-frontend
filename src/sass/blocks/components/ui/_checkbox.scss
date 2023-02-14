@@ -139,3 +139,52 @@
     }
   }
 }
+
+.checkbox-filter-color {
+  $block: &;
+
+  &__input {
+    display: none;
+  }
+
+  &--grey {
+    #{$block}__label {
+      &:before {
+        border-color: var(--background-components-v2);
+      }
+    }
+  }
+
+  &__label {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: inline-flex;
+    flex-shrink: 0;
+    padding: 0;
+    background: currentColor;
+    position: relative;
+    margin: 4px;
+    border: 1px solid #B8B8B8;
+
+    &:before {
+      content: '';
+      width: calc(100% + 10px);
+      height: calc(100% + 10px);
+      left: -5px;
+      top: -5px;
+      border: 2px solid var(--main-color-font);
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity var(--theme-duration) var(--ease);
+    }
+  }
+
+  &__input:checked ~ &__label {
+
+    &:before {
+      opacity: 1;
+    }
+  }
+}

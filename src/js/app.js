@@ -15,6 +15,7 @@ import {modalsInit} from './controllers/modals';
 import {selectsInit} from './modules/select';
 
 import {interactionWithCard} from "./modules/cardProduct";
+import {initFilterList} from "./modules/filterList";
 
 $(function () {
 
@@ -37,4 +38,8 @@ $(function () {
 
     // Взаимодействие с карточкой товара (открытие закрытие) только на девайсах больше 768
     interactionWithCard()
+
+
+    // Фильтр в каталоге
+    initFilterList();
 })

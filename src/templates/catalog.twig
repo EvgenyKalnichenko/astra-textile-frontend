@@ -107,9 +107,9 @@
             </div>
             <div class="modal__container">
                 <h2 class="modal__title">Фильтр</h2>
-                <div class="modal__scroll">
+                <div class="modal__scroll modal__scroll--mod custom-scroll">
                     <form action="#" class="form-filters">
-                        <div class="filter-list">
+                        <div class="filter-list" data-max-count="5">
                             <div class="filter-list-wrap">
                                 <div class="filter-list__top">
                                     <div class="filter-list__name">Ткань:</div>
@@ -121,7 +121,7 @@
                                     {% for i in range(0, 3) %}
                                         <div class="filter-list__item filter-list__item">
                                             <div class="checkbox checkbox--stroke checkbox--min">
-                                                <input type="checkbox" id="arrFilter_2076_763644074{{ i }}" class="checkbox__input" >
+                                                <input type="checkbox" id="arrFilter_2076_763644074{{ i }}" {% if i === 2 %}checked{% endif %} class="checkbox__input" >
                                                 <label for="arrFilter_2076_763644074{{ i }}" class="checkbox__label">
                                                     <span class="checkbox__icon">{{ mixins.icon('check-mark') }}</span>
                                                     <span class="checkbox__text checkbox__text--min">
@@ -132,13 +132,9 @@
                                         </div>
                                     {% endfor %}
                                 </div>
-                                <div class="filter-list__btn">
-                                    <span>Показать все </span>
-                                    {{ mixins.icon('arrow-bottom') }}
-                                </div>
                             </div>
                         </div>
-                        <div class="filter-list">
+                        <div class="filter-list" data-max-count="5">
                             <div class="filter-list-wrap">
                                 <div class="filter-list__top">
                                     <div class="filter-list__name">Размер:</div>
@@ -150,8 +146,8 @@
                                     {% for i in range(30, 50) %}
                                         <div class="filter-list__item filter-list__item">
                                             <div class="checkbox checkbox--stroke checkbox--min">
-                                                <input type="checkbox" id="arrFilter_2076_763644074{{ i }}" class="checkbox__input" >
-                                                <label for="arrFilter_2076_763644074{{ i }}" class="checkbox__label">
+                                                <input type="checkbox" id="arrFilter_{{ i }}" {% if i === 33%}checked{% endif %} {% if i === 36%}checked{% endif %}  class="checkbox__input" >
+                                                <label for="arrFilter_{{ i }}" class="checkbox__label">
                                                     <span class="checkbox__icon">{{ mixins.icon('check-mark') }}</span>
                                                     <span class="checkbox__text checkbox__text--min">
                                                     {{ i }}
@@ -161,11 +157,35 @@
                                         </div>
                                     {% endfor %}
                                 </div>
-                                <div class="filter-list__btn">
-                                    <span>Показать все </span>
-                                    {{ mixins.icon('arrow-bottom') }}
+                            </div>
+                        </div>
+                        <div class="filter-list filter-list--color" data-max-count="10">
+                            <div class="filter-list-wrap">
+                                <div class="filter-list__top">
+                                    <div class="filter-list__name">Цвет:</div>
+                                    <div class="filter-list__reset">
+                                        Сбросить {{ mixins.icon('close') }}
+                                    </div>
+                                </div>
+                                <div class="filter-list__scroll filter-list__scroll--grid custom-scroll">
+                                    {% for item in data.colors %}
+                                        <div class="filter-list__item">
+                                            <div class="checkbox-filter-color">
+                                                <input type="checkbox"
+                                                       id="arrFilter_{{ item.id }}"
+                                                       {% if item.color === '#FFFFFF'%}checked{% endif %}
+                                                       class="checkbox-filter-color__input"
+                                                >
+                                                <label for="arrFilter_{{ item.id }}" class="checkbox-filter-color__label" style="color: {{ item.color }}"></label>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
                                 </div>
                             </div>
+                        </div>
+                        <div class="form-filters__btns">
+                            <button type="submit" class="btn btn--medium">Применить</button>
+                            <button type="button" class="btn btn--medium btn--stroke btn--accent">Очистить</button>
                         </div>
                     </form>
                 </div>

@@ -39,28 +39,10 @@
     border-radius: 12px;
     //overflow-y: auto;
     //overflow-x: hidden;
+    box-sizing: border-box;
 
     @include sm-screen {
       padding: 20px 15px;
-    }
-  }
-
-  &--right {
-    @include rmin($break_sm) {
-      padding: 0;
-
-      #{$block}__close {
-        right: 15px;
-        top: 10px;
-      }
-
-      #{$block}__inner {
-        margin-left: auto;
-        border-radius: 0;
-        margin-right: 0;
-        height: 100%;
-        width: 400px;
-      }
     }
   }
 
@@ -140,6 +122,7 @@
 
     @include sm-screen {
       padding-bottom: 14px;
+      margin-bottom: 10px;
       border-bottom: 1px solid var(--background-components-v2);
     }
   }
@@ -169,6 +152,10 @@
         height: 100%;
         max-height: calc((var(--vh, 1vh) * 90) - 25px);
 
+        &--mod {
+          max-height: calc((var(--vh, 1vh) * 90) - 70px);
+        }
+
         &::-webkit-scrollbar {
           display: none;
         }
@@ -176,8 +163,55 @@
     }
   }
 
+  &--right {
+
+
+    #{$block}__close {
+      background: transparent;
+      color: currentColor;
+      font-size: 16px;
+      right: 10px;
+
+      &:hover {
+        background: transparent;
+        color: var(--accent);
+      }
+    }
+
+    #{$block}__title{
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--background-components-v2);
+    }
+
+    #{$block}__scroll {
+      height: calc((var(--vh, 1vh) * 100) - 110px);
+      overflow: auto;
+    }
+
+    @include rmin($break_sm) {
+      padding: 0;
+
+      #{$block}__close {
+        right: 15px;
+        top: 10px;
+      }
+
+      #{$block}__inner {
+        margin-left: auto;
+        border-radius: 0;
+        margin-right: 0;
+        //height: 100%;
+        width: 400px;
+      }
+    }
+  }
+
   &__wrap {
     position: relative;
+  }
+
+  &__container {
+
   }
 
   &.is-active #{$block}__inner {

@@ -1,9 +1,36 @@
 .form-filters {
   display: flex;
   flex-direction: column;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  min-height: 100%;
 
   .filter-list {
     margin-bottom: 30px;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    height: 60px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 5px 20px;
+    box-shadow: 0 4px 35px rgb(0 0 0 / 10%);
+    @include sm-screen {
+      box-shadow: 0 4px 35px rgb(0 0 0 / 10%);
+      padding: 0 15px;
+    }
+
+    .btn {
+      width: calc(100% - 10px);
+    }
   }
 }
 
@@ -12,7 +39,7 @@
   font-size: 15px;
 
   &__top {
-    margin-bottom: 17px;
+    margin-bottom: 12px;
     line-height: 20px;
     display: flex;
   }
@@ -22,15 +49,37 @@
   }
 
   &__item {
-    margin-bottom: 10px;
+    margin: 10px 0;
+    display: none;
+
+    .filter-list.is-active & {
+      display: block !important;
+    }
+
+    //&:nth-child(-n+5) {
+    //  display: block;
+    //}
   }
 
   &__scroll {
-    max-height: 300px;
-    overflow-y: auto;
+    //max-height: 300px;
+    //padding: 5px 0;
+    //overflow-y: auto;
+    //
+    //@include xl-screen {
+    //  max-height: 100%;
+    //}
 
-    @include xl-screen {
-      max-height: 100%;
+    &--grid {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 220px;
+      gap: 10px;
+      margin: 20px 0;
+
+      .filter-list__item {
+        margin: 0;
+      }
     }
   }
 
@@ -58,10 +107,14 @@
   &__reset {
     margin-left: auto;
     color: var(--accent);
-    display: inline-flex;
     align-items: center;
     cursor: pointer;
     font-size: 14px;
+    display: none;
+
+    &.is-active {
+      display: inline-flex;
+    }
 
     .icon {
       margin-left: 10px;
