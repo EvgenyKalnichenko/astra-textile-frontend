@@ -43,7 +43,7 @@
       width: calc(70% - 40px);
     }
 
-    @include md-screen {
+    @include r(1132px) {
       flex-direction: column;
       width: calc(60% - 40px);
     }
@@ -56,7 +56,7 @@
   &__col {
     width: 100%;
 
-    @include md-screen {
+    @include sm-screen {
       margin-bottom: 50px;
     }
 
@@ -69,15 +69,16 @@
         width: calc(59% - 39px);
       }
 
-      @include md-screen {
+      @include r(1132px) {
         width: 100%;
         min-width: 100%;
         margin-right: 0;
+        margin-bottom: 30px;
       }
     }
 
     &:last-child {
-      @include rmin($break_md) {
+      @include rmin(1132px) {
         width: 41%;
         max-width: 434px;
       }

@@ -25,32 +25,32 @@
     }
   }
 
+  &__item {
+    width: calc(20% - 16px);
+    margin-right: 20px;
+
+    @include lg-screen {
+      width: calc(25% - 8px);
+      margin-right: 10px;
+    }
+
+    @include md-screen {
+      width: calc(33.333% - 7px);
+      margin-right: 10px;
+    }
+
+    @include rd(0px, 460px) {
+      width: calc(50% - 5px);
+      margin-right: 10px;
+    }
+  }
+
   &__container {
     position: relative;
 
     & > .swiper {
       //overflow: visible;
       //padding-bottom: 150px;
-    }
-
-    .swiper-slide {
-      width: calc(20% - 16px);
-      margin-right: 20px;
-
-      @include lg-screen {
-        width: calc(25% - 8px);
-        margin-right: 10px;
-      }
-
-      @include md-screen {
-        width: calc(33.333% - 7px);
-        margin-right: 10px;
-      }
-
-      @include rd(0px, 460px) {
-        width: calc(50% - 5px);
-        margin-right: 10px;
-      }
     }
 
     .card-product {
