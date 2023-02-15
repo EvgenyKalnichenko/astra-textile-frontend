@@ -2,7 +2,7 @@
   border: 1px solid var(--background-components);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
-  padding: 33px 44px;
+  padding: 33px 38px;
   position: sticky;
   top: 15px;
   min-width: 303px;
@@ -15,6 +15,7 @@
     padding: 30px 25px;
   }
 
+
   .product-total {
     margin-bottom: 40px;
   }
@@ -22,7 +23,7 @@
   &__link {
     background: var(--background-components);
     border-radius: 12px;
-    padding: 15px 22px;
+    padding: 17px 22px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
@@ -34,6 +35,6 @@
   }
 
   &__bottom {
-    margin-top: 40px;
+    margin-top: 30px;
   }
 }

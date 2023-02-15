@@ -9,7 +9,6 @@
   }
 
   &__price {
-    font-weight: 600;
     font-size: 28px;
     line-height: 38px;
     margin-bottom: 10px;
@@ -60,6 +59,14 @@
       width: 44px;
       height: 44px;
       font-size: 18px;
+    }
+  }
+
+  &--big {
+    #{$block}__price {
+      font-size: 36px;
+      line-height: 42px;
+      margin-bottom: 22px;
     }
   }
 }

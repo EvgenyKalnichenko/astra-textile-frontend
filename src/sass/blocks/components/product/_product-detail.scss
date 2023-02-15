@@ -1,16 +1,23 @@
 .product-detail {
   display: flex;
+  margin-bottom: 40px;
 
   @include sm-screen {
     flex-wrap: wrap;
   }
 
   &__images {
-    flex: 1 1 0;
+    //flex: 1 1 0;
     margin-right: 60px;
+    width: 32%;
+
+    @include xl-screen {
+      margin-right: 50px;
+    }
 
     @include lg-screen {
       width: 30%;
+      margin-right: 40px;
     }
 
     @include md-screen {
@@ -19,22 +26,26 @@
 
     @include sm-screen {
       width: 100%;
+      margin-right: 0;
     }
   }
 
   &__row {
-    width: 66.666%;
+    width: calc(68% - 60px);
     display: flex;
     justify-content: space-between;
 
+    @include xl-screen {
+      width: calc(66.666% - 50px);
+    }
 
     @include lg-screen {
-      width: 70%;
+      width: calc(70% - 40px);
     }
 
     @include md-screen {
       flex-direction: column;
-      width: 60%;
+      width: calc(60% - 40px);
     }
 
     @include sm-screen {
@@ -43,21 +54,19 @@
   }
 
   &__col {
-    width: 41%;
-    flex: 1 1 0;
+    width: 100%;
 
     @include md-screen {
-      width: 100%;
       margin-bottom: 50px;
     }
 
     &:first-child {
-      max-width: 505px;
+      width: calc(59% - 50px);
       margin-right: 50px;
-      flex: 1 1 0;
 
       @include xl-screen {
         margin-right: 39px;
+        width: calc(59% - 39px);
       }
 
       @include md-screen {
@@ -68,7 +77,10 @@
     }
 
     &:last-child {
-      max-width: 434px;
+      @include rmin($break_md) {
+        width: 41%;
+        max-width: 434px;
+      }
     }
   }
 
@@ -77,6 +89,13 @@
   }
 }
 
+.product-detail-description {
+  margin-bottom: 30px;
+
+  .grey {
+    color: var(--background-components);
+  }
+}
 
 .product-description {
   &__title {
@@ -95,5 +114,60 @@
     flex-shrink: 0;
     color: #6C6C6C;
     padding-right: 10px;
+  }
+}
+
+.product-slider  {
+
+  @include rmin($break_sm) {
+    position: sticky;
+    top: 20px;
+  }
+
+  &__main {
+    //@include ratio(87, 130);
+    position: relative;
+    //border: 1px solid var(--background-components);
+    border-radius: 10px;
+    margin-bottom: 28px;
+
+    //img {
+    //  @include coverdiv();
+    //  @include ofi(cover, center);
+    //}
+
+    .swiper {
+      .swiper-slide {
+
+        @include sm-screen {
+          width: 206px;
+          position: relative;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    .swiper-slide-thumb-active .product-image {
+      border-color: var(--accent);
+    }
+  }
+
+  .product-image {
+    border-radius: 12px;
+    @include ratio(120, 180);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    &--border {
+      border: 2px solid var(--background-components);
+    }
+
+    img {
+      @include coverdiv();
+      @include ofi(cover, center);
+    }
   }
 }

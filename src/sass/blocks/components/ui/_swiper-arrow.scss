@@ -10,6 +10,32 @@
   transform: translate(0, -50%);
   z-index: 2;
 
+  &__item {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    pointer-events: all;
+    cursor: pointer;
+    transition: 0.2s background-color ease-in-out;
+    color: var(--background-components-v2);
+
+    @media (hover: hover) {
+      &:hover {
+        background: rgba(var(--accent), 0.6);
+      }
+    }
+
+    &.swiper-button-disabled {
+      cursor: default !important;
+      pointer-events: none;
+    }
+  }
+
   &--big {
     width: calc(100% + 110px);
     left: -55px;
@@ -27,28 +53,23 @@
     }
   }
 
-  &__item {
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: #FFFFFF;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    border-radius: 50%;
-    pointer-events: all;
-    cursor: pointer;
-    transition: 0.2s background-color ease-in-out;
-    color: var(--background-components-v2);
+  &--mod {
+    width: 100%;
+    height: 100%;
+    left: 0;
 
-    @media (hover: hover) {
-      &:not(.swiper-button-disabled):hover {
-        background: rgba(var(--accent), 0.6);
+    #{$block}__item {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      align-items: center;
+      height: 100%;
+      border-radius: 0;
+
+      &:hover {
+        background: rgba(0,0,0,0.01);
+        color: var(--main-color-font);
       }
-    }
-
-    &.swiper-button-disabled {
-      cursor: default;
     }
   }
 }

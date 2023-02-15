@@ -11,9 +11,53 @@
         </div>
     </div>
     <section class="product-detail">
-        <div class="product-detail__images"></div>
+        <div class="product-detail__images">
+            <div class="product-slider">
+                <div class="product-slider__main">
+                    <div class="swiper swiper-top">
+                        <div class="swiper-wrapper">
+                            {% for i in range(0, 6) %}
+                                <div class="swiper-slide">
+                                    <div class="product-image product-image--border">
+                                        <picture>
+                                            <source data-srcset="img/product-1.webp" type="image/webp"/>
+                                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="swiper-arrow swiper-arrow--mod sm-none">
+                        <div class="swiper-arrow__item swiper-arrow__item--prev">
+                            {{ mixins.icon('swiper-prev') }}
+                        </div>
+                        <div class="swiper-arrow__item swiper-arrow__item--next">
+                            {{ mixins.icon('swiper-next') }}
+                        </div>
+                    </div>
+                </div>
+                <div class="product-slider__nav sm-none">
+                    <div class="swiper swiper-bottom">
+                        <div class="swiper-wrapper">
+                            {% for i in range(0, 6) %}
+                                <div class="swiper-slide">
+                                    <div class="product-image product-image--border">
+                                        <picture>
+                                            <source data-srcset="img/product-1.webp" type="image/webp"/>
+                                            <img class="lazy" data-src="img/product-1.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="product-detail__row">
             <div class="product-detail__col">
+                <div class="product-detail-description"><span>Артикул:</span> 5648752</div>
                 {% include "partials/product/_product-prices.twig" %}
                 <div class="product-colors">
                     <div class="product-colors__title">Цвет товара: Зеленый</div>
@@ -65,7 +109,18 @@
             </div>
             <div class="product-detail__col">
                 <div class="product-card-info">
-                    {% include "partials/product/_product-total.twig" %}
+                    <div class="product-total product-total--big">
+                        <div class="product-total__text">Итого:</div>
+                        <div class="product-total__price">
+                            <b>355 150</b> ₽
+                        </div>
+                        <div class="product-total__row">
+                            <a href="#" class="btn btn--medium">В корзину</a>
+                            <div class="favorite-icon">
+                                {{ mixins.icon('heart') }}
+                            </div>
+                        </div>
+                    </div>
                     <a href="#" class="product-card-info__link">Доставка и оплата {{ mixins.icon('arrow-right') }}</a>
                     <a href="#" class="product-card-info__link">Как сделать заказ {{ mixins.icon('arrow-right') }}</a>
                     <div class="product-card-info__bottom">

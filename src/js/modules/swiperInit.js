@@ -1,8 +1,9 @@
-import Swiper, {Navigation, Pagination} from "swiper";
+import Swiper, {Navigation, Pagination, Thumbs} from "swiper";
 import {initIntersectionObserver} from "./initIntersectionObserver";
 import {Breakpoints} from "./breakpoints";
 
 export function swiperInit () {
+    // слайдр на главной
     document.querySelectorAll('.main-slider:not(.swiper-init)').forEach((el) => {
         el.classList.add('swiper-init')
         new Swiper (el.querySelector('.swiper-container'), {
@@ -35,6 +36,7 @@ export function swiperInit () {
         })
     })
 
+    // Слайдр в карточке товара
     initIntersectionObserver(
         (item) => {
             const el = item.target;
@@ -56,6 +58,7 @@ export function swiperInit () {
         document.querySelectorAll('.card-product__images:not(.init)')
     )
 
+    // Слайдр отзывов на главной
     initIntersectionObserver(
         (item) => {
             const el = item.target;
@@ -96,6 +99,7 @@ export function swiperInit () {
         document.querySelectorAll('.slider-reviews:not(.init)')
     )
 
+    // Слайдер недавно смотрели & с этими товарами покупают
     initIntersectionObserver(
         (item) => {
             const el = item.target;
@@ -130,5 +134,48 @@ export function swiperInit () {
             }
         },
         document.querySelectorAll('.section-slider:not(.init)')
+    )
+
+    // Сладер на детальной странице товара
+    initIntersectionObserver(
+        (item) => {
+            const el = item.target;
+            el.classList.add('init')
+
+            const swiper = new Swiper(el.querySelector(".swiper-bottom"), {
+                modules: [Navigation],
+                spaceBetween: 10,
+                slidesPerView: 4,
+                freeMode: true,
+                watchSlidesProgress: true,
+
+            });
+
+            const swiper2 = new Swiper(el.querySelector(".swiper-top"), {
+                modules: [Thumbs, Navigation],
+                spaceBetween: 10,
+                slidesPerView: 1,
+                slideActiveClass: 'is-active',
+                navigation: {
+                    nextEl: el.querySelector('.swiper-arrow__item--next'),
+                    prevEl: el.querySelector('.swiper-arrow__item--prev'),
+                },
+                thumbs: {
+                    swiper: swiper,
+                },
+                breakpoints: {
+                    // when window width is >= 320px
+                    0: {
+                        slidesPerView: 'auto',
+                    },
+                    // when window width is >= 640px
+                    768: {
+                        slidesPerView: 1,
+                    }
+                }
+            });
+
+        },
+        document.querySelectorAll('.product-slider:not(.init)')
     )
 }
