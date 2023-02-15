@@ -1,0 +1,50 @@
+.product-colors {
+  $block: &;
+
+  &__title {
+    font-weight: bold;
+    margin-bottom: 13px;
+  }
+
+  &__row {
+    display: flex;
+    //flex-wrap: wrap;
+    overflow-x: auto;
+  }
+
+  &__name {
+    text-align: center;
+  }
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    @include ratio(87, 130);
+    margin-bottom: 7px;
+    border: 1px solid var(--background-components);
+    border-radius: 5px;
+
+    img {
+      @include coverdiv();
+      @include ofi(cover, center);
+    }
+  }
+
+  &__item {
+    margin-right: 23px;
+    margin-bottom: 20px;
+    width: 87px;
+    flex-shrink: 0;
+
+    @include xl-screen {
+      margin-right: 20px;
+    }
+
+    &.is-active {
+      #{$block}__image {
+        border: 2px solid var(--accent);
+      }
+    }
+  }
+}

@@ -40,6 +40,8 @@
 @import './blocks/components/section/section-about';
 @import './blocks/components/section/section-catalog';
 @import './blocks/components/section/section-seo';
+@import './blocks/components/section/section-404';
+@import './blocks/components/section/section-slider';
 
 @import './blocks/components/sliders/main-slider';
 @import './blocks/components/sliders/slider-reviews';
@@ -52,12 +54,16 @@
 @import 'blocks/components/product/product-prices';
 @import './blocks/components/product/product-sizes';
 @import './blocks/components/product/product-total';
+@import './blocks/components/product/product-detail';
+@import './blocks/components/product/product-colors';
+@import './blocks/components/product/product-card-info';
 @import './blocks/components/product/fast-view-product';
 
 @import './blocks/components/ui/link-arrow';
 @import './blocks/components/ui/favorite-icon';
 @import './blocks/components/ui/swiper-arrow';
 @import './blocks/components/ui/social';
+@import './blocks/components/ui/social-share';
 @import './blocks/components/ui/btn';
 @import './blocks/components/ui/label-status';
 @import './blocks/components/ui/counter';

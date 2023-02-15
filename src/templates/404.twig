@@ -3,17 +3,12 @@
 {% extends "layouts/_layout.twig" %}
 
 {% block content %}
-    <div class="layout__container container">
-        <div class="page404">
-            <h1 class="page404__title">404</h1>
-            <div class="page404__bold">Упс, здесь ничего нет</div>
-            <div class="page404__text">
-                Возможно, запрашиваемая страница временно недоступна или удалена
-            </div>
-            <div class="page404__note">Может, попробовать поискать?</div>
-            <div class="page404__search">
-{#                {% include "partials/_form-search.twig" %}#}
-            </div>
+    <section class="section-404">
+        <h1 class="section-404__title">404</h1>
+        <div class="section-404__bold">Упс, здесь ничего нет</div>
+        <div class="section-404__text">
+            Возможно, запрашиваемая страница временно недоступна или удалена
         </div>
-    </div>
+        <a href="/" class="btn btn--big">На главную</a>
+    </section>
 {% endblock %}

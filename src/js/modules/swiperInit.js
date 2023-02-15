@@ -95,4 +95,40 @@ export function swiperInit () {
         },
         document.querySelectorAll('.slider-reviews:not(.init)')
     )
+
+    initIntersectionObserver(
+        (item) => {
+            const el = item.target;
+            el.classList.add('init')
+            new Swiper (el.querySelector('.swiper'), {
+                modules: [Navigation],
+                loop: false,
+                slidesPerView: 'auto',
+                watchOverflow: true,
+                speed: 200,
+                slideClass: 'swiper-slide',
+                navigation: {
+                    nextEl: el.querySelector('.swiper-arrow__item--next'),
+                    prevEl: el.querySelector('.swiper-arrow__item--prev'),
+                }
+            })
+            // Если карточка раскрывающаяся тогда для слайдера создаем
+            // отступ снизу и делаем высоту слайдера равным размеру картчоки
+            if($(window).width() > Breakpoints.SM) {
+                const swiper = $(el.querySelector('.swiper'))
+                const getHeightCard = () => $(el.querySelector('.swiper')).find('.card-product:first-child').height();
+                const container = swiper.closest('.section-slider__container');
+
+                const setHeightSwiper = () => {
+                    container.height(getHeightCard)
+                    swiper.css({
+                        'padding-bottom': '180px'
+                    })
+                }
+                setHeightSwiper()
+                $(window).on('resize', setHeightSwiper)
+            }
+        },
+        document.querySelectorAll('.section-slider:not(.init)')
+    )
 }

@@ -64,6 +64,7 @@ $(function () {
     pageWidget([
         'index',
         'catalog',
+        'product-detail',
         '404'
     ]);
 });

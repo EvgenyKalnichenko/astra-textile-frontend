@@ -17,7 +17,7 @@ $(document).on('change', '[data-input-policy]', function () {
 
 // Каталог меню
 
-if($('.menu-sidebar').length ){
+if($('.menu-sidebar').length){
     $(document).on('click', '.menu-sidebar__name', function () {
         $(this).siblings('.menu-sidebar__list').stop().slideToggle(200)
     })

@@ -1,0 +1,130 @@
+{% set title = "Детальная страница товара" %}
+
+{% extends "layouts/_layout.twig" %}
+
+{% block content %}
+    {% include "./partials/_breadcrumbs.twig" %}
+    <div class="top-page">
+        <h1 class="title-page">Б0760-2 Футболка женская люрекс</h1>
+        <div class="top-page__back lg-none">
+            <a href="#">{{ mixins.icon('arrow-long-left') }} К списку товаров</a>
+        </div>
+    </div>
+    <section class="product-detail">
+        <div class="product-detail__images"></div>
+        <div class="product-detail__row">
+            <div class="product-detail__col">
+                {% include "partials/product/_product-prices.twig" %}
+                <div class="product-colors">
+                    <div class="product-colors__title">Цвет товара: Зеленый</div>
+                    <div class="product-colors__row custom-scroll">
+                            <a href="#" class="product-colors__item is-active">
+                                <div class="product-colors__image">
+                                    <picture>
+                                        <source data-srcset="img/product-1.webp" type="image/webp"/>
+                                        <img class="lazy" data-src="img/product-1.jpg" alt="">
+                                    </picture>
+                                </div>
+                                <div class="product-colors__name">Зеленый</div>
+                            </a>
+                        {% for i in range(0, 7) %}
+                            <a href="#" class="product-colors__item">
+                                <div class="product-colors__image">
+                                    <picture>
+                                        <source data-srcset="img/product-2.webp" type="image/webp"/>
+                                        <img class="lazy" data-src="img/product-2.jpg" alt="">
+                                    </picture>
+                                </div>
+                                <div class="product-colors__name">Розовый</div>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% include "partials/product/_product-size.twig" %}
+                <div class="product-description">
+                    <h3 class="product-description__title">
+                        Коротко о товаре:
+                    </h3>
+                    <div class="product-description__row">
+                        <div class="product-description__col grey">Модель:</div>
+                        <div class="product-description__col">Футболка женская люрекс</div>
+                    </div>
+                    <div class="product-description__row">
+                        <div class="product-description__col grey">Ткань:</div>
+                        <div class="product-description__col">Атаман</div>
+                    </div>
+                    <div class="product-description__row">
+                        <div class="product-description__col grey">Состав:</div>
+                        <div class="product-description__col">пэ95%; спандекс5%</div>
+                    </div>
+                    <div class="product-description__row">
+                        <div class="product-description__col grey">Очень длинное название хар-ки:</div>
+                        <div class="product-description__col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius excepturi hic ratione! Amet autem beatae fugit iusto laborum natus numquam provident quam quisquam sit. Laborum necessitatibus nesciunt porro? Blanditiis, sit.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-detail__col">
+                <div class="product-card-info">
+                    {% include "partials/product/_product-total.twig" %}
+                    <a href="#" class="product-card-info__link">Доставка и оплата {{ mixins.icon('arrow-right') }}</a>
+                    <a href="#" class="product-card-info__link">Как сделать заказ {{ mixins.icon('arrow-right') }}</a>
+                    <div class="product-card-info__bottom">
+                        {% include "partials/_social-share.twig" %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-slider">
+        <div class="section-slider__title title-h2">С этими товарами покупают</div>
+        <div class="section-slider__container">
+            <div class="swiper swiper-container">
+                <div class="swiper-wrapper">
+                    {% for i in range(0, 15) %}
+                        <div class="swiper-slide">
+                            {% include "partials/_card-product.twig" %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination swiper-pagination--mod"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-arrow sm-none">
+                <div class="swiper-arrow__item swiper-arrow__item--prev">
+                    {{ mixins.icon('swiper-prev') }}
+                </div>
+                <div class="swiper-arrow__item swiper-arrow__item--next">
+                    {{ mixins.icon('swiper-next') }}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-slider">
+        <div class="section-slider__title title-h2">Вы недавно смотрели</div>
+        <div class="section-slider__container">
+            <div class="swiper swiper-container">
+                <div class="swiper-wrapper">
+                    {% for i in range(0, 15) %}
+                        <div class="swiper-slide">
+                            {% include "partials/_card-product.twig" %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination swiper-pagination--mod"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-arrow sm-none">
+                <div class="swiper-arrow__item swiper-arrow__item--prev">
+                    {{ mixins.icon('swiper-prev') }}
+                </div>
+                <div class="swiper-arrow__item swiper-arrow__item--next">
+                    {{ mixins.icon('swiper-next') }}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

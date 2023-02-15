@@ -31,87 +31,11 @@
                     </div>
                     <div class="fast-view-product__information">
                         <h3 class="fast-view-product__title">Б0760-2 Футболка женская люрекс</h3>
-                        <div class="product-prices">
-                            <div class="product-prices__col">
-                                <div class="product-prices__old"></div>
-                                <div class="product-prices__price"><b>2 110</b> ₽</div>
-                                <div class="product-prices__name">Розница</div>
-                                <div class="product-prices__description"></div>
-                            </div>
-                            <div class="product-prices__col">
-                                <div class="product-prices__old"></div>
-                                <div class="product-prices__price"><b>850</b> ₽ </div>
-                                <div class="product-prices__name">Мел. опт</div>
-                                <div class="product-prices__description">(от 6 000)</div>
-                            </div>
-                            <div class="product-prices__col">
-                                <div class="product-prices__old"><b>320</b></div>
-                                <div class="product-prices__price"><b>650</b> ₽ </div>
-                                <div class="product-prices__name">Сред. опт</div>
-                                <div class="product-prices__description">(от 15 000 ₽)</div>
-                            </div>
-                            <div class="product-prices__col">
-                                <div class="product-prices__old"><b>320</b> ₽</div>
-                                <div class="product-prices__price"><b>350</b> ₽ </div>
-                                <div class="product-prices__name">Круп. опт</div>
-                                <div class="product-prices__description">(от 25 000 ₽)</div>
-                            </div>
-                        </div>
-                        <div class="product-sizes">
-                            <div class="product-sizes__top">
-                                <div class="product-sizes__name">Размеры</div>
-                                <div class="product-sizes__tabl">
-                                    <a href="#" class="link-arrow">
-                                        <span class="link-arrow__text">Таблица размеров</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-sizes__all">
-                                <div class="counter">
-                                    <div class="counter__name">Все</div>
-                                    <div class="counter__col">
-                                        <div class="counter__main">
-                                            <div class="counter__btn">{{ mixins.icon('minus') }}</div>
-                                            <input class="counter__input" type="text">
-                                            <div class="counter__btn">{{ mixins.icon('plus') }}</div>
-                                        </div>
-                                        <div class="counter__info">Ост: 56шт.</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-sizes__grid">
-                                {% for i in range(0, 12) %}
-                                    <div class="counter yellow">
-                                        <div class="counter__name">{{ 30 + i }}</div>
-                                        <div class="counter__col">
-                                            <div class="counter__main">
-                                                <div class="counter__btn">{{ mixins.icon('minus') }}</div>
-                                                <input class="counter__input" type="text">
-                                                <div class="counter__btn">{{ mixins.icon('plus') }}</div>
-                                            </div>
-                                            <div class="counter__info">Ост: 56шт.</div>
-                                        </div>
-                                    </div>
-                                {% endfor %}
-                            </div>
-                            <div class="product-sizes__quantity">
-                                <span>Количество:</span> <span class="status status--many">Много</span> <span class="status status--few">Мало</span>
-                            </div>
-                        </div>
-                        <div class="product-total">
-                            <div class="product-total__text">Итого:</div>
-                            <div class="product-total__price">
-                                355 150 ₽
-                            </div>
-                            <div class="product-total__row">
-                                <a href="#" class="btn btn--medium">В корзину</a>
-                                <div class="favorite-icon">
-                                    {{ mixins.icon('heart') }}
-                                </div>
-                            </div>
-                        </div>
+                        {% include "partials/product/_product-prices.twig" %}
+                        {% include "partials/product/_product-size.twig" %}
+                        {% include "partials/product/_product-total.twig" %}
                     </div>
-                    <a href="{{ baseUrl }}/product-detail.html" class="fast-view-product__link">Подробнее о товаре</a>
+                    <a href="{{ data.baseUrl }}/product-detail.html" class="fast-view-product__link">Подробнее о товаре</a>
                 </div>
             </div>
         </div>

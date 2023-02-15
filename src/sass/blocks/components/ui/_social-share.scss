@@ -1,0 +1,56 @@
+.social-share {
+
+  &__text {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 10px;
+    color: #fff;
+    transition: .25s ease-in-out;
+    background: var(--background-components);
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 12px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &--telegram {
+      background: #1E3CAD;
+      font-size: 14px;
+    }
+
+    &--vk {
+      background: #3B83F1;
+    }
+
+    &--ok {
+      background: #FFAD03;
+      font-size: 18px;
+    }
+
+    &--vb {
+      background: #B759E3;
+      font-size: 15px;
+    }
+
+    &--wa {
+      background: #3ED94E;
+      font-size: 18px;
+    }
+  }
+}

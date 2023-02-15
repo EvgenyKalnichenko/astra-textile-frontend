@@ -46,19 +46,17 @@
     }
   }
 
-  &.yellow  {
+  &.counter--yellow  {
 
     #{$block}__main {
       border-color: var(--color-yellow);
     }
   }
 
-  &.green  {
+  &.counter--green  {
 
     #{$block}__main {
       border-color: var(--color-green);
     }
   }
-
-
 }

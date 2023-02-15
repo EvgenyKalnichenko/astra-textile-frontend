@@ -1,0 +1,60 @@
+.section-slider {
+  margin-bottom: 90px;
+
+  @include sm-screen {
+    margin-bottom: 50px;
+  }
+
+  @include rmin($break_sm) {
+    z-index: 1;
+    position: relative;
+
+    &:hover {
+      z-index: 2;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    margin-bottom: 30px;
+
+    @include xl-screen {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__container {
+    position: relative;
+
+    & > .swiper {
+      //overflow: visible;
+      //padding-bottom: 150px;
+    }
+
+    .swiper-slide {
+      width: calc(20% - 16px);
+      margin-right: 20px;
+
+      @include lg-screen {
+        width: calc(25% - 8px);
+        margin-right: 10px;
+      }
+
+      @include md-screen {
+        width: calc(33.333% - 7px);
+        margin-right: 10px;
+      }
+
+      @include rd(0px, 460px) {
+        width: calc(50% - 5px);
+        margin-right: 10px;
+      }
+    }
+
+    .card-product {
+      box-sizing: border-box;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.product-card-info {
+  border: 1px solid var(--background-components);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 33px 44px;
+  position: sticky;
+  top: 15px;
+  min-width: 303px;
+
+  @include xl-screen {
+    padding: 30px;
+  }
+
+  @include lg-screen {
+    padding: 30px 25px;
+  }
+
+  .product-total {
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    background: var(--background-components);
+    border-radius: 12px;
+    padding: 15px 22px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    align-items: center;
+
+    .icon {
+      font-size: 8px;
+    }
+  }
+
+  &__bottom {
+    margin-top: 40px;
+  }
+}
