@@ -68,6 +68,7 @@ $(function () {
         '404',
         'news',
         'news-detail',
-        'reviews'
+        'reviews',
+        'about'
     ]);
 });

@@ -1,0 +1,68 @@
+.about-description {
+  p {
+    margin-bottom: 30px;
+
+    @include xl-screen {
+      margin-bottom: 20px;
+    }
+  }
+
+  & > * {
+    margin-bottom: 10px;
+  }
+}
+
+.about-numbers {
+  margin: 40px 0;
+
+  &__title {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+    @include lg-screen {
+      font-size: 24px;
+      line-height: 33px;
+    }
+
+    @include sm-screen {
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-bottom: 20px;
+    grid-gap: 60px 70px;
+
+    @include sm-screen {
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 30px;
+    }
+  }
+
+  &__num {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 10px;
+    color: var(--accent);
+
+    @include xl-screen {
+      font-size: 32px;
+    }
+
+    @include lg-screen {
+      font-size: 28px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    line-height: 26px;
+  }
+}
