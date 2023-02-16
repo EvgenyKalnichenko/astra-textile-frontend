@@ -5,9 +5,9 @@
 {% block content %}
     {% include "./partials/_breadcrumbs.twig" %}
     <section class="news-detail">
-        <h1 class="news-detail__title">График работы в праздничные дни 2023</h1>
+        <h1 class="news-detail__title title-h2">График работы в праздничные дни 2023</h1>
         <div class="news-detail__nav">
-            <a href="#" class="btn-back">
+            <a href="{{ data.baseUrl }}/news.html" class="btn-back">
                 {{ mixins.icon('arrow-long-left') }}
                 К списку новостей
             </a>
