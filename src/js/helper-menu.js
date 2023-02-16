@@ -65,6 +65,8 @@ $(function () {
         'index',
         'catalog',
         'product-detail',
-        '404'
+        '404',
+        'news',
+        'news-detail'
     ]);
 });

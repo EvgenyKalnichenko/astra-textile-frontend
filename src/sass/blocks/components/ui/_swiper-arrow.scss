@@ -30,7 +30,7 @@
       }
     }
 
-    &.swiper-button-disabled {
+    &.swiper-button-disabled, &.disabled {
       cursor: default !important;
       pointer-events: none;
     }
@@ -51,6 +51,14 @@
     .icon {
       font-size: 34px;
     }
+  }
+
+  &--static {
+    position: unset;
+    top: unset;
+    left: unset;
+    transform: unset;
+    gap: 15px;
   }
 
   &--mod {

@@ -1,6 +1,11 @@
 .section-news {
   margin-bottom: 100px;
 
+  &--w1300 {
+    max-width: 1300px;
+    width: 100%;
+  }
+
   @include xl-screen {
     margin-bottom: 75px;
   }
@@ -21,6 +26,14 @@
     margin-bottom: 60px;
     display: flex;
     align-items: flex-end;
+  }
+
+  &__pagination {
+    margin-top: 90px;
+
+    @include sm-screen {
+      margin-top: 50px;
+    }
   }
 }
 

@@ -1,0 +1,72 @@
+{% set title = "Детальная страница новости" %}
+
+{% extends "layouts/_layout.twig" %}
+
+{% block content %}
+    {% include "./partials/_breadcrumbs.twig" %}
+    <section class="news-detail">
+        <h1 class="news-detail__title">График работы в праздничные дни 2023</h1>
+        <div class="news-detail__nav">
+            <a href="#" class="btn-back">
+                {{ mixins.icon('arrow-long-left') }}
+                К списку новостей
+            </a>
+            <div class="news-detail__toggle">
+                <div class="swiper-arrow swiper-arrow--static">
+                    <a href="#" class="swiper-arrow__item disabled">
+                        {{ mixins.icon('swiper-prev') }}
+                    </a>
+                    <a href="#" class="swiper-arrow__item">
+                        {{ mixins.icon('swiper-next') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="news-detail__container">
+            <div class="news-detail__image">
+                <picture>
+                    <source data-srcset="img/news-1.webp" type="image/webp"/>
+                    <img class="lazy" data-src="img/news-1.jpg" alt="">
+                </picture>
+            </div>
+            <div class="news-detail__text">
+                <h4>Уважаемые покупатели!</h4>
+                <p>Последний день отгрузок 30 декабря. Если вы не успели оплатить свой заказ, то отгрузка будет после
+                    праздничных дней.</p>
+                <p>С 1 января по 8 января заказы принимаются в обычном режиме. Обработка заказов и выставление счетов
+                    начнутся с 9 января.</p>
+                <p>В праздничные дни менеджеры не смогут проконсультировать. Все вопросы можете высылать на электронную
+                    почту <a href="mailto:astraivtex2010@yandex.ru">astraivtex2010@yandex.ru</a></p>
+                <p>Счастливого Нового года! Мы рады, что вы всегда с нами. Благодарим за доверие и надеемся, что в Новом
+                    году наше сотрудничество продолжится. Желаем вам веселых праздничных дней, ярких и позитивных
+                    эмоций, благополучия, сил, здоровья, оптимизма! Пусть все, что загадано под бой курантов,
+                    обязательно исполнится!
+                    С 9 января работаем по обычному графику.</p>
+            </div>
+        </div>
+        <div class="news-detail__more">
+            <h3 class="title-h3">Другие новости</h3>
+            <div class="news-grid">
+                {% for i in range(0, 3) %}
+                    <div class="news-card">
+                        <div class="news-card__data">
+                            26.09.2022
+                        </div>
+                        <a href="#" class="news-card__title">
+                            График работы в праздничные дни 2023
+                        </a>
+                        <div class="news-card__text">
+                            Последний день отгрузок 30 декабря. Если вы не успели оплатить свой заказ, то отгрузка будет
+                            после праздничных дней.
+                            С 1 января по 8 января заказы принимаются в обычном режиме. Обработка заказов и выставление
+                            счетов начнутся с 9 января.
+                        </div>
+                        <a href="#" class="link-arrow">
+                            Подробнее
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

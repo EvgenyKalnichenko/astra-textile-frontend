@@ -88,6 +88,27 @@
   }
 }
 
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  color: var(--main-color-font);
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--accent);
+  }
+
+  .icon {
+    font-size: 14px;
+  }
+
+  svg {
+    margin-right: 5px;
+    line-height: 10px;
+  }
+}
+
 .btn-basket {
   border: none;
   background: transparent;

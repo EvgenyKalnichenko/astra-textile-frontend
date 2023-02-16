@@ -1,0 +1,41 @@
+{% set title = "Новости" %}
+
+{% extends "layouts/_layout.twig" %}
+
+{% block content %}
+    {% include "./partials/_breadcrumbs.twig" %}
+    <h1 class="title-page">Новости</h1>
+    <section class="section-news section-news--w1300">
+        <div class="news-grid">
+            {% for i in range(0, 3) %}
+                <div class="news-card">
+                    <div class="news-card__data">26.12.2022</div>
+                    <a href="{{ data.baseUrl }}/news-detail.html" class="news-card__title">
+                        Очень длинное название новости, Очень длинное название новости, Очень длинное название новости, Очень длинное название новости
+                    </a>
+                    <div class="news-card__text">
+                        Кароткое описание
+                    </div>
+                    <a  href="{{ data.baseUrl }}/news-detail.html" class="link-arrow">
+                        <span class="link-arrow__text">Подробнее</span>
+                    </a>
+                </div>
+                <div class="news-card">
+                    <div class="news-card__data">26.12.2022</div>
+                    <a href="{{ data.baseUrl }}/news-detail.html" class="news-card__title">
+                        График работы в праздничные дни 2023
+                    </a>
+                    <div class="news-card__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur at corporis, cum est exercitationem inventore maxime modi numquam optio perferendis quaerat repellendus rerum sed similique? A ex unde vero.
+                    </div>
+                    <a href="{{ data.baseUrl }}/news-detail.html" class="link-arrow">
+                        <span class="link-arrow__text">Подробнее</span>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="section-news__pagination">
+            {% include "partials/_pagination.twig" %}
+        </div>
+    </section>
+{% endblock %}

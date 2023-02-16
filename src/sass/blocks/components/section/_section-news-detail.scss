@@ -1,0 +1,132 @@
+.news-detail{
+  margin-bottom: 70px;
+
+  @include xl-screen {
+    margin-bottom: 50px;
+  }
+
+  @include lg-screen {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 25px;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 30px;
+
+    @include lg-screen {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    margin-left: auto;
+
+    @include sm-screen {
+      font-size: 19px;
+    }
+  }
+
+  &__next {
+    margin-left: 35px;
+
+    @include sm-screen {
+      margin-left: 20px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+
+    @include xl-screen {
+      margin-bottom: 50px;
+    }
+
+    @include lg-screen {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 30px;
+    width: calc(66.666% - 70px);
+    color: #323232;
+
+    & > * {
+      margin-bottom: 15px;
+    }
+
+    @include lg-screen {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include md-screen {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include xs-screen {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    width: 33.333%;
+    background: #F5F5F5;
+    margin-right: 70px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: max-content;
+
+    @include sm-screen {
+      margin-right: 20px;
+    }
+
+    @include xs-screen {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    &:before {
+      position: relative;
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &__more {
+
+    .title-h3 {
+      margin-bottom: 40px;
+    }
+  }
+}
