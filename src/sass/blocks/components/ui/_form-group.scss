@@ -47,7 +47,6 @@
   }
 
   &__input {
-    background: transparent;
     border: 1px solid var(--background-components-v2);
     border-radius: 6px;
     overflow: hidden;
@@ -55,6 +54,7 @@
     line-height: 42px;
     padding: 0 15px;
     width: 100%;
+    background: #fff;
     font-size: 16px;
     transition: background var(--theme-duration) var(--ease);
 
@@ -65,9 +65,9 @@
 
   &__textarea {
     width: 100%;
-    background: var(--background-components);
-    border: none;
-    border-radius: 6px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid var(--background-components-v2);
     padding: 15px;
   }
 

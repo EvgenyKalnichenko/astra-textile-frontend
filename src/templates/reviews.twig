@@ -1,0 +1,87 @@
+{% set title = "Отзывы" %}
+
+{% extends "layouts/_layout.twig" %}
+
+{% block content %}
+    {% include "./partials/_breadcrumbs.twig" %}
+    <div class="page-1320">
+        <div class="top-page">
+            <h1 class="title-page">Отзывы</h1>
+        </div>
+        <form action="#" class="form-reviews default-border">
+            <h2 class="form-reviews__title">
+                {{ mixins.icon('review') }}
+                Написать отзыв
+            </h2>
+            <div class="form-reviews__top">
+                <div class="form-group">
+                    <div class="form-group__label">Как Вас зовут</div>
+                    <input type="text" name="name" class="form-group__input" placeholder="Ваше имя"/>
+                </div>
+                <div class="form-group">
+                    <div class="form-group__label">Ваш e-mail</div>
+                    <input type="email" name="email" class="form-group__input" placeholder="example@mail.ru"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group__wrap">
+                    <textarea class="form-group__textarea"
+                              name="Текст сообщения"
+                              placeholder="Текст сообщения"
+                              cols="30"
+                              rows="5"
+                    ></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox checkbox--policy checkbox--min">
+                    <input type="checkbox" id="subscribe-policy32" class="checkbox__input" checked="" data-input-policy="">
+                    <label for="subscribe-policy32" class="checkbox__label">
+                    <span class="checkbox__icon">
+                        {{ mixins.icon('check-mark') }}
+                    </span>
+                        <span class="checkbox__text checkbox__text--min">
+                        Я согласен на обработку <a href="#">персональных данных</a>
+                    </span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-reviews__btn">
+                <button class="btn btn--medium" type="submit">Отправить</button>
+            </div>
+        </form>
+        <section class="section-reviews">
+            <div class="reviews-grid">
+                {% for i in range(0, 6) %}
+                    <div class="reviews-grid__item">
+                        <div class="card-r">
+                            <div class="card-r__top">
+                                <div class="card-r__name">
+                                    {{ mixins.icon('user-fill') }}
+                                    Елена
+                                </div>
+                                <div class="card-r__date">
+                                    16.11.2021
+                                </div>
+                            </div>
+                            <div class="card-r__box default-border">
+                                <div class="card-r__box-content">
+                                    Добрый день! Хочу выразить благодарность производителю и всем кто работает в этой
+                                    команде.
+                                    Заказ сделала впервые, очень приятно, что качество не огорчило, а приятно удивило!
+                                    Размеры
+                                    заявлены верно, все в размер. Цвета и модели как на картинке и никакого обмана, состав
+                                    тканей прописан-это позволило сделать правильный выбор! Всем спасибо, буду продолжать
+                                    заказывать!!!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="section-reviews__pagination">
+                {% include "partials/_pagination.twig" %}
+            </div>
+        </section>
+    </div>
+{% endblock %}

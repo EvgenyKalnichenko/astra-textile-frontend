@@ -1,0 +1,101 @@
+.card-r {
+  $block: &;
+
+  &__box {
+    padding: 25px;
+
+    //&-content {
+    //  max-height: calc(21px * 10);
+    //  overflow: hidden;
+    //  position: relative;
+    //}
+  }
+
+  &.open {
+    #{$block}__box-content {
+      max-height: unset;
+    }
+  }
+
+  &.hidden {
+
+    #{$block}__box-content {
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(180deg, rgba(#fff, 0) 0%, #fff 100%);
+        pointer-events: none;
+      }
+    }
+
+    .link-arrow {
+
+      svg {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  .link-arrow {
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__control {
+    width: 100%;
+    background: #fff;
+    text-align: right;
+    padding-top: 25px;
+  }
+
+  &__date {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #787878;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  &__name {
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+    display: inline-flex;
+    align-items: center;
+
+    .icon {
+      color: var(--accent);
+      margin-right: 10px;
+    }
+  }
+}
+
+.reviews-grid {
+  margin-bottom: 30px;
+
+  &__item {
+    margin-bottom: 30px;
+  }
+}
+
+.reviews {
+  max-width: 1370px;
+
+
+  &__form {
+    margin-bottom: 30px;
+  }
+}

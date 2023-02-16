@@ -54,6 +54,15 @@
 	color: var(--accent);
 }
 
+.default-border {
+	border: 1px solid var(--background-components-v2);
+	border-radius: 12px;
+}
+
+.page-1320 {
+	max-width: 1320px;
+}
+
 @include xl-screen {
 	.xl-block {
 		display: block;

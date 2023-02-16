@@ -67,6 +67,7 @@ $(function () {
         'product-detail',
         '404',
         'news',
-        'news-detail'
+        'news-detail',
+        'reviews'
     ]);
 });
