@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>Новости</title>
+    <title>Отзывы</title>
     <link rel="preload" href="./fonts/Manrope/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Manrope/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Manrope/Manrope-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -587,59 +587,142 @@
           </ul>
         </nav>
         <div class="page-1320">
-          <h1 class="title-page">Новости</h1>
-          <section class="section-news">
-            <div class="news-grid">
-              <div class="news-card">
-                <div class="news-card__data">26.12.2022</div>
-                <a href="/astra-textile-frontend/news-detail.html" class="news-card__title"> Очень длинное название новости, Очень длинное название новости, Очень длинное название новости, Очень длинное название новости </a>
-                <div class="news-card__text"> Кароткое описание </div>
-                <a href="/astra-textile-frontend/news-detail.html" class="link-arrow">
-                  <span class="link-arrow__text">Подробнее</span>
-                </a>
+          <div class="top-page">
+            <h1 class="title-page">Отзывы</h1>
+          </div>
+          <form action="#" class="form-reviews default-border">
+            <h2 class="form-reviews__title">
+              <svg class="icon icon-review">
+                <use xlink:href="img/sprite.svg#icon-review"></use>
+              </svg> Написать отзыв
+            </h2>
+            <div class="form-reviews__top">
+              <div class="form-group">
+                <div class="form-group__label">Как Вас зовут</div>
+                <input type="text" name="name" class="form-group__input" placeholder="Ваше имя" />
               </div>
-              <div class="news-card">
-                <div class="news-card__data">26.12.2022</div>
-                <a href="/astra-textile-frontend/news-detail.html" class="news-card__title"> График работы в праздничные дни 2023 </a>
-                <div class="news-card__text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur at corporis, cum est exercitationem inventore maxime modi numquam optio perferendis quaerat repellendus rerum sed similique? A ex unde vero. </div>
-                <a href="/astra-textile-frontend/news-detail.html" class="link-arrow">
-                  <span class="link-arrow__text">Подробнее</span>
-                </a>
-              </div>
-              <div class="news-card">
-                <div class="news-card__data">26.12.2022</div>
-                <a href="/astra-textile-frontend/news-detail.html" class="news-card__title"> Очень длинное название новости, Очень длинное название новости, Очень длинное название новости, Очень длинное название новости </a>
-                <div class="news-card__text"> Кароткое описание </div>
-                <a href="/astra-textile-frontend/news-detail.html" class="link-arrow">
-                  <span class="link-arrow__text">Подробнее</span>
-                </a>
-              </div>
-              <div class="news-card">
-                <div class="news-card__data">26.12.2022</div>
-                <a href="/astra-textile-frontend/news-detail.html" class="news-card__title"> График работы в праздничные дни 2023 </a>
-                <div class="news-card__text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur at corporis, cum est exercitationem inventore maxime modi numquam optio perferendis quaerat repellendus rerum sed similique? A ex unde vero. </div>
-                <a href="/astra-textile-frontend/news-detail.html" class="link-arrow">
-                  <span class="link-arrow__text">Подробнее</span>
-                </a>
-              </div>
-              <div class="news-card">
-                <div class="news-card__data">26.12.2022</div>
-                <a href="/astra-textile-frontend/news-detail.html" class="news-card__title"> Очень длинное название новости, Очень длинное название новости, Очень длинное название новости, Очень длинное название новости </a>
-                <div class="news-card__text"> Кароткое описание </div>
-                <a href="/astra-textile-frontend/news-detail.html" class="link-arrow">
-                  <span class="link-arrow__text">Подробнее</span>
-                </a>
-              </div>
-              <div class="news-card">
-                <div class="news-card__data">26.12.2022</div>
-                <a href="/astra-textile-frontend/news-detail.html" class="news-card__title"> График работы в праздничные дни 2023 </a>
-                <div class="news-card__text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur at corporis, cum est exercitationem inventore maxime modi numquam optio perferendis quaerat repellendus rerum sed similique? A ex unde vero. </div>
-                <a href="/astra-textile-frontend/news-detail.html" class="link-arrow">
-                  <span class="link-arrow__text">Подробнее</span>
-                </a>
+              <div class="form-group">
+                <div class="form-group__label">Ваш e-mail</div>
+                <input type="email" name="email" class="form-group__input" placeholder="example@mail.ru" />
               </div>
             </div>
-            <div class="section-news__pagination">
+            <div class="form-group">
+              <div class="form-group__wrap">
+                <textarea class="form-group__textarea" name="Текст сообщения" placeholder="Текст сообщения" cols="30" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="checkbox checkbox--policy checkbox--min">
+                <input type="checkbox" id="subscribe-policy32" class="checkbox__input" checked="" data-input-policy="">
+                <label for="subscribe-policy32" class="checkbox__label">
+                  <span class="checkbox__icon">
+                    <svg class="icon icon-check-mark">
+                      <use xlink:href="img/sprite.svg#icon-check-mark"></use>
+                    </svg>
+                  </span>
+                  <span class="checkbox__text checkbox__text--min"> Я согласен на обработку <a href="#">персональных данных</a>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div class="form-reviews__btn">
+              <button class="btn btn--medium" type="submit">Отправить</button>
+            </div>
+          </form>
+          <section class="section-reviews">
+            <div class="reviews-grid">
+              <div class="reviews-grid__item">
+                <div class="card-r">
+                  <div class="card-r__top">
+                    <div class="card-r__name">
+                      <svg class="icon icon-user-fill">
+                        <use xlink:href="img/sprite.svg#icon-user-fill"></use>
+                      </svg> Елена
+                    </div>
+                    <div class="card-r__date"> 16.11.2021 </div>
+                  </div>
+                  <div class="card-r__box default-border">
+                    <div class="card-r__box-content"> Добрый день! Хочу выразить благодарность производителю и всем кто работает в этой команде. Заказ сделала впервые, очень приятно, что качество не огорчило, а приятно удивило! Размеры заявлены верно, все в размер. Цвета и модели как на картинке и никакого обмана, состав тканей прописан-это позволило сделать правильный выбор! Всем спасибо, буду продолжать заказывать!!! </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews-grid__item">
+                <div class="card-r">
+                  <div class="card-r__top">
+                    <div class="card-r__name">
+                      <svg class="icon icon-user-fill">
+                        <use xlink:href="img/sprite.svg#icon-user-fill"></use>
+                      </svg> Елена
+                    </div>
+                    <div class="card-r__date"> 16.11.2021 </div>
+                  </div>
+                  <div class="card-r__box default-border">
+                    <div class="card-r__box-content"> Добрый день! Хочу выразить благодарность производителю и всем кто работает в этой команде. Заказ сделала впервые, очень приятно, что качество не огорчило, а приятно удивило! Размеры заявлены верно, все в размер. Цвета и модели как на картинке и никакого обмана, состав тканей прописан-это позволило сделать правильный выбор! Всем спасибо, буду продолжать заказывать!!! </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews-grid__item">
+                <div class="card-r">
+                  <div class="card-r__top">
+                    <div class="card-r__name">
+                      <svg class="icon icon-user-fill">
+                        <use xlink:href="img/sprite.svg#icon-user-fill"></use>
+                      </svg> Елена
+                    </div>
+                    <div class="card-r__date"> 16.11.2021 </div>
+                  </div>
+                  <div class="card-r__box default-border">
+                    <div class="card-r__box-content"> Добрый день! Хочу выразить благодарность производителю и всем кто работает в этой команде. Заказ сделала впервые, очень приятно, что качество не огорчило, а приятно удивило! Размеры заявлены верно, все в размер. Цвета и модели как на картинке и никакого обмана, состав тканей прописан-это позволило сделать правильный выбор! Всем спасибо, буду продолжать заказывать!!! </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews-grid__item">
+                <div class="card-r">
+                  <div class="card-r__top">
+                    <div class="card-r__name">
+                      <svg class="icon icon-user-fill">
+                        <use xlink:href="img/sprite.svg#icon-user-fill"></use>
+                      </svg> Елена
+                    </div>
+                    <div class="card-r__date"> 16.11.2021 </div>
+                  </div>
+                  <div class="card-r__box default-border">
+                    <div class="card-r__box-content"> Добрый день! Хочу выразить благодарность производителю и всем кто работает в этой команде. Заказ сделала впервые, очень приятно, что качество не огорчило, а приятно удивило! Размеры заявлены верно, все в размер. Цвета и модели как на картинке и никакого обмана, состав тканей прописан-это позволило сделать правильный выбор! Всем спасибо, буду продолжать заказывать!!! </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews-grid__item">
+                <div class="card-r">
+                  <div class="card-r__top">
+                    <div class="card-r__name">
+                      <svg class="icon icon-user-fill">
+                        <use xlink:href="img/sprite.svg#icon-user-fill"></use>
+                      </svg> Елена
+                    </div>
+                    <div class="card-r__date"> 16.11.2021 </div>
+                  </div>
+                  <div class="card-r__box default-border">
+                    <div class="card-r__box-content"> Добрый день! Хочу выразить благодарность производителю и всем кто работает в этой команде. Заказ сделала впервые, очень приятно, что качество не огорчило, а приятно удивило! Размеры заявлены верно, все в размер. Цвета и модели как на картинке и никакого обмана, состав тканей прописан-это позволило сделать правильный выбор! Всем спасибо, буду продолжать заказывать!!! </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews-grid__item">
+                <div class="card-r">
+                  <div class="card-r__top">
+                    <div class="card-r__name">
+                      <svg class="icon icon-user-fill">
+                        <use xlink:href="img/sprite.svg#icon-user-fill"></use>
+                      </svg> Елена
+                    </div>
+                    <div class="card-r__date"> 16.11.2021 </div>
+                  </div>
+                  <div class="card-r__box default-border">
+                    <div class="card-r__box-content"> Добрый день! Хочу выразить благодарность производителю и всем кто работает в этой команде. Заказ сделала впервые, очень приятно, что качество не огорчило, а приятно удивило! Размеры заявлены верно, все в размер. Цвета и модели как на картинке и никакого обмана, состав тканей прописан-это позволило сделать правильный выбор! Всем спасибо, буду продолжать заказывать!!! </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section-reviews__pagination">
               <div class="paginator-box">
                 <button class="paginator-box__load">
                   <svg class="icon icon-double-arrow-bottom">
