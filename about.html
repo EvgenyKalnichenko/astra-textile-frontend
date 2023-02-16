@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>О компании</title>
+    <link rel="preload" href="./fonts/Manrope/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Manrope/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Manrope/Manrope-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Manrope/Manrope-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" media="all" href="css/style.css?v=2" />
+  </head>
+  <body>
+    <!-- BEGIN content -->
+    <div class="layout">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__top">
+            <div class="container">
+              <a href="/astra-textile-frontend" class="header__logo none md-block">
+                <img src="./img/logo.png" alt="logo">
+              </a>
+              <div class="header__nav md-none">
+                <a class="header__nav-link" href="#">О компании</a>
+                <a class="header__nav-link" href="#">Доставка и оплата</a>
+                <a class="header__nav-link" href="#">Отзывы</a>
+                <a class="header__nav-link" href="#">Сотрудничество</a>
+                <a class="header__nav-link" href="#">Прайс-лист</a>
+                <a class="header__nav-link" href="#">Размеры</a>
+                <a class="header__nav-link" href="#">Контакты</a>
+              </div>
+              <div class="header__callback sm-none" data-modal-ajax-open="callback">Перезвоните мне</div>
+              <div class="header__phone">
+                <span data-modal-open="popup-callback">8 920 673 97 05</span>
+                <svg class="icon icon-arrow-bottom">
+                  <use xlink:href="img/sprite.svg#icon-arrow-bottom"></use>
+                </svg>
+                <div data-modal="popup-callback" data-disabled-scroll="false" class="header__phone-popup">
+                  <div data-modal-close="popup-callback" class="back-bg"></div>
+                  <div data-modal-inner="popup-callback" class="card-contacts">
+                    <div class="card-contacts__item">
+                      <a href="tel:84932554328">
+                        <svg class="icon icon-phone">
+                          <use xlink:href="img/sprite.svg#icon-phone"></use>
+                        </svg> 8 (4932) 55-43-28 </a>
+                      <span class="card-contacts__item-description"></span>
+                    </div>
+                    <div class="card-contacts__item">
+                      <a href="tel:8 (920) 673-97-05">
+                        <svg class="icon icon-phone">
+                          <use xlink:href="img/sprite.svg#icon-phone"></use>
+                        </svg> 8 (920) 673-97-05 </a>
+                      <span class="card-contacts__item-description"> (viber, whatapp)</span>
+                    </div>
+                    <button type="button" data-modal-ajax-open="callback" class="btn btn--medium"> Заказать звонок </button>
+                    <div class="card-contacts__item" data-v-759b5fdc="">
+                      <svg class="icon icon-message">
+                        <use xlink:href="img/sprite.svg#icon-message"></use>
+                      </svg>
+                      <span class="card-contacts__email"> astraivtex2010@yandex.ru </span> <br> Техническая поддержка
+                    </div>
+                    <button type="button" class="btn btn--medium"> Написать </button>
+                    <div class="card-contacts__item" data-v-759b5fdc="">
+                      <svg class="icon icon-geolocation">
+                        <use xlink:href="img/sprite.svg#icon-geolocation"></use>
+                      </svg> Россия, Иваново, ул. Громобоя, д. 1Б
+                    </div>
+                    <div class="card-contacts__social" data-v-759b5fdc="">
+                      <div class="card-contacts__social-text" data-v-759b5fdc=""> Присоединяйтесь к нам: </div>
+                      <div class="social-icon">
+                        <a href="#" target="_blank" class="social-icon__item">
+                          <img src="./img/vk.svg" alt="">
+                        </a>
+                        <a href="#" target="_blank" class="social-icon__item">
+                          <img src="./img/ok.svg" alt="">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <div class="container">
+              <a href="/astra-textile-frontend" class="header__logo md-none">
+                <img src="./img/logo.png" alt="logo">
+              </a>
+              <div class="header__menu none md-flex">
+                <span class="open">
+                  <svg class="icon icon-hamb-mobile">
+                    <use xlink:href="img/sprite.svg#icon-hamb-mobile"></use>
+                  </svg> Меню </span>
+                <span class="close">
+                  <svg class="icon icon-close">
+                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                  </svg> Закрыть </span>
+              </div>
+              <div class="header__catalog md-none">
+                <button class="btn btn--transparent btn--big" data-modal-toggle="menu-catalog" type="button">
+                  <svg class="icon icon-hamburger">
+                    <use xlink:href="img/sprite.svg#icon-hamburger"></use>
+                  </svg>
+                  <svg class="icon icon-close">
+                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                  </svg> Каталог </button>
+              </div>
+              <div class="header__search">
+                <form action="#" class="form-search">
+                  <input type="text" placeholder="Поиск по каталогу" class="form-search__input">
+                  <div class="form-search__btn">
+                    <button class="btn btn--pd-min btn--white btn--border-accent" aria-label="search" type="submit">
+                      <svg class="icon icon-search">
+                        <use xlink:href="img/sprite.svg#icon-search"></use>
+                      </svg>
+                      <span class="sm-none">Найти</span>
+                    </button>
+                  </div>
+                  <div class="form-search__result">
+                    <div class="custom-scroll">
+                      <a href="#" class="form-search__item">Халат 1</a>
+                      <a href="#" class="form-search__item">Халат 2</a>
+                      <a href="#" class="form-search__item">Халат 1</a>
+                      <a href="#" class="form-search__item">Халат 2</a>
+                      <a href="#" class="form-search__item">Халат 1</a>
+                      <a href="#" class="form-search__item">Халат 2</a>
+                      <a href="#" class="form-search__item">Халат 1</a>
+                      <a href="#" class="form-search__item">Халат 2</a>
+                      <a href="#" class="form-search__item">Халат 1</a>
+                      <a href="#" class="form-search__item">Халат 2</a>
+                      <a href="#" class="form-search__item">Халат 1</a>
+                      <a href="#" class="form-search__item">Халат 2</a>
+                      <a href="#" class="form-search__item">Халат 1</a>
+                      <a href="#" class="form-search__item">Халат 2</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="customer-panel">
+                <a href="#" class="customer-panel__item none md-flex">
+                  <div class="customer-panel__icon">
+                    <svg class="icon icon-home">
+                      <use xlink:href="img/sprite.svg#icon-home"></use>
+                    </svg>
+                  </div>
+                  <div class="customer-panel__name"> Главная </div>
+                </a>
+                <a href="#" data-modal-toggle="menu-catalog" class="customer-panel__item none md-flex">
+                  <div class="customer-panel__icon">
+                    <svg class="icon icon-hamb-mobile">
+                      <use xlink:href="img/sprite.svg#icon-hamb-mobile"></use>
+                    </svg>
+                  </div>
+                  <div class="customer-panel__name"> Каталог </div>
+                </a>
+                <a href="#" class="customer-panel__item">
+                  <div class="customer-panel__icon">
+                    <div class="customer-panel__counter customer-panel__counter--accent">7</div>
+                    <svg class="icon icon-user">
+                      <use xlink:href="img/sprite.svg#icon-user"></use>
+                    </svg>
+                  </div>
+                  <div class="customer-panel__name"> Профиль </div>
+                </a>
+                <a href="#" class="customer-panel__item">
+                  <div class="customer-panel__icon">
+                    <div class="customer-panel__counter">0</div>
+                    <svg class="icon icon-heart">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </div>
+                  <div class="customer-panel__name"> Избранное </div>
+                </a>
+                <a href="#" class="customer-panel__item">
+                  <div class="customer-panel__icon">
+                    <div class="customer-panel__counter customer-panel__counter--accent">37</div>
+                    <svg class="icon icon-basket">
+                      <use xlink:href="img/sprite.svg#icon-basket"></use>
+                    </svg>
+                  </div>
+                  <div class="customer-panel__name"> 356 430 руб. </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-mobile" data-modal="menu-mobile" data-modal-inner="menu-mobile">
+          <div class="menu-mobile__wrap">
+            <a href="#" class="menu-mobile__link" data-modal-open="menu-catalog">Каталог</a>
+            <a href="#" class="menu-mobile__link">О компании</a>
+            <a href="#" class="menu-mobile__link">Доставка и оплата</a>
+            <a href="#" class="menu-mobile__link">Отзывы</a>
+            <a href="#" class="menu-mobile__link">Сотрудничество</a>
+            <a href="#" class="menu-mobile__link">Прайс-лист</a>
+            <a href="#" class="menu-mobile__link">Размеры</a>
+            <a href="#" class="menu-mobile__link">Контакты</a>
+            <div class="card-contacts card-contacts--mod">
+              <div class="card-contacts__item">
+                <a href="tel:84932554328">
+                  <svg class="icon icon-phone">
+                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                  </svg> 8 (4932) 55-43-28 </a>
+                <span class="card-contacts__item-description"></span>
+              </div>
+              <div class="card-contacts__item">
+                <a href="tel:8 (920) 673-97-05">
+                  <svg class="icon icon-phone">
+                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                  </svg> 8 (920) 673-97-05 </a>
+                <span class="card-contacts__item-description"> (viber, whatapp)</span>
+              </div>
+              <button type="button" data-modal-ajax-open="callback" class="btn btn--medium"> Заказать звонок </button>
+              <div class="card-contacts__item" data-v-759b5fdc="">
+                <svg class="icon icon-message">
+                  <use xlink:href="img/sprite.svg#icon-message"></use>
+                </svg>
+                <span class="card-contacts__email"> astraivtex2010@yandex.ru </span> <br> Техническая поддержка
+              </div>
+              <button type="button" class="btn btn--medium"> Написать </button>
+              <div class="card-contacts__item" data-v-759b5fdc="">
+                <svg class="icon icon-geolocation">
+                  <use xlink:href="img/sprite.svg#icon-geolocation"></use>
+                </svg> Россия, Иваново, ул. Громобоя, д. 1Б
+              </div>
+              <div class="card-contacts__social" data-v-759b5fdc="">
+                <div class="card-contacts__social-text" data-v-759b5fdc=""> Присоединяйтесь к нам: </div>
+                <div class="social-icon">
+                  <a href="#" target="_blank" class="social-icon__item">
+                    <img src="./img/vk.svg" alt="">
+                  </a>
+                  <a href="#" target="_blank" class="social-icon__item">
+                    <img src="./img/ok.svg" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-catalog" data-modal="menu-catalog">
+          <div class="menu-catalog__wrapper container" data-modal-inner="catalog-menu">
+            <div class="menu-catalog__left custom-scroll">
+              <div class="recommendations">
+                <div class="recommendations__item blue">
+                  <div class="recommendations__icon">
+                    <svg class="icon icon-new">
+                      <use xlink:href="img/sprite.svg#icon-new"></use>
+                    </svg>
+                  </div>
+                  <a href="#" class="recommendations__link"> Новинки </a>
+                </div>
+                <div class="recommendations__item accent">
+                  <div class="recommendations__icon">
+                    <svg class="icon icon-actions">
+                      <use xlink:href="img/sprite.svg#icon-actions"></use>
+                    </svg>
+                  </div>
+                  <a href="#" class="recommendations__link"> Акции </a>
+                </div>
+                <div class="recommendations__item yellow">
+                  <div class="recommendations__icon">
+                    <svg class="icon icon-star">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </div>
+                  <a href="#" class="recommendations__link"> Хиты продаж </a>
+                </div>
+              </div>
+              <a href="#" class="menu-catalog__link" data-menu-open="Женский трикотаж ">Женский трикотаж </a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Мужской трикотаж">Мужской трикотаж</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Детский трикотаж">Детский трикотаж</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Домашний текстиль">Домашний текстиль</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Спецодежда">Спецодежда</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Нижнее белье">Нижнее белье</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Носки, колготки">Носки, колготки</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Шапки, шарфы, перчатки, снуды">Шапки, шарфы, перчатки, снуды</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Сумки зонты">Сумки зонты</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Обувь">Обувь</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Женский трикотаж ">Женский трикотаж </a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Мужской трикотаж">Мужской трикотаж</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Детский трикотаж">Детский трикотаж</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Домашний текстиль">Домашний текстиль</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Спецодежда">Спецодежда</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Нижнее белье">Нижнее белье</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Носки, колготки">Носки, колготки</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Шапки, шарфы, перчатки, снуды">Шапки, шарфы, перчатки, снуды</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Сумки зонты">Сумки зонты</a>
+              <a href="#" class="menu-catalog__link" data-menu-open="Обувь">Обувь</a>
+            </div>
+            <div class="menu-catalog__right custom-scroll">
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Женский трикотаж " data-modal-inner="Женский трикотаж ">
+                <a href="#" data-modal-close="Женский трикотаж " class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Женский трикотаж </h4>
+                <ul>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Халаты</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Платья</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Сарафаны</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Футболки майки</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Джемпера, водолазки</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Толстовки кардиганы</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Костюмы</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Брюки, бриджи, легенсы, шорты, юбки</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Пижамы</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Ночные сорочки</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Ночные комплекты-пеньюары</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Мужской трикотаж" data-modal-inner="Мужской трикотаж">
+                <a href="#" data-modal-close="Мужской трикотаж" class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Мужской трикотаж</h4>
+                <ul>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Халаты</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Платья</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Сарафаны</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Футболки майки</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Джемпера, водолазки</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Толстовки кардиганы</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Костюмы</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Брюки, бриджи, легенсы, шорты, юбки</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Пижамы</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Ночные сорочки</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Ночные комплекты-пеньюары</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Детский трикотаж" data-modal-inner="Детский трикотаж">
+                <a href="#" data-modal-close="Детский трикотаж" class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Детский трикотаж</h4>
+                <ul>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Халаты</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Платья</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Сарафаны</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Домашний текстиль" data-modal-inner="Домашний текстиль">
+                <a href="#" data-modal-close="Домашний текстиль" class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Домашний текстиль</h4>
+                <ul>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Готовый бизнес</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Партнерство и сотрудничество</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Бизнес услуги</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Сырье, тара, товары оптом</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Спецодежда" data-modal-inner="Спецодежда">
+                <a href="#" data-modal-close="Спецодежда" class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Спецодежда</h4>
+                <ul>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Детская одежда</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Детская обувь</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Игрушки, книжки</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Детское питание</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Коляски и транспорт для детей</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Нижнее белье" data-modal-inner="Нижнее белье">
+                <a href="#" data-modal-close="Нижнее белье" class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Нижнее белье</h4>
+                <ul>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Одежда для мужчин</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Одежда для женщин</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Обувь для мужчин</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Обувь для женщин</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Головные уборы</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Носки, колготки" data-modal-inner="Носки, колготки">
+                <a href="#" data-modal-close="Носки, колготки" class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Носки, колготки</h4>
+                <ul>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Фауна</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Флора</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Аквариумистика</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Автоуслуги</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Фермерское хозяйство</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Шапки, шарфы, перчатки, снуды" data-modal-inner="Шапки, шарфы, перчатки, снуды">
+                <a href="#" data-modal-close="Шапки, шарфы, перчатки, снуды" class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Шапки, шарфы, перчатки, снуды</h4>
+                <ul>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Готовый бизнес</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Партнерство и сотрудничество</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Бизнес услуги</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Сырье, тара, товары оптом</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Сумки зонты" data-modal-inner="Сумки зонты">
+                <a href="#" data-modal-close="Сумки зонты" class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Сумки зонты</h4>
+                <ul>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Готовый бизнес</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Партнерство и сотрудничество</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Бизнес услуги</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Сырье, тара, товары оптом</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-catalog__second" data-disabled-scroll="false" data-modal="Обувь" data-modal-inner="Обувь">
+                <a href="#" data-modal-close="Обувь" class="menu-catalog__back none">
+                  <span>
+                    <svg class="icon icon-arrow-left">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </span> Назад </a>
+                <h4 class="menu-catalog__title">Обувь</h4>
+                <ul>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Готовый бизнес</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Партнерство и сотрудничество</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Бизнес услуги</a>
+                  </li>
+                  <li>
+                    <a href="/astra-textile-frontend/catalog.html">Сырье, тара, товары оптом</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="container">
+        <nav aria-label="breadcrumbs" class="breadcrumb">
+          <ul class="breadcrumb__list">
+            <li class="breadcrumb__item">
+              <a href="/" class="breadcrumb__link"> Главная </a>
+            </li>
+            <li class="breadcrumb__item">
+              <a href="#" class="breadcrumb__link"> Каталог </a>
+            </li>
+            <li class="breadcrumb__item">
+              <a href="#" class="breadcrumb__link"> Женский трикотаж </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="page-1320">
+          <h1 class="title-page">О компании</h1>
+          <div class="about-description">
+            <p>Торговая марка «Астратекстиль» предлагает женский трикотаж оптом от производителя. Трикотажные изделия нашей компании изготавливаются из полотен российского и зарубежного производства. Дата основания компании 22 июля 1997 года, у нас многолетний опыт работы на российском рынке. За этот период мы зарекомендовали себя как надежный и ответственный поставщик. Пошив осуществляется строго по ГОСТам. Вся продукция сертифицирована и соответствует стандартам качества. Предлагаемый ассортимент от 42 до 72 размера. </p>
+            <p> Мы изготавливаем и разрабатываем как изделия, указанные на сайте, так же и на заказ (по Вашему желанию). Для изготовления одежды мы используем только качественные ткани. Постоянно происходит обновление ассортимента и цветовой гаммы. </p>
+            <h4>Подзаголовок</h4>
+            <p>Торговая марка «Астратекстиль» предлагает женский трикотаж оптом от производителя. Трикотажные изделия нашей компании изготавливаются из полотен российского и зарубежного производства. Дата основания компании 22 июля 1997 года, у нас многолетний опыт работы на российском рынке. За этот период мы зарекомендовали себя как надежный и ответственный поставщик. Пошив осуществляется строго по ГОСТам. Вся продукция сертифицирована и соответствует стандартам качества. Предлагаемый ассортимент от 42 до 72 размера.</p>
+          </div>
+          <div class="about-numbers">
+            <h2 class="about-numbers__title">Астра текстиль в <span class="accent">цифрах</span></h2>
+            <div class="about-numbers__grid">
+              <div class="about-numbers__item">
+                <div class="about-numbers__num"> 10 </div>
+                <div class="about-numbers__text"> лет на рынке </div>
+              </div>
+              <div class="about-numbers__item">
+                <div class="about-numbers__num"> 170 </div>
+                <div class="about-numbers__text"> сотрудников (6 подразделений и 15 отделов) </div>
+              </div>
+              <div class="about-numbers__item">
+                <div class="about-numbers__num"> 1 000 </div>
+                <div class="about-numbers__text"> товаров на сайте </div>
+              </div>
+              <div class="about-numbers__item">
+                <div class="about-numbers__num"> 1 500 000 </div>
+                <div class="about-numbers__text"> изделий продано за год </div>
+              </div>
+              <div class="about-numbers__item">
+                <div class="about-numbers__num"> 2 000 000 </div>
+                <div class="about-numbers__text"> изделий произведено за год </div>
+              </div>
+              <div class="about-numbers__item">
+                <div class="about-numbers__num"> 45 000 </div>
+                <div class="about-numbers__text"> заказов отправлено за год </div>
+              </div>
+              <div class="about-numbers__item">
+                <div class="about-numbers__num"> 2 100 </div>
+                <div class="about-numbers__text"> м2 производственные площади </div>
+              </div>
+              <div class="about-numbers__item">
+                <div class="about-numbers__num"> 3 600 </div>
+                <div class="about-numbers__text"> м2 складские площади </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-slider"> 132 </div>
+        </div>
+      </main>
+      <div class="footer">
+        <div class="footer__container container">
+          <div class="footer__row">
+            <div class="footer__col">
+              <div class="footer__top">
+                <div class="footer__title"> Каталог <svg class="icon" x="0px" y="0px" viewBox="0 0 25 25">
+                    <circle cx="12.5" cy="12.5" r="12.5" />
+                    <polygon fill="#ffffff" points="13,15.5 8.8,11.2 10.2,9.8 13,12.7 15.8,9.8 17.2,11.2 " />
+                  </svg>
+                </div>
+              </div>
+              <ul class="footer__list column-2">
+                <li>
+                  <a href="#">Детский трикотаж</a>
+                </li>
+                <li>
+                  <a href="#">Домашняя обувь</a>
+                </li>
+                <li>
+                  <a href="#">Женский трикотаж</a>
+                </li>
+                <li>
+                  <a href="#">Мужской трикотаж</a>
+                </li>
+                <li>
+                  <a href="#">Прочие товары</a>
+                </li>
+                <li>
+                  <a href="#">Товары для дома</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__col footer__col--info">
+              <div class="footer__top">
+                <div class="footer__title"> Информация <svg class="icon" x="0px" y="0px" viewBox="0 0 25 25">
+                    <circle cx="12.5" cy="12.5" r="12.5" />
+                    <polygon fill="#ffffff" points="13,15.5 8.8,11.2 10.2,9.8 13,12.7 15.8,9.8 17.2,11.2 " />
+                  </svg>
+                </div>
+              </div>
+              <ul class="footer__list column-2">
+                <li><a href="#" class="">Новости</a></li>
+                <li><a href="#" class="">Новости</a></li>
+                <li><a href="#" class="">Новости</a></li>
+                <li><a href="#" class="">Новости</a></li>
+                <li><a href="#" class="">Новости</a></li>
+                <li><a href="#" class="">Новости</a></li>
+                <li><a href="#" class="">Новости</a></li>
+                <li><a href="#" class="">Новости</a></li>
+                <li><a href="#" class="">Новости</a></li>
+                <li><a href="#" class="">Новости</a></li>
+              </ul>
+            </div>
+            <div class="footer__col footer__col--contacts">
+              <div class="footer__top">
+                <div class="footer__title"> Контакты </div>
+              </div>
+              <div class="footer__contacts">
+                <div class="footer__contacts-item">
+                  <div class="contact-item">
+                    <div class="contact-item__icon">
+                      <svg class="icon icon-phone">
+                        <use xlink:href="img/sprite.svg#icon-phone"></use>
+                      </svg>
+                    </div>
+                    <div class="contact-item__info">
+                      <a href="tel:+7 920 673 97 05" class="contact-item__phone"> +7 (920) 673 97 05</a> <br>
+                      <a href="#" data-modal-ajax-open="callback">Перезвоните мне</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer__contacts-item">
+                  <div class="contact-item">
+                    <div class="contact-item__icon">
+                      <svg class="icon icon-message">
+                        <use xlink:href="img/sprite.svg#icon-message"></use>
+                      </svg>
+                    </div>
+                    <div class="contact-item__info">
+                      <a href="mailto:astraivtex2010@yandex.ru" target="_blank">astraivtex2010@yandex.ru</a>
+                      <br> техническая поддержка
+                    </div>
+                  </div>
+                </div>
+                <div class="footer__contacts-item">
+                  <div class="footer__social-text"> Присоединяйтесь к нам <br> в социальных сетях: </div>
+                  <div class="social-icon">
+                    <a href="#" target="_blank" class="social-icon__item">
+                      <img src="./img/vk.svg" alt="">
+                    </a>
+                    <a href="#" target="_blank" class="social-icon__item">
+                      <img src="./img/ok.svg" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="copyright__container container">
+            <div class="copyright__row">
+              <div class="copyright__text">Астра Текстиль ©Текстиль из Иваново 2022</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END content -->
+    <script type="text/javascript" src="js/app.js?v=2"></script>
+    <!-- !!!!!!!! START: HELPER ТОЛЬКО ДЛЯ DEV !!!!!!!!! -->
+    <script defer src="js/helper-menu.js"></script>
+    <!-- !!!!!!!! END: HELPER ТОЛЬКО ДЛЯ DEV !!!!!!!!! -->
+  </body>
+</html>
