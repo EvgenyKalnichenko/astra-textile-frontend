@@ -1,5 +1,5 @@
 .social-icon {
-  display: inline-flex;
+
 
   &__item {
     color: #FFFFFF;
@@ -15,5 +15,13 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__row {
+    display: inline-flex;
   }
 }

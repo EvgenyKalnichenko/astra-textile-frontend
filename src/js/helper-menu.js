@@ -65,10 +65,11 @@ $(function () {
         'index',
         'catalog',
         'product-detail',
-        '404',
         'news',
         'news-detail',
         'reviews',
-        'about'
+        'about',
+        'contacts',
+        '404'
     ]);
 });

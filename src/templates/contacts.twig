@@ -1,0 +1,124 @@
+{% set title = "О компании" %}
+
+{% extends "layouts/_layout.twig" %}
+
+{% block content %}
+    {% include "./partials/_breadcrumbs.twig" %}
+    <div class="page-1320">
+        <h1 class="title-page">Контакты</h1>
+        <section class="section-contacts">
+            <div class="section-contacts__row">
+                <div class="section-contacts__col">
+                    <div class="contacts-box">
+                        <div class="contacts-box__icon">
+                            {{ mixins.icon('clock') }}
+                        </div>
+                        <div class="contacts-box__content">
+                            <div class="contacts-box__list">
+                                <div class="contacts-box__item">
+                                    ПН-ПТ: 9:00-17:00 (по МСК)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts-box">
+                        <div class="contacts-box__icon">
+                            {{ mixins.icon('phone') }}
+                        </div>
+                        <div class="contacts-box__content">
+                            <div class="contacts-box__list">
+                                <div class="contacts-box__item">
+                                    <a class="contacts-box__tel" href="tel:8 (4932) 55-43-28">8 (4932) 55-43-28</a>
+                                    <div class="text-min text-grey">городской телефон</div>
+                                </div>
+                                <div class="contacts-box__item">
+                                    <a class="contacts-box__tel" href="tel:8 (920) 673-97-05 ">8 (920) 673-97-05</a>
+                                    <div class="text-min text-grey">менеджер Елена, Любовь </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts-box">
+                        <div class="contacts-box__icon">
+                            {{ mixins.icon('message') }}
+                        </div>
+                        <div class="contacts-box__content">
+                            <div class="contacts-box__list">
+                                <div class="contacts-box__item">
+                                    <a href="mailto:astraivtex2010@yandex.ru">astraivtex2010@yandex.ru</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts-box">
+                        <div class="contacts-box__icon">
+                            {{ mixins.icon('geolocation') }}
+                        </div>
+                        <div class="contacts-box__content">
+                            <div class="contacts-box__list">
+                                <div class="contacts-box__item">
+                                    г. Кохма, ул. Красноармейская д. 15
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% include "./partials/_social.twig" %}
+                </div>
+                <div class="section-contacts__col">
+                    <div class="contacts-person">
+                        <div class="contacts-person__icon">
+                            {{ mixins.icon('user-fill') }}
+                        </div>
+                        <div class="contacts-person__name">
+                            ИП Горячева Таисья Павловна
+                        </div>
+                        <div class="contacts-person__list">
+                            <div class="contacts-person__list-item">
+                                ИНН: 3702018561
+                            </div>
+                            <div class="contacts-person__list-item">
+                                ОГРН: 3143702250010
+                            </div>
+                            <div class="contacts-person__list-item">
+                                Наименование банка: Ивановское Отделение №869 ПАО Сбербанка г.Иваново
+                            </div>
+                            <div class="contacts-person__list-item">
+                                Расчетный счет: 402810117000004985
+                            </div>
+                            <div class="contacts-person__list-item">
+                                К/c: 301018100000000608
+                            </div>
+                            <div class="contacts-person__list-item">
+                                БИК: 04246608
+                            </div>
+                            <div class="contacts-person__list-item">
+                                Адрес местонахождения Банка получателя: <br>
+                                Юр.адрес 117997, г.Москва, ул.Вавилова, 19 <br>
+                                Почтовый 15309, г.Иваново, ул.Лежневская, 1
+                            </div>
+                        </div>
+                    </div>
+                    <div class="warning">
+                        <div class="warning__top">
+                            <div class="warning__icon">
+                                {{ mixins.icon('warning') }}
+                            </div>
+                            <div class="warning__bold">
+                                Обращаем Ваше внимание
+                            </div>
+                        </div>
+                        <div class="warning__bottom">
+                            <div>
+                                Оплата на карту Сбербанка может производиться только от физического лица. <br>
+                                С расчетного счета и карты привязанной к расчетному счету необходимо производить оплату
+                                на наш расчетный счет.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A02fdc418f06e2ce0d3415c8acc99ffed3773f0cb62d0d11d90d150facfe2d791&amp;width=100%25&amp;height=100%amp;lang=ru_RU&amp;scroll=true"></script>        </section>
+    </div>
+{% endblock %}

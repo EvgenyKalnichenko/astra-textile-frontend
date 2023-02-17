@@ -1,0 +1,145 @@
+.section-contacts {
+  font-size: 16px;
+  line-height: 26px;
+
+  @include sm-screen {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  &__col {
+    &:first-child {
+      grid-column: firstCol;
+    }
+
+    &:last-child {
+      grid-column: lastCol;
+    }
+  }
+
+  &__row {
+    grid-template-columns: [firstCol] 7fr [lastCol] 9fr;
+    display: grid;
+
+    @include rmin($break_lg) {
+      grid-template-columns: [firstCol] 7fr [lastCol] 9fr;
+      grid-gap: 90px;
+    }
+
+    @include rd($break_sm, $break_lg) {
+      grid-template-columns: [firstCol] 8fr [lastCol] 8fr;
+      grid-gap: 40px;
+    }
+
+    @include sm-screen {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 40px;
+    }
+  }
+}
+
+.contacts-person {
+  padding-left: 35px;
+  position: relative;
+  margin-bottom: 30px;
+
+  @include sm-screen {
+    margin-bottom: 15px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    color: $accent;
+    font-size: 20px;
+  }
+
+  &__name {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+}
+
+.contacts-box {
+  padding-left: 35px;
+  position: relative;
+  margin-bottom: 30px;
+
+  @include sm-screen {
+    margin-bottom: 15px;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--accent);
+
+    svg {
+      font-size: 20px;
+      max-width: 19px;
+    }
+  }
+
+  a {
+    color: currentColor;
+    transition: 0.15s ease-in-out;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  &__social {
+    margin-bottom: 20px;
+
+    &-name {
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    align-items: flex-start;
+  }
+
+  &__tel {
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  .text-grey {
+    color: var(--color-light);
+  }
+}
+
+.section-map {
+  background: var(--background-components);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 30px 0;
+  position: relative;
+  height: 506px;
+
+  //&:before {
+  //  content: "";
+  //  position: relative;
+  //  display: block;
+  //  padding-top: 44%;
+  //  z-index: -1;
+  //}
+
+  iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
