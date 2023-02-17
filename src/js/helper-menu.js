@@ -68,8 +68,10 @@ $(function () {
         'news',
         'news-detail',
         'reviews',
+        'basket',
         'about',
         'contacts',
+        'delivery',
         '404'
     ]);
 });

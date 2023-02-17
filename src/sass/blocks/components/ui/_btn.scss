@@ -135,3 +135,69 @@
     left: 1px;
   }
 }
+
+.btn-i {
+  $b: &;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+  outline: none;
+  background: transparent;
+  border: none;
+  color: #000;
+
+  &:hover {
+    color: $accent;
+  }
+
+  @include sm-screen {
+    //font-size: 12px;
+    //line-height: 12px;
+  }
+
+  &--grey {
+    color: #696969;
+
+    #{$b}__icon {
+      color: #696969;
+    }
+  }
+
+  &--red {
+
+    #{$b}__icon {
+      color: $error;
+    }
+  }
+
+  &--accent {
+    color: $accent;
+  }
+
+  &__text {
+    display: inline-block;
+    line-height: 20px;
+  }
+
+  &__icon {
+    width: 18px;
+    height: 20px;
+    margin-right: 10px;
+    color: $accent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @include sm-screen {
+      top: -2px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+

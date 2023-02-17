@@ -14,9 +14,7 @@ $(document).on('change', '[data-input-policy]', function () {
     }
 });
 
-
 // Каталог меню
-
 if($('.menu-sidebar').length){
     $(document).on('click', '.menu-sidebar__name', function () {
         $(this).siblings('.menu-sidebar__list').stop().slideToggle(200)
@@ -26,6 +24,21 @@ if($('.menu-sidebar').length){
         'display' : 'block'
     })
 }
+
+// Раскрытие карточки в корзине
+
+$(document).on('click', '.card-basket__more', function () {
+    const card = $(this).closest('.card-basket')
+    card.toggleClass('is-active')
+    card.find('.card-basket__dropdown').slideToggle(200)
+
+    if(card.hasClass('is-active')) {
+        $(this).text('Скрыть количество и размеры')
+    } else {
+        $(this).text('Показать количество и размеры')
+    }
+
+})
 
 // input mask
 // $('[name="phone"]').mask('+7 (999) 999 99 99');

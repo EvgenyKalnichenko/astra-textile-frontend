@@ -1,0 +1,39 @@
+.section-basket {
+  margin-bottom: 110px;
+
+  @include xl-screen {
+    margin-bottom: 90px;
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__main {
+    width: calc(100% - 435px);
+    margin-right: 45px;
+
+    @include xl-screen {
+      width: calc(100% - 380px);
+      margin-right: 30px;
+    }
+
+    @include r(1200px) {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__sidebar {
+    width: 390px;
+
+    @include xl-screen {
+      width: 350px;
+    }
+
+    @include r(1200px) {
+      width: 100%;
+    }
+  }
+}

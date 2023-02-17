@@ -2,17 +2,17 @@
     <div class="header__container">
         <div class="header__top">
             <div class="container">
-                <a href="{{ data.baseUrl }}" class="header__logo none md-block">
+                <a href="{{ data.baseUrl }}/" class="header__logo none md-block">
                     <img src="./img/logo.png" alt="logo">
                 </a>
                 <div class="header__nav md-none">
-                    <a class="header__nav-link" href="#">О компании</a>
-                    <a class="header__nav-link" href="#">Доставка и оплата</a>
-                    <a class="header__nav-link" href="#">Отзывы</a>
+                    <a class="header__nav-link" href="{{ data.baseUrl }}/about.html">О компании</a>
+                    <a class="header__nav-link" href="{{ data.baseUrl }}/delivery.html">Доставка и оплата</a>
+                    <a class="header__nav-link" href="{{ data.baseUrl }}/reviews.html">Отзывы</a>
                     <a class="header__nav-link" href="#">Сотрудничество</a>
                     <a class="header__nav-link" href="#">Прайс-лист</a>
                     <a class="header__nav-link" href="#">Размеры</a>
-                    <a class="header__nav-link" href="#">Контакты</a>
+                    <a class="header__nav-link" href="{{ data.baseUrl }}/contacts.html">Контакты</a>
                 </div>
                 <div class="header__callback sm-none" data-modal-ajax-open="callback">Перезвоните мне</div>
                 <div class="header__phone">
@@ -62,7 +62,7 @@
         </div>
         <div class="header__bottom">
             <div class="container">
-                <a href="{{ data.baseUrl }}" class="header__logo md-none">
+                <a href="{{ data.baseUrl }}/" class="header__logo md-none">
                     <img src="./img/logo.png" alt="logo">
                 </a>
                 <div class="header__menu none md-flex">
@@ -138,7 +138,7 @@
                             Избранное
                         </div>
                     </a>
-                    <a href="#" class="customer-panel__item">
+                    <a href="{{ data.baseUrl }}/basket.html" class="customer-panel__item">
                         <div class="customer-panel__icon">
                             <div class="customer-panel__counter customer-panel__counter--accent">37</div>
                             {{ mixins.icon('basket') }}

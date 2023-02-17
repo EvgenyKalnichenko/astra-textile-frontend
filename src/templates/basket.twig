@@ -1,0 +1,128 @@
+{% set title = "Корзина" %}
+
+{% extends "layouts/_layout.twig" %}
+
+{% block content %}
+    {% include "./partials/_breadcrumbs.twig" %}
+    <section class="section-basket">
+        <h1 class="title-page">Корзина</h1>
+        <div class="section-basket__grid">
+            <div class="section-basket__main">
+                {% for i in range(0, 3) %}
+                    <div class="card-basket default-border">
+                        <div class="card-basket__wrap">
+                            <div class="card-basket__image">
+                                <picture>
+                                    <source data-srcset="img/product-{{ i + 1 }}.webp" type="image/webp"/>
+                                    <img class="lazy" data-src="img/product-{{ i + 1 }}.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="card-basket__description">
+                                <div class="card-basket__title">Б0760-2 Футболка женская люрекс</div>
+                                <div class="card-basket__info">
+                                    <span class="text-grey">Артикул:</span> Б0760-2
+                                </div>
+                                <div class="card-basket__info">
+                                    <span class="text-grey">Цвет:</span> фиолетовый
+                                </div>
+                            </div>
+                            <div class="card-basket__total">
+                                <div class="card-basket__total-row">
+                                    <div class="card-basket__total-text">Количество:</div>
+                                    <div class="card-basket__total-price"><b>120</b></div>
+                                </div>
+                                <div class="card-basket__total-row">
+                                    <div class="card-basket__total-text">Цена мелкооптовая:</div>
+                                    <div class="card-basket__total-price"><b>1 350</b> ₽</div>
+                                </div>
+                                <div class="card-basket__total-row">
+                                    <div class="card-basket__total-text">Общая сумма:</div>
+                                    <div class="card-basket__total-price"><b>162 000</b> ₽</div>
+                                </div>
+                            </div>
+                            <div class="card-basket__control">
+                                <div class="card-basket__icon">{{ mixins.icon('heart') }}</div>
+                                <div class="card-basket__icon">{{ mixins.icon('close') }}</div>
+                            </div>
+                            <div class="card-basket__dropdown">
+                                {% include "partials/product/_product-size.twig" %}
+                            </div>
+                        </div>
+                        <div class="card-basket__more">Показать количество и размеры</div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="section-basket__sidebar">
+                <div class="card-sidebar">
+                    <div class="card-sidebar__col">
+                        <div class="card-sidebar__row">
+                            <div class="card-sidebar__name">
+                                Количество товаров
+                            </div>
+                            <div class="card-sidebar__bold">
+                                18
+                            </div>
+                        </div>
+                        <div class="card-sidebar__row">
+                            <div class="card-sidebar__name">
+                                Общая стоимость:
+                            </div>
+                            <div class="card-sidebar__bold">
+                                452 000
+                            </div>
+                        </div>
+                        <div class="card-sidebar__row">
+                            <div class="card-sidebar__name">
+                                Скидка:
+                            </div>
+                            <div class="card-sidebar__bold">
+                                12% (23 000)
+                            </div>
+                        </div>
+                        <div class="system-stock">
+{#                            <div class="system-stock__name">#}
+{#                                Система скидок#}
+{#                            </div>#}
+                            <div class="system-stock__note">
+                                До скидки <span>2</span>% осталось заказать на сумму:
+                                7&nbsp;850&nbsp;₽.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-sidebar__col">
+                        <div class="card-sidebar__row">
+                            <div class="card-sidebar__name card-sidebar__name--big">
+                                Итого к оплате:
+                            </div>
+                            <div class="card-sidebar__bold card-sidebar__bold--big">
+                                12&nbsp;150&nbsp;₽
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-sidebar__col">
+                        <div class="card-sidebar__btn">
+                            <button class="btn btn--full btn--medium">
+                                Продолжить оформление
+                            </button>
+                            <div class="error-message">
+
+                            </div>
+                        </div>
+                        <div class="card-sidebar__options">
+                            <div class="card-sidebar__reset">
+                                <button type="button" class="btn-i btn-i--red">
+                                    <div class="btn-i__icon">
+                                        {{ mixins.icon('reset') }}
+                                    </div>
+                                    <div data-v-f886dda6="" class="btn-i__text">
+                                        Очистить корзину
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
