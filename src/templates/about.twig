@@ -1,7 +1,10 @@
 {% set title = "О компании" %}
 
 {% extends "layouts/_layout.twig" %}
-
+{% block head %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+{% endblock %}
 {% block content %}
     {% include "./partials/_breadcrumbs.twig" %}
     <div class="page-1320">
@@ -97,8 +100,33 @@
             </div>
         </div>
         <div class="about-slider">
-            132
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    {% for i in range(0, 7) %}
+                        <div class="swiper-slide about-slider__item">
+                            <a href="img/sert.webp"
+                               data-fancybox="gallery"
+                               data-caption="Название сертификата"
+                               class="about-slider__link"
+                            >
+                                <picture>
+                                    <source data-srcset="img/sert.webp" type="image/webp"/>
+                                    <img class="lazy" data-src="img/sert.jpg" alt="">
+                                </picture>
+                            </a>
+                            <div class="about-slider__name">Описание фотки сертификата итд</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="swiper-arrow sm-none">
+                <div class="swiper-arrow__item swiper-arrow__item--prev">
+                    {{ mixins.icon('swiper-prev') }}
+                </div>
+                <div class="swiper-arrow__item swiper-arrow__item--next">
+                    {{ mixins.icon('swiper-next') }}
+                </div>
+            </div>
         </div>
-
     </div>
 {% endblock %}

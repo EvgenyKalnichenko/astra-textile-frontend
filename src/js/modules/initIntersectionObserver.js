@@ -3,7 +3,6 @@ function debugFunction(message, debug= false,) {
 }
 
 export const initIntersectionObserver = (fn, targets) => {
-    console.log('initIntersectionObserver')
     if (
         'IntersectionObserver' in window &&
         'IntersectionObserverEntry' in window &&
@@ -15,7 +14,7 @@ export const initIntersectionObserver = (fn, targets) => {
         }
         const observer = new IntersectionObserver(items => {
             items.forEach(item => {
-                if (item.isIntersecting) { // && item.intersectionRatio>0.25
+                if (item.isIntersecting) {
                     debugFunction('Нашел элемент')
                     if (!item.target.classList.contains('init')) {
                         debugFunction('выполняю функцию')

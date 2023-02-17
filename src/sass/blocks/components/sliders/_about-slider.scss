@@ -1,0 +1,34 @@
+.about-slider {
+  position: relative;
+  margin-bottom: 100px;
+
+  @include xl-screen {
+    margin-bottom: 70px;
+  }
+
+  &__link {
+    @include ratio(302, 380);
+    position: relative;
+    margin-bottom: 10px;
+    display: block;
+
+    img {
+      @include coverdiv();
+      @include ofi(contain, center);
+    }
+  }
+
+  &__name {
+    text-align: center;
+  }
+
+  &__item {
+    width: calc(25% - 25px);
+    margin-right: 25px;
+
+    @include md-screen {
+      width: 250px;
+      margin-right: 25px;
+    }
+  }
+}

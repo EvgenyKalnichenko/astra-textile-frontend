@@ -178,4 +178,38 @@ export function swiperInit () {
         },
         document.querySelectorAll('.product-slider:not(.init)')
     )
+
+    // Сладер на странице о компании
+    initIntersectionObserver(
+        (item) => {
+            const el = item.target;
+            el.classList.add('init')
+
+            new Swiper (el.querySelector('.swiper'), {
+                modules: [Navigation],
+                navigation: {
+                    nextEl: el.querySelector('.swiper-arrow__item--next'),
+                    prevEl: el.querySelector('.swiper-arrow__item--prev'),
+                },
+                loop: false,
+                spaceBetween: 0,
+                watchOverflow: true,
+                speed: 200,
+                slideClass: 'swiper-slide',
+                breakpoints: {
+                    // when window width is >= 320px
+                    0: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 25,
+                    },
+                    // when window width is >= 640px
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 25,
+                    },
+                }
+            })
+        },
+        document.querySelectorAll('.about-slider:not(.init)')
+    )
 }
