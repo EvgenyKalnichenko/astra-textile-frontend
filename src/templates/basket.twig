@@ -41,7 +41,7 @@
                                 </div>
                             </div>
                             <div class="card-basket__control">
-                                <div class="card-basket__icon">{{ mixins.icon('heart') }}</div>
+                                <div class="card-basket__icon {% if i === 1 %}is-active{% endif %}">{{ mixins.icon('heart') }}</div>
                                 <div class="card-basket__icon">{{ mixins.icon('close') }}</div>
                             </div>
                             <div class="card-basket__dropdown">
@@ -76,19 +76,55 @@
                                 Скидка:
                             </div>
                             <div class="card-sidebar__bold">
-                                12% (23 000)
+                                10% (23 000)
                             </div>
                         </div>
                         <div class="system-stock">
 {#                            <div class="system-stock__name">#}
 {#                                Система скидок#}
 {#                            </div>#}
+                            <div class="indicator">
+                                <div class="indicator__row">
+                                    <div class="indicator__bold">5%</div>
+                                    <div class="indicator__bold">10%</div>
+                                    <div class="indicator__bold">15%</div>
+                                </div>
+                                <div class="indicator__row">
+                                    <div class="indicator__line">
+                                        <div class="indicator__percent" style="width: 70%"></div>
+                                    </div>
+                                    <div class="indicator__point is-active"></div>
+                                    <div class="indicator__point is-active"></div>
+                                    <div class="indicator__point"></div>
+                                </div>
+                                <div class="indicator__row">
+                                    <div class="indicator__text">Мел.опт</div>
+                                    <div class="indicator__text">Сред.опт</div>
+                                    <div class="indicator__text">Круп.опт</div>
+                                </div>
+                            </div>
                             <div class="system-stock__note">
                                 До скидки <span>2</span>% осталось заказать на сумму:
                                 7&nbsp;850&nbsp;₽.
                             </div>
                         </div>
                     </div>
+                    <form class="promo-code">
+                        <div class="promo-code__row">
+                            <div class="form-group form-group--mg0">
+                                <div class="form-group__label">Промокод:</div>
+                                <input type="text" class="form-group__input" placeholder="" />
+                            </div>
+                            <div class="form-group promo-code__btn form-group--mg0">
+                                <button class="btn btn--accent btn--stroke" type="submit">Применить</button>
+                            </div>
+                        </div>
+                        {# добавь класс green или error #}
+                        <div class="promo-code__status green">
+                            Промокод применен
+                        </div>
+                    </form>
+
                     <div class="card-sidebar__col">
                         <div class="card-sidebar__row">
                             <div class="card-sidebar__name card-sidebar__name--big">

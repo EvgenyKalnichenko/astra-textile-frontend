@@ -55,6 +55,11 @@
     display: none;
     width: 100%;
     order: 6;
+    padding-left: 135px;
+
+    @include sm-screen {
+      padding: 0;
+    }
   }
 
   &__description {
@@ -111,6 +116,30 @@
       order: 3;
       width: 40px;
       margin-left: 0;
+    }
+
+
+  }
+
+  &__icon {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    .icon-close {
+      color: var(--accent);
+    }
+
+    .icon-heart {
+      color: var(--background-components-v2);
+    }
+
+    &.is-active {
+      .icon-heart {
+        color: var(--accent);
+      }
     }
   }
 
