@@ -1,0 +1,21 @@
+.menu-lk {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+  &__link {
+    margin-bottom: 5px;
+    background: var(--background-components);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    padding: 8px 15px;
+    border-radius: 12px;
+    //transition: var(--theme-duration) var(--ease) color, var(--theme-duration) var(--ease) background-color;
+
+    &:hover {
+      background-color: var(--accent);
+      color: #fff;
+    }
+  }
+}

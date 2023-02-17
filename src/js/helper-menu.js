@@ -72,6 +72,7 @@ $(function () {
         'about',
         'contacts',
         'delivery',
+        'orders',
         '404'
     ]);
 });

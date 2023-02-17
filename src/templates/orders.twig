@@ -1,0 +1,45 @@
+{% set title = "Заказы" %}
+
+{% extends "layouts/_layout.twig" %}
+
+{% block content %}
+    {% include "./partials/_breadcrumbs.twig" %}
+    <h1 class="title-page">Личный кабинет</h1>
+    <section class="section-lk">
+        <div class="section-lk__grid">
+            <div class="section-lk__sidebar">
+                <div class="menu-lk">
+                    <a href="./profile.html" class="menu-lk__link">Мой профиль</a>
+                    <a href="./orders.html" class="menu-lk__link">Заказы</a>
+                    <a href="./favorites.html" class="menu-lk__link">Избранное</a>
+                    <a href="./wishlist.html" class="menu-lk__link">Лист ожидания</a>
+                </div>
+                <div class="menu-control">
+                    <div class="menu-control__item">
+                        <a href="#" class="btn-i btn-i--red">
+                            <div class="btn-i__icon">
+                                {{ mixins.icon('reset') }}
+                            </div>
+                            <div class="btn-i__text">
+                                Удалить профиль
+                            </div>
+                        </a>
+                    </div>
+                    <div class="menu-control__item">
+                        <a href="#" class="btn-i btn-i--red">
+                            <div class="btn-i__icon">
+                                {{ mixins.icon('exit') }}
+                            </div>
+                            <div class="btn-i__text">
+                                Выход
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-lk__content">
+312
+            </div>
+        </div>
+    </section>
+{% endblock %}
