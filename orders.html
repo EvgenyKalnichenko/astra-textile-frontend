@@ -593,37 +593,1301 @@
         <section class="section-lk">
           <div class="section-lk__grid">
             <div class="section-lk__sidebar">
-              <div class="menu-lk">
-                <a href="./profile.html" class="menu-lk__link is-active">Мой профиль</a>
-                <a href="./orders.html" class="menu-lk__link">Заказы <span class="menu-lk__count menu-lk__count--grey">0</span></a>
-                <a href="./favorites.html" class="menu-lk__link">Избранное <span class="menu-lk__count">2</span></a>
-                <a href="./wishlist.html" class="menu-lk__link">Лист ожидания <span class="menu-lk__count">7</span></a>
-              </div>
-              <div class="menu-control">
-                <div class="menu-control__item">
-                  <a href="#" class="btn-i btn-i--red">
-                    <div class="btn-i__icon">
-                      <svg class="icon icon-reset">
-                        <use xlink:href="img/sprite.svg#icon-reset"></use>
-                      </svg>
-                    </div>
-                    <div class="btn-i__text"> Удалить профиль </div>
-                  </a>
+              <div class="section-lk__sticky">
+                <div class="menu-lk">
+                  <a href="./profile.html" class="menu-lk__link is-active">Мой профиль</a>
+                  <a href="./orders.html" class="menu-lk__link">Заказы <span class="menu-lk__count menu-lk__count--grey">0</span></a>
+                  <a href="./favorites.html" class="menu-lk__link">Избранное <span class="menu-lk__count">2</span></a>
+                  <a href="./wishlist.html" class="menu-lk__link">Лист ожидания <span class="menu-lk__count">7</span></a>
                 </div>
-                <div class="menu-control__item">
-                  <a href="#" class="btn-i btn-i--red">
-                    <div class="btn-i__icon">
-                      <svg class="icon icon-exit">
-                        <use xlink:href="img/sprite.svg#icon-exit"></use>
-                      </svg>
-                    </div>
-                    <div class="btn-i__text"> Выход </div>
-                  </a>
+                <div class="menu-control">
+                  <div class="menu-control__item">
+                    <a href="#" class="btn-i btn-i--red">
+                      <div class="btn-i__icon">
+                        <svg class="icon icon-reset">
+                          <use xlink:href="img/sprite.svg#icon-reset"></use>
+                        </svg>
+                      </div>
+                      <div class="btn-i__text"> Удалить профиль </div>
+                    </a>
+                  </div>
+                  <div class="menu-control__item">
+                    <a href="#" class="btn-i btn-i--red">
+                      <div class="btn-i__icon">
+                        <svg class="icon icon-exit">
+                          <use xlink:href="img/sprite.svg#icon-exit"></use>
+                        </svg>
+                      </div>
+                      <div class="btn-i__text"> Выход </div>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="section-lk__content">
               <h2 class="section-lk__head">Заказы</h2>
+              <div class="orders-list">
+                <div class="card-order">
+                  <div class="card-order__top">
+                    <div class="card-order__wrap">
+                      <div class="card-order__grid">
+                        <div class="card-order__col">
+                          <div class="card-order__name">Дата</div>
+                          <div class="card-order__text"><b>20.11.2022</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Номер</div>
+                          <div class="card-order__text"><b>23409</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Статус</div>
+                          <div class="card-order__text"><b>Ожидает оплаты</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Оплата</div>
+                          <div class="card-order__text"><b>Не оплачен</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Общая сумма</div>
+                          <div class="card-order__text"><b>162 000</b></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-order__control">
+                      <div class="card-order__btn">
+                        <a href="#" class="btn btn--medium">Оплатить</a>
+                      </div>
+                      <div class="card-order__toggle">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Подробнее</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-bottom">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-bottom"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-order__dropdown">
+                    <div class="loader"></div>
+                    <div class="card-order__panel">
+                      <div class="card-order__panel-left">
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-repeat">
+                              <use xlink:href="img/sprite.svg#icon-repeat"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Повторить </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-download-v2">
+                              <use xlink:href="img/sprite.svg#icon-download-v2"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Скачать счет на оплату </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-close">
+                              <use xlink:href="img/sprite.svg#icon-close"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Отменить </div>
+                        </a>
+                      </div>
+                      <div class="card-order__panel-right">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Свернуть</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-top">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-top"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-order">
+                  <div class="card-order__top">
+                    <div class="card-order__wrap">
+                      <div class="card-order__grid">
+                        <div class="card-order__col">
+                          <div class="card-order__name">Дата</div>
+                          <div class="card-order__text"><b>20.11.2022</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Номер</div>
+                          <div class="card-order__text"><b>23409</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Статус</div>
+                          <div class="card-order__text"><b>Ожидает оплаты</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Оплата</div>
+                          <div class="card-order__text"><b>Не оплачен</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Общая сумма</div>
+                          <div class="card-order__text"><b>162 000</b></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-order__control">
+                      <div class="card-order__btn">
+                        <a href="#" class="btn btn--medium">Оплатить</a>
+                      </div>
+                      <div class="card-order__toggle">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Подробнее</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-bottom">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-bottom"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-order__dropdown">
+                    <div class="loader"></div>
+                    <div class="card-order__panel">
+                      <div class="card-order__panel-left">
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-repeat">
+                              <use xlink:href="img/sprite.svg#icon-repeat"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Повторить </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-download-v2">
+                              <use xlink:href="img/sprite.svg#icon-download-v2"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Скачать счет на оплату </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-close">
+                              <use xlink:href="img/sprite.svg#icon-close"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Отменить </div>
+                        </a>
+                      </div>
+                      <div class="card-order__panel-right">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Свернуть</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-top">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-top"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-order">
+                  <div class="card-order__top">
+                    <div class="card-order__wrap">
+                      <div class="card-order__grid">
+                        <div class="card-order__col">
+                          <div class="card-order__name">Дата</div>
+                          <div class="card-order__text"><b>20.11.2022</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Номер</div>
+                          <div class="card-order__text"><b>23409</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Статус</div>
+                          <div class="card-order__text"><b>Ожидает оплаты</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Оплата</div>
+                          <div class="card-order__text"><b>Не оплачен</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Общая сумма</div>
+                          <div class="card-order__text"><b>162 000</b></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-order__control">
+                      <div class="card-order__btn">
+                        <a href="#" class="btn btn--medium">Оплатить</a>
+                      </div>
+                      <div class="card-order__toggle">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Подробнее</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-bottom">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-bottom"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-order__dropdown">
+                    <div class="loader"></div>
+                    <div class="card-order__panel">
+                      <div class="card-order__panel-left">
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-repeat">
+                              <use xlink:href="img/sprite.svg#icon-repeat"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Повторить </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-download-v2">
+                              <use xlink:href="img/sprite.svg#icon-download-v2"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Скачать счет на оплату </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-close">
+                              <use xlink:href="img/sprite.svg#icon-close"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Отменить </div>
+                        </a>
+                      </div>
+                      <div class="card-order__panel-right">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Свернуть</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-top">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-top"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-order">
+                  <div class="card-order__top">
+                    <div class="card-order__wrap">
+                      <div class="card-order__grid">
+                        <div class="card-order__col">
+                          <div class="card-order__name">Дата</div>
+                          <div class="card-order__text"><b>20.11.2022</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Номер</div>
+                          <div class="card-order__text"><b>23409</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Статус</div>
+                          <div class="card-order__text"><b>Ожидает оплаты</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Оплата</div>
+                          <div class="card-order__text"><b>Не оплачен</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Общая сумма</div>
+                          <div class="card-order__text"><b>162 000</b></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-order__control">
+                      <div class="card-order__btn">
+                        <a href="#" class="btn btn--medium">Оплатить</a>
+                      </div>
+                      <div class="card-order__toggle">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Подробнее</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-bottom">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-bottom"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-order__dropdown">
+                    <div class="loader"></div>
+                    <div class="card-order__panel">
+                      <div class="card-order__panel-left">
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-repeat">
+                              <use xlink:href="img/sprite.svg#icon-repeat"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Повторить </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-download-v2">
+                              <use xlink:href="img/sprite.svg#icon-download-v2"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Скачать счет на оплату </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-close">
+                              <use xlink:href="img/sprite.svg#icon-close"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Отменить </div>
+                        </a>
+                      </div>
+                      <div class="card-order__panel-right">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Свернуть</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-top">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-top"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-order">
+                  <div class="card-order__top">
+                    <div class="card-order__wrap">
+                      <div class="card-order__grid">
+                        <div class="card-order__col">
+                          <div class="card-order__name">Дата</div>
+                          <div class="card-order__text"><b>20.11.2022</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Номер</div>
+                          <div class="card-order__text"><b>23409</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Статус</div>
+                          <div class="card-order__text"><b>Ожидает оплаты</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Оплата</div>
+                          <div class="card-order__text"><b>Не оплачен</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Общая сумма</div>
+                          <div class="card-order__text"><b>162 000</b></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-order__control">
+                      <div class="card-order__btn">
+                        <a href="#" class="btn btn--medium">Оплатить</a>
+                      </div>
+                      <div class="card-order__toggle">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Подробнее</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-bottom">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-bottom"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-order__dropdown">
+                    <div class="loader"></div>
+                    <div class="card-order__panel">
+                      <div class="card-order__panel-left">
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-repeat">
+                              <use xlink:href="img/sprite.svg#icon-repeat"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Повторить </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-download-v2">
+                              <use xlink:href="img/sprite.svg#icon-download-v2"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Скачать счет на оплату </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-close">
+                              <use xlink:href="img/sprite.svg#icon-close"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Отменить </div>
+                        </a>
+                      </div>
+                      <div class="card-order__panel-right">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Свернуть</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-top">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-top"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-order">
+                  <div class="card-order__top">
+                    <div class="card-order__wrap">
+                      <div class="card-order__grid">
+                        <div class="card-order__col">
+                          <div class="card-order__name">Дата</div>
+                          <div class="card-order__text"><b>20.11.2022</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Номер</div>
+                          <div class="card-order__text"><b>23409</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Статус</div>
+                          <div class="card-order__text"><b>Ожидает оплаты</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Оплата</div>
+                          <div class="card-order__text"><b>Не оплачен</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Общая сумма</div>
+                          <div class="card-order__text"><b>162 000</b></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-order__control">
+                      <div class="card-order__btn">
+                        <a href="#" class="btn btn--medium">Оплатить</a>
+                      </div>
+                      <div class="card-order__toggle">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Подробнее</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-bottom">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-bottom"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-order__dropdown">
+                    <div class="loader"></div>
+                    <div class="card-order__panel">
+                      <div class="card-order__panel-left">
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-repeat">
+                              <use xlink:href="img/sprite.svg#icon-repeat"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Повторить </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-download-v2">
+                              <use xlink:href="img/sprite.svg#icon-download-v2"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Скачать счет на оплату </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-close">
+                              <use xlink:href="img/sprite.svg#icon-close"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Отменить </div>
+                        </a>
+                      </div>
+                      <div class="card-order__panel-right">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Свернуть</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-top">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-top"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-order">
+                  <div class="card-order__top">
+                    <div class="card-order__wrap">
+                      <div class="card-order__grid">
+                        <div class="card-order__col">
+                          <div class="card-order__name">Дата</div>
+                          <div class="card-order__text"><b>20.11.2022</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Номер</div>
+                          <div class="card-order__text"><b>23409</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Статус</div>
+                          <div class="card-order__text"><b>Ожидает оплаты</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Оплата</div>
+                          <div class="card-order__text"><b>Не оплачен</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Общая сумма</div>
+                          <div class="card-order__text"><b>162 000</b></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-order__control">
+                      <div class="card-order__btn">
+                        <a href="#" class="btn btn--medium">Оплатить</a>
+                      </div>
+                      <div class="card-order__toggle">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Подробнее</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-bottom">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-bottom"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-order__dropdown">
+                    <div class="loader"></div>
+                    <div class="card-order__panel">
+                      <div class="card-order__panel-left">
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-repeat">
+                              <use xlink:href="img/sprite.svg#icon-repeat"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Повторить </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-download-v2">
+                              <use xlink:href="img/sprite.svg#icon-download-v2"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Скачать счет на оплату </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-close">
+                              <use xlink:href="img/sprite.svg#icon-close"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Отменить </div>
+                        </a>
+                      </div>
+                      <div class="card-order__panel-right">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Свернуть</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-top">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-top"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-order">
+                  <div class="card-order__top">
+                    <div class="card-order__wrap">
+                      <div class="card-order__grid">
+                        <div class="card-order__col">
+                          <div class="card-order__name">Дата</div>
+                          <div class="card-order__text"><b>20.11.2022</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Номер</div>
+                          <div class="card-order__text"><b>23409</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Статус</div>
+                          <div class="card-order__text"><b>Ожидает оплаты</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Оплата</div>
+                          <div class="card-order__text"><b>Не оплачен</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Общая сумма</div>
+                          <div class="card-order__text"><b>162 000</b></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-order__control">
+                      <div class="card-order__btn">
+                        <a href="#" class="btn btn--medium">Оплатить</a>
+                      </div>
+                      <div class="card-order__toggle">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Подробнее</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-bottom">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-bottom"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-order__dropdown">
+                    <div class="loader"></div>
+                    <div class="card-order__panel">
+                      <div class="card-order__panel-left">
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-repeat">
+                              <use xlink:href="img/sprite.svg#icon-repeat"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Повторить </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-download-v2">
+                              <use xlink:href="img/sprite.svg#icon-download-v2"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Скачать счет на оплату </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-close">
+                              <use xlink:href="img/sprite.svg#icon-close"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Отменить </div>
+                        </a>
+                      </div>
+                      <div class="card-order__panel-right">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Свернуть</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-top">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-top"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-order">
+                  <div class="card-order__top">
+                    <div class="card-order__wrap">
+                      <div class="card-order__grid">
+                        <div class="card-order__col">
+                          <div class="card-order__name">Дата</div>
+                          <div class="card-order__text"><b>20.11.2022</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Номер</div>
+                          <div class="card-order__text"><b>23409</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Статус</div>
+                          <div class="card-order__text"><b>Ожидает оплаты</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Оплата</div>
+                          <div class="card-order__text"><b>Не оплачен</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Общая сумма</div>
+                          <div class="card-order__text"><b>162 000</b></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-order__control">
+                      <div class="card-order__btn">
+                        <a href="#" class="btn btn--medium">Оплатить</a>
+                      </div>
+                      <div class="card-order__toggle">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Подробнее</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-bottom">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-bottom"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-order__dropdown">
+                    <div class="loader"></div>
+                    <div class="card-order__panel">
+                      <div class="card-order__panel-left">
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-repeat">
+                              <use xlink:href="img/sprite.svg#icon-repeat"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Повторить </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-download-v2">
+                              <use xlink:href="img/sprite.svg#icon-download-v2"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Скачать счет на оплату </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-close">
+                              <use xlink:href="img/sprite.svg#icon-close"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Отменить </div>
+                        </a>
+                      </div>
+                      <div class="card-order__panel-right">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Свернуть</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-top">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-top"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-order">
+                  <div class="card-order__top">
+                    <div class="card-order__wrap">
+                      <div class="card-order__grid">
+                        <div class="card-order__col">
+                          <div class="card-order__name">Дата</div>
+                          <div class="card-order__text"><b>20.11.2022</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Номер</div>
+                          <div class="card-order__text"><b>23409</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Статус</div>
+                          <div class="card-order__text"><b>Ожидает оплаты</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Оплата</div>
+                          <div class="card-order__text"><b>Не оплачен</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Общая сумма</div>
+                          <div class="card-order__text"><b>162 000</b></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-order__control">
+                      <div class="card-order__btn">
+                        <a href="#" class="btn btn--medium">Оплатить</a>
+                      </div>
+                      <div class="card-order__toggle">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Подробнее</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-bottom">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-bottom"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-order__dropdown">
+                    <div class="loader"></div>
+                    <div class="card-order__panel">
+                      <div class="card-order__panel-left">
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-repeat">
+                              <use xlink:href="img/sprite.svg#icon-repeat"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Повторить </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-download-v2">
+                              <use xlink:href="img/sprite.svg#icon-download-v2"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Скачать счет на оплату </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-close">
+                              <use xlink:href="img/sprite.svg#icon-close"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Отменить </div>
+                        </a>
+                      </div>
+                      <div class="card-order__panel-right">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Свернуть</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-top">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-top"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-order">
+                  <div class="card-order__top">
+                    <div class="card-order__wrap">
+                      <div class="card-order__grid">
+                        <div class="card-order__col">
+                          <div class="card-order__name">Дата</div>
+                          <div class="card-order__text"><b>20.11.2022</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Номер</div>
+                          <div class="card-order__text"><b>23409</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Статус</div>
+                          <div class="card-order__text"><b>Ожидает оплаты</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Оплата</div>
+                          <div class="card-order__text"><b>Не оплачен</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Общая сумма</div>
+                          <div class="card-order__text"><b>162 000</b></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-order__control">
+                      <div class="card-order__btn">
+                        <a href="#" class="btn btn--medium">Оплатить</a>
+                      </div>
+                      <div class="card-order__toggle">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Подробнее</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-bottom">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-bottom"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-order__dropdown">
+                    <div class="loader"></div>
+                    <div class="card-order__panel">
+                      <div class="card-order__panel-left">
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-repeat">
+                              <use xlink:href="img/sprite.svg#icon-repeat"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Повторить </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-download-v2">
+                              <use xlink:href="img/sprite.svg#icon-download-v2"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Скачать счет на оплату </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-close">
+                              <use xlink:href="img/sprite.svg#icon-close"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Отменить </div>
+                        </a>
+                      </div>
+                      <div class="card-order__panel-right">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Свернуть</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-top">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-top"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-order">
+                  <div class="card-order__top">
+                    <div class="card-order__wrap">
+                      <div class="card-order__grid">
+                        <div class="card-order__col">
+                          <div class="card-order__name">Дата</div>
+                          <div class="card-order__text"><b>20.11.2022</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Номер</div>
+                          <div class="card-order__text"><b>23409</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Статус</div>
+                          <div class="card-order__text"><b>Ожидает оплаты</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Оплата</div>
+                          <div class="card-order__text"><b>Не оплачен</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Общая сумма</div>
+                          <div class="card-order__text"><b>162 000</b></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-order__control">
+                      <div class="card-order__btn">
+                        <a href="#" class="btn btn--medium">Оплатить</a>
+                      </div>
+                      <div class="card-order__toggle">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Подробнее</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-bottom">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-bottom"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-order__dropdown">
+                    <div class="loader"></div>
+                    <div class="card-order__panel">
+                      <div class="card-order__panel-left">
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-repeat">
+                              <use xlink:href="img/sprite.svg#icon-repeat"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Повторить </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-download-v2">
+                              <use xlink:href="img/sprite.svg#icon-download-v2"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Скачать счет на оплату </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-close">
+                              <use xlink:href="img/sprite.svg#icon-close"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Отменить </div>
+                        </a>
+                      </div>
+                      <div class="card-order__panel-right">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Свернуть</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-top">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-top"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-order">
+                  <div class="card-order__top">
+                    <div class="card-order__wrap">
+                      <div class="card-order__grid">
+                        <div class="card-order__col">
+                          <div class="card-order__name">Дата</div>
+                          <div class="card-order__text"><b>20.11.2022</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Номер</div>
+                          <div class="card-order__text"><b>23409</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Статус</div>
+                          <div class="card-order__text"><b>Ожидает оплаты</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Оплата</div>
+                          <div class="card-order__text"><b>Не оплачен</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Общая сумма</div>
+                          <div class="card-order__text"><b>162 000</b></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-order__control">
+                      <div class="card-order__btn">
+                        <a href="#" class="btn btn--medium">Оплатить</a>
+                      </div>
+                      <div class="card-order__toggle">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Подробнее</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-bottom">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-bottom"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-order__dropdown">
+                    <div class="loader"></div>
+                    <div class="card-order__panel">
+                      <div class="card-order__panel-left">
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-repeat">
+                              <use xlink:href="img/sprite.svg#icon-repeat"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Повторить </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-download-v2">
+                              <use xlink:href="img/sprite.svg#icon-download-v2"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Скачать счет на оплату </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-close">
+                              <use xlink:href="img/sprite.svg#icon-close"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Отменить </div>
+                        </a>
+                      </div>
+                      <div class="card-order__panel-right">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Свернуть</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-top">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-top"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-order">
+                  <div class="card-order__top">
+                    <div class="card-order__wrap">
+                      <div class="card-order__grid">
+                        <div class="card-order__col">
+                          <div class="card-order__name">Дата</div>
+                          <div class="card-order__text"><b>20.11.2022</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Номер</div>
+                          <div class="card-order__text"><b>23409</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Статус</div>
+                          <div class="card-order__text"><b>Ожидает оплаты</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Оплата</div>
+                          <div class="card-order__text"><b>Не оплачен</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Общая сумма</div>
+                          <div class="card-order__text"><b>162 000</b></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-order__control">
+                      <div class="card-order__btn">
+                        <a href="#" class="btn btn--medium">Оплатить</a>
+                      </div>
+                      <div class="card-order__toggle">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Подробнее</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-bottom">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-bottom"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-order__dropdown">
+                    <div class="loader"></div>
+                    <div class="card-order__panel">
+                      <div class="card-order__panel-left">
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-repeat">
+                              <use xlink:href="img/sprite.svg#icon-repeat"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Повторить </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-download-v2">
+                              <use xlink:href="img/sprite.svg#icon-download-v2"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Скачать счет на оплату </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-close">
+                              <use xlink:href="img/sprite.svg#icon-close"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Отменить </div>
+                        </a>
+                      </div>
+                      <div class="card-order__panel-right">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Свернуть</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-top">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-top"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-order">
+                  <div class="card-order__top">
+                    <div class="card-order__wrap">
+                      <div class="card-order__grid">
+                        <div class="card-order__col">
+                          <div class="card-order__name">Дата</div>
+                          <div class="card-order__text"><b>20.11.2022</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Номер</div>
+                          <div class="card-order__text"><b>23409</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Статус</div>
+                          <div class="card-order__text"><b>Ожидает оплаты</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Оплата</div>
+                          <div class="card-order__text"><b>Не оплачен</b></div>
+                        </div>
+                        <div class="card-order__col">
+                          <div class="card-order__name">Общая сумма</div>
+                          <div class="card-order__text"><b>162 000</b></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-order__control">
+                      <div class="card-order__btn">
+                        <a href="#" class="btn btn--medium">Оплатить</a>
+                      </div>
+                      <div class="card-order__toggle">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Подробнее</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-bottom">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-bottom"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-order__dropdown">
+                    <div class="loader"></div>
+                    <div class="card-order__panel">
+                      <div class="card-order__panel-left">
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-repeat">
+                              <use xlink:href="img/sprite.svg#icon-repeat"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Повторить </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-download-v2">
+                              <use xlink:href="img/sprite.svg#icon-download-v2"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Скачать счет на оплату </div>
+                        </a>
+                        <a href="#" class="btn-i btn-i--red">
+                          <div class="btn-i__icon">
+                            <svg class="icon icon-close">
+                              <use xlink:href="img/sprite.svg#icon-close"></use>
+                            </svg>
+                          </div>
+                          <div class="btn-i__text"> Отменить </div>
+                        </a>
+                      </div>
+                      <div class="card-order__panel-right">
+                        <a href="#" class="link-arrow">
+                          <span class="xl-none">Свернуть</span>
+                          <span class="link-arrow__icon link-arrow__icon--fs8">
+                            <svg class="icon icon-arrow-link-top">
+                              <use xlink:href="img/sprite.svg#icon-arrow-link-top"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
