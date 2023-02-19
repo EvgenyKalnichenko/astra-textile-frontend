@@ -5,6 +5,10 @@
   margin-bottom: 30px;
   margin-top: 9px;
 
+  @include xl-screen {
+    margin-bottom: 25px;
+  }
+
   @include md-screen {
     grid-template-columns: repeat(2,1fr);
   }
@@ -13,6 +17,7 @@
     background: var(--background-components);
     padding: 12px;
     border-radius: 12px;
+    margin-bottom: 10px;
   }
 
   &__count {

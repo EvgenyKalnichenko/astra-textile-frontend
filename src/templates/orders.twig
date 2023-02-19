@@ -47,7 +47,55 @@
                     </div>
                 </div>
                 <div class="card-order__dropdown">
-                    <div class="loader"></div>
+{#                    <div class="loader"></div>#}
+                    <div class="card-order-product">
+                        <div class="card-order-product__left">
+                            <div class="card-order-product__image">
+                                <picture>
+                                    <source data-srcset="img/product-1.webp" type="image/webp"/>
+                                    <img class="lazy" data-src="img/product-1.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="card-order-product__description">
+                                <div class="card-order-product__title">Б0760-2 Футболка женская люрекс</div>
+                                <div class="card-order-product__text">
+                                    <span class="grey">Артикул:</span>  Б0760-2
+                                </div>
+                                <div class="card-order-product__text">
+                                    <span class="grey">Цвет:</span>  фиолетовый
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-order-product__right">
+                            <div class="card-order-product__col">
+                                <div class="card-order-product__col-name grey">Количество и размеры</div>
+                                <div class="card-order-product__sizes">
+                                    {% for i in range(40, 50) %}
+                                        <div class="card-order-product__sizes-item">
+                                            {{ i }}: 15 шт.
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="card-order-product__col">
+                                <div class="card-order-product__col-name grey">Цена:</div>
+                                <div class="card-order-product__total">
+                                    <div class="card-order-product__total-row">
+                                        <div class="card-order-product__total-text">Количество:</div>
+                                        <div class="card-order-product__total-price"><b>120</b></div>
+                                    </div>
+                                    <div class="card-order-product__total-row">
+                                        <div class="card-order-product__total-text">Цена мелкооптовая:</div>
+                                        <div class="card-order-product__total-price"><b>1 350</b> ₽</div>
+                                    </div>
+                                    <div class="card-order-product__total-row">
+                                        <div class="card-order-product__total-text">Общая сумма:</div>
+                                        <div class="card-order-product__total-price"><b>162 000</b> ₽</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card-order__panel">
                         <div class="card-order__panel-left">
                             <a href="#" class="btn-i btn-i--red">
@@ -88,4 +136,5 @@
             </div>
         {% endfor %}
     </div>
+    {% include "partials/_pagination.twig" %}
 {% endblock %}

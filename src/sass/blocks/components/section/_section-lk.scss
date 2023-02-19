@@ -1,13 +1,13 @@
 .section-lk {
-  margin-bottom: 70px;
+  //margin-bottom: 70px;
+  //
+  //@include lg-screen {
+  //  margin-bottom: 45px;
+  //}
 
-  @include lg-screen {
-    margin-bottom: 45px;
-  }
-
-  @include sm-screen {
-    margin-bottom: 30px;
-  }
+  //@include sm-screen {
+  //  margin-bottom: 30px;
+  //}
 
   &__head {
     margin-bottom: 26px;
@@ -77,6 +77,24 @@
 
     @include rmin($break_md) {
       grid-column: content;
+    }
+
+    @include sm-screen {
+      position: relative;
+      padding-top: 15px;
+
+      &:before {
+        height: calc(100% + 15px);
+        content: "";
+        display: block;
+        position: absolute;
+        background: var(--background-components);
+        left: -15px;
+        top: 0;
+        width: calc(100% + 30px);
+        border-radius: 12px 12px 0 0;
+        z-index: -1;
+      }
     }
   }
 

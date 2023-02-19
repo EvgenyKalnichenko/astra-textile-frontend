@@ -1,0 +1,149 @@
+.card-horizontal {
+  @extend .default-border;
+  overflow: hidden;
+  padding: 23px 30px;
+  position: relative;
+  background: #fff;
+
+  @include sm-screen {
+    padding: 15px;
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 15px;
+  }
+
+  &__prices {
+    @include sm-screen {
+      width: 100%;
+      max-width: 315px;
+    }
+  }
+
+  &__left {
+    margin-right: 40px;
+    display: flex;
+    align-items: flex-start;
+
+    @include xl-screen {
+      margin-right: 15px;
+    }
+
+    @include xs-screen {
+      margin-right: 0;
+    }
+  }
+
+  &__image {
+    @include ratio(88, 132);
+    position: relative;
+    width: 132px;
+    background: var(--background-components);
+    border-radius: 12px;
+    flex-shrink: 0;
+
+    @include xl-screen {
+      width: 64px;
+    }
+
+    @include xs-screen {
+      width: 60px;
+    }
+
+    img {
+      @include coverdiv();
+      @include ofi(cover, center);
+    }
+  }
+
+  &__prices {
+    margin: 0 auto;
+
+    @include lg-screen {
+      order: 4;
+      margin: 0;
+    }
+  }
+
+  &__sizes {
+    border-top: 1px solid var(--background-components-v2);
+    padding-top: 16px;
+    margin-top: auto;
+    width: 100%;
+
+    @include xl-screen {
+      order: 5;
+    }
+  }
+
+  &__description {
+   max-width: 400px;
+
+    @include lg-screen {
+      width: calc(100% - 200px);
+    }
+
+    @include sm-screen {
+      width: calc(100% - 270px);
+    }
+
+    @include xs-screen {
+      width: calc(100% - 100px);
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 17px;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+  }
+
+  &__right {
+    margin-left: auto;
+
+    @include xs-screen {
+      width: 100%;
+      order: 7;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 0;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__remove {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+
+  &__status {
+    margin-bottom: 15px;
+
+    @include xs-screen {
+      margin: 0;
+    }
+  }
+
+  &--available {
+    border-color: var(--color-green);
+  }
+
+  &--not-available {
+
+  }
+}

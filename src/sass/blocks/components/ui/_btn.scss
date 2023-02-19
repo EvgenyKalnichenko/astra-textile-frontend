@@ -196,7 +196,7 @@
 
   &__icon {
     width: 18px;
-    height: 20px;
+    height: 18px;
     margin-right: 10px;
     color: $accent;
     display: inline-flex;
@@ -204,9 +204,9 @@
     justify-content: center;
     position: relative;
 
-    @include sm-screen {
-      top: -2px;
-    }
+    //@include sm-screen {
+    //  top: -2px;
+    //}
 
     svg {
       width: 100%;
