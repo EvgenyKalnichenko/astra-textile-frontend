@@ -6,7 +6,6 @@
   cursor: pointer;
   grid-gap: 10px;
 
-
   &__text {
     text-decoration: underline;
     font-weight: bold;
@@ -19,6 +18,15 @@
   .icon-arrow-link-right {
     //margin-left: 10px;
     font-size: 12px;
+  }
+
+  &__icon {
+
+    @for $i from 5 to 25 {
+      &--fs#{$i} {
+        font-size: #{$i}px;
+      }
+    }
   }
 
   &--accent {

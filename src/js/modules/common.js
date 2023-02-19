@@ -26,7 +26,6 @@ if($('.menu-sidebar').length){
 }
 
 // Раскрытие карточки в корзине
-
 $(document).on('click', '.card-basket__more', function () {
     const card = $(this).closest('.card-basket')
     card.toggleClass('is-active')
@@ -37,7 +36,21 @@ $(document).on('click', '.card-basket__more', function () {
     } else {
         $(this).text('Показать количество и размеры')
     }
+})
 
+//Раскрытие карточки в заказах
+$(document).on('click', '.card-order__toggle', function (e){
+    e.preventDefault();
+    const card = $(this).closest('.card-order')
+    card.toggleClass('is-active')
+    card.find('.card-order__dropdown').slideDown(200)
+})
+
+$(document).on('click', '.card-order__panel-right', function (e){
+    e.preventDefault();
+    const card = $(this).closest('.card-order')
+    card.removeClass('is-active')
+    card.find('.card-order__dropdown').slideUp(200)
 })
 
 // input mask

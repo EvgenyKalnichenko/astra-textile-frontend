@@ -26,6 +26,13 @@
     }
   }
 
+  &__sticky {
+    @include rmin($break_md) {
+      position: sticky;
+      top: 15px;
+    }
+  }
+
   &__top {
     display: flex;
     align-items: center;

@@ -4,4 +4,88 @@
 
 {% block content %}
     <h2 class="section-lk__head">Заказы</h2>
+    <div class="orders-list">
+        {% for i in range(0, 15) %}
+            <div class="card-order">
+                <div class="card-order__top">
+                    <div class="card-order__wrap">
+                        <div class="card-order__grid">
+                            <div class="card-order__col">
+                                <div class="card-order__name">Дата</div>
+                                <div class="card-order__text"><b>20.11.2022</b></div>
+                            </div>
+                            <div class="card-order__col">
+                                <div class="card-order__name">Номер</div>
+                                <div class="card-order__text"><b>23409</b></div>
+                            </div>
+                            <div class="card-order__col">
+                                <div class="card-order__name">Статус</div>
+                                <div class="card-order__text"><b>Ожидает оплаты</b></div>
+                            </div>
+                            <div class="card-order__col">
+                                <div class="card-order__name">Оплата</div>
+                                <div class="card-order__text"><b>Не оплачен</b></div>
+                            </div>
+                            <div class="card-order__col">
+                                <div class="card-order__name">Общая сумма</div>
+                                <div class="card-order__text"><b>162 000</b></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-order__control">
+                        <div class="card-order__btn">
+                            <a href="#" class="btn btn--medium">Оплатить</a>
+                        </div>
+                        <div class="card-order__toggle">
+                            <a href="#" class="link-arrow">
+                                <span class="xl-none">Подробнее</span>
+                                <span class="link-arrow__icon link-arrow__icon--fs8">
+                                    {{ mixins.icon('arrow-link-bottom') }}
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-order__dropdown">
+                    <div class="loader"></div>
+                    <div class="card-order__panel">
+                        <div class="card-order__panel-left">
+                            <a href="#" class="btn-i btn-i--red">
+                                <div class="btn-i__icon">
+                                    {{ mixins.icon('repeat') }}
+                                </div>
+                                <div class="btn-i__text">
+                                    Повторить
+                                </div>
+                            </a>
+                            <a href="#" class="btn-i btn-i--red">
+                                <div class="btn-i__icon">
+                                    {{ mixins.icon('download-v2') }}
+                                </div>
+                                <div class="btn-i__text">
+                                    Скачать счет на оплату
+                                </div>
+                            </a>
+                            <a href="#" class="btn-i btn-i--red">
+                                <div class="btn-i__icon">
+                                    {{ mixins.icon('close') }}
+                                </div>
+                                <div class="btn-i__text">
+                                    Отменить
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-order__panel-right">
+                            <a href="#" class="link-arrow">
+                                <span class="xl-none">Свернуть</span>
+                                <span class="link-arrow__icon link-arrow__icon--fs8">
+                                    {{ mixins.icon('arrow-link-top') }}
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

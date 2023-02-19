@@ -1,0 +1,128 @@
+.card-order {
+  @extend .default-border;
+  overflow: hidden;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(130px,1fr));
+    gap: 15px 8px;
+    margin-right: 20px;
+  }
+
+  &__wrap {
+    width: 100%;
+    max-width: 890px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px 30px 18px;
+    position: relative;
+
+    @include xl-screen {
+      padding: 15px;
+    }
+
+    @include xs-screen {
+      flex-direction: column;
+    }
+  }
+
+  &__control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+
+    @include rmin($break_lg) {
+      width: calc(100% - 820px);
+      min-width: 170px;
+      flex-shrink: 0;
+    }
+
+    @include xs-screen {
+      width: 100%;
+      min-width: auto;
+      margin-top: 20px;
+    }
+  }
+
+  &__name {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-light);
+    margin-bottom: 3px;
+  }
+
+  &__dropdown {
+    display: none;
+    text-align: center;
+    border-top: 1px solid var(--background-components-v2);
+    padding-top: 15px;
+  }
+
+  &__toggle {
+    font-size: 14px;
+
+    @include xs-screen {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+    }
+  }
+
+  &__action {
+
+  }
+
+  &__panel {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 17px 30px;
+    justify-content: space-between;
+    border-top: 1px solid var(--background-components-v2);
+    margin-top: 15px;
+
+    @include sm-screen {
+      padding: 0;
+    }
+
+    &-left {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px 15px;
+
+      @include sm-screen {
+        padding: 15px;
+      }
+    }
+
+    &-right {
+
+      @include sm-screen {
+        width: 100%;
+        background: var(--background-components);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+
+  .card-order {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
