@@ -9,6 +9,23 @@
     margin-bottom: 30px;
   }
 
+  &__head {
+    margin-bottom: 26px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+
+    @include xl-screen {
+      font-size: 22px;
+      line-height: 30px;
+    }
+
+    @include sm-screen {
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+
   &__top {
     display: flex;
     align-items: center;
@@ -31,24 +48,27 @@
 
   &__grid {
     display: grid;
-    grid-column-gap: 7px;
-    grid-row-gap: 1rem;
+    grid-column-gap: 30px;
 
-    @include rmin(1300px) {
-      grid-template-columns: [sidebar] 2fr [content] 10fr;
+    @include rmin($break_md) {
+      grid-template-columns: [sidebar] 250px [content] 1fr;
     }
   }
 
   &__sidebar {
 
-    @include rmin(1300px) {
+    @include rmin($break_md) {
       grid-column: sidebar;
+    }
+
+    @include md-screen {
+      margin-bottom: 30px;
     }
   }
 
   &__content {
 
-    @include rmin(1300px) {
+    @include rmin($break_md) {
       grid-column: content;
     }
   }

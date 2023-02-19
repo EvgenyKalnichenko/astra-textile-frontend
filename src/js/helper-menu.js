@@ -72,7 +72,10 @@ $(function () {
         'about',
         'contacts',
         'delivery',
+        'profile',
         'orders',
+        'wishlist',
+        'favorites',
         '404'
     ]);
 });

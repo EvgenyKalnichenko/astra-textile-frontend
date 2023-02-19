@@ -1,19 +1,55 @@
 .menu-lk {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 8px;
   margin-bottom: 30px;
+  margin-top: 9px;
+
+  @include md-screen {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  @include sm-screen {
+    background: var(--background-components);
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  &__count {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    justify-content: center;
+    margin-left: auto;
+
+    &--grey {
+      background: var(--background-components-v2);
+    }
+  }
 
   &__link {
-    margin-bottom: 5px;
     background: var(--background-components);
     font-weight: 400;
     font-size: 16px;
     line-height: 23px;
-    padding: 8px 15px;
+    padding: 8px 19px;
+    display: inline-flex;
+    align-items: center;
     border-radius: 12px;
     //transition: var(--theme-duration) var(--ease) color, var(--theme-duration) var(--ease) background-color;
 
-    &:hover {
+    @include sm-screen {
+      background: #fff;
+      padding: 8px 11px;
+      font-size: 14px;
+    }
+
+    &:hover, &.is-active {
       background-color: var(--accent);
       color: #fff;
     }

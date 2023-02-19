@@ -1,13 +1,36 @@
 .menu-control {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
   padding: 5px 15px;
   border: 1px solid var(--background-components-v2);
   border-radius: 12px;
 
+  @include md-screen {
+    padding: 8px 0;
+    grid-template-columns: repeat(2,1fr);
+  }
+
   &__item {
     padding: 10px 0;
-    border-bottom: 1px solid var(--background-components-v2);
+    display: flex;
+    align-items: center;
+
+    @include rmin($break_md) {
+      border-bottom: 1px solid var(--background-components-v2);
+    }
+
+    @include md-screen {
+      border-right: 1px solid var(--background-components-v2);
+      padding: 5px 15px;
+    }
+
+    @include sm-screen {
+      padding: 5px 12px;
+    }
+
+    @include r(380px) {
+      font-size: 12px;
+    }
 
     &:last-child {
       border: none;

@@ -44,14 +44,17 @@
 
   &__label {
     margin-bottom: 3px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
   }
 
   &__input {
     border: 1px solid var(--background-components-v2);
-    border-radius: 6px;
+    border-radius: 12px;
     overflow: hidden;
     outline: 0;
-    line-height: 42px;
+    line-height: 38px;
     padding: 0 15px;
     width: 100%;
     background: #fff;
@@ -90,6 +93,16 @@
 
     &:hover {
       color: var(--accent);
+    }
+  }
+
+  &__row {
+    display: flex;
+    gap: 10px;
+
+    .btn {
+      padding: 0 10px;
+      font-size: 13px;
     }
   }
 

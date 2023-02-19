@@ -1,0 +1,80 @@
+{% import "data/_data.twig" as data %}
+{% import "partials/_mixins.twig" as mixins %}
+{% set debug = true %}
+{% set version = 2 %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
+    <link rel="preload" href="./fonts/Manrope/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Manrope/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Manrope/Manrope-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Manrope/Manrope-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#fff"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" media="all" href="css/style.css?v={{ version }}"/>
+    {# {% include "../partials/_media-tags.twig" %} #}
+    {% block head %}{% endblock %}
+</head>
+
+{#{% include "./partials/_breadcrumbs.twig" %}#}
+<body>
+
+<div class="layout">
+    {% include "partials/_header.twig" %}
+    <main class="container">
+        {% include "../partials/_breadcrumbs.twig" %}
+        <h1 class="title-page">Личный кабинет</h1>
+        <section class="section-lk">
+            <div class="section-lk__grid">
+                <div class="section-lk__sidebar">
+                    <div class="menu-lk">
+                        <a href="./profile.html" class="menu-lk__link is-active">Мой профиль</a>
+                        <a href="./orders.html" class="menu-lk__link">Заказы <span class="menu-lk__count menu-lk__count--grey">0</span></a>
+                        <a href="./favorites.html" class="menu-lk__link">Избранное <span class="menu-lk__count">2</span></a>
+                        <a href="./wishlist.html" class="menu-lk__link">Лист ожидания <span class="menu-lk__count">7</span></a>
+                    </div>
+                    <div class="menu-control">
+                        <div class="menu-control__item">
+                            <a href="#" class="btn-i btn-i--red">
+                                <div class="btn-i__icon">
+                                    {{ mixins.icon('reset') }}
+                                </div>
+                                <div class="btn-i__text">
+                                    Удалить профиль
+                                </div>
+                            </a>
+                        </div>
+                        <div class="menu-control__item">
+                            <a href="#" class="btn-i btn-i--red">
+                                <div class="btn-i__icon">
+                                    {{ mixins.icon('exit') }}
+                                </div>
+                                <div class="btn-i__text">
+                                    Выход
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-lk__content">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </section>
+    </main>
+    {% include "partials/_footer.twig" %}
+</div>
+
+{% include "partials/_modals.twig" %}
+<!-- END content -->
+<script type="text/javascript" src="js/app.js?v={{ version }}"></script>
+
+<!-- !!!!!!!! START: HELPER ТОЛЬКО ДЛЯ DEV !!!!!!!!! -->
+<script defer src="js/helper-menu.js"></script>
+<!-- !!!!!!!! END: HELPER ТОЛЬКО ДЛЯ DEV !!!!!!!!! -->
+</body>
+</html>

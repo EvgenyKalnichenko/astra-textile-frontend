@@ -1,0 +1,228 @@
+{% set title = "Мой профиль" %}
+
+{% extends "layouts/_layout-lk.twig" %}
+
+{% block content %}
+    <h2 class="section-lk__head">Мой профиль</h2>
+
+    <div class="tab-block is-active" data-tab-block="lk-data" data-tab-block-id="ur">
+        <form action="#" class="form default-border">
+            <div class="form__container">
+                <div class="form__title">
+                    {{ mixins.icon('user-fill') }}
+                    ИП Константин Константинопольский
+                </div>
+                <div class="form__row">
+                    <div class="checkbox checkbox--stroke checkbox--top">
+                        <input name="type" type="radio" id="type-5242" class="checkbox__input">
+                        <label for="type-5242" class="checkbox__label" data-tab="lk-data" data-tab-id="fiz">
+                            <span class="checkbox__icon">{{ mixins.icon('check-mark') }}</span>
+                            <span class="checkbox__text">
+                                          Физическое лицо
+                                        </span>
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox--stroke checkbox--top">
+                        <input name="type" type="radio" id="type-32" class="checkbox__input" checked="">
+                        <label for="type-32" class="checkbox__label" data-tab="lk-data" data-tab-id="ur">
+                            <span class="checkbox__icon">{{ mixins.icon('check-mark') }}</span>
+                            <span class="checkbox__text">
+                                         Юридическое лицо
+                                    </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form__grid">
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">Контактное лицо</div>
+                            <input type="text" name="contact name" class="form-group__input" placeholder=""/>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">ИНН организации</div>
+                            <input type="text" name="inn" class="form-group__input" placeholder=""/>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">Название компании</div>
+                            <input type="text" name="company name" class="form-group__input" placeholder=""/>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">Название банка</div>
+                            <input type="text" name="bank" class="form-group__input" placeholder=""/>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">Телефон</div>
+                            <input type="tel" name="phone" class="form-group__input" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">Расчестный счет</div>
+                            <input type="text" name="checking account" class="form-group__input" placeholder=""/>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">E-mail</div>
+                            <div class="form-group__row">
+                                <input type="email" name="checking account" class="form-group__input" placeholder=""/>
+                                <button class="btn btn--stroke btn--accent">Подтвердить</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">Корр. счет</div>
+                            <input type="text" name="corp account" class="form-group__input" placeholder=""/>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">БИК</div>
+                            <input type="text" name="bik" class="form-group__input" placeholder=""/>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">КПП</div>
+                            <input type="text" name="kpp" class="form-group__input" placeholder=""/>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">Руководитель</div>
+                            <input type="text" name="leader" class="form-group__input" placeholder=""/>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn--align-center btn--min">
+                    {{ mixins.icon('save') }}
+                    <div class="btn__text">
+                        Сохранить изменения
+                    </div>
+                </button>
+            </div>
+        </form>
+        <form action="#" class="form default-border">
+            <div class="form__container">
+                <div class="form__title">
+                    {{ mixins.icon('geolocation') }}
+                    Юридический адрес
+                </div>
+                <div class="form__grid">
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">Страна</div>
+                            <input type="text" name="contact name" class="form-group__input" placeholder=""/>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">Область</div>
+                            <input type="text" name="inn" class="form-group__input" placeholder=""/>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">Город</div>
+                            <input type="text" name="company name" class="form-group__input" placeholder=""/>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">Адрес</div>
+                            <input type="text" name="bank" class="form-group__input" placeholder=""/>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">Телефон</div>
+                            <input type="tel" name="phone" class="form-group__input" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">Индекс</div>
+                            <input type="text" name="checking account" class="form-group__input" placeholder=""/>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" disabled class="btn btn--min">
+                    {{ mixins.icon('save') }}
+                    <div class="btn__text">
+                        Сохранить изменения
+                    </div>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="tab-block" data-tab-block="lk-data" data-tab-block-id="fiz">
+        <form action="#" class="form default-border">
+            <div class="form__container">
+                <div class="form__title">
+                    {{ mixins.icon('user-fill') }}
+                    Иванов Иван Иванович
+                </div>
+                <div class="form__row">
+                    <div class="checkbox checkbox--stroke checkbox--top">
+                        <input name="type" type="radio" id="type-5242" class="checkbox__input" checked="">
+                        <label for="type-5242" class="checkbox__label" data-tab="lk-data" data-tab-id="fiz">
+                            <span class="checkbox__icon">{{ mixins.icon('check-mark') }}</span>
+                            <span class="checkbox__text">
+                                          Физическое лицо
+                                        </span>
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox--stroke checkbox--top">
+                        <input name="type" type="radio" id="type-32" class="checkbox__input">
+                        <label for="type-32" class="checkbox__label" data-tab="lk-data" data-tab-id="ur">
+                            <span class="checkbox__icon">{{ mixins.icon('check-mark') }}</span>
+                            <span class="checkbox__text">
+                                         Юридическое лицо
+                                    </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form__grid">
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">Контактное лицо</div>
+                            <input type="text" name="contact name" class="form-group__input" placeholder=""/>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">Телефон</div>
+                            <input type="tel" name="phone" class="form-group__input" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form-group form-group--mg0">
+                            <div class="form-group__label">E-mail</div>
+                            <div class="form-group__row">
+                                <input type="email" name="checking account" class="form-group__input" placeholder=""/>
+                                <button class="btn btn--stroke btn--accent">Подтвердить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn--align-center btn--min">
+                    {{ mixins.icon('save') }}
+                    <div class="btn__text">
+                        Сохранить изменения
+                    </div>
+                </button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

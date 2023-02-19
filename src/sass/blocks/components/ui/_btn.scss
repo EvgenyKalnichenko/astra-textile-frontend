@@ -19,6 +19,9 @@
     opacity: 0.8;
     cursor: default;
     pointer-events: none;
+    background: var(--background-components-v2);
+    color: #fff;
+    user-select: none;
   }
 
   &:hover {
@@ -47,6 +50,17 @@
 
   &--big {
     min-height: 50px;
+
+    @include xl-screen {
+      min-height: 44px;
+    }
+  }
+
+
+  &--min {
+    min-height: 40px;
+    font-size: 14px;
+    padding: 0 20px;
 
     @include xl-screen {
       min-height: 44px;

@@ -139,6 +139,17 @@
       border-color: var(--accent);
     }
   }
+
+  &--top {
+
+    #{$block}__icon {
+      top: -5px;
+
+      @include sm-screen {
+        top: -3px;
+      }
+    }
+  }
 }
 
 .checkbox-filter-color {
