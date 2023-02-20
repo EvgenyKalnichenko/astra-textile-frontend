@@ -65,7 +65,14 @@
                         </div>
                         <div class="card-horizontal__right">
                             <div class="card-horizontal__status green">Товар в наличии</div>
-                            <a href="#" class="btn btn--medium" data-modal-ajax-open="fast-view">Подробнее</a>
+                            <a href="#" data-modal-ajax-open="fast-view" class="btn btn--medium">
+                                <div class="btn__icon">
+                                    {{ mixins.icon('basket') }}
+                                </div>
+                                <div class="btn__text">
+                                    Подробнее
+                                </div>
+                            </a>
                             <div class="card-horizontal__remove">
                                 {{ mixins.icon('close') }}
                             </div>

@@ -65,7 +65,14 @@
                             </div>
                         </div>
                         <div class="card-horizontal__right">
-                            <a href="#" class="btn btn--medium" data-modal-ajax-open="add-basket">В корзину</a>
+                            <a href="#" data-modal-ajax-open="add-basket" class="btn btn--medium">
+                                <div class="btn__icon">
+                                    {{ mixins.icon('basket') }}
+                                </div>
+                                <div class="btn__text">
+                                    В корзину
+                                </div>
+                            </a>
                             <div class="card-horizontal__remove">
                                 {{ mixins.icon('close') }}
                             </div>

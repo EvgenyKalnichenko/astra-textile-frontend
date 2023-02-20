@@ -115,14 +115,21 @@
                             <b>355 150</b> ₽
                         </div>
                         <div class="product-total__row">
-                            <a href="#" class="btn btn--medium">В корзину</a>
+                            <a href="#" class="btn btn--medium">
+                                <div class="btn__icon">
+                                    {{ mixins.icon('basket') }}
+                                </div>
+                                <div class="btn__text">
+                                    В корзину
+                                </div>
+                            </a>
                             <div class="favorite-icon">
                                 {{ mixins.icon('heart') }}
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="product-card-info__link">Доставка и оплата {{ mixins.icon('arrow-right') }}</a>
-                    <a href="#" class="product-card-info__link">Как сделать заказ {{ mixins.icon('arrow-right') }}</a>
+                    <a href="./delivery.html" class="product-card-info__link">Доставка и оплата {{ mixins.icon('arrow-right') }}</a>
+                    <a href="#" class="product-card-info__link" data-modal-ajax-open="make-order">Как сделать заказ {{ mixins.icon('arrow-right') }}</a>
                     <div class="product-card-info__bottom">
                         {% include "partials/_social-share.twig" %}
                     </div>
@@ -147,10 +154,10 @@
 
             <!-- If we need navigation buttons -->
             <div class="swiper-arrow sm-none">
-                <div class="swiper-arrow__item swiper-arrow__item--prev">
+                <div data-swiper-prev class="swiper-arrow__item swiper-arrow__item--prev">
                     {{ mixins.icon('swiper-prev') }}
                 </div>
-                <div class="swiper-arrow__item swiper-arrow__item--next">
+                <div data-swiper-next class="swiper-arrow__item swiper-arrow__item--next">
                     {{ mixins.icon('swiper-next') }}
                 </div>
             </div>
@@ -173,10 +180,10 @@
 
             <!-- If we need navigation buttons -->
             <div class="swiper-arrow sm-none">
-                <div class="swiper-arrow__item swiper-arrow__item--prev">
+                <div data-swiper-prev class="swiper-arrow__item swiper-arrow__item--prev">
                     {{ mixins.icon('swiper-prev') }}
                 </div>
-                <div class="swiper-arrow__item swiper-arrow__item--next">
+                <div data-swiper-next class="swiper-arrow__item swiper-arrow__item--next">
                     {{ mixins.icon('swiper-next') }}
                 </div>
             </div>

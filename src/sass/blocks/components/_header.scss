@@ -19,6 +19,8 @@
     background: $bg-color;
     display: flex;
     min-height: 48px;
+    position: relative;
+    z-index: 40;
 
     .container {
       display: flex;

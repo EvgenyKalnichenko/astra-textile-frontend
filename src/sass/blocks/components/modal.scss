@@ -5,7 +5,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  //overflow: hidden;
   z-index: 300;
   display: flex;
   flex-direction: column;
@@ -14,7 +13,8 @@
   pointer-events: none;
   transition: .3s ease;
   padding: 20px;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   @include sm-screen {
     padding: 0;
@@ -49,7 +49,7 @@
   &--auto {
     #{$block}__inner {
       width: auto;
-      max-width: unset;
+      max-width: 100%;
     }
   }
 
@@ -164,8 +164,6 @@
   }
 
   &--right {
-
-
     #{$block}__close {
       background: transparent;
       color: currentColor;
@@ -210,12 +208,24 @@
     position: relative;
   }
 
-  &__container {
-
+  &__context {
+    & > * {
+      margin-bottom: 20px;
+    }
   }
 
   &.is-active #{$block}__inner {
     transform: translateY(0);
+  }
+
+  &__error {
+    background: #fff;
+    text-align: center;
+    width: 400px;
+    margin: auto;
+    padding: 30px;
+    color: $error;
+    border-radius: 12px;
   }
 }
 

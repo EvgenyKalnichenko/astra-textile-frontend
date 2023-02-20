@@ -56,7 +56,6 @@
     }
   }
 
-
   &--min {
     min-height: 40px;
     font-size: 14px;
@@ -99,6 +98,11 @@
 
   &--border-accent {
     border: 1px solid var(--accent)
+  }
+
+  &__icon {
+    font-size: 20px;
+    display: inline-flex;
   }
 }
 

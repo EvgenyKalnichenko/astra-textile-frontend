@@ -1,0 +1,94 @@
+{% import "partials/_mixins.twig" as mixins %}
+
+<div class="modal modal--auto modal--sm-bottom" data-modal="table-size">
+    <div class="modal__inner custom-scroll" data-modal-inner="table-size">
+        <div class="modal__close" data-modal-close="table-size">
+            {{ mixins.icon('close') }}
+        </div>
+        <div class="modal__container">
+            <h2 class="modal__title">Таблица размеров</h2>
+            <div class="modal__scroll modal__scroll--mod">
+                <div class="modal__context">
+                    <h3>Размерная сетка женской одежды по ГОСТу</h3>
+                    <div class="table-size">
+                        <table border="1" cellpadding="1" cellspacing="1">
+                            <thead>
+                            <tr>
+                                <td> ГОСТ</td>
+                                <td> RUS</td>
+                                <td>Рост см</td>
+                                <td>Обхват груди см</td>
+                                <td>Обхват талии см</td>
+                                <td>Обхват бедер см</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for i in range(0, 4) %}
+                                <tr>
+                                    <td>
+                                        80
+                                    </td>
+                                    <td>
+                                        84
+                                    </td>
+                                    <td>
+                                        88
+                                    </td>
+                                    <td>
+                                        92
+                                    </td>
+                                    <td>
+                                        96
+                                    </td>
+                                    <td>
+                                        100
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3>Размерная сетка женской одежды по ГОСТу</h3>
+                    <div class="table-size">
+                        <table border="1" cellpadding="1" cellspacing="1">
+                            <thead>
+                            <tr>
+                                <td> ГОСТ</td>
+                                <td> RUS</td>
+                                <td>Рост см</td>
+                                <td>Обхват груди см</td>
+                                <td>Обхват талии см</td>
+                                <td>Обхват бедер см</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for i in range(0, 3) %}
+                                <tr>
+                                    <td>
+                                        80
+                                    </td>
+                                    <td>
+                                        84
+                                    </td>
+                                    <td>
+                                        88
+                                    </td>
+                                    <td>
+                                        92
+                                    </td>
+                                    <td>
+                                        96
+                                    </td>
+                                    <td>
+                                        100
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

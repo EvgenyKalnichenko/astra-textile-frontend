@@ -5,8 +5,10 @@ import "./modules/tabs";
 import "./modules/footer";
 import "./modules/cardProduct";
 import "./modules/common";
+import "./modules/share";
 import "./controllers/catalog-menu";
 import "./controllers/mask";
+
 
 import LazyLoad from 'vanilla-lazyload';
 import {documentReady} from "./modules/utils"

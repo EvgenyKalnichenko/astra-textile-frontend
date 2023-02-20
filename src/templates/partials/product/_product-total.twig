@@ -4,7 +4,14 @@
         <b>355 150</b> ₽
     </div>
     <div class="product-total__row">
-        <a href="#" class="btn btn--medium">В корзину</a>
+        <a href="#" data-modal-ajax-open="add-basket" class="btn btn--medium">
+            <div class="btn__icon">
+                {{ mixins.icon('basket') }}
+            </div>
+            <div class="btn__text">
+                В корзину
+            </div>
+        </a>
         <div class="favorite-icon">
             {{ mixins.icon('heart') }}
         </div>

@@ -42,7 +42,7 @@ export function swiperInit () {
             const el = item.target;
             el.classList.add('init')
             new Swiper (el.querySelector('.swiper'), {
-                modules: [Pagination],
+                modules: [Navigation, Pagination],
                 loop: false,
                 slidesPerView: 1,
                 spaceBetween: 0,
@@ -52,7 +52,11 @@ export function swiperInit () {
                 pagination: {
                     el: el.querySelector('.swiper-pagination--card-product'),
                     type: 'bullets',
-                }
+                },
+                navigation: {
+                    nextEl: el.querySelector('.swiper-arrow__item--next'),
+                    prevEl: el.querySelector('.swiper-arrow__item--prev'),
+                },
             })
         },
         document.querySelectorAll('.card-product__images:not(.init)')
@@ -112,8 +116,8 @@ export function swiperInit () {
                 speed: 200,
                 slideClass: 'swiper-slide',
                 navigation: {
-                    nextEl: el.querySelector('.swiper-arrow__item--next'),
-                    prevEl: el.querySelector('.swiper-arrow__item--prev'),
+                    nextEl: el.querySelector('[data-swiper-next]'),
+                    prevEl: el.querySelector('[data-swiper-prev]'),
                 }
             })
             // Если карточка раскрывающаяся тогда для слайдера создаем
