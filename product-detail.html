@@ -191,7 +191,12 @@
         </div>
         <div class="menu-mobile" data-modal="menu-mobile" data-modal-inner="menu-mobile">
           <div class="menu-mobile__wrap">
-            <a href="#" class="menu-mobile__link" data-modal-open="menu-catalog">Каталог</a>
+            <a href="#" class="menu-mobile__link" data-modal-open="menu-catalog"> Каталог <span class="icon-circle">
+                <svg class="icon icon-arrow-right">
+                  <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                </svg>
+              </span>
+            </a>
             <a href="#" class="menu-mobile__link">О компании</a>
             <a href="#" class="menu-mobile__link">Доставка и оплата</a>
             <a href="#" class="menu-mobile__link">Отзывы</a>
@@ -834,7 +839,7 @@
                 <div class="product-sizes__top">
                   <div class="product-sizes__name">Размеры</div>
                   <div class="product-sizes__tabl">
-                    <a href="#" class="link-arrow">
+                    <a href="#" class="link-arrow" data-modal-ajax-open="table-size">
                       <span class="link-arrow__text">Таблица размеров</span>
                     </a>
                   </div>
@@ -1122,7 +1127,14 @@
                     <b>355 150</b> ₽
                   </div>
                   <div class="product-total__row">
-                    <a href="#" class="btn btn--medium">В корзину</a>
+                    <a href="#" class="btn btn--medium">
+                      <div class="btn__icon">
+                        <svg class="icon icon-basket">
+                          <use xlink:href="img/sprite.svg#icon-basket"></use>
+                        </svg>
+                      </div>
+                      <div class="btn__text"> В корзину </div>
+                    </a>
                     <div class="favorite-icon">
                       <svg class="icon icon-heart">
                         <use xlink:href="img/sprite.svg#icon-heart"></use>
@@ -1130,11 +1142,11 @@
                     </div>
                   </div>
                 </div>
-                <a href="#" class="product-card-info__link">Доставка и оплата <svg class="icon icon-arrow-right">
+                <a href="./delivery.html" class="product-card-info__link">Доставка и оплата <svg class="icon icon-arrow-right">
                     <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
                   </svg>
                 </a>
-                <a href="#" class="product-card-info__link">Как сделать заказ <svg class="icon icon-arrow-right">
+                <a href="#" class="product-card-info__link" data-modal-ajax-open="make-order">Как сделать заказ <svg class="icon icon-arrow-right">
                     <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
                   </svg>
                 </a>
@@ -1142,27 +1154,27 @@
                   <div class="social-share">
                     <div class="social-share__text">Поделиться в соц. сетях</div>
                     <div class="social-share__row">
-                      <a href="#" class="social-share__item social-share__item--vk">
+                      <a href="#" data-share="vk" class="social-share__item social-share__item--vk">
                         <svg class="icon icon-vk">
                           <use xlink:href="img/sprite.svg#icon-vk"></use>
                         </svg>
                       </a>
-                      <a href="#" class="social-share__item social-share__item--ok">
+                      <a href="#" data-share="ok" class="social-share__item social-share__item--ok">
                         <svg class="icon icon-ok">
                           <use xlink:href="img/sprite.svg#icon-ok"></use>
                         </svg>
                       </a>
-                      <a href="#" class="social-share__item social-share__item--vb">
+                      <a href="#" data-share="viber" class="social-share__item social-share__item--vb">
                         <svg class="icon icon-vb">
                           <use xlink:href="img/sprite.svg#icon-vb"></use>
                         </svg>
                       </a>
-                      <a href="#" class="social-share__item social-share__item--wa">
+                      <a href="#" data-share="whatsapp" class="social-share__item social-share__item--wa">
                         <svg class="icon icon-wa">
                           <use xlink:href="img/sprite.svg#icon-wa"></use>
                         </svg>
                       </a>
-                      <a href="#" class="social-share__item social-share__item--telegram">
+                      <a href="#" data-share="telegram" class="social-share__item social-share__item--telegram">
                         <svg class="icon icon-telegram">
                           <use xlink:href="img/sprite.svg#icon-telegram"></use>
                         </svg>
@@ -1221,11 +1233,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -1262,7 +1286,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -1310,11 +1341,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -1351,7 +1394,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -1399,11 +1449,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -1440,7 +1502,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -1488,11 +1557,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -1529,7 +1610,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -1577,11 +1665,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -1618,7 +1718,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -1666,11 +1773,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -1707,7 +1826,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -1755,11 +1881,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -1796,7 +1934,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -1844,11 +1989,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -1885,7 +2042,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -1933,11 +2097,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -1974,7 +2150,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2022,11 +2205,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -2063,7 +2258,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2111,11 +2313,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -2152,7 +2366,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2200,11 +2421,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -2241,7 +2474,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2289,11 +2529,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -2330,7 +2582,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2378,11 +2637,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -2419,7 +2690,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2467,11 +2745,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -2508,7 +2798,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2520,12 +2817,12 @@
             <div class="swiper-pagination swiper-pagination--mod"></div>
             <!-- If we need navigation buttons -->
             <div class="swiper-arrow sm-none">
-              <div class="swiper-arrow__item swiper-arrow__item--prev">
+              <div data-swiper-prev class="swiper-arrow__item swiper-arrow__item--prev">
                 <svg class="icon icon-swiper-prev">
                   <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
                 </svg>
               </div>
-              <div class="swiper-arrow__item swiper-arrow__item--next">
+              <div data-swiper-next class="swiper-arrow__item swiper-arrow__item--next">
                 <svg class="icon icon-swiper-next">
                   <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
                 </svg>
@@ -2580,11 +2877,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -2621,7 +2930,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2669,11 +2985,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -2710,7 +3038,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2758,11 +3093,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -2799,7 +3146,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2847,11 +3201,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -2888,7 +3254,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2936,11 +3309,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -2977,7 +3362,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -3025,11 +3417,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -3066,7 +3470,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -3114,11 +3525,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -3155,7 +3578,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -3203,11 +3633,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -3244,7 +3686,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -3292,11 +3741,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -3333,7 +3794,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -3381,11 +3849,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -3422,7 +3902,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -3470,11 +3957,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -3511,7 +4010,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -3559,11 +4065,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -3600,7 +4118,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -3648,11 +4173,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -3689,7 +4226,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -3737,11 +4281,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -3778,7 +4334,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -3826,11 +4389,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="swiper-arrow swiper-arrow--mod sm-none">
+                            <div class="swiper-arrow__item swiper-arrow__item--prev">
+                              <svg class="icon icon-swiper-prev">
+                                <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-arrow__item swiper-arrow__item--next">
+                              <svg class="icon icon-swiper-next">
+                                <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                           <div class="swiper-pagination swiper-pagination--card-product"></div>
                         </div>
                       </div>
                       <div class="card-product__bottom">
-                        <a href=".//product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
+                        <a href="./product-detail.html" class="card-product__title">Б0760-2 Футболка женская люрекс</a>
                         <div class="card-product__row">
                           <div class="card-product__col">
                             <span class="card-product__old-price">1 550</span>
@@ -3867,7 +4442,14 @@
                         <div class="card-product__dropdown">
                           <div class="card-product__description">Размер: 44 45 46 48 50 52 56 58</div>
                           <div class="card-product__description">Материал: Хлопок 60%, Полиамид 40%</div>
-                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium"> В корзину </button>
+                          <button type="button" aria-label="add basket" data-modal-ajax-open="add-basket" class="card-product__button btn btn--medium">
+                            <div class="btn__icon">
+                              <svg class="icon icon-basket">
+                                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                              </svg>
+                            </div>
+                            <div class="btn__text"> В корзину </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -3879,12 +4461,12 @@
             <div class="swiper-pagination swiper-pagination--mod"></div>
             <!-- If we need navigation buttons -->
             <div class="swiper-arrow sm-none">
-              <div class="swiper-arrow__item swiper-arrow__item--prev">
+              <div data-swiper-prev class="swiper-arrow__item swiper-arrow__item--prev">
                 <svg class="icon icon-swiper-prev">
                   <use xlink:href="img/sprite.svg#icon-swiper-prev"></use>
                 </svg>
               </div>
-              <div class="swiper-arrow__item swiper-arrow__item--next">
+              <div data-swiper-next class="swiper-arrow__item swiper-arrow__item--next">
                 <svg class="icon icon-swiper-next">
                   <use xlink:href="img/sprite.svg#icon-swiper-next"></use>
                 </svg>

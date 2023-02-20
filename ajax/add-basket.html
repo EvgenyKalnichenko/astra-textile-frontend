@@ -40,7 +40,7 @@
               <div class="product-sizes__top">
                 <div class="product-sizes__name">Размеры</div>
                 <div class="product-sizes__tabl">
-                  <a href="#" class="link-arrow">
+                  <a href="#" class="link-arrow" data-modal-ajax-open="table-size">
                     <span class="link-arrow__text">Таблица размеров</span>
                   </a>
                 </div>
@@ -306,7 +306,14 @@
                 <div class="product-total__price"> 355 150 ₽ </div>
               </div>
               <div class="product-total__row">
-                <a href="#" class="btn btn--medium">В корзину</a>
+                <a href="#" type="button" class="btn btn--medium">
+                  <div class="btn__icon">
+                    <svg class="icon icon-basket">
+                      <use xlink:href="img/sprite.svg#icon-basket"></use>
+                    </svg>
+                  </div>
+                  <div class="btn__text"> В корзину </div>
+                </a>
                 <div class="favorite-icon">
                   <svg class="icon icon-heart">
                     <use xlink:href="img/sprite.svg#icon-heart"></use>
