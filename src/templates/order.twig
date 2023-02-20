@@ -1,0 +1,397 @@
+{% set title = "Оформление заказа" %}
+
+{% extends "layouts/_layout.twig" %}
+
+{% block content %}
+    {% include "./partials/_breadcrumbs.twig" %}
+    <section class="section-basket">
+        <h1 class="title-page">Оформление заказа</h1>
+        <div class="section-basket__grid">
+            <div class="section-basket__main">
+                <div class="form default-border">
+                    <div class="form__container">
+                        <div class="form__title">
+                            {{ mixins.icon('user-fill') }}
+                            Контактные данные
+                        </div>
+                        <div class="form__row">
+                            <div class="checkbox checkbox--stroke checkbox--top">
+                                <input name="type" type="radio" id="type-5242" class="checkbox__input">
+                                <label for="type-5242" class="checkbox__label">
+                                    <span class="checkbox__icon">{{ mixins.icon('check-mark') }}</span>
+                                    <span class="checkbox__text">
+                                          Физическое лицо
+                                        </span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox--stroke checkbox--top">
+                                <input name="type" type="radio" id="type-32" class="checkbox__input" checked="">
+                                <label for="type-32" class="checkbox__label">
+                                    <span class="checkbox__icon">{{ mixins.icon('check-mark') }}</span>
+                                    <span class="checkbox__text">
+                                         Юридическое лицо
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form__grid form__grid--mg0">
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">Контактное лицо</div>
+                                    <input type="text" name="contact name" class="form-group__input" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">ИНН организации</div>
+                                    <input type="text" name="inn" class="form-group__input" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">Название компании</div>
+                                    <input type="text" name="company name" class="form-group__input" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">Название банка</div>
+                                    <input type="text" name="bank" class="form-group__input" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">Телефон</div>
+                                    <input type="tel" name="phone" class="form-group__input" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">Расчестный счет</div>
+                                    <input type="text" name="checking account" class="form-group__input"
+                                           placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">E-mail</div>
+                                    <input type="email" name="checking account" class="form-group__input"
+                                           placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">Корр. счет</div>
+                                    <input type="text" name="corp account" class="form-group__input" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">БИК</div>
+                                    <input type="text" name="bik" class="form-group__input" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">КПП</div>
+                                    <input type="text" name="kpp" class="form-group__input" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">Руководитель</div>
+                                    <input type="text" name="leader" class="form-group__input" placeholder=""/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form default-border">
+                    <div class="form__container">
+                        <div class="form__title">
+                            {{ mixins.icon('geolocation') }}
+                            Юридический адрес
+                        </div>
+                        <div class="form__grid form__grid--mg0">
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">Страна</div>
+                                    <input type="text" name="contact name" class="form-group__input" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">Область</div>
+                                    <input type="text" name="inn" class="form-group__input" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">Город</div>
+                                    <input type="text" name="company name" class="form-group__input" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">Адрес</div>
+                                    <input type="text" name="bank" class="form-group__input" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">Телефон</div>
+                                    <input type="tel" name="phone" class="form-group__input" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">Индекс</div>
+                                    <input type="text" name="checking account" class="form-group__input"
+                                           placeholder=""/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form default-border">
+                    <div class="form__container">
+                        <div class="form__title">
+                            {{ mixins.icon('box') }}
+                            Данные для доставки
+                        </div>
+                        <div class="form__row">
+                            <div class="checkbox checkbox--stroke checkbox--top">
+                                <input name="tk" type="radio" id="type-87" class="checkbox__input">
+                                <label for="type-87" class="checkbox__label">
+                                    <span class="checkbox__icon">{{ mixins.icon('check-mark') }}</span>
+                                    <span class="checkbox__text">
+                                          Самовывоз
+                                        </span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox--stroke checkbox--top">
+                                <input name="tk" type="radio" id="type-5" class="checkbox__input" checked="">
+                                <label for="type-5" class="checkbox__label">
+                                    <span class="checkbox__icon">{{ mixins.icon('check-mark') }}</span>
+                                    <span class="checkbox__text">
+                                       Транспортной компанией
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <div class="select-block select-block--w280px" data-select="form">
+                                <div class="select-block__title" data-select-head>
+                                    <span data-select-title>Выберите ТК</span>
+                                    <div class="select-block__icon">
+                                        {{ mixins.icon('arrow-bottom') }}
+                                    </div>
+                                </div>
+                                <ul class="select-block__list custom-scroll" data-select-body>
+                                    <li>
+                                        <a href="#" class="" data-select-item>СДЭК (посылка - до пункта выдачи) - 240 руб</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-select-item>СДЭК (посылка - курьером до двери) - 420 руб</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="" data-select-item>DPD (optimum - до пункта выдачи) - 298 руб</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form__grid form__grid--mg0">
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">Страна</div>
+                                    <input type="text" name="contact name" class="form-group__input" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">Область</div>
+                                    <input type="text" name="inn" class="form-group__input" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">Город</div>
+                                    <input type="text" name="company name" class="form-group__input" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">Адрес</div>
+                                    <input type="text" name="bank" class="form-group__input" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">Телефон</div>
+                                    <input type="tel" name="phone" class="form-group__input" placeholder=""/>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <div class="form-group form-group--mg0">
+                                    <div class="form-group__label">Индекс</div>
+                                    <input type="text" name="checking account" class="form-group__input"
+                                           placeholder=""/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form default-border">
+                    <div class="form__container">
+                        <div class="form__title">
+                            {{ mixins.icon('payment') }}
+                            Способы оплаты
+                        </div>
+                        <div class="form__row form__row--mg0">
+                            <div class="select-block select-block--w280px" data-select="form">
+                                <div class="select-block__title" data-select-head>
+                                    <span data-select-title>Способы оплаты</span>
+                                    <div class="select-block__icon">
+                                        {{ mixins.icon('arrow-bottom') }}
+                                    </div>
+                                </div>
+                                <ul class="select-block__list custom-scroll" data-select-body>
+                                    <li>
+                                        <a href="#" class="" data-select-item>Оплата при получении</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-select-item>Картой курьеру</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-select-item>Онлайн</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form default-border">
+                    <div class="form__container">
+                        <div class="form__title">
+                            {{ mixins.icon('review') }}
+                            Комментарий к заказу
+                        </div>
+                        <div class="form__row form__row--mg0">
+                            <div class="form-group form-group--mg0">
+                                <textarea type="text" rows="6" name="contact name" class="form-group__textarea"
+                                          placeholder=""></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-basket__sidebar">
+                <div class="card-sidebar">
+                    <div class="card-sidebar__col">
+                        <div class="card-sidebar__row">
+                            <div class="card-sidebar__name">
+                                Количество товаров
+                            </div>
+                            <div class="card-sidebar__bold">
+                                18
+                            </div>
+                        </div>
+                        <div class="card-sidebar__row">
+                            <div class="card-sidebar__name">
+                                Общая стоимость:
+                            </div>
+                            <div class="card-sidebar__bold">
+                                452 000
+                            </div>
+                        </div>
+                        <div class="card-sidebar__row">
+                            <div class="card-sidebar__name">
+                                Скидка:
+                            </div>
+                            <div class="card-sidebar__bold">
+                                10% (23 000)
+                            </div>
+                        </div>
+                        <div class="system-stock">
+                            {# <div class="system-stock__name"> #}
+                            {# Система скидок #}
+                            {# </div> #}
+                            <div class="indicator">
+                                <div class="indicator__row">
+                                    <div class="indicator__bold">5%</div>
+                                    <div class="indicator__bold">10%</div>
+                                    <div class="indicator__bold">15%</div>
+                                </div>
+                                <div class="indicator__row">
+                                    <div class="indicator__line">
+                                        <div class="indicator__percent" style="width: 70%"></div>
+                                    </div>
+                                    <div class="indicator__point is-active"></div>
+                                    <div class="indicator__point is-active"></div>
+                                    <div class="indicator__point"></div>
+                                </div>
+                                <div class="indicator__row">
+                                    <div class="indicator__text">Мел.опт</div>
+                                    <div class="indicator__text">Сред.опт</div>
+                                    <div class="indicator__text">Круп.опт</div>
+                                </div>
+                            </div>
+                            <div class="system-stock__note">
+                                До скидки <span>2</span>% осталось заказать на сумму:
+                                7&nbsp;850&nbsp;₽.
+                            </div>
+                        </div>
+                    </div>
+                    <form class="promo-code">
+                        <div class="promo-code__row">
+                            <div class="form-group form-group--mg0">
+                                <div class="form-group__label">Промокод:</div>
+                                <input type="text" class="form-group__input" placeholder=""/>
+                            </div>
+                            <div class="form-group promo-code__btn form-group--mg0">
+                                <button class="btn btn--min btn--accent btn--stroke" type="submit">Применить</button>
+                            </div>
+                        </div>
+                        {# добавь класс green или error #}
+                        <div class="promo-code__status green">
+                            Промокод применен
+                        </div>
+                    </form>
+
+                    <div class="card-sidebar__col">
+                        <div class="card-sidebar__row">
+                            <div class="card-sidebar__name card-sidebar__name--big">
+                                Итого к оплате:
+                            </div>
+                            <div class="card-sidebar__bold card-sidebar__bold--big">
+                                12&nbsp;150&nbsp;₽
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-sidebar__col">
+                        <div class="card-sidebar__btn">
+                            <button class="btn btn--full btn--medium">
+                                Оформить заказ
+                            </button>
+                            <div class="error-message">
+
+                            </div>
+                        </div>
+                        <div class="card-sidebar__options">
+                            <div class="card-sidebar__reset">
+                                <button type="button" class="btn-i btn-i--red">
+                                    <div class="btn-i__icon">
+                                        {{ mixins.icon('reset') }}
+                                    </div>
+                                    <div class="btn-i__text">
+                                        Очистить корзину
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

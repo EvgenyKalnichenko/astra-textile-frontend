@@ -42,7 +42,6 @@ export default class Select {
         });
 
         this.dom.close.on('click', (e) => {
-            console.log('clickclickclick')
             this.close();
         })
 
@@ -72,13 +71,13 @@ export default class Select {
         this.dom.input.val(text);
     }
     changeActive(el) {
-        const isActive = el.hasClass('active');
+        const isActive = el.hasClass(this.activeClass);
 
         this.dom.el.removeClass('is-error');
 
-        this.dom.items.removeClass('active');
+        this.dom.items.removeClass(this.activeClass);
         if (!isActive) {
-            el.addClass('active');
+            el.addClass(this.activeClass);
         }
     }
 }
@@ -105,14 +104,13 @@ export function selectsInit() {
     //         closeOnSelect: true,
     //     });
     // });
-    //
-    // $('[data-select=form]:not([data-select-init=true])').each(function() {
-    //     new Select(this, {
-    //         changeHead: true,
-    //         closeOnSelect: true,
-    //         input: '[data-select-input]'
-    //     });
-    // });
+
+    $('[data-select=form]:not([data-select-init=true])').each(function() {
+        new Select(this, {
+            changeHead: true,
+            closeOnSelect: true,
+        });
+    });
 
     $('[data-select=filter]:not([data-select-init=true])').each(function() {
         new Select(this, {
@@ -120,5 +118,4 @@ export function selectsInit() {
             closeOnSelect: false
         });
     });
-
 }

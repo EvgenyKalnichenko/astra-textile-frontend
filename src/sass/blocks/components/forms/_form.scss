@@ -1,5 +1,5 @@
 .form {
-  padding: 23px 32px;
+  padding: 23px 32px 30px;
   margin-bottom: 15px;
   background: #fff;
 
@@ -19,11 +19,14 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    margin-bottom: 44px;
+    margin-bottom: 30px;
 
     @include sm-screen {
-      gap: 20px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+    }
+
+    &--mg0 {
+      margin: 0;
     }
   }
 
@@ -69,6 +72,10 @@
 
     @include xs-screen {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    &--mg0 {
+      margin: 0;
     }
   }
 }

@@ -69,6 +69,7 @@ $(function () {
         'news-detail',
         'reviews',
         'basket',
+        'order',
         'about',
         'contacts',
         'delivery',

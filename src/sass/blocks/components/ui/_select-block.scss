@@ -1,0 +1,257 @@
+.select-block {
+  $block: &;
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+
+  &:hover {
+    z-index: 21;
+  }
+
+  &.is-active {
+    z-index: 21;
+  }
+
+  &--w100 {
+    width: 100%;
+  }
+
+  &--w280px {
+    max-width: 280px;
+    width: 100%;
+
+    @include xs-screen {
+      max-width: 100%
+    }
+  }
+
+  &--grey {
+
+    #{$block}__icon {
+      background: transparent;
+      color: $accent;
+      font-size: 10px;
+    }
+  }
+
+  &--mod {
+    .select-block__title {
+      border-color: transparent;
+    }
+
+    .select-block__list {
+      top: 40px;
+      border-radius: 10px;
+      padding-top: 5px;
+
+      li:first-child {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &--big {
+
+    #{$block}__title {
+      height: 50px;
+
+      @include sm-screen {
+        height: 40px;
+      }
+    }
+
+    #{$block}__icon {
+      width: 40px;
+      height: 40px;
+
+      @include sm-screen {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    #{$block}__list {
+
+      li {
+
+        &:first-child {
+          padding-top: 30px;
+
+          @include sm-screen {
+            padding-top: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  &--simple {
+
+    #{$block}__title {
+      height: auto;
+      border: none;
+      padding: 0 25px 0 0;
+      color: $accent;
+      font-weight: bold;
+    }
+
+    #{$block}__icon {
+      background: transparent;
+      width: 10px;
+      height: 10px;
+      color: $accent;
+    }
+
+    #{$block}__list {
+      width: 170px;
+      right: 0;
+      left: unset;
+      border-radius: 15px;
+
+      li:first-child {
+        padding-top: 0;
+      }
+
+      li:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &.is-active {
+    z-index: 10;
+  }
+
+  &__name {
+    margin-bottom: 8px;
+  }
+
+  &__remove {
+    z-index: 4;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    font-size: 13px;
+    width: 13px;
+    height: 13px;
+    color: $error;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+    &:hover{
+      opacity: 0.5;
+    }
+  }
+
+  &__top {
+    position: relative;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    background: $accent;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-radius: 50%;
+    transition: 0.15s ease-in-out;
+    font-size: 10px;
+
+    @include lg-screen {
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  &__title {
+    span {
+      height: 18px;
+      overflow: hidden;
+      white-space: nowrap;
+      display: inline-block;
+      width: 100%;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__title, &__input {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #CDCDCD;
+    box-sizing: border-box;
+    border-radius: 25px;
+    height: 40px;
+    padding: 0 50px 0 18px;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    z-index: 3;
+    font-weight: 500;
+
+    @include lg-screen {
+      height: 40px;
+    }
+
+    &.is-active #{$block}__icon {
+      transform: rotate(180deg);
+    }
+
+    span {
+      overflow: hidden;
+      white-space: nowrap;
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
+  &__list {
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    border: 1px solid #ccc;
+    margin: 0;
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    box-sizing: content-box;
+    top: 20px;
+    left: 0;
+    width: calc(100% - 2px);
+    z-index: 2;
+    display: none;
+
+    #{$block}.is-active & {
+      display: block;
+    }
+
+    li {
+
+      &:first-child {
+        padding-top: 20px;
+      }
+
+      &:last-child {
+        padding-bottom: 5px;
+      }
+
+      a {
+        display: block;
+        color: #333;
+        padding: 5px 18px;
+        text-decoration: none;
+
+        &:hover, &.is-active {
+          background-color: #e3e3e3;
+        }
+      }
+    }
+  }
+}
