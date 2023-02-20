@@ -2,6 +2,7 @@
 {% import "partials/_mixins.twig" as mixins %}
 {% set debug = true %}
 {% set version = 2 %}
+
 <!doctype html>
 <html lang="ru">
 <head>
@@ -33,10 +34,10 @@
                 <div class="section-lk__sidebar">
                     <div class="section-lk__sticky">
                         <div class="menu-lk">
-                            <a href="./profile.html" class="menu-lk__link is-active">Мой профиль</a>
-                            <a href="./orders.html" class="menu-lk__link">Заказы <span class="menu-lk__count menu-lk__count--grey">0</span></a>
-                            <a href="./favorites.html" class="menu-lk__link">Избранное <span class="menu-lk__count">2</span></a>
-                            <a href="./wishlist.html" class="menu-lk__link">Лист ожидания <span class="menu-lk__count">7</span></a>
+                            <a href="./profile.html" class="menu-lk__link {% if urlPage === 'profile'%}is-active{% endif %}">Мой профиль</a>
+                            <a href="./orders.html" class="menu-lk__link {% if urlPage === 'orders'%}is-active{% endif %}">Заказы <span class="menu-lk__count menu-lk__count--grey">0</span></a>
+                            <a href="./favorites.html" class="menu-lk__link {% if urlPage === 'favorites'%}is-active{% endif %}">Избранное <span class="menu-lk__count">2</span></a>
+                            <a href="./wishlist.html" class="menu-lk__link {% if urlPage === 'wishlist'%}is-active{% endif %}">Лист ожидания <span class="menu-lk__count">7</span></a>
                         </div>
                         <div class="menu-control">
                             <div class="menu-control__item">

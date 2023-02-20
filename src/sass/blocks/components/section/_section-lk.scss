@@ -1,13 +1,5 @@
 .section-lk {
-  //margin-bottom: 70px;
-  //
-  //@include lg-screen {
-  //  margin-bottom: 45px;
-  //}
-
-  //@include sm-screen {
-  //  margin-bottom: 30px;
-  //}
+  margin-bottom: 70px;
 
   &__head {
     margin-bottom: 26px;
@@ -82,9 +74,10 @@
     @include sm-screen {
       position: relative;
       padding-top: 15px;
+      padding-bottom: 40px;
 
       &:before {
-        height: calc(100% + 15px);
+        height: 100%;
         content: "";
         display: block;
         position: absolute;
@@ -92,9 +85,13 @@
         left: -15px;
         top: 0;
         width: calc(100% + 30px);
-        border-radius: 12px 12px 0 0;
+        border-radius: 12px;
         z-index: -1;
       }
+    }
+
+    .paginator-box {
+      margin-bottom: 0;
     }
   }
 

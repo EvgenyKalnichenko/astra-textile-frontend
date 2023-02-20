@@ -1,4 +1,5 @@
 .card-horizontal {
+  $block: &;
   @extend .default-border;
   overflow: hidden;
   padding: 23px 30px;
@@ -17,7 +18,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    gap: 15px;
+    gap: 20px 15px;
   }
 
   &__prices {
@@ -44,7 +45,7 @@
   &__image {
     @include ratio(88, 132);
     position: relative;
-    width: 132px;
+    width: 88px;
     background: var(--background-components);
     border-radius: 12px;
     flex-shrink: 0;
@@ -77,6 +78,7 @@
     padding-top: 16px;
     margin-top: auto;
     width: 100%;
+    font-size: 14px;
 
     @include xl-screen {
       order: 5;
@@ -84,7 +86,7 @@
   }
 
   &__description {
-   max-width: 400px;
+    max-width: 400px;
 
     @include lg-screen {
       width: calc(100% - 200px);
@@ -112,8 +114,21 @@
 
   &__right {
     margin-left: auto;
+    max-width: 237px;
+    width: 100%;
+    text-align: right;
+    margin-top: 10px;
+
+    @include xl-screen {
+      max-width: 160px;
+    }
+
+    @include sm-screen {
+      margin-top: 20px;
+    }
 
     @include xs-screen {
+      max-width: 100%;
       width: 100%;
       order: 7;
       display: flex;
@@ -129,10 +144,19 @@
     position: absolute;
     right: 15px;
     top: 15px;
+    color: var(--accent);
+    cursor: pointer;
+    transition: var(--theme-duration) var(--ease) color;
+
+    &:hover {
+      color: var(--main-color-font);
+    }
   }
 
   &__status {
     margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 19px;
 
     @include xs-screen {
       margin: 0;
@@ -140,10 +164,31 @@
   }
 
   &--available {
-    border-color: var(--color-green);
+    border-color: var(--color-green) !important;
+
+    #{$block}__status {
+      color: var(--color-green);
+    }
   }
 
   &--not-available {
+    color: #6C6C6C;
+    position: relative;
 
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(#fff, 0.4);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    #{$block}__status {
+      color: var(--accent);
+    }
   }
 }

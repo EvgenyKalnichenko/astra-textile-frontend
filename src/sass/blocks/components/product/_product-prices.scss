@@ -91,7 +91,7 @@
     grid-template-columns: repeat(1,1fr);
     position: relative;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 20px;
 
     & > * {
       white-space: nowrap;
@@ -144,6 +144,7 @@
 
   &__description {
     font-weight: 400;
+    height: 18px;
 
     @include xl-screen {
       order: 4;

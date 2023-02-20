@@ -70,6 +70,10 @@
   align-items: center;
   margin: 60px 0 80px;
 
+  &--m60 {
+    margin: 60px 0;
+  }
+
   @include sm-screen {
     justify-content: center;
     flex-wrap: wrap;
