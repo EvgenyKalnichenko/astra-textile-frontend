@@ -1,6 +1,6 @@
 {% import "partials/_mixins.twig" as mixins %}
 
-<div class="modal modal--auto modal--sm-bottom" data-modal="table-size">
+<div class="modal modal--auto modal--sm-bottom" data-modal="table-size" data-modal-onclose="remove">
     <div class="modal__inner custom-scroll" data-modal-inner="table-size">
         <div class="modal__close" data-modal-close="table-size">
             {{ mixins.icon('close') }}

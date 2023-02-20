@@ -102,6 +102,8 @@ class Modal {
                     $modal.remove();
                 }
             }, this.closeTimeout);
+        } else if (id && dataOnClose) {
+            $modal.remove();
         }
 
         this.doc.trigger('modal-close', [id]);
