@@ -2,6 +2,11 @@
 
 {% extends "layouts/_layout.twig" %}
 
+{% block head %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+    <script async src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+{% endblock %}
+
 {% block content %}
     {% include "./partials/_breadcrumbs.twig" %}
     <div class="top-page">
@@ -18,12 +23,14 @@
                         <div class="swiper-wrapper">
                             {% for i in range(0, 6) %}
                                 <div class="swiper-slide">
-                                    <div class="product-image product-image--border">
+                                    <a href="img/product-1.jpg"
+                                       data-fancybox="gallery"
+                                       class="product-image product-image--border">
                                         <picture>
                                             <source data-srcset="img/product-1.webp" type="image/webp"/>
                                             <img class="lazy" data-src="img/product-1.jpg" alt="">
                                         </picture>
-                                    </div>
+                                    </a>
                                 </div>
                             {% endfor %}
                         </div>

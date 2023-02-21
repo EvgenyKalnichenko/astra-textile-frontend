@@ -162,6 +162,7 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    display: block;
 
     &--border {
       border: 2px solid var(--background-components);
