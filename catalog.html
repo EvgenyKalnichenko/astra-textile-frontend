@@ -12,6 +12,32 @@
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" media="all" href="css/style.css?v=2" />
+    <script defer src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) =>
+      {
+        $('.slider-range').each((index, el) =>
+        {
+          const rangeMin = $(el).attr('data-range-min')
+          const rangeMax = $(el).attr('data-range-max')
+          const rangeFrom = $(el).attr('data-range-from')
+          const rangeTo = $(el).attr('data-range-to')
+          $(el).find('.slider-range__range').slider(
+          {
+            range: true,
+            min: Number(rangeMin),
+            max: Number(rangeMax),
+            values: [rangeFrom, rangeTo],
+            slide: function(event, ui)
+            {
+              $(el).find('.slider-range__from').val(ui.values[0]);
+              $(el).find('.slider-range__to').val(ui.values[1]);
+            }
+          });
+        })
+      });
+
+    </script>
   </head>
   <body>
     <!-- BEGIN content -->
@@ -2609,6 +2635,19 @@
               <h2 class="modal__title">Фильтр</h2>
               <div class="modal__scroll modal__scroll--mod custom-scroll">
                 <form action="#" class="form-filters">
+                  <div class="form-filter">
+                    <div class="slider-range" data-range-min="145" data-range-max="2415" data-range-from="500" data-range-to="2415">
+                      <div class="slider-range__head">
+                        <div class="slider-range__head-block">От <input name="catalogFilter_P45_MIN" value="500" class="slider-range__input slider-range__from" onkeyup="smartFilter.keyup(this)">
+                        </div>
+                        <div class="slider-range__head-block">До <input name="catalogFilter_P45_MAX" value="2415" class="slider-range__input slider-range__to" onkeyup="smartFilter.keyup(this)">
+                        </div>
+                      </div>
+                      <div class="slider-range__container">
+                        <div class="slider-range__range"></div>
+                      </div>
+                    </div>
+                  </div>
                   <div class="filter-list" data-max-count="5">
                     <div class="filter-list-wrap">
                       <div class="filter-list__top">
