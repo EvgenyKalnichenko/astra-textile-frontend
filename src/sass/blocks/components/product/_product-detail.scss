@@ -4,6 +4,7 @@
 
   @include sm-screen {
     flex-wrap: wrap;
+    margin-bottom: 0;
   }
 
   &__images {

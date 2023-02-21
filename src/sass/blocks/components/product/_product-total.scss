@@ -67,6 +67,17 @@
       font-size: 36px;
       line-height: 42px;
       margin-bottom: 22px;
+
+      @include sm-screen {
+        font-size: 25px;
+        line-height: 31px;
+      }
     }
+  }
+
+  .favorite-icon {
+    width: 43px;
+    height: 43px;
+    font-size: 18px;
   }
 }

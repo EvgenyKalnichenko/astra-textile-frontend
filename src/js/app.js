@@ -11,11 +11,11 @@ import "./controllers/mask";
 
 
 import LazyLoad from 'vanilla-lazyload';
+import counterInit from "./modules/counter";
 import {documentReady} from "./modules/utils"
 import {swiperInit} from "./modules/swiperInit";
 import {modalsInit} from './controllers/modals';
 import {selectsInit} from './modules/select';
-
 import {interactionWithCard} from "./modules/cardProduct";
 import {initFilterList} from "./modules/filterList";
 
@@ -41,6 +41,8 @@ $(function () {
     // Взаимодействие с карточкой товара (открытие закрытие) только на девайсах больше 768
     interactionWithCard()
 
+    //
+    counterInit()
 
     // Фильтр в каталоге
     initFilterList();
