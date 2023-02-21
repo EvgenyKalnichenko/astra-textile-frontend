@@ -104,7 +104,7 @@
   }
 
   &--min {
-    line-height: 20px;
+    line-height: 21px;
 
     #{$block}__label {
       padding-left: 32px;
@@ -114,14 +114,6 @@
       top: 1px;
       width: 20px;
       height: 20px;
-
-      @include xl-screen {
-        top: -1px;
-      }
-
-      @include sm-screen {
-        top: -2px;
-      }
 
       svg {
         font-size: 10px;
@@ -147,6 +139,22 @@
 
       @include sm-screen {
         top: -3px;
+      }
+    }
+  }
+
+  &--circle {
+    #{$block}__input:checked+#{$block}__label #{$block}__icon {
+      border-color: var(--accent);
+      background: transparent;
+
+      &:before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        background: var(--accent);
+        border-radius: 50%;
+        position: relative;
       }
     }
   }
