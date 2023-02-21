@@ -14,26 +14,57 @@
     <link rel="stylesheet" media="all" href="css/style.css?v=2" />
     <script defer src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-      window.addEventListener('DOMContentLoaded', (event) =>
+      window.addEventListener('DOMContentLoaded', () =>
       {
-        $('.slider-range').each((index, el) =>
+        $('.slider-range').each(function()
         {
-          const rangeMin = $(el).attr('data-range-min')
-          const rangeMax = $(el).attr('data-range-max')
-          const rangeFrom = $(el).attr('data-range-from')
-          const rangeTo = $(el).attr('data-range-to')
-          $(el).find('.slider-range__range').slider(
+          const $this = $(this),
+            // parentForm = $this.closest('form'),
+            range = $('.slider-range__range', $this),
+            min = parseInt($this.data('range-min')),
+            max = parseInt($this.data('range-max')),
+            from = parseInt($this.data('range-from')),
+            to = parseInt($this.data('range-to')),
+            inputFrom = $('.slider-range__from', $this),
+            inputTo = $('.slider-range__to', $this);
+          range.slider(
           {
             range: true,
-            min: Number(rangeMin),
-            max: Number(rangeMax),
-            values: [rangeFrom, rangeTo],
-            slide: function(event, ui)
+            min: min,
+            max: max,
+            values: [from, to],
+            animate: 'fast',
+            create: function()
             {
-              $(el).find('.slider-range__from').val(ui.values[0]);
-              $(el).find('.slider-range__to').val(ui.values[1]);
+              inputFrom.val($(this).slider('values', 0));
+              inputTo.val($(this).slider('values', 1));
+            },
+            slide: function(e, ui)
+            {
+              inputFrom.val(ui.values[0]).trigger('change.filterFloatBtn');
+              inputTo.val(ui.values[1]).trigger('change.filterFloatBtn');
+              clearTimeout(window.cadTimer);
+              window.cadTimer = setTimeout(function()
+              {
+                // document.getElementById('catalogsmartfilter').submit();
+              }, 500);
             }
           });
+          range.before('<div class="slider-range__range-bg" />');
+          inputFrom.on('change', function()
+          {
+            var val = $(this).val();
+            range.slider('values', 0, val);
+          });
+          inputTo.on('change', function()
+          {
+            var val = $(this).val();
+            range.slider('values', 1, val);
+          });
+          // parentForm.on('reset', function () {
+          //     range.slider('values', 0, min);
+          //     range.slider('values', 1, max);
+          // });
         })
       });
 
