@@ -1,10 +1,19 @@
 .ui-slider {
   position: relative;
   height: 3px;
-  width: 100%;
-  background: var(--background-components-v2);
+  width: calc(100% - 20px);
   margin: 30px 0;
   border-radius: 3px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + 20px);
+    height: 100%;
+    background: var(--background-components-v2);
+  }
 }
 
 .ui-widget-header {
@@ -26,13 +35,13 @@
   transform: translateY(-50%);
 }
 
-.ui-slider-handle:nth-child(2){
-  transform: translate(0, -50%);
-}
-
-.ui-slider-handle:nth-child(3){
-  transform: translate(-100%, -50%);
-}
+//.ui-slider-handle:nth-child(2){
+//  transform: translate(0, -50%);
+//}
+//
+//.ui-slider-handle:nth-child(3){
+//  transform: translate(0, -50%);
+//}
 
 .ui-slider-handle:before {
   content: '';
@@ -47,38 +56,40 @@
 .slider-range {
   max-width: 210px;
   width: 100%;
-}
 
-.slider-range__head {
-  margin-bottom: 25px;
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid var(--background-components-v2);
-  border-radius: 20px;
-  position: relative;
-}
+  &__head {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--background-components-v2);
+    border-radius: 20px;
+    position: relative;
 
-.slider-range__head:before {
-  content: '';
-  width: 1px;
-  height: 100%;
-  left: 50%;
-  top: 0;
-  position: absolute;
-  background: var(--background-components-v2);
-}
+    &:before {
+      content: '';
+      width: 1px;
+      height: 100%;
+      left: 50%;
+      top: 0;
+      position: absolute;
+      background: var(--background-components-v2);
+    }
+  }
 
-.slider-range__head-block {
-  display: flex;
-  width: 50%;
-  padding: 10px;
-}
+  &__head-block {
+    display: flex;
+    width: 50%;
+    padding: 10px;
+  }
 
-.slider-range__input {
-  width: 60px;
-  border: none;
-  text-align: center;
-  font-size: 14px;
-  color: #604d37;
-  font-weight: 700
+  &__input {
+    width: 60px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  &__container {
+    //width: calc(100% - 20px);
+  }
 }

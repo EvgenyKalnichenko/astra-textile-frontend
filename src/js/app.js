@@ -46,4 +46,6 @@ $(function () {
 
     // Фильтр в каталоге
     initFilterList();
+
+
 })
