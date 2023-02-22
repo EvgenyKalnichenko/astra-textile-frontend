@@ -12,65 +12,6 @@
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" media="all" href="css/style.css?v=12" />
-    <script async src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script async src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-    <script>
-      function initUiJquerySlider()
-      {
-        if ($)
-        {
-          const sliderRange = $('.slider-range');
-          if (sliderRange.length)
-          {
-            sliderRange.each((index, el) =>
-            {
-              if ($.ui)
-              {
-                const rangeMin = $(el).attr('data-range-min')
-                const rangeMax = $(el).attr('data-range-max')
-                const rangeFrom = $(el).attr('data-range-from')
-                const rangeTo = $(el).attr('data-range-to')
-                // console.log('jquery-ui.js загрузился')
-                $(el).find('.slider-range__range').slider(
-                {
-                  range: true,
-                  min: Number(rangeMin),
-                  max: Number(rangeMax),
-                  values: [rangeFrom, rangeTo],
-                  animate: 'fast',
-                  slide: function(event, ui)
-                  {
-                    $(el).find('.slider-range__from').val(ui.values[0]);
-                    $(el).find('.slider-range__to').val(ui.values[1]);
-                  }
-                });
-              }
-              else
-              {
-                // console.log('jquery-ui.js еще не загрузился')
-                // ждем когда загрузится jquery-ui.js
-                setTimeout(() =>
-                {
-                  initUiJquerySlider();
-                }, 500)
-              }
-            })
-          }
-        }
-        else
-        {
-          setTimeout(() =>
-          {
-            initUiJquerySlider();
-          }, 500)
-        }
-      }
-      window.addEventListener('DOMContentLoaded', () =>
-      {
-        initUiJquerySlider();
-      });
-
-    </script>
   </head>
   <body>
     <!-- BEGIN content -->
@@ -3271,5 +3212,64 @@
     <!-- !!!!!!!! START: HELPER ТОЛЬКО ДЛЯ DEV !!!!!!!!! -->
     <script defer src="js/helper-menu.js"></script>
     <!-- !!!!!!!! END: HELPER ТОЛЬКО ДЛЯ DEV !!!!!!!!! -->
+    <script async src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script async src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      function initUiJquerySlider()
+      {
+        if ($)
+        {
+          const sliderRange = $('.slider-range');
+          if (sliderRange.length)
+          {
+            sliderRange.each((index, el) =>
+            {
+              if ($.ui)
+              {
+                const rangeMin = $(el).attr('data-range-min')
+                const rangeMax = $(el).attr('data-range-max')
+                const rangeFrom = $(el).attr('data-range-from')
+                const rangeTo = $(el).attr('data-range-to')
+                // console.log('jquery-ui.js загрузился')
+                $(el).find('.slider-range__range').slider(
+                {
+                  range: true,
+                  min: Number(rangeMin),
+                  max: Number(rangeMax),
+                  values: [rangeFrom, rangeTo],
+                  animate: 'fast',
+                  slide: function(event, ui)
+                  {
+                    $(el).find('.slider-range__from').val(ui.values[0]);
+                    $(el).find('.slider-range__to').val(ui.values[1]);
+                  }
+                });
+              }
+              else
+              {
+                // console.log('jquery-ui.js еще не загрузился')
+                // ждем когда загрузится jquery-ui.js
+                setTimeout(() =>
+                {
+                  initUiJquerySlider();
+                }, 500)
+              }
+            })
+          }
+        }
+        else
+        {
+          setTimeout(() =>
+          {
+            initUiJquerySlider();
+          }, 500)
+        }
+      }
+      window.addEventListener('DOMContentLoaded', () =>
+      {
+        initUiJquerySlider();
+      });
+
+    </script>
   </body>
 </html>
