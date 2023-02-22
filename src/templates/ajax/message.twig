@@ -1,23 +1,26 @@
 {% import "partials/_mixins.twig" as mixins %}
 
-<div class="modal modal--auto modal--sm-bottom" data-modal="callback" data-modal-onclose="remove">
-    <div class="modal__inner custom-scroll" data-modal-inner="callback">
-        <div class="modal__close" data-modal-close="callback">
+<div class="modal modal--auto modal--sm-bottom" data-modal="message" data-modal-onclose="remove">
+    <div class="modal__inner custom-scroll" data-modal-inner="message">
+        <div class="modal__close" data-modal-close="message">
             {{ mixins.icon('close') }}
         </div>
         <div class="modal__container">
-            <h2 class="modal__title">Заказать звонок</h2>
+            <h2 class="modal__title">Напишите нам</h2>
             <div class="modal__scroll">
                 <form action="#" class="form-callback">
                     <p>Оставьте заявку и наш менеджер свяжется с вавми в ближайшее время</p>
-                    <div class="form-group error">
+                    <div class="form-group">
                         <div class="form-group__label">Как Вас зовут</div>
                         <input type="text" name="name" class="form-group__input" placeholder="Ваше имя" />
-                        <div class="form-group__error">Обязательное поле</div>
                     </div>
                     <div class="form-group">
                         <div class="form-group__label">Ваш телефон</div>
                         <input type="tel" name="phone" class="form-group__input" placeholder="Номер телефона" />
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group__label">Сообщение</div>
+                        <textarea rows="4" type="tel" name="phone" class="form-group__textarea" placeholder=""></textarea>
                     </div>
                     <div class="form-group form-group--mg20">
                         <button type="submit" class="btn btn--medium">Отправить</button>
