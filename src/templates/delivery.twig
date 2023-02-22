@@ -6,5 +6,80 @@
     {% include "./partials/_breadcrumbs.twig" %}
     <div class="page-1320">
         <h1 class="title-page">Доставка и оплата</h1>
+        <section class="section-delivery">
+            <div class="section-delivery__nav">
+                <div class="section-delivery__tab is-active" data-tab="tab" data-tab-id="delivery">Доставка</div>
+                <div class="section-delivery__tab" data-tab="tab" data-tab-id="payment">Оплата</div>
+            </div>
+            <div class="tab-block is-active" data-tab-block="tab" data-tab-block-id="delivery">
+                <h2 class="section-delivery__title">Доставка осуществляется 3-мя основными способами:</h2>
+                <ol>
+                    <li>Самовывоз.</li>
+                    <li>Автотранспортные компании.</li>
+                    <li>Для розницы: Почта России, СДЭК или Боксберри.</li>
+                </ol>
+                <div class="attention">
+                    <div class="attention__row">
+                        <div class="attention__icon">!</div>
+                        <div class="attention__text">Наложенным платежом (оплата при получении) не отправляем!!!</div>
+                    </div>
+                </div>
+                <div class="attention">
+                    <div class="attention__row">
+                        <div class="attention__icon">!</div>
+                        <div class="attention__text">Оплата доставки осуществляется покупателем!!!</div>
+                    </div>
+                </div>
+                <div class="grey-box">
+                    <div class="grey-box__title">Доставка Почта России:</div>
+                    <ul>
+                        <li>
+                            при отгрузке товара почтовый пакет включается в счет вместе с товаром (35, 50 или 80 рублей в
+                            зависимости от объема товара)
+                        </li>
+                        <li>
+                            при оплате заказа на карту доставка оплачивается вместе с заказом, менеджер рассчитывает
+                            стоимость и прописывает в письме при отправке счета. - после отгрузки высылаем номер
+                            отслеживания
+                        </li>
+                    </ul>
+                </div>
+                <div class="grey-box">
+                    <div class="grey-box__title">Доставка СДЭК, Боксберри:</div>
+                    <ul>
+                        <li>
+                            при отгрузке товара почтовый пакет включается в счет вместе с товаром (35, 50 или 80 рублей в
+                            зависимости от объема товара)
+                        </li>
+                        <li>
+                            при оплате заказа на карту доставка оплачивается вместе с заказом, менеджер рассчитывает
+                            стоимость и прописывает в письме при отправке счета. - после отгрузки высылаем номер
+                            отслеживания
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-block" data-tab-block="tab" data-tab-block-id="payment">
+                <h2 class="section-delivery__title">Оплата осуществляется следующим образом:</h2>
+                <div class="attention">
+                    <div class="attention__row">
+                        <div class="attention__icon">!</div>
+                        <div class="attention__text">Важная информация</div>
+                    </div>
+                </div>
+                <div class="grey-box">
+                    <div class="grey-box__title">Оплата</div>
+                    <ul>
+                        <li>
+                            текст
+                        </li>
+                        <li>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi culpa eius ex fuga pariatur perspiciatis quos sequi! Aliquam aperiam architecto cum ea eos harum inventore quae quas recusandae tenetur, veniam.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
     </div>
 {% endblock %}
