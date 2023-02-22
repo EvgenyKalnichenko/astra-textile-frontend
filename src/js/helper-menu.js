@@ -30,8 +30,8 @@ function pageWidget(pages) {
                 position: absolute;
                 top: 0;
                 left: 100%;
-                width: 24px;
-                height: 24px;
+                width: 44px;
+                height: 44px;
                 background: #222 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAAAxQTFRF////////AAAA////BQBkwgAAAAN0Uk5TxMMAjAd+zwAAACNJREFUCNdjqP///y/DfyBg+LVq1Xoo8W8/CkFYAmwA0Kg/AFcANT5fe7l4AAAAAElFTkSuQmCC) no-repeat 50% 50%;
                 cursor: pointer;
             }
