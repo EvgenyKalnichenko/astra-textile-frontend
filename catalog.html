@@ -3222,9 +3222,9 @@
           const sliderRange = $('.slider-range');
           if (sliderRange.length)
           {
-            sliderRange.each((index, el) =>
+            if ($.ui)
             {
-              if ($.ui)
+              sliderRange.each((index, el) =>
               {
                 const rangeMin = $(el).attr('data-range-min')
                 const rangeMax = $(el).attr('data-range-max')
@@ -3244,17 +3244,17 @@
                     $(el).find('.slider-range__to').val(ui.values[1]);
                   }
                 });
-              }
-              else
+              })
+            }
+            else
+            {
+              // console.log('jquery-ui.js еще не загрузился')
+              // ждем когда загрузится jquery-ui.js
+              setTimeout(() =>
               {
-                // console.log('jquery-ui.js еще не загрузился')
-                // ждем когда загрузится jquery-ui.js
-                setTimeout(() =>
-                {
-                  initUiJquerySlider();
-                }, 500)
-              }
-            })
+                initUiJquerySlider();
+              }, 500)
+            }
           }
         }
         else
