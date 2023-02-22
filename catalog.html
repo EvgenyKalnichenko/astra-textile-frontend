@@ -17,42 +17,52 @@
     <script>
       function initUiJquerySlider()
       {
-        const sliderRange = $('.slider-range');
-        if (sliderRange.length)
+        if ($)
         {
-          sliderRange.each((index, el) =>
+          const sliderRange = $('.slider-range');
+          if (sliderRange.length)
           {
-            if ($.ui)
+            sliderRange.each((index, el) =>
             {
-              const rangeMin = $(el).attr('data-range-min')
-              const rangeMax = $(el).attr('data-range-max')
-              const rangeFrom = $(el).attr('data-range-from')
-              const rangeTo = $(el).attr('data-range-to')
-              // console.log('jquery-ui.js загрузился')
-              $(el).find('.slider-range__range').slider(
+              if ($.ui)
               {
-                range: true,
-                min: Number(rangeMin),
-                max: Number(rangeMax),
-                values: [rangeFrom, rangeTo],
-                animate: 'fast',
-                slide: function(event, ui)
+                const rangeMin = $(el).attr('data-range-min')
+                const rangeMax = $(el).attr('data-range-max')
+                const rangeFrom = $(el).attr('data-range-from')
+                const rangeTo = $(el).attr('data-range-to')
+                // console.log('jquery-ui.js загрузился')
+                $(el).find('.slider-range__range').slider(
                 {
-                  $(el).find('.slider-range__from').val(ui.values[0]);
-                  $(el).find('.slider-range__to').val(ui.values[1]);
-                }
-              });
-            }
-            else
-            {
-              // console.log('jquery-ui.js еще не загрузился')
-              // ждем когда загрузится jquery-ui.js
-              setTimeout(() =>
+                  range: true,
+                  min: Number(rangeMin),
+                  max: Number(rangeMax),
+                  values: [rangeFrom, rangeTo],
+                  animate: 'fast',
+                  slide: function(event, ui)
+                  {
+                    $(el).find('.slider-range__from').val(ui.values[0]);
+                    $(el).find('.slider-range__to').val(ui.values[1]);
+                  }
+                });
+              }
+              else
               {
-                initUiJquerySlider();
-              }, 500)
-            }
-          })
+                // console.log('jquery-ui.js еще не загрузился')
+                // ждем когда загрузится jquery-ui.js
+                setTimeout(() =>
+                {
+                  initUiJquerySlider();
+                }, 500)
+              }
+            })
+          }
+        }
+        else
+        {
+          setTimeout(() =>
+          {
+            initUiJquerySlider();
+          }, 500)
         }
       }
       window.addEventListener('DOMContentLoaded', () =>
