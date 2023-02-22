@@ -71,6 +71,7 @@ $(function () {
         'basket',
         'order',
         'about',
+        'sizes',
         'contacts',
         'delivery',
         'profile',

@@ -63,6 +63,14 @@
 	max-width: 1320px;
 }
 
+.section-default {
+	margin-bottom: 70px;
+
+	& > * {
+		margin-bottom: 20px;
+	}
+}
+
 @include xl-screen {
 	.xl-block {
 		display: block;

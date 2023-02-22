@@ -1,0 +1,164 @@
+{% set title = "Размеры" %}
+
+{% extends "layouts/_layout.twig" %}
+
+{% block content %}
+    {% include "./partials/_breadcrumbs.twig" %}
+    <div class="page-1320">
+        <h1 class="title-page">Размеры</h1>
+        <section class="section-default">
+            <h3>Размерная сетка женской одежды по ГОСТу</h3>
+            <div class="table-size">
+                <table border="1" cellpadding="1" cellspacing="1">
+                    <thead>
+                    <tr>
+                        <td> ГОСТ</td>
+                        <td> RUS</td>
+                        <td>Рост см</td>
+                        <td>Обхват груди см</td>
+                        <td>Обхват талии см</td>
+                        <td>Обхват бедер см</td>
+                        <td>Обхват талии см</td>
+                        <td>Обхват бедер см</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in range(0, 4) %}
+                        <tr>
+                            <td>
+                                80
+                            </td>
+                            <td>
+                                84
+                            </td>
+                            <td>
+                                88
+                            </td>
+                            <td>
+                                92
+                            </td>
+                            <td>
+                                96
+                            </td>
+                            <td>
+                                100
+                            </td>
+                            <td>
+                                96
+                            </td>
+                            <td>
+                                100
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <h3>Размерная сетка мужской одежды по ГОСТу</h3>
+            <div class="table-size">
+                <table border="1" cellpadding="1" cellspacing="1">
+                    <thead>
+                    <tr>
+                        <td> ГОСТ</td>
+                        <td> RUS</td>
+                        <td>Рост см</td>
+                        <td>Обхват груди см</td>
+                        <td>Обхват талии см</td>
+                        <td>Обхват бедер см</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in range(0, 3) %}
+                        <tr>
+                            <td>
+                                80
+                            </td>
+                            <td>
+                                84
+                            </td>
+                            <td>
+                                88
+                            </td>
+                            <td>
+                                92
+                            </td>
+                            <td>
+                                96
+                            </td>
+                            <td>
+                                100
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <h3>Размерная сетка детской одежды по ГОСТу</h3>
+            <div class="table-size">
+                <table border="1" cellpadding="1" cellspacing="1">
+                    <thead>
+                    <tr>
+                        <td> ГОСТ</td>
+                        <td> RUS</td>
+                        <td>Рост см</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in range(0, 3) %}
+                        <tr>
+                            <td>
+                                80
+                            </td>
+                            <td>
+                                84
+                            </td>
+                            <td>
+                                88
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <h3>Размерная сетка какой то одежды</h3>
+            <div class="table-size">
+                <table border="1" cellpadding="1" cellspacing="1">
+                    <thead>
+                    <tr>
+                        <td> ГОСТ</td>
+                        <td> RUS</td>
+                        <td>Рост см</td>
+                        <td>Обхват груди см</td>
+                        <td>Обхват талии см</td>
+                        <td>Обхват бедер см</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in range(0, 3) %}
+                        <tr>
+                            <td>
+                                80
+                            </td>
+                            <td>
+                                84
+                            </td>
+                            <td>
+                                88
+                            </td>
+                            <td>
+                                92
+                            </td>
+                            <td>
+                                96
+                            </td>
+                            <td>
+                                100
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+{% endblock %}
