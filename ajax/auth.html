@@ -1,0 +1,124 @@
+<div class="modal modal--auto modal--sm-bottom" data-modal="auth">
+  <div class="modal__inner custom-scroll" data-modal-inner="auth">
+    <div class="modal__close" data-modal-close="auth">
+      <svg class="icon icon-close">
+        <use xlink:href="img/sprite.svg#icon-close"></use>
+      </svg>
+    </div>
+    <div class="modal__container">
+      <div class="modal__scroll">
+        <div class="form-auth">
+          <div class="form-auth__nav">
+            <div class="form-auth__tab is-active" data-tab="tab-auth" data-tab-id="login">Вход</div>
+            <div class="form-auth__tab" data-tab="tab-auth" data-tab-id="registration">Регистрация</div>
+          </div>
+          <div class="form-auth__body">
+            <div class="tab-block is-active" data-tab-block="tab-auth" data-tab-block-id="login">
+              <form action="#" class="form-login">
+                <div class="form-group">
+                  <div class="form-group__label">Ваш имя</div>
+                  <input type="text" name="name" class="form-group__input" placeholder="" />
+                </div>
+                <div class="form-group">
+                  <div class="form-group__label">Пароль</div>
+                  <div class="form-group__wrap">
+                    <div class="form-group__change-type">
+                      <svg class="icon icon-eye">
+                        <use xlink:href="img/sprite.svg#icon-eye"></use>
+                      </svg>
+                    </div>
+                    <input type="password" name="password" class="form-group__input" placeholder="" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="checkbox checkbox--min checkbox--policy">
+                    <input type="checkbox" id="subscribe-policy2" class="checkbox__input" checked="" data-input-policy="">
+                    <label for="subscribe-policy2" class="checkbox__label">
+                      <span class="checkbox__icon">
+                        <svg class="icon icon-check-mark">
+                          <use xlink:href="img/sprite.svg#icon-check-mark"></use>
+                        </svg>
+                      </span>
+                      <span class="checkbox__text checkbox__text--min"> Я согласен на обработку <a href="#">персональных данных</a>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group form-group--center">
+                  <button type="submit" class="btn btn--min190 btn--medium">Войти</button>
+                </div>
+                <div class="form-group form-group--min form-group--center">
+                  <a href="#" data-modal-ajax-open="restore" data-modal-close="auth">Забыли пароль?</a>
+                </div>
+              </form>
+            </div>
+            <div class="tab-block" data-tab-block="tab-auth" data-tab-block-id="registration">
+              <form action="#" class="form-registration">
+                <div class="form-group">
+                  <div class="form-group__label">Ваш имя</div>
+                  <input type="text" name="name" class="form-group__input" placeholder="" />
+                </div>
+                <div class="form-group">
+                  <div class="form-group__label">Ваш e-mail</div>
+                  <input type="email" name="name" class="form-group__input" placeholder="" />
+                </div>
+                <div class="form-group">
+                  <div class="form-group__label">Пароль</div>
+                  <div class="form-group__wrap">
+                    <div class="form-group__change-type">
+                      <svg class="icon icon-eye">
+                        <use xlink:href="img/sprite.svg#icon-eye"></use>
+                      </svg>
+                    </div>
+                    <input type="password" name="name" class="form-group__input" placeholder="" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-group__label">Подтвердить пароль</div>
+                  <div class="form-group__wrap">
+                    <div class="form-group__change-type">
+                      <svg class="icon icon-eye">
+                        <use xlink:href="img/sprite.svg#icon-eye"></use>
+                      </svg>
+                    </div>
+                    <input type="password" name="name" class="form-group__input" placeholder="" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="checkbox checkbox--min checkbox--policy">
+                    <input type="checkbox" id="subscribe-policy1" class="checkbox__input" checked="" data-input-policy="">
+                    <label for="subscribe-policy1" class="checkbox__label">
+                      <span class="checkbox__icon">
+                        <svg class="icon icon-check-mark">
+                          <use xlink:href="img/sprite.svg#icon-check-mark"></use>
+                        </svg>
+                      </span>
+                      <span class="checkbox__text checkbox__text--min"> Я согласен на обработку <a href="#">персональных данных</a>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="checkbox checkbox--min checkbox--policy">
+                    <input type="checkbox" id="type-ur" class="checkbox__input">
+                    <label for="type-ur" class="checkbox__label">
+                      <span class="checkbox__icon">
+                        <svg class="icon icon-check-mark">
+                          <use xlink:href="img/sprite.svg#icon-check-mark"></use>
+                        </svg>
+                      </span>
+                      <span class="checkbox__text checkbox__text--min"> Я юридическое лицо </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group form-group--center">
+                  <button type="submit" class="btn btn--min190 btn--medium" data-modal-close="auth" data-modal-ajax-open="success-registration"> Зарегистрироваться </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
