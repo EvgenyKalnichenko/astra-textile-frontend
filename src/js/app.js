@@ -9,18 +9,17 @@ import "./modules/share";
 import "./controllers/catalog-menu";
 import "./controllers/mask";
 
-
 import LazyLoad from 'vanilla-lazyload';
 import counterInit from "./modules/counter";
 import {documentReady} from "./modules/utils"
 import {swiperInit} from "./modules/swiperInit";
 import {modalsInit} from './controllers/modals';
+import {validatorInit} from "./controllers/validatir";
 import {selectsInit} from './modules/select';
 import {interactionWithCard} from "./modules/cardProduct";
 import {initFilterList} from "./modules/filterList";
 
 $(function () {
-
     // документ готов
     documentReady();
 
@@ -47,5 +46,7 @@ $(function () {
     // Фильтр в каталоге
     initFilterList();
 
+    //Валидация инпутов
 
+    validatorInit()
 })

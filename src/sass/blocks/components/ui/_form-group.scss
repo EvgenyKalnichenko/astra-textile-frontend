@@ -1,7 +1,7 @@
 .form-group  {
   $block: &;
   position: relative;
-  margin-bottom: 11px;
+  margin-bottom: 15px;
   width: 100%;
 
   &--mg0{
@@ -36,8 +36,25 @@
 
   &__error {
     font-size: 10px;
-    color: var(--accent);
-    display: none;
+    color: $error;
+    position: absolute;
+    top: calc(100% - 4px);
+  }
+
+  &.success {
+    #{$block}__error {
+      display: none;
+    }
+
+    #{$block}__input, #{$block}__textarea {
+      border: 1px solid var(--color-green);
+      background-image: checkIcon();
+      background-size: 1em;
+      background-repeat: no-repeat;
+      background-position: calc(100% - 10px) center;
+      padding-right: 30px;
+      transition: 0s;
+    }
   }
 
   &.error {
@@ -78,6 +95,7 @@
 
     & ~ #{$block}__input {
       padding-right: 40px;
+      background-image: none !important;
     }
   }
 
@@ -104,6 +122,14 @@
     font-size: 16px;
     transition: background var(--theme-duration) var(--ease);
 
+    //&:-webkit-autofill,
+    //&:-webkit-autofill:hover,
+    //&:-webkit-autofill:focus, {
+    //  border: 1px solid green;
+    //  -webkit-text-fill-color: green;
+    //  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    //  transition: background-color 5000s ease-in-out 0s;
+    //}
     &.error {
       border-color: $error;
     }
