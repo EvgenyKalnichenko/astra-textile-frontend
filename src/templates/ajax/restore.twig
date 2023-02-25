@@ -1,0 +1,27 @@
+{% import "partials/_mixins.twig" as mixins %}
+
+<div class="modal modal--auto modal--sm-bottom" data-modal="restore">
+    <div class="modal__inner custom-scroll" data-modal-inner="restore">
+        <div class="modal__close" data-modal-close="restore">
+            {{ mixins.icon('close') }}
+        </div>
+        <div class="modal__container">
+            <div class="modal__scroll">
+                <form action="#" class="form-restore">
+                    <h2 class="form-restore__title">Восстановление пароля</h2>
+                    <p>После заполнения формы мы отправим специальную ссылку на указанный электронный
+                        адрес/номер телефона, перейдя по которой вы сможете задать новый пароль.</p>
+                    <div class="form-group form-group--mg20">
+                        <div class="form-group__label">Ваш e-mail/номер телефона</div>
+                        <input type="email" name="email" class="form-group__input" placeholder=""/>
+                    </div>
+                    <div class="form-group form-group--center">
+                        <button type="submit" class="btn btn--min190 btn--medium">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

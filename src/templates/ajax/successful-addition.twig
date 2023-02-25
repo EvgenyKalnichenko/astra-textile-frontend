@@ -1,0 +1,46 @@
+{% import "partials/_mixins.twig" as mixins %}
+
+<div class="modal modal--auto modal--sm-bottom" data-modal="successful-addition" data-modal-onclose="remove">
+    <div class="modal__inner custom-scroll" data-modal-inner="successful-addition">
+        <div class="modal__close" data-modal-close="successful-addition">
+            {{ mixins.icon('close') }}
+        </div>
+        <div class="modal__container">
+            <div class="modal__scroll">
+                <div class="successful-addition">
+                    <div class="successful-addition__title">Товар добавлен в корзину</div>
+                    <div class="successful-addition__grid">
+                        <div class="successful-addition__image">
+                            <picture>
+                                <source srcset="img/product-2.webp" type="image/webp"/>
+                                <img src="img/product-2.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="successful-addition__description">
+                            <div class="successful-addition__text">Платье «Кипарис»</div>
+                            <div class="successful-addition__text"><span class="text-grey">Цвет:</span> фиолетовый</div>
+                            <div class="successful-addition__numbers">
+                                <div class="successful-addition__info">
+                                    <div class="successful-addition__info-top">Цена мелкооптовая</div>
+                                    <div class="successful-addition__info-bottom"><b>1 350</b> ₽</div>
+                                </div>
+                                <div class="successful-addition__info">
+                                    <div class="successful-addition__info-top">Количество</div>
+                                    <div class="successful-addition__info-bottom"><b>12</b></div>
+                                </div>
+                                <div class="successful-addition__info">
+                                    <div class="successful-addition__info-top">Общая сумма</div>
+                                    <div class="successful-addition__info-bottom"><b>162 000</b> ₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="successful-addition__btns">
+                        <a href="./basket.html" class="btn btn--medium">Перейти в корзину</a>
+                        <a href="#" class="grey" data-modal-close="successful-addition">Вернуться к покупкам</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

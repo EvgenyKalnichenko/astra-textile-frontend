@@ -1,0 +1,26 @@
+{% import "partials/_mixins.twig" as mixins %}
+
+<div class="modal modal--auto modal--sm-bottom" data-modal="modal-wish" data-modal-onclose="remove">
+    <div class="modal__inner custom-scroll" data-modal-inner="modal-wish">
+        <div class="modal__close" data-modal-close="modal-wish">
+            {{ mixins.icon('close') }}
+        </div>
+        <div class="modal__container">
+            <div class="modal__scroll">
+                <div class="message-default">
+                    <div class="message-default__icon">
+                        {{ mixins.icon('message-big') }}
+                    </div>
+                    <div class="message-default__text">
+                        Данного размера нет в наличии.
+                        Добавить его в лист ожидания?
+                    </div>
+                    <div class="message-default__bottom">
+                        <a href="#" class="btn btn--medium" data-modal-close="modal-wish" data-modal-ajax-open="success-message">Да</a>
+                        <a href="#" class="btn btn--transparent grey btn--medium" data-modal-close="modal-wish">Нет</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

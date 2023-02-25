@@ -1,0 +1,25 @@
+{% import "partials/_mixins.twig" as mixins %}
+
+<div class="modal modal--auto modal--sm-bottom" data-modal="success-message" data-modal-onclose="remove">
+    <div class="modal__inner custom-scroll" data-modal-inner="success-message">
+        <div class="modal__close" data-modal-close="success-message">
+            {{ mixins.icon('close') }}
+        </div>
+        <div class="modal__container">
+            <div class="modal__scroll">
+                <div class="message-default">
+                    <div class="message-default__icon">
+                        {{ mixins.icon('message-big') }}
+                    </div>
+                    <div class="message-default__text">
+                        При появлении товара в наличии, <br>
+                        на ваш e-mail придет уведомление.
+                    </div>
+                    <div class="message-default__bottom">
+                        <a href="#" class="btn btn--medium" data-modal-close="success-message">Ок</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

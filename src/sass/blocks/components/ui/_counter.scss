@@ -55,10 +55,45 @@
     }
   }
 
+  &.counter--disabled {
+
+    #{$block}__main {
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
   &.counter--green  {
 
     #{$block}__main {
       border-color: var(--color-green);
     }
+  }
+
+  &__col {
+    position: relative;
+
+    &:hover {
+      z-index: 1;
+      #{$block}__popup {
+        display: block;
+      }
+    }
+  }
+
+  &__popup {
+    position: absolute;
+    top: calc(100% - 15px);
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 24px rgb(0 0 0 / 10%);
+    padding: 15px;
+    border-radius: 12px;
+    display: none;
+    background: #fff;
+  }
+
+  .btn-i__text {
+    white-space: nowrap !important;
   }
 }

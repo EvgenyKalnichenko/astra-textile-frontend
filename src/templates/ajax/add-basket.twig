@@ -1,4 +1,5 @@
 {% import "partials/_mixins.twig" as mixins %}
+{% import "data/_data.twig" as data %}
 
 <div class="modal modal--w450 modal--sm-bottom" data-modal="add-basket" data-modal-onclose="remove">
     <div class="modal__inner custom-scroll" data-modal-inner="add-basket">
@@ -45,7 +46,7 @@
                                 </div>
                             </div>
                             <div class="product-total__row">
-                                <a href="#" type="button" class="btn btn--medium">
+                                <a href="#" type="button" class="btn btn--medium" data-modal-close="add-basket" data-modal-ajax-open="successful-addition">
                                     <div class="btn__icon">
                                         {{ mixins.icon('basket') }}
                                     </div>

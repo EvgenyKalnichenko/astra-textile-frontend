@@ -69,6 +69,7 @@
 @import './blocks/components/product/product-colors';
 @import './blocks/components/product/product-card-info';
 @import './blocks/components/product/fast-view-product';
+@import './blocks/components/product/successful-addition';
 
 @import './blocks/components/ui/link-arrow';
 @import './blocks/components/ui/favorite-icon';
@@ -88,12 +89,14 @@
 @import './blocks/components/ui/table-size';
 @import './blocks/components/ui/slider-range';
 @import './blocks/components/ui/attention';
+@import './blocks/components/ui/message-default';
 
 @import './blocks/components/forms/form';
 @import './blocks/components/forms/form-callback';
 @import './blocks/components/forms/form-active-filters';
 @import './blocks/components/forms/form-filters';
 @import './blocks/components/forms/form-reviews';
+@import './blocks/components/forms/form-auth';
 
 // HELPERS
 @import './base/helpers';

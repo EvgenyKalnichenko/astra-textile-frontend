@@ -24,6 +24,16 @@
     margin: 30px 0;
   }
 
+  &--center {
+    justify-content: center;
+    display: flex;
+  }
+
+  &--min {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
   &__error {
     font-size: 10px;
     color: var(--accent);
@@ -40,6 +50,39 @@
     #{$block}__input, #{$block}__textarea {
       border: 1px solid var(--accent);
     }
+  }
+
+  &__change-type {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    width: 20px;
+    color: var(--color-light);
+    cursor: pointer;
+    transition: var(--theme-duration) var(--ease) color;
+    display: flex;
+
+    &.is-active {
+      color: var(--accent);
+
+      &:hover {
+        color: var(--accentHover);
+      }
+    }
+
+    &:hover {
+      color: currentColor;
+    }
+
+    & ~ #{$block}__input {
+      padding-right: 40px;
+    }
+  }
+
+  &__wrap {
+    position: relative;
   }
 
   &__label {

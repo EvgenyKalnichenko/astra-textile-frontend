@@ -15,13 +15,13 @@ $(document).on('change', '[data-input-policy]', function () {
 });
 
 // Каталог меню
-if($('.menu-sidebar').length){
+if ($('.menu-sidebar').length) {
     $(document).on('click', '.menu-sidebar__name', function () {
         $(this).siblings('.menu-sidebar__list').stop().slideToggle(200)
     })
 
     $('.menu-sidebar__link.is-active').closest('.menu-sidebar__list').css({
-        'display' : 'block'
+        'display': 'block'
     })
 }
 
@@ -31,7 +31,7 @@ $(document).on('click', '.card-basket__more', function () {
     card.toggleClass('is-active')
     card.find('.card-basket__dropdown').slideToggle(200)
 
-    if(card.hasClass('is-active')) {
+    if (card.hasClass('is-active')) {
         $(this).text('Скрыть количество и размеры')
     } else {
         $(this).text('Показать количество и размеры')
@@ -39,18 +39,34 @@ $(document).on('click', '.card-basket__more', function () {
 })
 
 //Раскрытие карточки в заказах
-$(document).on('click', '.card-order__toggle', function (e){
+$(document).on('click', '.card-order__toggle', function (e) {
     e.preventDefault();
     const card = $(this).closest('.card-order')
     card.toggleClass('is-active')
     card.find('.card-order__dropdown').slideDown(200)
 })
 
-$(document).on('click', '.card-order__panel-right', function (e){
+$(document).on('click', '.card-order__panel-right', function (e) {
     e.preventDefault();
     const card = $(this).closest('.card-order')
     card.removeClass('is-active')
     card.find('.card-order__dropdown').slideUp(200)
+})
+
+
+// Изменение типа у инпута
+$(document).on('click', '.form-group__change-type', function () {
+    const $this = $(this)
+    const input = $this.closest('.form-group').find('input')
+    const currentType = input.attr('type')
+
+    if (currentType === 'password') {
+        input.attr('type', 'text')
+        $this.addClass('is-active')
+    } else {
+        input.attr('type', 'password')
+        $this.removeClass('is-active')
+    }
 })
 
 // input mask

@@ -40,8 +40,18 @@
     }
   }
 
+  &--min190 {
+    min-width: 190px;
+  }
+
   &--transparent {
-    text-transform: uppercase;
+    //text-transform: uppercase;
+    background: transparent;
+    border: none;
+
+    &:hover {
+      color: #fff;
+    }
   }
 
   &--medium {
@@ -157,7 +167,7 @@
 .btn-i {
   $b: &;
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   cursor: pointer;
   transition: 0.15s ease-in-out;
   outline: none;
@@ -167,6 +177,10 @@
 
   &:hover {
     color: $accent;
+
+    #{$b}__icon {
+      color: $accent;
+    }
   }
 
   @include sm-screen {
@@ -174,11 +188,25 @@
     //line-height: 12px;
   }
 
+  &--nowrap {
+    #{$b}__text {
+      white-space: nowrap;
+    }
+  }
+
   &--grey {
     color: #696969;
 
     #{$b}__icon {
       color: #696969;
+    }
+  }
+
+  &--yellow {
+    color: var(--color-yellow);
+
+    #{$b}__icon {
+      color: var(--color-yellow);
     }
   }
 
@@ -202,12 +230,12 @@
     width: 18px;
     height: 18px;
     margin-right: 10px;
-    color: $accent;
+    color: var(--accent);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     position: relative;
-
+    transition: 0.15s ease-in-out;
     //@include sm-screen {
     //  top: -2px;
     //}
