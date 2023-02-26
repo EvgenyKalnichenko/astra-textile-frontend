@@ -3,7 +3,7 @@ import isStrongPassword from 'validator/lib/isStrongPassword';
 import isEmpty from 'validator/lib/isEmpty';
 import isLength from 'validator/lib/isLength';
 import equals from 'validator/lib/equals';
-import isMobilePhone from "validator/es/lib/isMobilePhone";
+// import isMobilePhone from "validator/es/lib/isMobilePhone";
 
 const checkValid = (fn, $this, message) => {
     const group = $this.closest('.form-group')
@@ -57,7 +57,7 @@ const serviceRules = {
     }
 }
 
-function checkRule($this) {
+const validationInput = ($this) => {
     const rules = $this.attr('data-rules').split('|')
     const val = $this.val()
     rules.reduce((acc, el) => {
@@ -73,15 +73,19 @@ function checkRule($this) {
     }, '')
 }
 
+const validationForm = (form) => {
+    form.find('[data-rules]').each((index, el) => {
+        validationInput($(el))
+    })
+}
+
 export function validatorInit() {
     $(document).on('input', '[data-rules]', function () {
-        checkRule($(this))
+        validationInput($(this))
     })
 
     $(document).on('submit', 'form', function (e) {
         e.preventDefault()
-        $(this).find('[data-rules]').each((index, el) => {
-            checkRule($(el))
-        })
+        validationForm($(this))
     })
 }
