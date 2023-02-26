@@ -10,21 +10,20 @@
       <div class="modal__scroll">
         <form action="#" class="form-callback">
           <p>Оставьте заявку и наш менеджер свяжется с вавми в ближайшее время</p>
-          <div class="form-group error">
+          <div class="form-group">
             <div class="form-group__label">Как Вас зовут</div>
-            <input type="text" name="name" class="form-group__input" placeholder="Ваше имя" />
-            <div class="form-group__error">Обязательное поле</div>
+            <input type="text" name="name" data-rules="require" class="form-group__input" placeholder="Ваше имя" />
           </div>
           <div class="form-group">
             <div class="form-group__label">Ваш телефон</div>
-            <input type="tel" name="phone" class="form-group__input" placeholder="Номер телефона" />
+            <input type="tel" name="phone" data-rules="require|length:18" class="form-group__input" placeholder="+7 (___) ___ __ __" />
           </div>
           <div class="form-group form-group--mg20">
             <button type="submit" class="btn btn--medium">Отправить</button>
           </div>
           <div class="form-group">
             <div class="checkbox checkbox--policy">
-              <input type="checkbox" id="subscribe-policy5242" class="checkbox__input" checked="" data-input-policy="">
+              <input type="checkbox" id="subscribe-policy5242" class="checkbox__input" checked="" data-rules="policy">
               <label for="subscribe-policy5242" class="checkbox__label">
                 <span class="checkbox__icon">
                   <svg class="icon icon-check-mark">
