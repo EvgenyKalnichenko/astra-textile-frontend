@@ -18,6 +18,7 @@ import {validatorInit} from "./controllers/validatir";
 import {selectsInit} from './modules/select';
 import {interactionWithCard} from "./modules/cardProduct";
 import {initFilterList} from "./modules/filterList";
+import {initInputMask} from "./controllers/mask";
 
 $(function () {
     // документ готов
@@ -47,6 +48,8 @@ $(function () {
     initFilterList();
 
     //Валидация инпутов
-
     validatorInit()
+
+    //Маски инпутов
+    initInputMask()
 })
