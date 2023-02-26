@@ -44,8 +44,11 @@
     min-width: 190px;
   }
 
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
   &--transparent {
-    //text-transform: uppercase;
     background: transparent;
     border: none;
 
