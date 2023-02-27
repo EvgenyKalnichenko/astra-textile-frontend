@@ -2,4 +2,8 @@
   display: flex;
   justify-content: center;
   margin: 90px 0;
+
+  @include xl-screen {
+    margin: 50px 0;
+  }
 }
