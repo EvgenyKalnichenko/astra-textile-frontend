@@ -2,7 +2,7 @@ function pageWidget(pages) {
     const widgetWrap = $(`<div class="widget_wrap"><ul class="widget_list"></ul></div>`);
     widgetWrap.prependTo("body");
     for (let i = 0; i < pages.length; i++) {
-        $(`<li class="widget_item"><a class="widget_link" href="${pages[i]}.html">${pages[i]}</a></li>`).appendTo('.widget_list');
+        $(`<li class="widget_item"><a class="widget_link" href="${pages[i].url}.html">${pages[i].name}</a></li>`).appendTo('.widget_list');
     }
     const widgetStilization = $(`
         <style>
@@ -62,24 +62,24 @@ function pageWidget(pages) {
 
 $(function () {
     pageWidget([
-        'index',
-        'catalog',
-        'product-detail',
-        'news',
-        'news-detail',
-        'reviews',
-        'basket',
-        'order',
-        'about',
-        'sizes',
-        'contacts',
-        'delivery',
-        'profile',
-        'orders',
-        'wishlist',
-        'favorites',
-        'auth',
-        'change-password',
-        '404'
+        { url: 'index', name: 'Главная' },
+        { url: 'catalog', name: 'Каталог' },
+        { url: 'product-detail', name: 'Детальная страница товара' },
+        { url: 'news', name: 'Все новости' },
+        { url: 'news-detail', name: 'Детальная страница новости' },
+        { url: 'reviews', name: 'Отзывы' },
+        { url: 'basket', name: 'Корзина' },
+        { url: 'order', name: 'Оформление заказа' },
+        { url: 'about', name: 'О компании' },
+        { url: 'sizes', name: 'Размеры' },
+        { url: 'contacts', name: 'Контакты' },
+        { url: 'delivery', name: 'Доставка и оплата' },
+        { url: 'profile', name: 'Мой профиль' },
+        { url: 'orders', name: 'Мои заказы' },
+        { url: 'wishlist', name: 'Лист ожидания' },
+        { url: 'favorites', name: 'Избранное' },
+        { url: 'auth', name: 'Авторизация/регистрация' },
+        { url: 'change-password', name: 'Сменить пароль' },
+        { url: '404', name: '404' }
     ]);
 });
