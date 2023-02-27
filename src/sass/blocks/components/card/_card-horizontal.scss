@@ -125,6 +125,10 @@
       max-width: 160px;
     }
 
+    .btn {
+      white-space: nowrap;
+    }
+
     @include sm-screen {
       margin-top: 20px;
     }
