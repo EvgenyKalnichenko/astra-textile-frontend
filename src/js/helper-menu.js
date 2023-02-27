@@ -78,6 +78,8 @@ $(function () {
         'orders',
         'wishlist',
         'favorites',
+        'auth',
+        'change-password',
         '404'
     ]);
 });

@@ -29,6 +29,8 @@ const initInputMask = () => {
     $('[name="checking-account"]').mask('99999-999-9-9999-9999999', {placeholder: "99999-999-9-9999-9999999"});
 }
 
+// window.initMask = initInputMask
+
 export {
     SPMaskBehavior,
     initInputMask

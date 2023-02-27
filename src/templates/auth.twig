@@ -1,0 +1,103 @@
+{% set title = "Авторизация"%}
+
+{% extends "layouts/_layout.twig" %}
+
+{% block content %}
+    <section class="section-auth">
+        <div class="form-auth form-auth--shadow">
+            <div class="form-auth__nav">
+                <div class="form-auth__tab is-active" data-tab="tab-auth" data-tab-id="login">Вход</div>
+                <div class="form-auth__tab" data-tab="tab-auth" data-tab-id="registration">Регистрация</div>
+            </div>
+            <div class="form-auth__body">
+                <div class="tab-block is-active" data-tab-block="tab-auth" data-tab-block-id="login">
+                    <form action="#" class="form-login">
+                        <div class="form-group">
+                            <div class="form-group__label">Ваш email</div>
+                            <input type="email" name="email" data-rules="require|email" class="form-group__input" placeholder=""/>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group__label">Пароль</div>
+                            <div class="form-group__wrap">
+                                <div class="form-group__change-type">{{ mixins.icon('eye') }}</div>
+                                <input type="password" name="password" data-rules="require" class="form-group__input"
+                                       placeholder=""/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox checkbox--min checkbox--policy">
+                                <input type="checkbox" id="subscribe-policy2" data-rules="policy" class="checkbox__input" checked="">
+                                <label for="subscribe-policy2" class="checkbox__label">
+                                    <span class="checkbox__icon">{{ mixins.icon('check-mark') }}</span>
+                                    <span class="checkbox__text checkbox__text--min">
+                                            Я согласен на обработку <a href="#">персональных данных</a>
+                                        </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group form-group--center">
+                            <button type="submit" class="btn btn--min190 btn--medium">Войти</button>
+                        </div>
+                        <div class="form-group form-group--min form-group--center">
+                            <a href="#" data-modal-ajax-open="restore" data-modal-close="auth">Забыли пароль?</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-block" data-tab-block="tab-auth" data-tab-block-id="registration">
+                    <form action="#" class="form-registration">
+                        <div class="form-group">
+                            <div class="form-group__label">Ваш имя</div>
+                            <input type="text" name="name" data-rules="require" class="form-group__input" placeholder=""/>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group__label">Ваш e-mail</div>
+                            <input type="email" name="email" data-rules="require|email" class="form-group__input" placeholder=""/>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group__label">Пароль</div>
+                            <div class="form-group__wrap">
+                                <div class="form-group__change-type">{{ mixins.icon('eye') }}</div>
+                                <input type="password" name="password" data-rules="require|password|confirm:password_confirmed" class="form-group__input" placeholder=""/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group__label">Подтвердить пароль</div>
+                            <div class="form-group__wrap">
+                                <div class="form-group__change-type">{{ mixins.icon('eye') }}</div>
+                                <input type="password" name="password_confirmed" data-rules="require|password|confirm:password" class="form-group__input" placeholder=""/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox checkbox--min checkbox--policy">
+                                <input type="checkbox" id="subscribe-policy1" data-rules="policy" class="checkbox__input" checked="">
+                                <label for="subscribe-policy1" class="checkbox__label">
+                                    <span class="checkbox__icon">{{ mixins.icon('check-mark') }}</span>
+                                    <span class="checkbox__text checkbox__text--min">
+                                            Я согласен на обработку <a href="#">персональных данных</a>
+                                        </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox checkbox--min checkbox--policy">
+                                <input type="checkbox" id="type-ur" class="checkbox__input">
+                                <label for="type-ur" class="checkbox__label">
+                                    <span class="checkbox__icon">{{ mixins.icon('check-mark') }}</span>
+                                    <span class="checkbox__text checkbox__text--min">
+                                           Я юридическое лицо
+                                        </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group form-group--center">
+                            {#                                    data-modal-close="auth" data-modal-ajax-open="success-registration"#}
+                            <button type="submit" class="btn btn--min190 btn--medium">
+                                Зарегистрироваться
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
